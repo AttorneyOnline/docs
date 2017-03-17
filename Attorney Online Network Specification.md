@@ -1,4 +1,4 @@
-# Network Specification 1.0  #
+# Network Specification  #
 
 The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO connect and communicate with servers.
 
@@ -33,8 +33,11 @@ Loading is the process where the server sends lists of its characters, music and
 
 Used by versions 1.8 and 1.7.5, this loading is very inefficient and suffers heavily from latency. Can also be used by 2.3.0+ in cases where the server does not support fast loading.  
   
-C: askchaa#%
-S: 
+C: **askchaa#%**  
+S: **SI#<char_list_length: int>#<music_list_length: int>#<evidence_list_length: int>#%**  
+C: **askchar2#%**  
+S: **CI#....#%**  
+  
 ## Loading 2.0 ##
 
 Designed to be *much* faster than Loading 1.0, most noticably on slow connections.  
