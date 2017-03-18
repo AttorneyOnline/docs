@@ -75,6 +75,8 @@ S: **OPPASS#{<mod_pass: hex>}#%** (again, not the actual modpass)
 S: **DONE#%**  
   
 What's important to note here is that since the character and music lists often are way too large for a single packet, TCP chops it into smaller ones. It is the client's responsiblity to piece them together on their end.(TCP makes sure that the segments will be handled in the correct order)  
+  
+A sample can be found [here](https://github.com/Attorney-Online-Engineering-Task-Force/Documentation/blob/master/Samples/Handshake%20%2B%20Loading%202.0%20Sample)
 
 # Character picking
 
