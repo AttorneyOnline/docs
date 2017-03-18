@@ -57,7 +57,7 @@ S: **CharsCheck#<char_taken: int>#...#%** (same size as character list, 0 = free
 S: **OPPASS#{<mod_pass: hex>}#%** (an obsolete artifact of the disastrous security of old AO servers, still used on AO clients 1.8 and lower to display a guard checkbox in the client)  
 S: **DONE#%**  
 
-A sample can be found here(todo: add link)
+A sample can be found [here](https://github.com/Attorney-Online-Engineering-Task-Force/Documentation/blob/master/Samples/Handshake%20%2B%20Loading%201.0%20Sample)
   
 ## Loading 2.0 ##
 
