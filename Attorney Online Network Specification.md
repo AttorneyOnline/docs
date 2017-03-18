@@ -101,7 +101,7 @@ chat#
 <realization: int>#  
 <text_color: int>#  
   
-For more information on valid arguments and client behavior, see [https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D](this.)
+For more information on valid arguments and client behavior, see [this](https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D)
 
   
 
