@@ -5,6 +5,8 @@ The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO connect an
 ## Legend ##
 
 AO = Attorney Online  
+char = character, as in the game character, not the char datatype  
+type(x) = an array of type separated by x: typextypextype
 C = client  
 S = server  
 [x] = x is an optional argument(usually used by version 2.3.0+)  
@@ -36,7 +38,26 @@ Used by versions 1.8 and 1.7.5, this loading is very inefficient and suffers hea
 C: **askchaa#%**  
 S: **SI#<char_list_length: int>#<music_list_length: int>#<evidence_list_length: int>#%**  
 C: **askchar2#%**  
-S: **CI#....#%**  
+S: **CI#<char_id: int>#<char_name: string>&<description: string>&<?: int>&<evidence: int(,)>&&<?: int>&#...#%**  (1-10 in every packet, continued in the ...)    
+C: **AN#1#%**  
+S: **CI#...#%**  
+C: **AN#2#%**  
+...  
+S: **EI#<evidence_id: int>#<evidence_name: string>&<evidence_description: string>&1&<evidence_image_name: string>&##%**  (evidence loads one at a time)  
+C: **AE#1#%**  
+S: **EI#...#%**  
+C: **AE#2#%**  
+...  
+S: **EM#<music_id: int>#<music_name: string>#...#% (music is also loaded in packs of 10)**  
+C: **AM#1#%**  
+S: **EM#...#%**  
+C: **AM#2#%**  
+...  
+S: **CharsCheck#<char_id: int>#...#%** (same size as character list, 0 = free, -1 = taken)  
+S: **OPPASS#{<mod_pass: hex>}#%** (an obsolete artifact of the disastrous security of old AO servers, still used on AO clients 1.8 and lower to display a guard checkbox in the client)  
+S: **DONE#%**  
+
+A sample can be found here(todo: add link)
   
 ## Loading 2.0 ##
 
