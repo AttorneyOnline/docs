@@ -66,7 +66,7 @@ Designed to be *much* faster than Loading 1.0, most noticably on slow connection
 C: **askchaa#%**  
 S: **SI#<char_list_length: int>#<evidence_list_length: int>#<music_list_length: int>#%**  
 C: **RC#%**  
-S: **SC#<char_name: string>[&<char_description: string]#...#%** (contains the entire server character list)  
+S: **SC#<char_name: string>[&<char_description: string>]#...#%** (contains the entire server character list)  
 C: **RM#%**  
 S: **SM#<music_name: string>#...#%** (same as characters)  
 C: **RD#%** ~(rainbow dash is best pony)~  
@@ -88,6 +88,7 @@ For the most part, communication between clients happens this way. There are chi
 
 IC messages, (abbreviation for "In-character") are the kind of messages sent with a character, an animation and many other modifiers. There is a total of 14 arguments, which makes the packet a bit complex. To make this a bit more manageable, there is a redundant newline for every argument. These are not present in the actual packet.
 
+C:
 MS#  
 chat#  
 <pre_emote: string>#  
@@ -104,6 +105,8 @@ chat#
 <char_id2/flip: int>#  
 <realization: int>#  
 <text_color: int>#  
+
+S: (same, although may be slightly modified depending on server software and config)
   
 For more information on valid arguments and client behavior, see [this](https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D)
 
@@ -114,6 +117,84 @@ OOC messages, (abbreviation for "Out-of-character") are simple messages with a n
 CT#<name: string>#<message: string>#%
 
 # Music
+
+C: **MC#<songname: string>#<char_id: int>#%**  
+S: (same)
+
+Some servers support a looping feature where a song is played continuously, without receiving client music requests.
+
+# Judge commands
+
+In-game, characters in the "jud" position have some special abilities.  
+  
+## Witness Testimony/Cross Examination
+
+These are animated gifs that display in the playing area that facilitate gameplay. They are often shortened to WTCE.  
+  
+C: **RT#testimony1/testimony2#%** (testimony1 is WT, testimony2 is CE)  
+S: (same)
+
+## Penalty bars
+
+There are two penalty bars in the client, which are changed by this judge command.  
+  
+C: **HP#1/2#0-10#%** (1 is the defense bar, 2 is the prosecution bar)
+S: (same)
+
+# Backgrounds
+
+The client knows which background it should use based on this packet. Is often a part of the connection/loading process.
+
+S: **BN#<background_name: string>#%**
+
+# Moderator commands
+
+## Call mod
+
+A command anyone can send, this alerts all mods on guard with a sound cue.  
+  
+C: ZZ#%  
+S: ZZ#%
+
+## IP list
+
+Moderators have a utility to list all the characters connected along with their IP addresses.  
+OOC command: /ip  
+  
+S: **IL#<ip: string>|<char_name: string>|<char_id: int>|...#%** (extended to include all connected clients)  
+
+## Muting
+
+Prevents a client from sending IC messages. The server should enforce this serverside.  
+OOC command: /mute <char_name: string>/<char_id: int>/-1(everyone)  
+  
+S: **MU#<char_id: int>#%** (mutes client with corresponding char_id)  
+  
+Unmuting is the same, except the header is UM instead of MU.
+
+## Kicking
+
+Disconnects a client from the server.  
+OOC command: /kick <char_name: string>/<char_id: int>  
+  
+S: **KK#<char_id: int>#%**
+
+## Banning
+
+The ultimate penalty. Disconnects and prevents client from reconnecting.  
+OOC command: /ban <char_name: string>/<char_id: int>  
+  
+S: **KB#<char_id: int>#%**  
+  
+There is another packet associated with banning. The server should send this when a banned client attempts to connect;  
+  
+S: **BD#%**  
+  
+This properly informs the client as to why a connection fails.
+
+
+
+
 
 
   
