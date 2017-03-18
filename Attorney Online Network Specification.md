@@ -82,6 +82,30 @@ For the most part, communication between clients happens this way. There are chi
   
 ## IC messages
 
+IC messages, (abbreviation for "In-character) are the kind of messages sent with a character, an animation and many other modifiers. There is a total of 14 arguments, which makes the packet a bit complex. To make this a bit more manageable, there is a redundant newline for every argument. These are not present in the actual packet.
+
+MS#  
+chat#  
+<pre_emote: string>#  
+<character: string>#  
+<emote: string>#  
+<message: unicode_string>#  
+<side: string>#  
+<sfx-name: string>#  
+<emote_modifier: int>#  
+<char_id: int>#  
+<sfx-delay: int>#  
+<shout_modifier: int>#  
+<evidence: int>#  
+<char_id2/flip: int>#  
+<realization: int>#  
+<text_color: int>#  
+  
+For more information on valid arguments and client behavior, see [https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D](this.)
+
+  
+
+
 
   
 
