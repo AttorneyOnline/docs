@@ -76,13 +76,18 @@ S: **DONE#%**
   
 What's important to note here is that since the character and music lists often are way too large for a single packet, TCP chops it into smaller ones. It is the client's responsiblity to piece them together on their end.(TCP makes sure that the segments will be handled in the correct order)  
 
+# Character picking
+
+C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#%**  (there's strictly speaking no need to verify player id serverside)  
+S: **PV#<player_id:  int>#CID#<char_id: int>#%**
+
 # Messaging
 
 For the most part, communication between clients happens this way. There are chiefly two message types, IC messages and OOC messages.  
   
 ## IC messages
 
-IC messages, (abbreviation for "In-character) are the kind of messages sent with a character, an animation and many other modifiers. There is a total of 14 arguments, which makes the packet a bit complex. To make this a bit more manageable, there is a redundant newline for every argument. These are not present in the actual packet.
+IC messages, (abbreviation for "In-character") are the kind of messages sent with a character, an animation and many other modifiers. There is a total of 14 arguments, which makes the packet a bit complex. To make this a bit more manageable, there is a redundant newline for every argument. These are not present in the actual packet.
 
 MS#  
 chat#  
@@ -102,6 +107,15 @@ chat#
 <text_color: int>#  
   
 For more information on valid arguments and client behavior, see [this](https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D)
+
+## OOC messages
+
+OOC messages, (abbreviation for "Out-of-character") are simple messages with a name and message associated with them. They're used by servers to convey information and by users to not interrupt ongoing gameplay.  
+  
+CT#<name: string>#<message: string>#%
+
+# Music
+
 
   
 
