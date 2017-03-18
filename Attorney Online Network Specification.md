@@ -66,7 +66,7 @@ Designed to be *much* faster than Loading 1.0, most noticably on slow connection
 C: **askchaa#%**  
 S: **SI#<char_list_length: int>#<evidence_list_length: int>#<music_list_length: int>#%**  
 C: **RC#%**  
-S: **SC#<char_name: string>#...#%** (contains the entire server character list)  
+S: **SC#<char_name: string>[&<char_description: string]#...#%** (contains the entire server character list)  
 C: **RM#%**  
 S: **SM#<music_name: string>#...#%** (same as characters)  
 C: **RD#%** ~(rainbow dash is best pony)~  
@@ -79,8 +79,7 @@ What's important to note here is that since the character and music lists often 
 # Character picking
 
 C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#%**  (there's strictly speaking no need to verify player id serverside)  
-S: **PV#<player_id:  int>#CID#<char_id: int>#%**
-
+S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicated that a character was successfully picked
 # Messaging
 
 For the most part, communication between clients happens this way. There are chiefly two message types, IC messages and OOC messages.  
