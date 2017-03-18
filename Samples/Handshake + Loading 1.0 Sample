@@ -4,7 +4,7 @@ S: "HI#serverD#v1300.146#%"
 S: "ID#243#v1300.146#%"
 C: "ID#AO2#2.3.0#%"
 S: "PN#8#100#%"
-C: "askchaa#%"
+C: "askchaa#%" (is typically sent when the "connect" button is pressed in the client)
 S: "SI#100#18#468#%"
 C: "askchar2#%"
 S: "CI#0#Phoenix&No description&3&1,2,9,&&0&#1#AthenaSOJ&No description&3&1,2,9,&&0&#2#Young Mia&No description&3&1,2,9,&&0&#3#Calisto&No description&3&1,2,9,&&0&#4#HoboDef&No description&3&1,2,9,&&0&#5#Layton&No description&4&1,2,9,16,&&0&#6#Raymond&No description&3&1,2,9,&&0&#7#Ryuunosuke&No description&3&1,2,9,&&0&#8#Asougi&No description&3&1,2,9,&&0&#9#Apollo&No description&3&1,2,9,&&0&##%"
