@@ -149,6 +149,13 @@ The client knows which background it should use based on this packet. Is often a
 
 S: **BN#<background_name: string>#%**
 
+# Keep alive
+
+The client should have some indication as to when the server stops responding. That is where the CH packet comes in, which should be sent by the client at regular intervals, and receive an appropriate response from the server.  
+  
+C: **CH#<char_id: int>#%**  
+S: **CHECK#%**
+
 # Moderator commands
 
 ## Call mod
