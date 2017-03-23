@@ -91,7 +91,7 @@ For the most part, communication between clients happens this way. There are chi
 IC messages, (abbreviation for "In-character") are the kind of messages sent with a character, an animation and many other modifiers. There is a total of 14 arguments, which makes the packet a bit complex. To make this a bit more manageable, there is a redundant newline for every argument. These are not present in the actual packet.
 
 C:
-MS#  
+**MS#  
 chat#  
 <pre_emote: string>#  
 <character: string>#  
@@ -106,8 +106,7 @@ chat#
 <evidence: int>#  
 <char_id2/flip: int>#  
 <realization: int>#  
-<text_color: int>#  
-
+<text_color: int>#%**  
 S: (same, although may be slightly modified depending on server software and config)
   
 For more information on valid arguments and client behavior, see [this](https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D)
