@@ -6,7 +6,7 @@ The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO clients co
 
 AO = Attorney Online  
 char = character, as in the game character, not the char datatype  
-type(x) = an array of type separated by x: typextypextype
+type(x) = an array of type separated by x: typextypextype  
 C = client  
 S = server  
 [x] = x is an optional argument(usually used by version 2.3.0+)  
