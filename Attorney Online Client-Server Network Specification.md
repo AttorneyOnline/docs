@@ -1,6 +1,6 @@
 # Network Specification  #
 
-The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO connect and communicate with servers.
+The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO clients connect and communicate with servers.
 
 ## Legend ##
 
