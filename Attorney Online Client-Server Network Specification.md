@@ -92,7 +92,7 @@ IC messages, (abbreviation for "In-character") are the kind of messages sent wit
 
 C:
 **MS#  
-chat#  
+chat/0/1# (0 = no desk, 1 = desk)  
 <pre_emote: string>#  
 <character: string>#  
 <emote: string>#  
