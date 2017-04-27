@@ -148,6 +148,27 @@ The client knows which background it should use based on this packet. Is often a
 
 S: **BN#<background_name: string>#%**
 
+# Evidence
+
+The Attorney Online 2.4.0 client and later support the usage of evidence. It is worth noting that the evidence type has three attributes: name, description and image. The network usage is such;
+
+## Add
+
+C: **PE#<name: string>#<description: string>#<image: string>#%**  
+S: **LE#<name: string>&<description: string>&<image: string>#...#%** (the entire evidence list is sent here)   
+
+## Remove
+
+C: **DE#<id: int>#%**  
+S: **LE#<name: string>&<description: string>&<image: string>#...#%**
+
+## Edit
+
+C: **EE#<id: int>#<name: string>#<description: string>#<image: string>#%**  
+S: **LE#<name: string>&<description: string>&<image: string>#...#%**
+
+Take note that the LE header(i.e. the whole evidence list) is sent from the server every time the client does an operation. This is to ensure synchronization between clients. The server should also send its associated evidence list when the client joins a server or an area.
+
 # Keep alive
 
 The client should have some indication as to when the server stops responding. That is where the CH packet comes in, which should be sent by the client at regular intervals, and receive an appropriate response from the server.  
