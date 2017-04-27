@@ -169,6 +169,8 @@ S: ZZ#%
 Moderators have a utility to list all the characters connected along with their IP addresses.  
 OOC command: /ip  
   
+Using this is optional. The server might opt to send a string formatted with newlines instead.  
+  
 S: **IL#<ip: string>|<char_name: string>|<char_id: int>|...#%** (extended to include all connected clients)  
 
 ## Muting
