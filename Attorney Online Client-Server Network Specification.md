@@ -18,7 +18,7 @@ The handshake is largely the same regardless of server and client version.
   
 C: (ordinary TCP handshake)  
 S: **decryptor#{<decryptor: hex>}#%** (the argument is decrypted using **unsigned integer** 322 as decryption key)  
-(all headers the from the client are encrypted from here on)*  
+(all headers from the client are encrypted from here on)*  
 C: **HI#<unique_hardware_id: string>#%**  
 S: **ID#<player_id: int>#<software: string>[#<version: int.int.int>]#%** (player id is largely unused)  
 [C: **ID#<software: string>#<version: int.int.int>#%**]  
