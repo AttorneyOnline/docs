@@ -182,8 +182,10 @@ S: **CHECK#%**
 
 A command anyone can send, this alerts all mods on guard with a sound cue.  
   
-C: ZZ#%  
-S: ZZ#%
+C: **ZZ#%**  
+S: **ZZ#<call_mod_message: string>#%**  
+  
+The call mod message typically contains information such as which character called, which area called from and their IP. This depends on the serverside implementation, though.
 
 ## IP list
 
