@@ -73,7 +73,8 @@ character Franziska {
 			length = 30 frames          # this could also be 'seconds' or 'milliseconds'
 			sub talking {               # Subsprites automatically inherit parent properties.
 				path prefix "(b)"
-			}
+				length = default		# Automatically redefines it to the 'default' system value;
+			}                           # in this case, the number of frames of the GIF itself.
 		}
 		animated bow {
 			path = "franziska-bow.gif"
@@ -85,6 +86,7 @@ character Franziska {
 		static stare {
 			path = "stare.png"
 		}
+		animated damage from "damage.sprite"
 		# ...
 	}
 
@@ -109,7 +111,7 @@ character Franziska {
 			icon : my-icon('3')
 			damage
 			sweating
-			sfx = "system/stab"
+			sfx = system "stab"
 		}
 		mad {
 			icon : my-icon('4')
@@ -121,7 +123,7 @@ character Franziska {
 			icon : my-icon('5')
 			bow
 			sweating
-			sfx = "system/stab"
+			sfx = system "stab"
 		}
 
 		# One-line multi-elements allowed with brackets
@@ -132,7 +134,7 @@ character Franziska {
 			whip
 			withwhip
 			desk = on
-			sfx = "system/stab"
+			sfx = system "stab"
 		}
 
 		# When you bind a game variable to a macro or pattern, you can invoke
