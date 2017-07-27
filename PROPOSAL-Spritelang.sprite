@@ -1,0 +1,154 @@
+/*
+# Spritelang
+
+Spritelang is a domain-specific language designed for easy definition of sprite data and
+associated data.
+
+It is parsed on sprite load and uses a syntax vaguely reminiscent of JSON.
+However, it includes a parametrized macro system that allows fast redefinition of
+names and paths. It also includes a sprite system with a rudimentary inheritance system.
+
+## But INI files were so much shorter! Why use this?
+
+The only reason INI files are so much shorter than Spritelang files is because
+AO has historically made many assumptions about the structure of your sprite.
+As time has told, this does not work for all characters and content. If anything,
+character creators should have first-class support for flexible animations.
+
+## But you could have just improved on the old system. Why did you just decide to make
+   a new language?
+
+In a way, you were already learning a language by using INI files. In fact, INI files
+*are* a domain-specific language. A domain-specific language is one that is used for a
+specific application rather than for general programming. You could not write an entire
+operating system with Spritelang, but you can still script animations for your characters
+with the language. It fits a specific purpose in mind and gains efficiency from that
+specialization.
+
+After quite an amount of research, I found that there did not exist a language for defining sprites,
+which is a shame, so I decided to just make my own.
+
+## Maybe there's a reason people never made "a language for defining sprites."
+
+If there is, I have not found (a good) one.
+
+## Are you going to force your dumb, undeveloped ideas onto everyone? Do you even KNOW how to make sprites?
+   You think you're so cool, but you can't even make good arguments! AO should burn to the ground along with
+   everyone who uses this pile of unfixable crap!
+
+Calm down, sir. Let's take a look at an (unfinished) showcase of what this language can do.
+*/
+
+# This is a comment.
+// This is also a comment.
+/* C-style block comments are also allowed for familiarity. */
+
+# Schemas help tell the game what kind of sprite definitions it is interpreting.
+# Some games might use different formats, so for compatibility, one game might decide
+# to be able to read other schemas, even though variables and blocks may produce
+# different behavior.
+schema AttorneyOnline3
+
+# A pattern is essentially an extended version of a macro.
+# Their scope is unlimited.
+pattern my-icon(n) {
+		# Macros are defined as custom variables.
+		# You can optionally provide it arguments to be used later in
+		# preprocessing.
+		macro path(n, s) = "emotions/button{n}-{s}.png"
+
+		# These are italicized to remind you that they are used by the game/schema.
+		normal = path(n, "off")
+		pressed = path(n, "on")
+}
+
+character Franziska {
+	side = "pro"
+	gender = "female"
+	
+	sprites {
+		animated tisk {
+			path = "franziska-tisk.gif"
+			path prefix "(a)"
+			length = 30 frames          # this could also be 'seconds' or 'milliseconds'
+			sub talking {               # Subsprites automatically inherit parent properties.
+				path prefix "(b)"
+			}
+		}
+		animated bow {
+			path = "franziska-bow.gif"
+			path prefix "(a)"
+			length = 40 frames
+			# One-line subsprites are okay, too, but only one element allowed
+			sub talking: path prefix "(b)"
+		}
+		static stare {
+			path = "stare.png"
+		}
+		# ...
+	}
+
+	emotions {
+		wigglenormal {
+			icon {
+				normal = "button1-off.png"
+				pressed = "button1-on.png"
+			}
+			tisk
+			ready
+			desk = on
+		}
+		thinking {
+			# If you find it uncomfortable to push double quotes because of your keyboard layout,
+			# you may use single quotes as well for strings.
+			icon : my-icon('2')         # Here, we apply the pattern we defined above.
+			bow
+			clench
+		}
+		damaged {
+			icon : my-icon('3')
+			damage
+			sweating
+			sfx = "system/stab"
+		}
+		mad {
+			icon : my-icon('4')
+			damage
+			mad
+			desk = on
+		}
+		sweating {
+			icon : my-icon('5')
+			bow
+			sweating
+			sfx = "system/stab"
+		}
+
+		# One-line multi-elements allowed with brackets
+		mocking { icon: my-icon('6'), bow, tisk, desk = on }
+
+		whipthatsuckertodeath {
+			icon : my-icon('7')
+			whip
+			withwhip
+			desk = on
+			sfx = "system/stab"
+		}
+
+		# When you bind a game variable to a macro or pattern, you can invoke
+		# the variable without having to state the name of the macro.
+		bind icon my-icon
+
+		holdingwhip {
+			icon('8')
+			bow
+			withwhip
+		}
+
+		zoom {
+			icon('9')
+			bow
+			zoom
+		}
+	}
+}
