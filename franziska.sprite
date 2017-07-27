@@ -1,0 +1,37 @@
+schema AttorneyOnline
+pattern AOImage {
+	path = "franziska-{_name_}.gif"
+	path prefix "(a)"
+	sub talking: path prefix "(b)"
+}
+pattern AOIcon(n) {
+	macro path(p) = "emotions/button{n}_{p}.png"
+	normal = path("off")
+	pressed = path("on")
+}
+character Franziska {
+	side = "pro"
+	gender = "female"
+	sprites {
+		bind animated AOImage
+		animated bow
+		animated damage: sfx: {delay 0.4s, system "stab"}
+		animated ha
+		animated tisk
+		animated whip: sfx: {delay 0.4s, system "whip"}
+		animated zoom
+	}
+	emotions {
+		bind icon AOIcon
+		wigglenormal: {icon("1"), desk = on, tisk, ready}
+		thinking:     {icon("2"), bow, clench}
+		damaged:      {icon("3"), damage, sweating}
+		satisfied:    {icon("4"), bow, ha}
+		mad:          {icon("5"), desk = on, damage, mad}
+		sweating:     {icon("6"), bow, sweating}
+		mocking:      {icon("7"), desk = on, bow, tisk}
+		whipthatsuckertodeath: {icon("8"), desk = on, whip, withwhip}
+		holdingwhip:  {icon("9"), bow, withwhip}
+		zoom:         {icon("10"), bow, zoom}
+	}
+}
