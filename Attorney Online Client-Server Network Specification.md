@@ -225,16 +225,26 @@ S: **BD#%**
   
 This properly informs the client as to why a connection fails.
 
+# Master server
 
+C: `askforservers#%` (returns first server on the list starting from 0)
+S: first server
+C: `SR#[id]#%`
+S: server of index `[id]`
 
-
-
-
-  
-
-
-
-  
-
-
-  
+|Function     |Message       |Direction|
+|-------------|--------------|---------|
+|Chat|`CT#[username]#[message]#%`|Server|
+|Version check|`VC#%`|Server|
+|Client version (AO2)|`ID#[client software]#[version]#%`|Server|
+|Hard drive ID (or anything in practice)|`HI#[hdid]#%`|Server|
+|Get all servers (AO2)|`ALL#%`|Server|
+|Server entry (paginated) (AO1)|`SN#[entry number]#[ip]#[server version]#[port]#[name]#[desc]#%`|Client|
+|Server entry (all) (AO2)|`ALL#[[name]&[desc]&[ip]&[port]#]%`|Client|
+|Server version|`SV#[version]#%`|Client|
+|Ping|`PING#%`|Server|
+|Server not advertised (reply to ping)|`NOSERV#%`|Advertiser|
+|Heartbeat|`SCC#[port]#[name]#[description]#[server software]#%`|Server|
+|Heartbeat success|`PSDD#0#%`|Advertiser|
+|Keepalive|`CHECK#%`|Advertiser|
+|Global ban|`DOOM#%`|Client|
