@@ -69,7 +69,7 @@ C: **RC#%**
 S: **SC#<char_name: string>[&<char_description: string>]#...#%** (contains the entire server character list)  
 C: **RM#%**  
 S: **SM#<music_name: string>#...#%** (same as characters)  
-C: **RD#%** ~(rainbow dash is best pony)~  
+C: **RD#%**
 S: **CharsCheck#<char_taken: int>#...#%** (same size as character list, 0 = free, -1 = taken)  
 S: **OPPASS#{<mod_pass: hex>}#%** (again, not the actual modpass)  
 S: **DONE#%**  
