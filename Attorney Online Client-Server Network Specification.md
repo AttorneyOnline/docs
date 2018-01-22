@@ -121,10 +121,10 @@ CT#<name: string>#<message: string>#%
 
 Escape codes allows characters like '#' to be sent in messages.
 
-'%' = "\<percent\>"  
-'#' = "\<num\>"  
-'$' = "\<dollar\>"  
-'&' = "\<and\>"  
+'%' = `<percent>`  
+'#' = `<num>`  
+'$' = `<dollar>`  
+'&' = `<and>`  
 
 # Music
 
