@@ -117,6 +117,15 @@ OOC messages, (abbreviation for "Out-of-character") are simple messages with a n
   
 CT#<name: string>#<message: string>#%
 
+## Escape Codes
+
+Escape codes allows characters like '#' to be sent in messages.
+
+'%' = `<percent>`  
+'#' = `<num>`  
+'$' = `<dollar>`  
+'&' = `<and>`  
+
 # Music
 
 C: **MC#<songname: string>#<char_id: int>#%**  
