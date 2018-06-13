@@ -12,6 +12,26 @@ S = server
 [x] = x is an optional argument(usually used by version 2.3.0+)  
 {x} = x is encrypted using the "fantacrypt" algorithm  
 
+# FantaCrypt#
+
+AO1.x encrypted the headers of the packets sent by the client to the server.
+FantaCrypt works by seeding a PRNG with a known value (the decryption key).
+The lower two bytes are the only ones that are used in the PRNG.
+Additionally, only the upper byte of those two bytes are used in the cipher.
+The current key is XOR'ed with the current byte.
+To get the key value for the next byte, the byte and key are added together.
+Then, some multiplication and addition is done to that value.
+This PRNG behavior is similar to a Linear Congruential Generator.
+Finally, everything but the lower two bytes are discarded.
+However, there was a major flaw in the implementation of FantaCrypt.
+The server supplies the client with the initial key to use for every packet.
+Thus, it is totally vulnerable to a replay atttack.
+Many clients do not actually even implement the FantaCrypt algorithm, but instead
+they use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet.
+This is because the 'decryptor' packet argument is the key to be used, but encrypted.
+The decryptor value is always encrypted with a magic number key value: 322 decimal.
+FantaCrypt is only used in messages sent by the client to the server, as well.
+
 # Handshake #
 
 The handshake is largely the same regardless of server and client version.  
