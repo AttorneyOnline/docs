@@ -12,7 +12,7 @@ S = server
 [x] = x is an optional argument(usually used by version 2.3.0+)  
 {x} = x is encrypted using the "fantacrypt" algorithm  
 
-# FantaCrypt#
+# FantaCrypt #
 
 AO1.x encrypted the headers of the packets sent by the client to the server.
 FantaCrypt works by seeding a PRNG with a known value (the decryption key).
