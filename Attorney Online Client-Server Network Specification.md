@@ -153,6 +153,12 @@ S: (same)
 
 Some servers support a looping feature where a song is played continuously, without receiving client music requests.
 
+# Area Switching
+
+C: **MC#<areaname: string>#<char_id: int>#%**
+
+The MC packet is reused for this purpose. Once received, the server will start sending messages from the corrisponding area name. If the area (or music) does not exist, the packet is ignored.
+
 # Judge commands
 
 In-game, characters in the "jud" position have some special abilities.  
