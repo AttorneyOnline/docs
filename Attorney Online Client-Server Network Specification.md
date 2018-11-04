@@ -157,7 +157,7 @@ Some servers support a looping feature where a song is played continuously, with
 
 C: **MC#<areaname: string>#<char_id: int>#%**
 
-The MC packet is reused for this purpose. Once received, the server will send 2 HP's, BN, and LE packets, to load the area info. After that, it will start sending messages from the new area. If the area does not exist, the packet is ignored.
+The MC packet is reused for this purpose. Once received the server will send 2 HP's, 1 BN, and 1 LE packets, to load the area info. After that it will start sending messages from the new area. If the area does not exist the packet is ignored.
 
 # Judge commands
 
