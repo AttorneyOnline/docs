@@ -1,6 +1,6 @@
 # Network Specification  #
 
-The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO clients connect and communicate with servers.
+The following document covers how 1.7.5, 1.8 and 2.3.0+ versions of AO clients connect and communicate with servers.
 
 ## Legend ##
 
@@ -11,6 +11,26 @@ C = client
 S = server  
 [x] = x is an optional argument(usually used by version 2.3.0+)  
 {x} = x is encrypted using the "fantacrypt" algorithm  
+
+# FantaCrypt #
+
+AO1.x encrypted the headers of the packets sent by the client to the server.
+FantaCrypt works by seeding a PRNG with a known value (the decryption key).
+The lower two bytes are the only ones that are used in the PRNG.
+Additionally, only the upper byte of those two bytes are used in the cipher.
+The current key is XOR'ed with the current byte.
+To get the key value for the next byte, the byte and key are added together.
+Then, some multiplication and addition is done to that value.
+This PRNG behavior is similar to a Linear Congruential Generator.
+Finally, everything but the lower two bytes are discarded.
+However, there was a major flaw in the implementation of FantaCrypt.
+The server supplies the client with the initial key to use for every packet.
+Thus, it is totally vulnerable to a replay atttack.
+Many clients do not actually even implement the FantaCrypt algorithm, but instead
+they use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet.
+This is because the 'decryptor' packet argument is the key to be used, but encrypted.
+The decryptor value is always encrypted with a magic number key value: 322 decimal.
+FantaCrypt is only used in messages sent by the client to the server, as well.
 
 # Handshake #
 
@@ -69,7 +89,7 @@ C: **RC#%**
 S: **SC#<char_name: string>[&<char_description: string>]#...#%** (contains the entire server character list)  
 C: **RM#%**  
 S: **SM#<music_name: string>#...#%** (same as characters)  
-C: **RD#%**
+C: **RD#%**  
 S: **CharsCheck#<char_taken: int>#...#%** (same size as character list, 0 = free, -1 = taken)  
 S: **OPPASS#{<mod_pass: hex>}#%** (again, not the actual modpass)  
 S: **DONE#%**  
@@ -81,7 +101,7 @@ A sample can be found [here](https://github.com/Attorney-Online-Engineering-Task
 # Character picking
 
 C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#%**  (there's strictly speaking no need to verify player id serverside)  
-S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicated that a character was successfully picked
+S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicates that a character was successfully picked)
 # Messaging
 
 For the most part, communication between clients happens this way. There are chiefly two message types, IC messages and OOC messages.  
@@ -117,12 +137,27 @@ OOC messages, (abbreviation for "Out-of-character") are simple messages with a n
   
 CT#<name: string>#<message: string>#%
 
+## Escape Codes
+
+Escape codes allows characters like '#' to be sent in messages.
+
+'%' = `<percent>`  
+'#' = `<num>`  
+'$' = `<dollar>`  
+'&' = `<and>`  
+
 # Music
 
 C: **MC#<songname: string>#<char_id: int>#%**  
 S: (same)
 
 Some servers support a looping feature where a song is played continuously, without receiving client music requests.
+
+# Area Switching
+
+C: **MC#<areaname: string>#<char_id: int>#%**
+
+The MC packet is reused for this purpose. Once received the server will send 2 HP's, 1 BN, and 1 LE packets, to load the area info. After that it will start sending messages from the new area. If the area does not exist the packet is ignored.
 
 # Judge commands
 
