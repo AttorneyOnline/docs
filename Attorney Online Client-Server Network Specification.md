@@ -1,6 +1,6 @@
 # Network Specification  #
 
-The following document covers how 1.7.5, 1.8 an 2.3.0+ versions of AO clients connect and communicate with servers.
+The following document covers how 1.7.5, 1.8 and 2.3.0+ versions of AO clients connect and communicate with servers.
 
 ## Legend ##
 
@@ -101,7 +101,7 @@ A sample can be found [here](https://github.com/Attorney-Online-Engineering-Task
 # Character picking
 
 C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#%**  (there's strictly speaking no need to verify player id serverside)  
-S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicated that a character was successfully picked
+S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicates that a character was successfully picked)
 # Messaging
 
 For the most part, communication between clients happens this way. There are chiefly two message types, IC messages and OOC messages.  
