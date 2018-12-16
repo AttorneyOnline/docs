@@ -126,8 +126,50 @@ chat/0/1# (0 = no desk, 1 = desk)
 <evidence: int>#  
 <char_id2/flip: int>#  
 <realization: int>#  
-<text_color: int>#%**  
-S: (same, although may be slightly modified depending on server software and config)
+<text_color: int>#  
+[<showname: string>]#  
+[<other_charid: int>]#  
+[<self_offset: int>]#  
+[<noninterrupting_preanim: int>]#%**  
+
+S: 
+**MS#  
+chat/0/1# (0 = no desk, 1 = desk)  
+<pre_emote: string>#  
+<character: string>#  
+<emote: string>#  
+<message: unicode_string>#  
+<side: string>#  
+<sfx-name: string>#  
+<emote_modifier: int>#  
+<char_id: int>#  
+<sfx-delay: int>#  
+<shout_modifier: int>#  
+<evidence: int>#  
+<char_id2/flip: int>#  
+<realization: int>#  
+<text_color: int>#  
+[<showname: string>]#  
+[<other_charid: int>]#  
+[<other_name: string>]#  
+[<other_emote: string>]#  
+[<self_offset: int>]#  
+[<other_offset: int>]#  
+[<other_flip: int>]#  
+[<noninterrupting_preanim: int>]#%**  
+
+The following features have been added in 2.6 when the Case Café Custom Client features had been merged:
+
+- `showname`: If used, this will show a custom showname for the character.
+- `other_charid`: The character ID of the person the users wishes to pair up with.
+- `other_name`: This is actually the literal name of the character -- that is, its folder. This is sent over in case the user's pair is iniswapping.
+- `other_emote`: The emote the user's pair was doing. Note that by default, zooms (that are correctly defined as such) do not update this value, so a pair of zooms will not appear. Zooms also enjoy special privileges, in that (assuming they are correctly defined, again) they make the pair disappear in the client, and get centered.
+- `self_offset`: the percentage, going from `-100` (one whole screen's worth to the left) to `100` (one whole screen's worth to the right).
+- `other_offset`: The user's pair's `self_offset`, basically.
+- `other_flip`: The user's pair's `char_id2/flip`, basically.
+- `noninterrupting_preanim`: If `1`, the preanimation plays at the same time as the text goes.
+
+Note that servers may overwrite specific values of this message. For example, disemvoweling and shaking modify your text, and `/force_nonint_pres` forces your preanims to be noninuterrupting.
   
 For more information on valid arguments and client behavior, see [this](https://github.com/Attorney-Online-Engineering-Task-Force/Attorney-Online-Client-Remake/wiki/In-character-chat-messages%5BMS%5D)
 
@@ -135,7 +177,14 @@ For more information on valid arguments and client behavior, see [this](https://
 
 OOC messages, (abbreviation for "Out-of-character") are simple messages with a name and message associated with them. They're used by servers to convey information and by users to not interrupt ongoing gameplay.  
   
-CT#<name: string>#<message: string>#%
+**CT#<name: string>#<message: string>#[<is_from_server: int>]#%**
+
+The `is_from_server` packet piece is an addition that arrived with 2.6. 
+If it is a `1`, the message sender's name is coloured with the `ooc_server_color` as defined in the current theme. 
+Else, it is coloured with `ooc_default_color`. 
+This is used to make pretending to be the server and leaving messages in its name harder.
+
+Generally, only the server adds the `is_from_server` part. It does not care if the client adds it, it will just ignore that.
 
 ## Escape Codes
 
@@ -148,16 +197,89 @@ Escape codes allows characters like '#' to be sent in messages.
 
 # Music
 
-C: **MC#<songname: string>#<char_id: int>#%**  
+C: **MC#<songname: string>#<char_id: int>#[<showname: string>]#%**  
 S: (same)
 
 Some servers support a looping feature where a song is played continuously, without receiving client music requests.
+
+In 2.6, a `showname` piece is added to the end of this packet. This is for the chatlog to be able to correctly store and show who changed the music, so that it does not end up confusing when it does not refer to the user's showname, but their character's name.
 
 # Area Switching
 
 C: **MC#<areaname: string>#<char_id: int>#%**
 
 The MC packet is reused for this purpose. Once received the server will send 2 HP's, 1 BN, and 1 LE packets, to load the area info. After that it will start sending messages from the new area. If the area does not exist the packet is ignored.
+
+## Area updates
+
+In 2.6, there is one further packet concerning areas.
+
+S: 
+**ARUP#0#<area1_p: int>#<area2_p: int>#...#%  
+ARUP#1#<area1_s: string>##<area2_s: string>#...#%  
+ARUP#2#<area1_cm: string>##<area2_cm: string>#...#%  
+ARUP#3#<area1_l: string>##<area2_l: string>#...#%**  
+
+Where the first argument is:
+
+- `0`, if it talks about playercount,
+- `1`, if it talks about the area's status,
+- `2`, if it talks about the CM(s) of the area, and
+- `3`, if it talks about the area being locked or not.
+
+This packet has as many pieces (plus one) as there are areas on the server. It describes, in order, every area's given property. As an example, a packet of `ARUP#0#4#3#7#2#0#0#%` would mean that:
+
+- There are 4 players in the first area (or in the zeroth area, actually)
+- There are 3 in the second,
+- There are 7 in the third,
+- There are 2 in the fourth,
+- And 0 in the last two.
+
+# Casing
+
+In the 2.6 update, a few packets have been introduced to supply casing needs.
+
+## Case preferences update
+
+This packet updates the user's casing alert preferences.
+
+C: **SETCASE#<caselist: string>#<will_cm: int>#<will_def: int>#<will_pro: int>#<will_judge: int>#<will_jury: int>#<will_steno: int>#%**
+
+Where the arguments are:
+
+- `caselist`: The list of cases this user is willing to host (assuming they are also willing to CM) (not used currently),
+- `will_cm`: `1` if the user is willing to host cases (not used currently),
+- `will_def`: `1` if the user is willing to defend a case / play as a defence attorney (or a co-defence attorney),
+- `will_pro`: `1` if the user is willing to prosecute a case / play as a prosecutor (or a co-prosecutor),
+- `will_judge`: `1` if the user is willing to judge a case,
+- `will_jury`: `1` if the user is willing to be a member of the jury in a case,
+- `will_steno`: `1` if the user is willing to be the stenographer of a case.
+
+It is up to the server to decide what to do with this packet. By default, tsuserver stores the information gathered from it, and uses it to decide whom to alert.
+
+Additionally, this packet is sent everytime the "Casing" tickbox on the game area (not the "Casing" tickbox in the Settings!) is turned on or off. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (signalling that the user does not want to play as anything).
+
+## Case alert
+
+This packet sends an alert to players about a case needing participants.
+
+C: **CASEA#<casetitle: string>#<need_def: int>#<need_pro: int>#<need_judge: int>#<need_jury: int>#<need_steno: int>#%**  
+S: **CASEA#<message: string>#<need_def: int>#<need_pro: int>#<need_judge: int>#<need_jury: int>#<need_steno: int>#%**
+
+Where the arguments are:
+
+- `casetitle`: The title of the case being played,
+- `message`: This could also equal to the title of the case, but the server may choose to decorate it -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
+- `need_def`: `1` if the user needs a defence attorney,
+- `need_pro`: `1` if the user needs a prosecutor,
+- `need_judge`: `1` if the user needs a judge,
+- `need_jury`: `1` if the user needs jurors,
+- `need_steno`: `1` if the user need a stenographer.
+
+The above packet, when sent from clientside, requests the server to sent the serverside packet to all the targeted users. 
+The default behaviour is that users are targeted if they marked themselves as at least one of the roles the announcement is looking for using the `SETCASE` packet. 
+There is a default cooldown of a minute on a case alert.
+If a `CASEA` packet arrives to the client, the client plays the given SFX at the `case_call` line in the current theme's `courtroom_sounds.ini`, if one exists.
 
 # Judge commands
 
@@ -167,8 +289,12 @@ In-game, characters in the "jud" position have some special abilities.
 
 These are animated gifs that display in the playing area that facilitate gameplay. They are often shortened to WTCE.  
   
-C: **RT#testimony1/testimony2#%** (testimony1 is WT, testimony2 is CE)  
+C: **RT#testimony1/testimony2/[judgeruling]#[<variant: int>]#%** (testimony1 is WT, testimony2 is CE, judgeruling is Not Guilty / Guilty)  
 S: (same)
+
+`judgeruling` and its `variant`s are a 2.6 addition.
+The `variant` part only comes in when it concerns `judgeruling`. 
+Variant `0` is Not Guilty, variant `1` is Guilty.
 
 ## Penalty bars
 
@@ -243,16 +369,20 @@ Unmuting is the same, except the header is UM instead of MU.
 ## Kicking
 
 Disconnects a client from the server.  
-OOC command: /kick <char_name: string>/<char_id: int>  
+OOC command: /kick <char_name: string>/<char_id: int> [reason: string]
   
-S: **KK#<char_id: int>#%**
+S: **KK#<char_id: int>#<reason: string>#%**
+
+In 2.6, a new `reason` field is added. Though it is not necessary in the calling of the OOC command (it is replaced with `N/A` if left empty), the packet requires one.
 
 ## Banning
 
 The ultimate penalty. Disconnects and prevents client from reconnecting.  
-OOC command: /ban <char_name: string>/<char_id: int>  
+OOC command: /ban <char_name: string>/<char_id: int> [reasong: string]
   
-S: **KB#<char_id: int>#%**  
+S: **KB#<char_id: int>#<reason: string>#%**  
+
+In 2.6, a new `reason` field is added. Though it is not necessary in the calling of the OOC command (it is replaced with `N/A` if left empty), the packet requires one.
   
 There is another packet associated with banning. The server should send this when a banned client attempts to connect;  
   
