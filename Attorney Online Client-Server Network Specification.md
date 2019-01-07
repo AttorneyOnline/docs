@@ -386,16 +386,18 @@ In 2.6, a new `reason` field is added. Though it is not necessary in the calling
   
 There is another packet associated with banning. The server should send this when a banned client attempts to connect;  
   
-S: **BD#%**  
+S: **BD#<reason: string>#%**  
   
 This properly informs the client as to why a connection fails.
 
+In 2.6.1, a new `reason` field is added. It is required when sending this packet.
+
 # Master server
 
-C: `askforservers#%` (returns first server on the list starting from 0)
-S: first server
-C: `SR#[id]#%`
-S: server of index `[id]`
+C: `askforservers#%` (returns first server on the list starting from 0)  
+S: first server  
+C: `SR#[id]#%`  
+S: server of index `[id]`  
 
 |Function     |Message       |Direction|
 |-------------|--------------|---------|
