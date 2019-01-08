@@ -378,7 +378,7 @@ In 2.6, a new `reason` field is added. Though it is not necessary in the calling
 ## Banning
 
 The ultimate penalty. Disconnects and prevents client from reconnecting.  
-OOC command: /ban <char_name: string>/<char_id: int> [reasong: string]
+OOC command: /ban <char_name: string>/<char_id: int> [reason: string]
   
 S: **KB#<char_id: int>#<reason: string>#%**  
 
