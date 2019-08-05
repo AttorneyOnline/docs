@@ -100,7 +100,8 @@ A sample can be found [here](https://github.com/Attorney-Online-Engineering-Task
 
 # Character picking
 
-C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#<password: string>#%**
+C: **PW#<password: string>#%**
+C: **CC#<player_id: int>#<char_id: int>#<unique_hardware_id: string>#%**
 (there's strictly speaking no need to verify player id serverside)
 The password parameter is new in 2.7. In 1.7, character passwords were checked clientside and after that the feature was never reimplemented.
 S: **PV#<player_id:  int>#CID#<char_id: int>#%** (the server indicates that a character was successfully picked)
