@@ -21,6 +21,19 @@ You will encounter certain technical limitations of GIF rather quickly. There ar
 - The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this.
 - Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended.
 
+Once you have created your emotes, you will need to make button icons for them in an `emotions` folder inside the character folder. For each emote, there must be an "on" and "off" button named `buttonX_[off/on].png`, where X is the emote number which you will specify in the `char.ini` below. Icons should be 40x40.
+
+The character icon is always named `char_icon.png` and is 60x60 in size.
+
+You may also wish to customize the interjections, each of which have a fixed name:
+
+- "Hold it!" (`holdit.wav`)
+- "Take that!" (`takethat.wav`)
+- "Objection!" (`objection.wav`)
+- Custom (`custom.wav`)
+
+Since WAV files are very large, the Ogg (`.ogg`) format may also be used.
+
 ### 2. Creating a `char.ini`
 
 What is ini-editing, exactly? Ini-editing is modifying a character's .ini file to change the way it interacts with the game client. Failed attempts at ini-editing may cause errors, which nobody likes. This guide aims to cover every aspect of ini-editing as in-depth as possible.
