@@ -12,7 +12,7 @@ This compendium is split into four main sections:
  - Creating Content
    - [Characters](authoring/characters.md)
    - Themes
-   - Backgrounds
+   - [Backgrounds](authoring/backgrounds.md)
    - Other Content
  - Hosting a Server
    - tsuserver3
