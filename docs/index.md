@@ -5,12 +5,12 @@ Welcome to Attorney Online! Attorney Online is an off-the-cuff courtroom drama s
 This compendium is split into four main sections:
  
  - Playing the Game
-   - Installation (desktop only)
+   - [Installation (desktop only)](gameplay/install.md)
    - The Interface
    - Casing
    - Other Roleplaying Games
  - Creating Content
-   - Characters
+   - [Characters](authoring/characters.md)
    - Themes
    - Backgrounds
    - Other Content
