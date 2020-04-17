@@ -18,6 +18,6 @@ This compendium is split into four main sections:
    - tsuserver3
    - serverD (legacy)
  - Development Guide
-   - Roadmap
+   - [Roadmap](development/roadmap.md)
    - Network Protocol
    - Using Qt
