@@ -32,6 +32,8 @@ You may also wish to customize the interjections, each of which have a fixed nam
 - "Objection!" (`objection.wav`)
 - Custom (`custom.wav`)
 
+If you want additional objections, see the "Additional Custom Objections" chapter at the end of the documentation.
+
 Since WAV files are very large, the Ogg (`.ogg`) format may also be used.
 
 ### 2. Creating a `char.ini`
@@ -230,7 +232,8 @@ README.txt
 This reduces the cognitive load on the player, as all they have to do is drag and drop the contents of the zip file into their AO folder.
 
 ###  Additional Custom Objections
-In order to have more than 1 custom objection and allow the player to use them by right clicking the custom button, you need to create a folder named "custom_objections". The character folder should look like this:
+You can more than 1 custom objections enabling the player to use them by right clicking the custom button.
+In order to do this, you need to create a folder named "custom_objections" with the final character folder looking like this:
 ```
 characters/
   MyCharacter1/
