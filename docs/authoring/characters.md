@@ -210,7 +210,7 @@ This is not perfect, but it makes gifs adjustable by just changing char.inis.
 
 The issue with too fast gifs is also present here, but has less of an impact (typically a character will blink and move their mouths a bit faster). Unfortunately, this has to be fixed manually.
 
-### 3. Distributing
+### Distributing
 
 Generally, characters are distributed in a bundle. A typical zip file looks like this:
 
@@ -228,6 +228,20 @@ README.txt
 ```
 
 This reduces the cognitive load on the player, as all they have to do is drag and drop the contents of the zip file into their AO folder.
+
+###  Additional Custom Objections
+In order to have more than 1 custom objection and allow the player to use them by right clicking the custom button, you need to create a folder named "custom_objections". The character folder should look like this:
+```
+characters/
+  MyCharacter1/
+    custom.gif
+    custom.wav
+    custom_objections/
+      AwsomecustomObj.gif
+      AwsomecustomObj.wav
+      sadcustom.apng
+      sadcustom.wav
+```
 
 I believe that pretty much sums it up. Happy ini-editing!
 
