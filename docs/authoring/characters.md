@@ -130,7 +130,7 @@ Under `[SoundN]`, we see a list of numbers equalling something else. The leftmos
 
 `[SoundT]` is essentially the delay before the sound effect is played. The only significant value here is `7 = 4`, which is once again the `deskslam` emote. As you probably know, the `deskslam` sound is only supposed to play when hands actually come in contact with the desk and not in the start of the animation; the '4' value makes sure of that. Again, each tick is 60 milliseconds.
 
-### Sample INI file
+#### Sample INI file
 
 ```ini
 [Options]
@@ -196,13 +196,13 @@ number = 13
 14 = 1
 ```
 
-### Special quirks
+#### Special quirks
 
-#### Ordering
+##### Ordering
 
 Putting `[Time]` after `[Emotions]`, for example, will not work. (TODO: is this still true?)
 
-#### Preanims
+##### Preanims
 
 There are certain issues with preanims (shorthand for preanimations) related to characters being specifically made for a certain timing in AO1. To properly explain how AO2 deals with this, let me introduce two terms; real and full time.
 
@@ -220,11 +220,11 @@ Putting `<preanim> = 0` in `[Time]` will make the gif play once at normal speed.
 
 This is not perfect, but it makes gifs adjustable by just changing char.inis.
 
-#### Talking and idle animations
+##### Talking and idle animations
 
 The issue with too fast gifs is also present here, but has less of an impact (typically a character will blink and move their mouths a bit faster). Unfortunately, this has to be fixed manually.
 
-### Distributing
+### 3. Distributing
 
 Generally, characters are distributed in a bundle. A typical zip file looks like this:
 
