@@ -32,9 +32,21 @@ You may also wish to customize the interjections, each of which have a fixed nam
 - "Objection!" (`objection.wav`)
 - Custom (`custom.wav`)
 
-If you want additional objections, see the "Additional Custom Objections" chapter at the end of the documentation.
+You can have more than 1 custom interjection, which the player can use by right-clicking the "Custom" button. To do this, you need to place the interjection audio and animation in `custom_objections`. The folder structure will look like this:
 
-Since WAV files are very large, the Ogg (`.ogg`) format may also be used.
+```
+characters/
+  MyCharacter1/
+    custom.gif
+    custom.wav
+    custom_objections/
+      awesomecustomobj.gif
+      awesomecustomobj.wav
+      sadcustom.apng
+      sadcustom.wav
+```
+
+Since WAV files are very large, the Ogg (`.ogg`) format may also be used for any sound effect or interjection. The audio codec may be Vorbis or Opus.
 
 ### 2. Creating a `char.ini`
 
@@ -230,21 +242,6 @@ README.txt
 ```
 
 This reduces the cognitive load on the player, as all they have to do is drag and drop the contents of the zip file into their AO folder.
-
-###  Additional Custom Objections
-You can more than 1 custom objections enabling the player to use them by right clicking the custom button.
-In order to do this, you need to create a folder named "custom_objections" with the final character folder looking like this:
-```
-characters/
-  MyCharacter1/
-    custom.gif
-    custom.wav
-    custom_objections/
-      AwsomecustomObj.gif
-      AwsomecustomObj.wav
-      sadcustom.apng
-      sadcustom.wav
-```
 
 I believe that pretty much sums it up. Happy ini-editing!
 
