@@ -16,7 +16,7 @@ You're here because you want to make a character! There are three simple steps t
 
 Find or create content that you wish to make emotes out of. The minimum recommended size of your content is 256x192. Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme) it will still work.
 
-  
+> **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
 That being said, here are some things to keep in mind:
 
@@ -177,7 +177,7 @@ side = wit
 - `chat`: (optional, defaults to your theme) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use. 
 	- For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`. 
 	- Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
-> **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page.
+> **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
 - `chat_font`: (optional, defaults to either the one specified by `chat` or the one in your theme, in that order) modifies the font your message text will be in. This is clientside, so don't get any ideas about screwing with people by setting it to Comic Sans - you'll only be screwing with yourself!
 - `chat_size`: (optional, same defaults as `chat_font`) modifies the size of your message text. Like `chat_font`, this is also clientside.
 - `shouts`: (optional, defaults to your theme and is overridden by your character files) modifies the interjections your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
