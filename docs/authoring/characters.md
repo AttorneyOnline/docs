@@ -18,7 +18,7 @@ Find or create content that you wish to make emotes out of. The minimum recommen
 
 > **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
-That being said, here are some things to keep in mind:
+That being said, here are some things to keep in mind when the viewport is not the same size as your content:
 
 - If the viewport is the exact same size (or an exact multiple of) as the content, it will be scaled using **nearest neighbor** filtering. This makes sure that sprite art doesn't get blurry.
 
@@ -42,7 +42,7 @@ You will need to name your emotes in a specific convention to be detected by the
 
   
 
-You will encounter certain technical limitations of GIF rather quickly. There are two animation formats other than GIF which are fully supported as of release 2.8.4:
+You will encounter certain technical limitations of GIF rather quickly. There are two animation formats other than GIF which are fully supported:
 
   
 
@@ -206,7 +206,7 @@ Emote **comments** will display in the dropdown menu and on the emote button its
 
   
 
-The next section defines the **preanimation**, or the animation played before the character actually starts speaking. If there is none, a placeholder called `-` is typically used. These can be either in the root of the character folder or stored in a subfolder (generally named "anim"). To use a preanimation file from a subfolder, you must prefix the file name with the name of the folder. For example, a preanimation of `anim/deskslam` would correspond to this structure:
+The next section defines the **preanimation**, or the animation played before the character actually starts speaking. If there is none, a placeholder called `-` is typically used. Preanimations can be either in the root of the character folder or stored in a subfolder (generally named `anim`). To use a preanimation file from a subfolder, you must prefix the file name with the name of the folder. For example, a preanimation of `anim/deskslam` would correspond to this structure:
 ```
 char.ini
 anim/
@@ -236,7 +236,7 @@ The engine will also scan for other supported file formats, such as `.apng` and 
 
 If no animations are found for an emote, the engine will fall back to static emotes. Static emotes don't use `(a)`/`(b)` prefixes - instead, an static emote named `cough` would be expected to be in the file `cough.png`.
 
-If you're the type who likes to organize, you can also place files in **subfolders**. To use subfolder mode, you simply have to prefix your emotes with a forward slash (`/`). For `(a)`/`(b)` type emotes in subfolder mode, create two folders named `(a)` and `(b)` and place your prefix-less files in the appropriate folders. For example, the emote `/angry` will search for a file named `angry.gif` in `(a)/` and `(b)/` for idle and talking respectively.
+If you're the type who likes to organize, you can also place files in subfolders, though the method is somewhat different from that of preanimations. To use subfolders, you must prefix your emotes with a forward slash (`/`). For `(a)`/`(b)` type emotes in subfolder mode, create two folders named `(a)` and `(b)` and place your prefix-less files in the appropriate folders. For example, the emote `/angry` will search for a file named `angry.gif` in `(a)/` and `(b)/` for idle and talking respectively.
 
 As another example, the emote `/def/thinking` will search for a set of files arranged like this:
 ```
@@ -264,7 +264,7 @@ The modifier value controls pre-animations, sounds, and zooms. The valid inputs 
 - `6`: Same as 5, except it will *always* play pre-animations.
 
 ##### `<deskmod>` (optional)
-Introduced in release 2.6, this boolean value allows an emote to either force the desk/witness stand/overlay to be displayed, or force it to disappear. This takes precedence over all other factors affecting desk visibility.
+This option allows an emote to either force the desk/witness stand/overlay to be displayed, or force it to disappear. This takes precedence over all other factors affecting desk visibility.
 - `0`: Forcibly hide the desks while this emote is displayed.
 
 - `1`: Forcibly show the desks while this emote is displayed.
