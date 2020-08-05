@@ -287,7 +287,7 @@ Sounds specified will be searched for under `sounds/general/`. Subfolders can be
 
 The only value here is `7 = 4`, which is the `deskslam` emote. As you probably know, the `deskslam` sound is only supposed to play when hands actually come in contact with the desk and not in the start of the animation; the '4' value makes sure of that. Again, each tick is 60 milliseconds, so a value of `4` causes a wait of 240 milliseconds before the sound is played.
 
-  
+> **TODO:** Add documentation for `[SoundL]`, `[_FrameSFX]`, `[_FrameRealization]`, and `[_FrameScreenshake]`. - in1tiate
 
 #### Sample INI file
 
