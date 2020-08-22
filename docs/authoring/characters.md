@@ -8,18 +8,24 @@ You're here because you want to make a character! There are three simple steps t
 
 ### 1. Collecting Content
 
-Find or create content that you wish to make emotes out of. The minimum recommended size of your content is 256x192. Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme) it will still work.
+First, you need to find or create content that you wish to make emotes out of.
+
+#### Sizing
+
+The minimum recommended size of your content is 256x192. Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
 
 > **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
-That being said, here are some things to keep in mind when the viewport is not the same size as your content:
+That being said, here are some basic rules when the viewport is not the same size as your content:
 
-- If the viewport is the exact same size (or an exact multiple of) as the content, it will be scaled using **nearest neighbor** filtering. This makes sure that sprite art doesn't get blurry.
+- If the viewport's size is an exact multiple of that of the content, it will be scaled using **nearest neighbor** filtering. This makes sure that sprite art doesn't get blurry.
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
 - Content with an aspect ratio wider than the viewport will be centered and cropped at the left and right edges.
 - Content with an aspect ratio narrower than the viewport will simply be centered within it.
 
-When in doubt, make your content on a 4:3 canvas for the best all-around compatibility.
+We recommend that you make your content on a 4:3 canvas for the best all-around compatibility.
+
+#### Animations
 
 Emotes may be static or animated. For animated emotes, you'll want to make two animations: an _idle_ animation and a _talking_ animation. Some emotes may also have a _preanimation_.
 
@@ -30,9 +36,13 @@ You will encounter certain technical limitations of GIF rather quickly. There ar
 - The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this. *APNG is recommended for 2D characters.*
 - Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended. *Lossy WebP is recommended for 3D characters with high frame rates.*
 
+#### Buttons
+
 Once you have created your emotes, you will need to make button icons for them in an `emotions` folder inside the character folder. For each emote, there must be an "on" and "off" button named `buttonX_[off/on].png`, where X is the emote number which you will specify in the `char.ini` below. Icons should be 40x40.
 
 The character icon is always named `char_icon.png` and is 60x60 in size.
+
+#### Interjections (shouts)
 
 You may also wish to customize the **interjections**, each of which have a fixed name:
 
@@ -59,21 +69,46 @@ Since WAV files are very large, the Ogg Vorbis (`.ogg`) or Ogg Opus (`.opus`) fo
 
 ### 2. Creating a `char.ini`
 
-What is **ini-editing**, exactly? Ini-editing is modifying a character's .ini file to change the way it interacts with the game client. Failed attempts at ini-editing may cause errors, which nobody likes. This guide aims to cover every aspect of ini-editing as in-depth as possible.
+#### Sample INI file
 
 ```ini
 [Options]
-name = Joe
-side = wit
+name = Phoenix
+showname = Wright
+needs_showname = true
+side = def
+gender = male
+chat = aa
+chat_font = Igiari
+chat_size = 10
+shouts = aa
+effects = default/effects
+realization = realization
 
 [Emotions]
-1 = <comment>#<preanim>#<emote>#<mod>
+number = 13
+1 = pointing#-#pointing#0#
+2 = thinking#-#thinking#0#
+3 = normal#-#normal#0#
+4 = confident#-#confident#0#
+5 = paper#-#document#0#
+6 = headshake#nope#-#1#
+7 = slam#deskslam#handsondesk#1#
+8 = nod#nodding#normal#1#
+9 = damage#ohshit#sweating#1#
+10 = zoom#-#zoom#5#
+11 = bashful#-#sheepish#1#
+12 = coffee#phoenix-chugs#phoenix-coffee#1#
+13 = despair#sweating#phoenix-emo#1#
 
 [SoundN]
-1 = <sfx-name>
+7 = sfx-deskslam
+9 = sfx-stab2
+13 = sfx-deskslam
+14 = sfx-deskslam
 
 [SoundT]
-1 = <sfx-delay>
+7 = 4
 ```
 
 #### `[Options]`
@@ -82,7 +117,9 @@ side = wit
 
 - `showname` (optional): this name will appear on the nameplate whenever the character speaks, however it is fetched locally which means if you write `showname = FINIX RAIT`, only you will see it. If you want to change your nameplate for everyone, type it in the "Showname" field while playing.
 
-- `side`: modifies where in the courtroom the character appears. This is commonly called your **pos**, or **position**. Valid options:
+- `needs_showname` (optional, defaults to true): if false, use a blank showname.
+
+- `side` (defaults to "wit"): modifies where in the courtroom the character initially appears. This is commonly called your **pos**, or **position**. Valid options:
   	- `def` - Defense
     - `pro` - Prosecution
     - `hld` - Helper defense
@@ -92,16 +129,23 @@ side = wit
     - `jur` - Juror (since 2.6)
     - `sea` - Seance (since 2.6)
 
-- `gender`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**). Blip sound effects can be located in `sounds/blips/` (recommended) or `sounds/general/` with the prefix `sfx-blip` (not recommended). For example: - `gender = male` will first try to find a sound file named "male" under `sounds/blips/`. If it can't find one... - ...it will instead search for a file named "sfx-blipmale" under `sounds/general/`. This is purely to maintain compatibility with pre-2.8.4 servers' file bases - if you're adding a new blip, use `sounds/blips/`!
+- `gender`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**).
+  Blip sound effects can be located in `sounds/blips/` (recommended) or `sounds/general/` with the prefix `sfx-[blip]` (not recommended).
 
-- `chat`: (optional, defaults to your theme) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use. - For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`. - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
+- `chat`: (optional, defaults to your theme's chatbox) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use.
+  - For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`.
+  - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
   > **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
 
 - `chat_font`: (optional, defaults to either the one specified by `chat` or the one in your theme, in that order) modifies the font your message text will be in. This is clientside, so don't get any ideas about screwing with people by setting it to Comic Sans - you'll only be screwing with yourself!
 
 - `chat_size`: (optional, same defaults as `chat_font`) modifies the size of your message text. Like `chat_font`, this is also clientside.
 
-- `shouts`: (optional, defaults to your theme and is overridden by your character files) modifies the interjections your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
+- `shouts`: (optional, defaults to your theme and is overridden by your character files) modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
+
+- `effects` (optional, defaults to `default/effects`): specifies misc folder to search for overlay effects, like `chat` and `shouts`.
+
+- `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
 #### `[Emotions]`
 
@@ -173,6 +217,7 @@ The modifier value controls pre-animations, sounds, and zooms. The valid inputs 
 
 This option allows an emote to either force the desk/witness stand/overlay to be displayed, or force it to disappear. This takes precedence over all other factors affecting desk visibility.
 
+- `-1`: Forcibly show the desks while this emote is displayed, except for `jud`/`hld`/`hlp` positions.
 - `0`: Forcibly hide the desks while this emote is displayed.
 - `1`: Forcibly show the desks while this emote is displayed.
 
@@ -182,50 +227,64 @@ Under `[SoundN]`, we see a list of numbers equaling something else. The leftmost
 
 Sounds specified will be searched for under `sounds/general/`. Subfolders can be used in much the same way as preanimations - see the relevant section above.
 
+Note that the sound effect will only play when the "Pre" tick is checked, even if the emote has no valid preanimation.
+
 #### `[SoundT]`
 
 `[SoundT]` is essentially the delay before the sound effect is played. The input it takes is in **ticks**, which are 60 milliseconds each. The minimum value is `0`, which also happens to be the default. If there is no sound, or if the sound should be played instantly, it's safe to omit the line entirely.
 
 The only value here is `7 = 4`, which is the `deskslam` emote. As you probably know, the `deskslam` sound is only supposed to play when hands actually come in contact with the desk and not in the start of the animation; the '4' value makes sure of that. Again, each tick is 60 milliseconds, so a value of `4` causes a wait of 240 milliseconds before the sound is played.
 
-> **TODO:** Add documentation for `[SoundL]`, `[_FrameSFX]`, `[_FrameRealization]`, and `[_FrameScreenshake]`. - in1tiate
+#### `[SoundL]`
 
-#### Sample INI file
+This section defines which emotes (by emote number) should loop sound effects, or which sound effects in general (by name) should loop.
+
+For each entry, the sound effect will loop if the value is `1`.
+
+```
+[SoundL]
+1 = 0
+2 = 1
+sound = 1
+```
+
+### `[<emote>_FrameSFX]`
+
+This section lists the sound effects that should play at certain frame numbers, for a specified emote.
 
 ```ini
-[Options]
-name = Phoenix
-side = def
-gender = male
-chat = AA
-chat_font = Igiari
-chat_size = 16
-shouts = AA
+# Replace pre-minigun with the reference to the animation for which to set this frame sfx to
+[pre-minigun_FrameSFX]
+# Frame number for which the specified sound should play.
+10 = soj-sarge-hatch
+18 = soj-sarge-extend
+40 = soj-sarge-cock
+50 = soj-sarge-shoot
+180 = soj-sarge-retract
+204 = soj-armie-drone-set
+212 = soj-sarge-hatch
+```
 
-[Emotions]
-number = 13
-1 = pointing#-#pointing#0#
-2 = thinking#-#thinking#0#
-3 = normal#-#normal#0#
-4 = confident#-#confident#0#
-5 = paper#-#document#0#
-6 = headshake#nope#-#1#
-7 = slam#deskslam#handsondesk#1#
-8 = nod#nodding#normal#1#
-9 = damage#ohshit#sweating#1#
-10 = zoom#-#zoom#5#
-11 = bashful#-#sheepish#1#
-12 = coffee#phoenix-chugs#phoenix-coffee#1#
-13 = despair#sweating#phoenix-emo#1#
+### `[<emote>_FrameRealization]`
 
-[SoundN]
-7 = sfx-deskslam
-9 = sfx-stab2
-13 = sfx-deskslam
-14 = sfx-deskslam
+This section defines at which frame a screen flash should occur. (The realization sound effect is not played.)
 
-[SoundT]
-7 = 4
+```ini
+# Replace pre-salute with the reference to the animation for which to set this screen flash to
+[pre-salute_FrameRealization]
+# Frame 32 screen flash = true. Does not play realization sound effect.
+32 = 1
+```
+
+### `[<emote>_FrameScreenshake]`
+
+This section defines at which frame a screen shake should occur.
+
+```ini
+# Replace pre-salute with the reference to the animation for which to set this screenshake to
+[pre-salute_FrameScreenshake]
+# Frame 32 screenshake = true.
+32 = 1
 ```
 
 #### Special quirks
