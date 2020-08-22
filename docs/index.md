@@ -13,9 +13,9 @@ This compendium is split into four main sections:
    - [Characters](authoring/characters.md)
    - [Themes](authoring/themes.md)
    - [Backgrounds](authoring/backgrounds.md)
-   - Other Content
+   - [Other Content](authoring/other.md)
  - Hosting a Server
-   - tsuserver3
+   - [tsuserver3](server/tsuserver.md)
    - serverD (legacy)
  - Development Guide
    - [Roadmap](development/roadmap.md)
