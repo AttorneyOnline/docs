@@ -7,7 +7,7 @@ This compendium is split into four main sections:
  - Playing the Game
    - [Installation (desktop only)](gameplay/install.md)
    - The Interface
-   - Casing
+   - [Casing](gameplay/casing.md)
    - Other Roleplaying Games
  - Creating Content
    - [Characters](authoring/characters.md)
