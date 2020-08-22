@@ -11,7 +11,7 @@ This compendium is split into four main sections:
    - Other Roleplaying Games
  - Creating Content
    - [Characters](authoring/characters.md)
-   - Themes
+   - [Themes](authoring/themes.md)
    - [Backgrounds](authoring/backgrounds.md)
    - Other Content
  - Hosting a Server

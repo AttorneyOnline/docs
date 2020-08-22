@@ -4,7 +4,7 @@ Here, we'll explain how to install Attorney Online. Installation is only require
 
 ### What's the Difference?
 
-- **Platform support.** webAO works on anything with a web browser, including Android, iOS, Chrome OS, smart TVs, and probably cars. Desktop AO only works on Windows, Linux, and unofficially macOS.
+- **Platform support.** webAO works on anything with a web browser, including Android, iOS, Chrome OS, smart TVs, and probably cars. Desktop AO works natively on Windows, Linux, and macOS.
 - **Server support.** Desktop AO can access any server, whereas webAO can only access servers that support it.
 - **Animation timing.** Desktop AO has perfect frame timing; webAO has various timing issues in its animations that disturb the experience.
 - **Asset downloading.** Desktop AO allows you to install your own assets locally; webAO downloads a curated list automatically.
@@ -15,7 +15,7 @@ In summary, while webAO is more convenient, the desktop version of AO is more ro
 
 ### Downloading
 
-Install the client from the [website](https://aceattorneyonline.com/). You can also try the launcher, which does the extracting step for you (todo: download link).
+Install the client from the [website](https://aceattorneyonline.com/). The launcher is recommended, which does the extracting step for you and will automatically install updates whenever they are available.
 
 ### Extracting
 

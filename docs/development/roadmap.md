@@ -2,12 +2,6 @@
 
 Okay, the roadmap... I'm sure everyone wants to know what direction AO intends to go. These are mostly long-term goals; short-term goals are usually done on impulse and usually just involve putting things that already exist together.
 
-### Add the launcher to the website
-
-The launcher is fairly mature and will greatly benefit players for subsequent releases, but it has not been added to the website because there is no spot for it.
-
-**In need of:** Web designer
-
 ### Finish the ui-files branch
 
 This is a full revamp of the UI and network code. There will be some things that won't be refactored before release, such as asset loading, the character parser, and the viewport (which is essentially the core engine of the game).
@@ -46,7 +40,7 @@ The core engine is rather limited in a few ways:
   - WT/CE.
 - Only a fixed number of layers.
 
-It has been overloaded, and events really need to be split into smaller sub-events.
+It has been overloaded, and events really need to be split into smaller sub-events using a timeline model.
 
 Eventually, this will also require a major modification of the network protocol in order to be fully leveraged.
 
@@ -54,4 +48,4 @@ Eventually, this will also require a major modification of the network protocol 
 
 Using Capcom assets is an immense legal liability. Distancing ourselves from the *Ace Attorney* franchise by pushing the legal burden of nonfree assets to server hosts and distributing the base game as 100% fan content opens business opportunities.
 
-One important opportunity is publishing the game on Steam as an original fan game. From my knowledge of marketing, I actually think that adding a small price to the game would increase perceived value than if it were simply free, *even if the game remained open-source*. It also introduces a revenue stream that can be used to fund artists for original content. But as there are many moving parts to sales - and this implies the formation of a company, during a time when I would already be working a full-time software job - I would otherwise assume that it would enter Steam free.
+This is also an opportunity to publish the game on Steam as an original fan game. From my knowledge of marketing, I personally believe that adding a small price to the game may increase perceived value than if it were simply free, even if the game remained open-source. It also introduces a revenue stream that can be used to fund artists for original content. But as there are many moving parts to sales - and this implies the formation of a company, during a time when I would already be working a full-time software job - I would otherwise assume that it would enter Steam free.

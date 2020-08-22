@@ -27,8 +27,8 @@ You will need to name your emotes in a specific convention to be detected by the
 
 You will encounter certain technical limitations of GIF rather quickly. There are two animation formats other than GIF which are fully supported:
 
-- The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this.
-- Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended.
+- The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this. *APNG is recommended for 2D characters.*
+- Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended. *Lossy WebP is recommended for 3D characters with high frame rates.*
 
 Once you have created your emotes, you will need to make button icons for them in an `emotions` folder inside the character folder. For each emote, there must be an "on" and "off" button named `buttonX_[off/on].png`, where X is the emote number which you will specify in the `char.ini` below. Icons should be 40x40.
 
@@ -55,7 +55,7 @@ characters/
         sadcustom.ogg
 ```
 
-Since WAV files are very large, the Ogg (`.ogg`) format may also be used for any sound effect or interjection. The audio codec may be Vorbis or Opus.
+Since WAV files are very large, the Ogg Vorbis (`.ogg`) or Ogg Opus (`.opus`) format may also be used for any sound effect or interjection. *Opus is recommended.*
 
 ### 2. Creating a `char.ini`
 

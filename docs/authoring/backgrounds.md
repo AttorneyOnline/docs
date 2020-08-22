@@ -18,11 +18,11 @@ If the background is AO2-compatible (read: contains `stand.png`, `defensedesk.pn
 
 ### AO1 backgrounds
 
-For the sake of documentation, it should be noted that some AO1-era backgrounds use different dimensions for desks.
-
-Even though we previously stated that Fanat is Russian, these desks are named in Spanish (`bancodefensa`, `bancoacusacion`, `estrado`). Why? I don't know!
+For the sake of documentation, it should be noted that some AO1-era backgrounds use different dimensions for desks. These desks' filenames are in Spanish (`bancodefensa`, `bancoacusacion`, `estrado`). (Why are they in Spanish if Fanat is Russian? I don't know!)
 
 Instead of taking a full 256x192, these desks have a limited resolution, and the height of the viewport is also limited to just less than 192 pixels.
+
+Support for these AO1-style desks was dropped in 2.8.
 
 ---
 
