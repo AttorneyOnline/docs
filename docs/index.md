@@ -14,9 +14,7 @@ This compendium is split into four main sections:
    - [Themes](authoring/themes.md)
    - [Backgrounds](authoring/backgrounds.md)
    - [Other Content](authoring/other.md)
- - Hosting a Server
-   - [tsuserver3](server/tsuserver.md)
-   - serverD (legacy)
+ - [Hosting a Server](server/tsuserver.md)
  - Development Guide
    - [Roadmap](development/roadmap.md)
    - [Network Protocol](development/network.md)
