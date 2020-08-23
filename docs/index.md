@@ -19,5 +19,5 @@ This compendium is split into four main sections:
    - serverD (legacy)
  - Development Guide
    - [Roadmap](development/roadmap.md)
-   - Network Protocol
+   - [Network Protocol](development/network.md)
    - Using Qt
