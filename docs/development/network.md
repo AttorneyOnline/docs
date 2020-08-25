@@ -67,7 +67,7 @@ The server sends an array of numbers representing whether or not each character 
 `taken` may be one of the following:
 
 - `-1`: character is taken
-- Anything else: character is free
+- ` 0`: character is free
 
 #### Choose character
 
