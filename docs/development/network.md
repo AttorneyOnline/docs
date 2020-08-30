@@ -100,6 +100,8 @@ Introduced in 2.6:
 Introduced in 2.8:
 
 - `looping_sfx`: Enables looping SFX extensions for the in-character command.
+- `additive`: Enables additive text.
+- `effects`: Enables effect overlays.
 
 #### Player count
 
