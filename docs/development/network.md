@@ -2,6 +2,52 @@
 
 Attorney Online's network protocol is one with a rich and colorful past. It has mostly remained intact since AO1 due to a constant demand for backward compatibility; even to this day, AO1 clients are still able to find servers from the lobby and join a game.
 
+- [Network Protocol](#network-protocol)
+  - [Handshake](#handshake)
+    - [Hard drive ID](#hard-drive-id)
+    - [Client version information](#client-version-information)
+    - [Feature list](#feature-list)
+    - [Player count](#player-count)
+    - [Resource counts](#resource-counts)
+    - [Character list](#character-list)
+    - [Music list](#music-list)
+    - [Final confirmation](#final-confirmation)
+  - [Character selection](#character-selection)
+    - [Taken characters](#taken-characters)
+    - [Choose character](#choose-character)
+  - [In-character commands](#in-character-commands)
+    - [In-character message](#in-character-message)
+    - [Background](#background)
+    - [Music](#music)
+    - [Penalty (health) bars](#penalty-health-bars)
+    - [Witness Testimony/Cross Examination (WT/CE)](#witness-testimonycross-examination-wtce)
+  - [Out-of-character message](#out-of-character-message)
+  - [Evidence](#evidence)
+    - [List](#list)
+    - [Add](#add)
+    - [Remove](#remove)
+    - [Edit](#edit)
+  - [Areas](#areas)
+    - [Switch area](#switch-area)
+    - [Area updates](#area-updates)
+  - [Casing](#casing)
+    - [Case preferences update](#case-preferences-update)
+    - [Case alert](#case-alert)
+  - [Moderator commands](#moderator-commands)
+    - [Call mod](#call-mod)
+    - [Kick](#kick)
+    - [Ban](#ban)
+  - [Keep alive](#keep-alive)
+  - [Escape codes](#escape-codes)
+  - [Obsolete](#obsolete)
+    - [FantaCrypt](#fantacrypt)
+    - [Slow loading](#slow-loading)
+    - [Mod password](#mod-password)
+    - [IP list](#ip-list)
+    - [Mute](#mute)
+- [Master server protocol](#master-server-protocol)
+  - [Paginated list (obsolete)](#paginated-list-obsolete)
+
 ### Handshake
 
 #### Hard drive ID
@@ -16,7 +62,39 @@ Sends the client's hard drive ID (supposedly a unique identifier) to the server 
 
 Sends the client name and version to the server.
 
-**Response:** Player count
+**Response:** Player count, feature list
+
+#### Feature list
+
+**Server:** `FL#{feature1}#{feature2}#...#%`
+
+Lists the features supported by the server, essentially acting as a list of feature flags.
+
+(The FL packet was introduced in 2.3.3; prior to 2.3.3, features depended on detecting a compatible server version.)
+
+Features introduced in 2.1.0 (the first AO2 release):
+
+- `yellowtext`: Enables the use of yellow text.
+- `flipping`: Enables the use of emote flipping.
+- `customobjections`: Enables the use of a single custom objection named `custom`.
+- `fastloading`: Enables the use of "fast loading" instead of the legacy loading protocol.
+- `noencryption`: Disables FantaCrypt for the remainder of the session.
+
+Introduced in 2.3 - 2.5:
+
+- `deskmod`: Allows forcing desk/no desk. Introduced in 2.3.2.
+- `evidence`: Enables evidence. Introduced in 2.4.0.
+
+Introduced in 2.6:
+
+- `cccc_ic_support`: Enables 2.6 extensions for the in-character command.
+- `arup`: Indicates that the server broadcasts area updates.
+- `casing_alerts`: Enables casing alerts.
+- `modcall_reason`: Enables calling moderators with a custom reason.
+
+Introduced in 2.8:
+
+- `looping_sfx`: Enables looping SFX extensions for the in-character command.
 
 #### Player count
 
@@ -24,7 +102,7 @@ Sends the client name and version to the server.
 
 Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
 
-#### More server information
+#### Resource counts
 
 **Client:** `askchaa#%`<br>
 **Server:** `SI#{char_cnt}#{evi_cnt}#{music_cnt}#%`
@@ -79,8 +157,10 @@ The client selects a character to use in the room. Note that `hdid` is an obsole
 If the character cannot be used, the server will not respond. Otherwise, the server responds with the character selected.
 
 > **Note:** A `PV` response may be sent at any time to force a character switch, and the character ID may not necessarily be the one requested by the player.
-  
-### In-character message
+
+### In-character commands
+
+#### In-character message
 
 **Client:**
 ```
@@ -244,25 +324,15 @@ All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+.
 
 > Note that servers may modify specific values of this message. For example, disemvoweling and shaking modify your text, and `/force_nonint_pres` forces your preanims to be noninterrupting. Therefore, to determine if your message was successfully sent, the character ID should be compared instead of the message text or the entire packet.
 
-### Out-of-character message
+#### Background
 
-**Client:** `CT#{name}#{message}#%`<br>
-**Server:** `CT#{name}#{message}#{is_from_server}#%`
+**Server:** `BN#{background}#%`
 
-Represents a simple message with name and text. OOC is used to convey information without interrupting ongoing gameplay.
+Sets the background of the viewport.
 
-`is_from_server` is an addition that arrived with 2.6. If `1`, the name is colored with the theme's designated OOC server color.
+Clients can set the background with a server chat command, such as `/bg`.
 
-### Escape codes
-
-Escape codes allows characters like '#' to be sent in messages.
-
-- `%`: `<percent>`
-- `#`: `<num>`
-- `$`: `<dollar>`
-- `&`: `<and>`
-
-### Music
+#### Music
 
 **Client:** `MC#{songname}#{char_id}#{showname}#%`<br>
 **Server:** same
@@ -273,7 +343,66 @@ Since 2.6, a `showname` piece is added at the end. This is for the chatlog to be
 
 Since 2.8, the track is expected to loop clientside. Before 2.8, the track was not expected to loop, and thus servers had to add a looping feature where the `MC` packet is sent to replay the track.
 
-### Switch area
+#### Penalty (health) bars
+
+**Client:** **HP#{bar}#{value}#%**<br>
+**Server:** same
+
+Updates the penalty bar. This is typically only allowed when the player is in the judge (`jud`) position.
+
+- **bar**: the bar to be updated
+  - `1`: defense bar (red bar)
+  - `2`: prosecution bar (blue bar)
+- **value**: the value to set the bar to (0-10)
+
+#### Witness Testimony/Cross Examination (WT/CE)
+  
+**Client:** `RT#{animation}#%`<br>
+**Server:** same
+
+Overlays a non-looping special animation. This is typically only allowed when the player is in the judge (`jud`) position.
+
+**animation** may be one of the following:
+
+- `testimony1` - "Witness Testimony"
+- `testimony2` - "Cross Examination"
+- `judgeruling#0` - "Not Guilty" (since 2.6)
+- `judgeruling#1` - "Guilty" (since 2.6)
+
+### Out-of-character message
+
+**Client:** `CT#{name}#{message}#%`<br>
+**Server:** `CT#{name}#{message}#{is_from_server}#%`
+
+Represents a simple message with name and text. OOC is used to convey information without interrupting ongoing gameplay.
+
+`is_from_server` is an addition that arrived with 2.6. If `1`, the name is colored with the theme's designated OOC server color.
+
+### Evidence
+
+Supported by 2.4 onward. Every evidence item has three attributes: name, description and image.
+
+> Note that the whole evidence list is broadcasted every time the client performs any evidence operation, to ensure synchronization between clients. The server also sends the evidence list when the client joins an area.
+
+#### List
+
+**Server:** `LE#{name}&{description}&{image}#...#%`
+
+#### Add
+
+**Client:** `PE#{name}#{description}#{image}#%`
+
+#### Remove
+
+**Client:** `DE#{id}#%`
+
+#### Edit
+
+**Client:** `EE#{id}#{name}#{description}#{image}#%`
+
+### Areas
+
+#### Switch area
 
 **Client:** `MC#{area_name}#{char_id}#%`
 
@@ -283,7 +412,7 @@ The server will typically reset the health bars, background, and evidence.
 
 If the specified area does not exist, the packet is ignored.
 
-### Area updates
+#### Area updates
 
 **Server:**
 - `ARUP#0#{area1_players}#{area2_players}#...#%`
@@ -313,7 +442,9 @@ For instance, a packet of `ARUP#0#4#3#7#2#0#0#%` would mean that:
 This packet was added in 2.6.
 
 
-### Case preferences update
+### Casing
+
+#### Case preferences update
 
 **Client:** `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
 
@@ -333,7 +464,7 @@ It is up to the server to decide what to do with this packet. By default, tsuser
 
 Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
 
-### Case alert
+#### Case alert
 
 **Client:** `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{need_steno}#%`<br>
 **Server:** same, except `{message}` instead of `{case_title}`
@@ -355,71 +486,6 @@ The above packet, when sent from clientside, requests the server to sent the ser
 Users are targeted if they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet).
 
 This packet may be rate-limited.
-
-### Room controls
-
-Characters in the judge (`jud`) position have some special courtroom abilities.
-  
-#### Witness Testimony/Cross Examination (WT/CE)
-  
-**Client:** `RT#{animation}#%`<br>
-**Server:** same
-
-Overlays a special animation.
-
-**animation** may be one of the following:
-
-- `testimony1` - "Witness Testimony"
-- `testimony2` - "Cross Examination"
-- `judgeruling#0` - "Not Guilty" (since 2.6)
-- `judgeruling#1` - "Guilty" (since 2.6)
-
-#### Penalty (health) bars
-
-**Client:** **HP#{bar}#{value}#%**<br>
-**Server:** same
-
-Updates the penalty bar.
-
-- **bar**: the bar to be updated
-  - `1`: defense bar (red bar)
-  - `2`: prosecution bar (blue bar)
-- **value**: the value to set the bar to (0-10)
-
-### Background
-
-**Server:** `BN#{background}#%`
-
-Sets the background of the viewport.
-
-### Evidence
-
-Supported by 2.4 onward. Every evidence item has three attributes: name, description and image.
-
-> Note that the whole evidence list is broadcasted every time the client performs any evidence operation, to ensure synchronization between clients. The server also sends the evidence list when the client joins an area.
-
-#### List
-
-**Server:** `LE#{name}&{description}&{image}#...#%`
-
-#### Add
-
-**Client:** `PE#{name}#{description}#{image}#%`
-
-#### Remove
-
-**Client:** `DE#{id}#%`
-
-#### Edit
-
-**Client:** `EE#{id}#{name}#{description}#{image}#%`
-
-### Keep alive
-  
-**Client:** `CH#<char_id: int>#%`<br>
-**Server:** `CHECK#%`
-
-Sent to ensure that the server and client are still alive. Some servers expect the client to send this packet as often as 10 seconds.
 
 ### Moderator commands
 
@@ -447,6 +513,22 @@ Notifies a client that they were kicked and banned.
 **Server:** `BD#{reason}#%`
   
 Notifies a client that they cannot join because they are banned.
+
+### Keep alive
+  
+**Client:** `CH#<char_id: int>#%`<br>
+**Server:** `CHECK#%`
+
+Sent to ensure that the server and client are still alive. Some servers expect the client to send this packet as often as 10 seconds.
+
+### Escape codes
+
+Escape codes allows characters like '#' to be sent in messages.
+
+- `%`: `<percent>`
+- `#`: `<num>`
+- `$`: `<dollar>`
+- `&`: `<and>`
 
 ### Obsolete
 
