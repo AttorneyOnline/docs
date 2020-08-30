@@ -10,6 +10,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Player count](#player-count)
     - [Resource counts](#resource-counts)
     - [Character list](#character-list)
+    - [Evidence list](#evidence-list)
     - [Music list](#music-list)
     - [Final confirmation](#final-confirmation)
   - [Character selection](#character-selection)
@@ -21,6 +22,8 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Music](#music)
     - [Penalty (health) bars](#penalty-health-bars)
     - [Witness Testimony/Cross Examination (WT/CE)](#witness-testimonycross-examination-wtce)
+    - [Set position](#set-position)
+    - [Available positions](#available-positions)
   - [Out-of-character message](#out-of-character-message)
   - [Evidence](#evidence)
     - [List](#list)
@@ -30,6 +33,8 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
   - [Areas](#areas)
     - [Switch area](#switch-area)
     - [Area updates](#area-updates)
+    - [Music list](#music-list-1)
+    - [Area list](#area-list)
   - [Casing](#casing)
     - [Case preferences update](#case-preferences-update)
     - [Case alert](#case-alert)
@@ -115,6 +120,13 @@ Requests character, evidence, and track counts ahead of time for memory allocati
 **Server:** `SC#{char_name}&{char_desc}#...#%`
 
 Requests a full list of characters. Note that `char_desc` is obsolete and likely not present.
+
+#### Evidence list
+
+**Client:** `RE#%`<br>
+**Server:** `LE#{name}&{description}&{image}#...#%`
+
+See the [evidence list](#list) packet.
 
 #### Music list
 
@@ -326,9 +338,10 @@ All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+.
 
 #### Background
 
-**Server:** `BN#{background}#%`
+**Server:** `BN#{background}%`
+**Server:** `BN#{background}#{position}%` (since 2.8)
 
-Sets the background of the viewport.
+Sets the background of the viewport, and optionally the position.
 
 Clients can set the background with a server chat command, such as `/bg`.
 
@@ -369,6 +382,18 @@ Overlays a non-looping special animation. This is typically only allowed when th
 - `judgeruling#0` - "Not Guilty" (since 2.6)
 - `judgeruling#1` - "Guilty" (since 2.6)
 
+#### Set position
+
+**Server:** `SP#{side}#%`
+
+Sets the position dropdown on the client to `side`. Added in 2.8.
+
+#### Available positions
+
+**Server:** `SD#{side1}*{side2}*...#%`
+
+Overrides the position dropdown on the client to the specified list of positions. Added in 2.8.
+
 ### Out-of-character message
 
 **Client:** `CT#{name}#{message}#%`<br>
@@ -386,6 +411,7 @@ Supported by 2.4 onward. Every evidence item has three attributes: name, descrip
 
 #### List
 
+**Client:** `RE#%`<br>
 **Server:** `LE#{name}&{description}&{image}#...#%`
 
 #### Add
@@ -441,6 +467,25 @@ For instance, a packet of `ARUP#0#4#3#7#2#0#0#%` would mean that:
 
 This packet was added in 2.6.
 
+#### Music list
+
+**Server:** `FM#{track1}#{track2}#...#%`
+
+Like the standard music list packet, but excludes areas.
+
+This can be used to update the music list on a per-area basis.
+
+This packet was added in 2.8.
+
+#### Area list
+
+**Server:** `FM#{area1}#{area2}#...#%`
+
+Like the standard music list packet, but excludes music and only lists areas.
+
+This can be used to add and remove areas dynamically.
+
+This packet was added in 2.8.
 
 ### Casing
 
