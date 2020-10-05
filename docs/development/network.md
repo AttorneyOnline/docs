@@ -340,7 +340,7 @@ All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+.
 
 #### Background
 
-**Server:** `BN#{background}%`
+**Server:** `BN#{background}%`<br>
 **Server:** `BN#{background}#{position}%` (since 2.8)
 
 Sets the background of the viewport, and optionally the position.
@@ -349,7 +349,7 @@ Clients can set the background with a server chat command, such as `/bg`.
 
 #### Music
 
-**Client:** `MC#{songname}#{char_id}#{showname}#%`<br>
+**Client:** `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}#%`<br>
 **Server:** same
 
 Plays the specified track (with file extension) and records the event to the IC log.
@@ -358,9 +358,19 @@ Since 2.6, a `showname` piece is added at the end. This is for the chatlog to be
 
 Since 2.8, the track is expected to loop clientside. Before 2.8, the track was not expected to loop, and thus servers had to add a looping feature where the `MC` packet is sent to replay the track.
 
+- **looping**: if greater than zero, indicates client-side looping
+- **channel**: channel number to play on (0-3)
+  - Typically, channel 0 is used as the main BGM channel, whereas channel 1 is used for area-specific soundscapes.
+- **effects**: a bit field of transition effects:
+  - Bit 0: fade in
+  - Bit 1: fade out
+  - Bit 2: sync position
+
+The canonical "empty track" is `~stop.mp3`.
+
 #### Penalty (health) bars
 
-**Client:** **HP#{bar}#{value}#%**<br>
+**Client:** `HP#{bar}#{value}#%`<br>
 **Server:** same
 
 Updates the penalty bar. This is typically only allowed when the player is in the judge (`jud`) position.
