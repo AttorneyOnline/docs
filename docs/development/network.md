@@ -588,7 +588,7 @@ Notifies a client that they cannot join because they are banned.
 
 Sent to ensure that the server and client are still alive. Some servers expect the client to send this packet as often as 10 seconds.
 
-#### Subtheme switching
+### Subtheme switching
 
 **Server:** `ST#{subtheme}#{reload}#%`
 
@@ -598,7 +598,7 @@ Instructs the client to switch to a given subtheme. The client can ignore this i
 * **subtheme:** The subtheme to switch to.
 * **reload:** If `1`, the client will reload theme.
 
-#### Timers
+### Timers
 
 **Server:** `TI#{timer_id: int}#{command: int}#{time: int}#%`
 
