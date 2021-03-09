@@ -179,7 +179,7 @@ If the character cannot be used, the server will not respond. Otherwise, the ser
 **Client:**
 ```
 MS#
-{chat}#
+{desk_mod}#
 {preanim}#
 {character}#
 {emote}#
@@ -210,7 +210,7 @@ MS#
 **Server**:
 ```
 MS#  
-{chat}#
+{desk_mod}#
 {preanim}#
 {character}#
 {emote}#
@@ -248,10 +248,14 @@ An in-character (IC) message is a basic form of viewport event in which a animat
 
 Reference of fields:
 
-- **chat**: Whether or not to override desk appearance.
+- **desk_mod**: Whether or not to override desk appearance.
   * `chat`: Positions "def", "pro", and "wit" default to desk and the positions "hld", "hlp" and "jud" to no desk.
-  * `0`: no desk
-  * `1`: desk
+  * `0`: desk is hidden
+  * `1`: desk is shown
+  * `2`: desk is hidden during preanim, shown when it ends
+  * `3`: desk is shown during preanim, hidden when it ends
+  * `4`: desk is hidden during preanim, character is centered and pairing is ignored, when it ends desk is shown and pairing is restored
+  * `5`: desk is shown during preanim, when it ends character is centered and pairing is ignored
 
 - **preanim**: The animation that plays before the character starts talking. Does not include file extension.
 
@@ -312,7 +316,9 @@ Reference of fields:
 
 - **other_emote**: The emote the user's pair was doing. Note that by default, zooms (that are correctly defined as such) do not update this value, so a pair of zooms will not appear. Zooms also enjoy special privileges, in that (assuming they are correctly defined, again) they make the pair disappear in the client and get centered.
 
-- **self_offset**: the percentage by which the character is shifted horizontally, from `-100` (one whole screen's worth to the left) to `100` (one whole screen's worth to the right).
+- **self_offset**: the percentage by which the character is shifted horizontally, from `-100` (one whole screen's worth to the left) to `100` (one whole screen's worth to the right). This parameter also stores vertical offset, which is self-explanatory.
+  * `{x_offset}`: <2.9
+  * `{x_offset}&{y_offset}`: 2.9+
 
 - **other_offset**: The user's pair's `self_offset`, basically.
 
@@ -544,6 +550,8 @@ Users are targeted if they marked themselves as at least one of the roles the an
 
 This packet may be rate-limited.
 
+####
+
 ### Moderator commands
 
 #### Call mod
@@ -577,6 +585,32 @@ Notifies a client that they cannot join because they are banned.
 **Server:** `CHECK#%`
 
 Sent to ensure that the server and client are still alive. Some servers expect the client to send this packet as often as 10 seconds.
+
+#### Subtheme switching
+
+**Server:** `ST#{subtheme}#{reload}#%`
+
+Instructs the client to switch to a given subtheme. The client can ignore this if the user's subtheme is manually set.
+
+**Parameters:**
+* **subtheme:** The subtheme to switch to.
+* **reload:** If `1`, the client will reload theme.
+
+#### Timers
+
+**Server:** `TI#{timer_id: int}#{command: int}#{time: int}#%`
+
+Instructs the client to manipulate the timers on its UI.
+
+**Parameters:**
+* **timer_id:** The ID of the timer to manipulate, `0`-`4`. Typically, `0` is used as a "global" timer (be it server-wide or per-"hub")
+* **command:**
+  * `0`: Start/resume/sync timer at `time`
+  * `1`: Pause timer at `time`
+  * `2`: Show timer
+  * `3`: Hide timer
+* **time:** The time to display on the timer, in milliseconds.
+
 
 ### Escape codes
 
