@@ -43,6 +43,8 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Kick](#kick)
     - [Ban](#ban)
   - [Keep alive](#keep-alive)
+  - [Subtheme switching](#subtheme-switching)
+  - [Timers](#timers)
   - [Escape codes](#escape-codes)
   - [Obsolete](#obsolete)
     - [FantaCrypt](#fantacrypt)
