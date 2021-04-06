@@ -42,6 +42,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Call mod](#call-mod)
     - [Kick](#kick)
     - [Ban](#ban)
+    - [Popup](#popup)
   - [Keep alive](#keep-alive)
   - [Subtheme switching](#subtheme-switching)
   - [Timers](#timers)
