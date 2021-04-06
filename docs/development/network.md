@@ -583,6 +583,12 @@ Notifies a client that they were kicked and banned.
   
 Notifies a client that they cannot join because they are banned.
 
+#### Popup
+
+**Server:** `BB#{message}`
+
+Notifies a client with a popup containing the specified **message**.
+
 ### Keep alive
   
 **Client:** `CH#<char_id: int>#%`<br>
