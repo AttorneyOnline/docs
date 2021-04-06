@@ -401,6 +401,8 @@ Overlays a non-looping special animation. This is typically only allowed when th
 - `testimony2` - "Cross Examination"
 - `judgeruling#0` - "Not Guilty" (since 2.6)
 - `judgeruling#1` - "Guilty" (since 2.6)
+- `testimony1#1` - Hides the "Testimony" indicator (since 2.9)
+- Anything else - Custom splash. SFX name and animation filename are exactly the string provided (since 2.9)
 
 #### Set position
 
