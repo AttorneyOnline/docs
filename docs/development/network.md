@@ -528,7 +528,7 @@ Parameters:
 - **jury**: `1` if the user is willing to be a member of the jury in a case
 - **steno**: `1` if the user is willing to be the stenographer of a case
 
-It is up to the server to decide what to do with this packet. By default, tsuserver stores the information gathered from it, and uses it to decide whom to alert.
+It is up to the server to decide what to do with this packet. By default, tsuserver does nothing with this information and sends all case alerts to every connected client.
 
 Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
 
