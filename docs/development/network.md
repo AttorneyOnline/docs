@@ -551,7 +551,9 @@ Where the arguments are:
 
 The above packet, when sent from clientside, requests the server to sent the serverside packet to all relevant users.
 
-Users are targeted if they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet).
+Users are targeted if:
+* they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet). ([akashi](https://github.com/AttorneyOnline/akashi))
+* they are currently connected to the server, regardless of casing preferences ([tsuserver3](https://github.com/AttorneyOnline/tsuserver3))
 
 This packet may be rate-limited.
 
