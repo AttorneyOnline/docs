@@ -528,7 +528,7 @@ Parameters:
 - **jury**: `1` if the user is willing to be a member of the jury in a case
 - **steno**: `1` if the user is willing to be the stenographer of a case
 
-It is up to the server to decide what to do with this packet. By default, tsuserver stores the information gathered from it, and uses it to decide whom to alert.
+It is up to the server to decide what to do with this packet. By default, tsuserver does nothing with this information (though it is stored, for some reason) and sends all case alerts to every connected client.
 
 Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
 
@@ -551,7 +551,9 @@ Where the arguments are:
 
 The above packet, when sent from clientside, requests the server to sent the serverside packet to all relevant users.
 
-Users are targeted if they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet).
+Users are targeted if:
+* they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet). ([akashi](https://github.com/AttorneyOnline/akashi))
+* they are currently connected to the server, regardless of casing preferences ([tsuserver3](https://github.com/AttorneyOnline/tsuserver3))
 
 This packet may be rate-limited.
 
