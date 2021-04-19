@@ -106,6 +106,15 @@ Introduced in 2.8:
 - `additive`: Enables additive text.
 - `effects`: Enables effect overlays.
 
+Introduced in 2.9:
+
+- `y_offset`: Enables vertical offset support.
+- `expanded_desk_mods`: Enables desk modifiers 2 through 5.
+
+Introduced in 2.9.1:
+
+- `auth_packet`: Enables the use of the `AUTH` packet.
+
 #### Player count
 
 **Server:** `PN#{players}#{max}#%`
