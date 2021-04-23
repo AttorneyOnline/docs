@@ -640,7 +640,10 @@ Instructs the client to manipulate the timers on its UI.
 Instructs the client to show or hide the judge controls.
 
 **Parameters:**
-* **state:** If `1` show the judge controls, otherwise hide them.
+* **state:**
+  * `-1`: Show or hide the judge controls, depending on the client's position.
+  * `0`: Hide the judge controls.
+  * `1`: Show the judge controls.
 
 ### Escape codes
 
