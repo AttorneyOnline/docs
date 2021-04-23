@@ -633,6 +633,14 @@ Instructs the client to manipulate the timers on its UI.
   * `3`: Hide timer
 * **time:** The time to display on the timer, in milliseconds.
 
+### Judge controls
+
+**Server:** `JD#{state: int}#%`
+
+Instructs the client to show or hide the judge controls.
+
+**Parameters:**
+* **state:** If `1` show the judge controls, otherwise hide them.
 
 ### Escape codes
 
