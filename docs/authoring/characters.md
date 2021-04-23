@@ -147,6 +147,11 @@ number = 13
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
+#### `[Time]` (optional)
+
+Made mostly redundant with release 2.8.4. The purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine (read: the inability of the author to read the duration from the file itself). Up until 2.8.4, preanimations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` can still be used to dictate preanim duration, but it is no longer strictly necessary.
+
+
 #### `[Emotions]`
 
 Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your ini will likely be here.
@@ -292,8 +297,6 @@ This section defines at which frame a screen shake should occur.
 ##### Deprecated options
 
 Older char.inis may contain sections or options not mentioned in this guide. Here are a few of them and a brief explanation of each, for posterity:
-
-- `[Time]`: Deprecated with release 2.8.4. The former purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine. Up until 2.8.4, preanimations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` is now ignored entirely by AO2.
 
 - `firstmode`: Technically never deprecated - `firstmode` was never used by AO2 in the first place. This is another holdover from AO1, and if you see this in a char.ini you can probably assume it's _very_ old. The purpose of `firstmode` was to work around a limitation in the unofficial Attorney Online 1.8 client which you can read more about [here.](https://sites.google.com/site/attorneyonlinedev/updates/asmallpatchandastoryaboutbuttons)
 
