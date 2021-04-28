@@ -47,6 +47,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
   - [Subtheme switching](#subtheme-switching)
   - [Timers](#timers)
   - [Escape codes](#escape-codes)
+  - [Authentication](#authenticate)
   - [Obsolete](#obsolete)
     - [FantaCrypt](#fantacrypt)
     - [Slow loading](#slow-loading)
@@ -569,6 +570,15 @@ This packet may be rate-limited.
 ####
 
 ### Moderator commands
+
+#### Authenticate
+**Server:** `AUTH#{state: int}#%`
+
+**Parameters:**
+**state:**
+- `1` or higher: Successful log-in. Displays the guard button.
+- `0`: Unsuccessful log-in attempt.
+- `-1` or lower: Log-out. Hides the guard button.
 
 #### Call mod
   
