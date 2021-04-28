@@ -572,6 +572,7 @@ This packet may be rate-limited.
 ### Moderator commands
 
 #### Authenticate
+**Client:** `AUTH#{username}#{password}#%`
 **Server:** `AUTH#{state: int}#%`
 
 **Parameters:**
@@ -579,6 +580,10 @@ This packet may be rate-limited.
 - `1` or higher: Successful log-in. Displays the guard button.
 - `0`: Unsuccessful log-in attempt.
 - `-1` or lower: Log-out. Hides the guard button.
+
+Attempts to log in as moderator to a server.
+
+The username is optional, and a server may choose to discard it.
 
 #### Call mod
   
