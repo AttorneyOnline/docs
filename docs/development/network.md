@@ -44,6 +44,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Ban](#ban)
   - [Keep alive](#keep-alive)
   - [Escape codes](#escape-codes)
+  - [Authentication](#authenticate)
   - [Obsolete](#obsolete)
     - [FantaCrypt](#fantacrypt)
     - [Slow loading](#slow-loading)
