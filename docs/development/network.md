@@ -46,6 +46,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
   - [Keep alive](#keep-alive)
   - [Subtheme switching](#subtheme-switching)
   - [Timers](#timers)
+  - [Judge controls](#judge-controls)
   - [Escape codes](#escape-codes)
   - [Obsolete](#obsolete)
     - [FantaCrypt](#fantacrypt)
