@@ -5,6 +5,7 @@ Explain how Timers work
 Scaling Methods
 Blankposting/Narrator
 Scaling Override
+OTF Bug
 
 2.9.0
 Charlist Sidebar
@@ -13,7 +14,9 @@ Subthemes & Parenting
 Animated UI
 
 2.8.0
-Animatd
+Animated Backgrounds
+Background Overlays
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NTEyOTA5Ml19
+eyJoaXN0b3J5IjpbLTE3MzEwNzQ3NTBdfQ==
 -->
