@@ -84,6 +84,7 @@ chat_size = 10
 shouts = aa
 effects = default/effects
 realization = realization
+scaling = fast
 
 [Emotions]
 number = 13
@@ -338,3 +339,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 ---
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTI5MDQ0MTE0MF19
+-->
