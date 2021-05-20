@@ -157,9 +157,11 @@ Made mostly redundant with release 2.8.4. The purpose of this section was to dic
 
 #### `[Emotions]`
 
-Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your ini will likely be here.
+Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your char.ini will likely be here.
 
 The `number` option is pretty self-explanatory. It specifies the number of emotes. Make sure this is correct - if it's too low, you won't be able to use all your emotes. If it's too high (or if you don't specify a `number`), you'll end up with placeholder emotes that'll clutter up your pages.
+
+All characters will follow the format of `[Emote Number] = <comment>#<preanim>#<`
 
 Now for the specific emotions.
 
@@ -342,5 +344,5 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNTA2MjAxM119
+eyJoaXN0b3J5IjpbLTIwNzE1NzM2NTVdfQ==
 -->
