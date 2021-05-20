@@ -195,6 +195,7 @@ Consider using subfolders if your character has a lot of files.
 Between the next #'s is the name of the actual animation when the character is idle and speaking, starting with `(a)` and `(b)` in the character folder, respectively. For instance, if your animation is named "cough", then the engine expects your idle animation to be named `(a)cough.gif` on the file system, and your talking animation to be named `(b)cough.gif`.
 
 The engine will also scan for other supported file formats, such as `.apng` and `.webp`, as described above.
+**Beware of having multiple formats with the same file name** (Default.png and Default.GIF), as the Engine will load fil**
 
 If no animations are found for an emote, the engine will fall back to static emotes. Static emotes don't use `(a)`/`(b)` prefixes - instead, an static emote named `cough` would be expected to be in the file `cough.png`.
 
@@ -344,5 +345,5 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MjA5NTk5MF19
+eyJoaXN0b3J5IjpbLTIwNjI0MzI1MV19
 -->
