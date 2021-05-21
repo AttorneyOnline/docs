@@ -70,17 +70,17 @@ You can add a folder inside of a theme that can replace anything inside the exis
 
 For example, the fallback order for  `courtroom_design.ini`  will be as follows:
 
--   `theme/subtheme/courtroom_design.ini`
--   `theme/courtroom_design.ini`
--   `default_theme/courtroom_design.ini`
+-   `base/theme/subtheme/courtroom_design.ini`
+-   `base/theme/courtroom_design.ini`
+-   `base/theme/default_theme/courtroom_design.ini`
 
 Note that subthemes will never fall back to any subthemes belonging to the default theme.
 
 As of 2.9.1, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
 
 #### Parent Themes
-Parent themes 
+You can specify a new default theme for themes, so instead of falling back to the theme called `default`, you can fall back to any theme of your choice. To do this, add a `default_theme=` value in `courtroom_design.ini`. Note that it is not recursive, so if the default theme you selected has a `default_theme=` value as well, it won't fall back a second time, nor will it fall back to `default`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTY5MzAzOTEsLTc0MjgwNTE4MSwtMT
+eyJoaXN0b3J5IjpbLTEzNTMzMzY5MjMsLTc0MjgwNTE4MSwtMT
 c2NTYxNzkwOCwxNzQ0MzEwODM1XX0=
 -->
