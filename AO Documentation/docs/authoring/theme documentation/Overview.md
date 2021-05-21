@@ -82,8 +82,8 @@ As of 2.9.1, the client makes no attempts to differentiate folders for the main 
 You can specify a new default theme for themes, so instead of falling back to the theme called `default`, you can fall back to any theme of your choice. To do this, add a `default_theme=` value in `courtroom_design.ini`. Note that it is not recursive, so if the default theme you selected has a `default_theme=` value as well, it won't fall back a second time, nor will it fall back to `default`.
 
 ### Animated UI
-Starting in 2.9.0, it is possible to have elements of your UI be animated. To take advantage of this, make sure that you have `Animated Themes` checked in your settings, and use an animated format (WebP, APNG, or GIF) with you
+Starting in 2.9.0, it is possible to have elements of your UI be animated. To take advantage of this, make sure that you have `Animated Themes` checked in your settings, and use an animated format (WebP, APNG, or GIF) with your animated image. ***Please be aware that this may impact AO's performance, and that the developers are not responsible for if your computer cannot handle themes filled with
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDE3MzExNzAsLTEzNTMzMzY5MjMsLT
-c0MjgwNTE4MSwtMTc2NTYxNzkwOCwxNzQ0MzEwODM1XX0=
+eyJoaXN0b3J5IjpbMTYzNTQ0MTg5MSwtMTM1MzMzNjkyMywtNz
+QyODA1MTgxLC0xNzY1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
 -->
