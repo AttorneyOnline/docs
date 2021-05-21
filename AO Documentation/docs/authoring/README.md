@@ -22,12 +22,12 @@ Here's a list of tools and additional tutorials that can help you out along the 
 	 - Paint.NET
 	 - Adobe Photoshop
 - Notepad++
-- XnConvert
+- [XnConvert](https://www.xnview.com/en/xnconvert/)
 - Bulk Rename Utility
 - [Satoru;1816's WebP Characters Tutorial](https://docs.google.com/document/d/1onNBhWnZkDZvzgXmJehpap4kYsKHNJNHWZ16-L2-N1Q/edit)
 	- [Still Image to WebP (Online)](https://nsspot.herokuapp.com/imagetowebp/#)
 		- You can also use XnConvert for the same functionality as this link, if you already have it.
 	- [libwebp](https://developers.google.com/speed/webp/download)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTcwNTE3OV19
+eyJoaXN0b3J5IjpbLTQ0MTYyODM1OSwxMTg1NzA1MTc5XX0=
 -->
