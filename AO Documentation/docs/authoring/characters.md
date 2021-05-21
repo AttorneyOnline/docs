@@ -141,7 +141,7 @@ number = 13
 - `gender`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**).
   Blip sound effects can be located in `sounds/blips/` (recommended) or `sounds/general/` with the prefix `sfx-[blip]` (not recommended).
 
-- `chat`: (optional, defaults to your theme's chatbox) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use.
+- `chat`: (optional, defaults to your theme's  chatbox) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use.
   - For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`.
   - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
   > **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
@@ -224,11 +224,10 @@ This is a popular way to declutter the root of your character folder.
 
 ##### `<modifier>`
 
-The modifier value controls pre-animations, sounds, and zooms. The valid inputs here are: 0, 1, 2, 3, 4, 5, and 6.
+The modifier value controls pre-animations, sounds, and zooms. The valid inputs here are: 0, 1, 5, and 6.
 
 - `0`: Tells the client to not play the pre-animation or sound effect associated with the emote, Has no effect on `[FrameSFX]` (more on that later)
 - `1`: Plays the pre-animation and associated sound.
-- - 	
 - `5`: Zoom, in which the foreground desk or witness stand will not be displayed. Additionally, the background is replaced by speed lines. Emotes with `5` will never play pre-animations.
 - `6`: Same as 5, except it will _always_ play pre-animations.
 
@@ -239,6 +238,9 @@ This option allows an emote to either force the desk/witness stand/overlay to be
 - `-1`: Forcibly show the desks while this emote is displayed, except for `jud`/`hld`/`hlp` positions.
 - `0`: Forcibly hide the desks while this emote is displayed.
 - `1`: Forcibly show the desks while this emote is displayed.
+- `2`: Hides the overlay during preanimation, shows it again once the preanim is finished
+- `3`: Shows the overlay _only_ during the preanim, and hides it when it ends
+- `4`
 
 #### `[SoundN]`
 
@@ -353,5 +355,5 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNzkxNDE0NywxODg4NjU1NzhdfQ==
+eyJoaXN0b3J5IjpbMjA4MDA3MDczOCwxODg4NjU1NzhdfQ==
 -->
