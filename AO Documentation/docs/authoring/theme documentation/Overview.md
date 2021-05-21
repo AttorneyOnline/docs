@@ -45,7 +45,7 @@ AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will 
 
 ### Qt Stylesheets
 
-As of 2.8, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io/Qt-5/stylesheet-syntax.html), which allows significantly greater freedom in widget and font styles. Please see the [Qt CSS Objects](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/theme%20documentation/Qt%20CSS%20Objects.md) documentation for some brief basics on this front (it is assumed you already know how to use Qt, so
+As of 2.8, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io/Qt-5/stylesheet-syntax.html), which allows significantly greater freedom in widget and font styles. Please see the [Qt CSS Objects](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/theme%20documentation/Qt%20CSS%20Objects.md) documentation for some brief basics on this front (the documentation assumes you already either know how to use Qt CSS Stylesheets, or you're a fast learner.)
 
 ### Sounds
 
@@ -60,5 +60,5 @@ event = sfx-name.wav
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis, where the new chatbox can be found in its respective directory in `misc`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MjcyNTY0MF19
+eyJoaXN0b3J5IjpbMTc0NDMxMDgzNV19
 -->
