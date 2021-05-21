@@ -15,19 +15,19 @@ Here's a list of tools and additional tutorials that can help you out along the 
 
 ---
 - Latest Attorney Online client version *(duh)*
- - Python 3
+ - [Python 3](https://www.python.org/downloads/)
 	 - [Crystalwarrior's AO2 Scripts](https://github.com/Crystalwarrior/AO2-Scripts/)
  - An Image-Editing Program
-	 - GIMP
-	 - Paint.NET
+	 - [GIMP](https://www.gimp.org/downloads/)
+	 - [Paint.NET](https://www.getpaint.net/download.html)
 	 - Adobe Photoshop
-- Notepad++
+- [Notepad++](https://notepad-plus-plus.org/downloads/)
 - [XnConvert](https://www.xnview.com/en/xnconvert/)
-- Bulk Rename Utility
+- [Bulk Rename Utility](https://www.bulkrenameutility.co.uk/Download.php)
 - [Satoru;1816's WebP Characters Tutorial](https://docs.google.com/document/d/1onNBhWnZkDZvzgXmJehpap4kYsKHNJNHWZ16-L2-N1Q/edit)
 	- [Still Image to WebP (Online)](https://nsspot.herokuapp.com/imagetowebp/#)
 		- You can also use XnConvert for the same functionality as this link, if you already have it.
 	- [libwebp](https://developers.google.com/speed/webp/download)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MTYyODM1OSwxMTg1NzA1MTc5XX0=
+eyJoaXN0b3J5IjpbMTM3MjgyNTE1MCwxMTg1NzA1MTc5XX0=
 -->
