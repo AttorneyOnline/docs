@@ -6,7 +6,7 @@ The desktop AO client uses a custom UI loader that reads INI files which define 
 
 Before considering a theme, you must first understand two main limitations of themes:
 
-1. They break immediately on new versions, since new versions have buttons and widgets whose positions will not be defined by your (now outdated) theme. These new values will a
+1. They break immediately on new versions, since new versions have buttons and widgets whose positions will not be defined by your (now outdated) theme. These new values will always be pulled from the Default theme.
 2. They are *absolutely positioned*, meaning that they will not adapt to the size of the window.
 
 These limitations will be addressed in a later version, which will replace the in-house theming system with Qt's native theming system.
@@ -30,7 +30,7 @@ widget_name = x, y, width, height
 
 ### Fonts
 
-Fonts are defined in `courtroom_fonts.ini` and `lobby_fonts.ini`. The syntax for the INI file is as follows:
+Fonts are defined in `courtroom_fonts.ini` and `lobby_fonts.ini`, and are highly recommended to be placed into the `base\fonts` folder for distribution. The syntax for the INI file is as follows:
 
 ```ini
 fontname = size
@@ -59,5 +59,5 @@ event = sfx-name.wav
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis, where the new chatbox can be found in its respective directory in `misc`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTcwNTU1NF19
+eyJoaXN0b3J5IjpbMjEzMTU4NTI3OV19
 -->
