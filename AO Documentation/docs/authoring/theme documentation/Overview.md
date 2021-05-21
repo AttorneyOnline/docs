@@ -59,7 +59,11 @@ event = sfx-name.wav
 ### Chatboxes
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis with `chatbox = exampletext`, where the new chatbox can be found in `base/misc/exampletext` (please note that `exampletext` is just a sample name!).
+
+### Subthemes and Parent Themes
+
+Added in 2.9.1, it's now possible for themes to inherit elements from other themes. `Subthemes` are when the theme has slight edits to them that
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDE2Nzc0LC0xNzY1NjE3OTA4LDE3ND
-QzMTA4MzVdfQ==
+eyJoaXN0b3J5IjpbMTI5NDYzNzEzOSwtMTc2NTYxNzkwOCwxNz
+Q0MzEwODM1XX0=
 -->
