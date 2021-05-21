@@ -148,7 +148,7 @@ number = 13
 - `gender`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**).
   Blip sound effects can be located in `sounds/blips/` (recommended) or `sounds/general/` with the prefix `sfx-[blip]` (not recommended).
 
-- `chat`: (optional, defaults to your theme's  chatbox) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use.
+- `chat`: (optional, defaults to your theme's  chatbox) allows characters to use custom **chatboxes** (the box your message appears in) and **interjections**. Input should be a directory in `misc/` containing the chatbox you want to use.
   - For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`.
   - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
   > **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
@@ -157,13 +157,13 @@ number = 13
 
 - `chat_size`: (optional, same defaults as `chat_font`) modifies the size of your message text. Like `chat_font`, this is also clientside.
 
-- `shouts`: (optional, defaults to your theme and is overridden by your character files) modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
+- `shouts`: (Depreciated in 2.9.0, functionality merged with `chat`.) modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
 
 - `effects` (optional, defaults to `default/effects`): specifies misc folder to search for overlay effects, like `chat` and `shouts`.
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
-- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters.
+- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added 
 
 #### `[Shouts]` (optional)
 With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
@@ -366,6 +366,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTkwMzA2MDAsLTQ1NzExNjY5NCwxOD
-g4NjU1NzhdfQ==
+eyJoaXN0b3J5IjpbMjAyMzgzODM5LC0yMDk5MDMwNjAwLC00NT
+cxMTY2OTQsMTg4ODY1NTc4XX0=
 -->
