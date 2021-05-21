@@ -9,13 +9,13 @@ Before considering a theme, you must first understand two main limitations of th
 1. They break immediately on new versions, since new versions have buttons and widgets whose positions will not be defined by your (now outdated) theme. These new values will always be pulled from the Default theme.
 2. They are *absolutely positioned*, meaning that they will not adapt to the size of the window.
 
-These limitations will be addressed in a later version, which will replace the in-house theming system with Qt's native theming system. For those who want to ensure compatibility when the replacement occurs, please make sure to back up the *original assets* used to make your theme - The more you save, the less work t
+These limitations will be addressed in a later version, which will replace the in-house theming system with Qt's native theming system. For those who want to ensure compatibility when the replacement occurs, please make sure to back up the *original assets* used to make your theme - The more you save, the less work that will have to be done!
 
 ### Minimum Contents
 
 A theme is a folder in `base/themes`. On startup, the client scans all folders in `base/themes` and considers each directory to be a theme (regardless of the validity of its contents).
 
-Technically, a theme has no minimum files. It can be empty; any files not in your theme are simply searched in the default theme instead. Therefore, it is not necessary to copy the entire default theme - you only need to copy the files you want to edit.
+Technically, a theme has no minimum files. It can be empty; any files not in your theme are simply searched in the default theme instead. Therefore, it is not necessary to copy the entire default theme - you only need to copy the files you want to edit. The client pulls any "missing files"  from `base/themes/default`.
 
 Since the theme configuration files have a large amount of options and widgets, we hope that inline comments in the INI files will suffice in lieu of documentation here.
 
@@ -60,6 +60,6 @@ event = sfx-name.wav
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis, where the new chatbox can be found in its respective directory in `misc`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwNDkxMzA2LC0xNzY1NjE3OTA4LDE3ND
-QzMTA4MzVdfQ==
+eyJoaXN0b3J5IjpbLTE0NDI2NzMyNjEsLTE3NjU2MTc5MDgsMT
+c0NDMxMDgzNV19
 -->
