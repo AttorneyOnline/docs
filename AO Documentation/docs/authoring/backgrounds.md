@@ -16,7 +16,7 @@ Backgrounds typically contain the following files:
 
 If the background is AO2-compatible (read: contains `stand.png`, `defensedesk.png` and `prosecutiondesk.png`), the position of the chat bar and chat box are fetched from `ao2_ic_chat_message` and `ao2_chatbox` in courtroom_design.ini, respectively.
 
-As of Client Version 2.8, you can define custom positions per 
+As of Client Version 2.8, you can define custom positions through `design.ini`.
 
 ### AO1 backgrounds
 
@@ -30,5 +30,5 @@ Support for these AO1-style desks was dropped in 2.8.
 
 *Some of this content was adapted from the* [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) *written by OmniTroid.*
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1MDM2MzU5XX0=
+eyJoaXN0b3J5IjpbNjEzMjU0NzMsMzg1MDM2MzU5XX0=
 -->
