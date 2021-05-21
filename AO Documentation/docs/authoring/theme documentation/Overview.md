@@ -58,8 +58,8 @@ event = sfx-name.wav
 
 ### Chatboxes
 
-Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis, where the new chatbox can be found in its respective directory in `misc`.
+Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis with `chatbox = exampletext`, where the new chatbox can be found in `base/misc/exampletext` (please note that `exampletext` is just a sample name!!.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDI2NzMyNjEsLTE3NjU2MTc5MDgsMT
+eyJoaXN0b3J5IjpbLTExODg3NjQ0ODIsLTE3NjU2MTc5MDgsMT
 c0NDMxMDgzNV19
 -->
