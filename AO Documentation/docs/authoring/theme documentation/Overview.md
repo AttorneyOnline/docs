@@ -40,7 +40,8 @@ fontname_bold = 0/1
 fontname_sharp = 0/1
 ```
 
-AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will work, but have several issues (see [AO2-Client#224](https://github.com/AttorneyOnline/AO2-Client/issues/224)) making them look terrible in some cases. If the font you want to use is in OpenType format (OTF), this documentation recommends the use of [otf2ttf](https://pypi.org/project/otf2ttf/) to convert the font to TrueType format. **Please do not use online conversion websites.** Many OTF fonts that users supply have special properties that cause these web converters to fail. Use the provided tool instead.
+AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will work, but have several issues (see [AO2-Client#224](https://github.com/AttorneyOnline/AO2-Client/issues/224)) making them look terrible in some cases. If the font you want to use is in OpenType format (OTF), this documentation recommends the use of [otf2ttf](https://pypi.org/project/otf2ttf/) to convert the font to TrueType format. 
+***Please do not use online conversion websites.*** Many OTF fonts that users supply have special properties that cause these web converters to fail. Use the provided tool instead.
 
 ### Qt Stylesheets
 
@@ -59,5 +60,5 @@ event = sfx-name.wav
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis, where the new chatbox can be found in its respective directory in `misc`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzMTU4NTI3OV19
+eyJoaXN0b3J5IjpbNTk0OTUxMjA1XX0=
 -->
