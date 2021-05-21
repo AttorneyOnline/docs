@@ -8,7 +8,7 @@
  - [ ] Custom SFX Names
 ### 2.9.0
  - [ ] Charlist Sidebar
- - [ ] Stickers
+ - [x] Stickers
  - [x] Subthemes
  - [x] Parent Themes
  - [x] Animated UI
@@ -39,5 +39,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MzgwNTI0MV19
+eyJoaXN0b3J5IjpbLTE3MTYzMjI5NzUsMTg5MzgwNTI0MV19
 -->
