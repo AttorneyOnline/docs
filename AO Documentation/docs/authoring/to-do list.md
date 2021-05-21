@@ -9,7 +9,8 @@ Update CSS listing
 ### 2.9.0
  - [ ] Charlist Sidebar
  - [ ] Stickers
- - [ ] Subthemes & Parenting
+ - [x] Subthemes
+ - [ ] Parent Themes
  - [ ] Animated UI
  - [ ] New Deskmods
  - [ ] Demo Files
@@ -39,5 +40,5 @@ Update CSS listing
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1NjYxMjk1XX0=
+eyJoaXN0b3J5IjpbODcyNDU0ODY0XX0=
 -->
