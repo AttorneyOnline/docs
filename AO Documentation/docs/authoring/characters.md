@@ -249,9 +249,9 @@ This option allows an emote to either force the desk/witness stand/overlay to be
 - `0`: Forcibly hide the desks while this emote is displayed.
 - `1`: Forcibly show the desks while this emote is displayed.
 - `2`: Hides the overlay during  pre-animation, shows it again once the  pre-animation is finished
-- `3`: Shows the overlay _only_ during the  pre-animation, and hides it when it ends
-- `4`: Same as `2`, except the pre-animation will ignore the current character's X/Y Offsets and the paired character will be hidden for its duration.
-- `5`: Same as `3`, except after the pre-animation the character will move to 0,0 and any paired characters will be hidden.
+- `3`: Shows the overlay _only_ during the  pre-animation, and hides the overlay when the pre-animation ends
+- `4`: Same as `2`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
+- `5`: Same as `3`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
 
 #### `[SoundN]`
 
@@ -366,6 +366,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjI5NzkwNSwtMjA5OTAzMDYwMCwtND
-U3MTE2Njk0LDE4ODg2NTU3OF19
+eyJoaXN0b3J5IjpbLTk3MDgzMTc5OSwxMTc2Mjk3OTA1LC0yMD
+k5MDMwNjAwLC00NTcxMTY2OTQsMTg4ODY1NTc4XX0=
 -->
