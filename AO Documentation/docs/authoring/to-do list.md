@@ -2,16 +2,16 @@
  - [ ] Update CSS listing
  - [ ] Include Documentation on some CSS tricks that have been done
  - [ ] Explain how Timers work
- - [ ] Scaling Methods
  - [ ] Blankposting/Narrator
  - [ ] Scaling Override
+ - [ ] Scaling Methods
  - [ ] Custom SFX Names
 ### 2.9.0
  - [ ] Charlist Sidebar
  - [ ] Stickers
  - [x] Subthemes
  - [x] Parent Themes
- - [ ] Animated UI
+ - [x] Animated UI
  - [ ] New Deskmods
  - [ ] Demo Files
  - [x] Fonts Folder
@@ -27,9 +27,8 @@
  - [ ] Cannot Connect to the Masterserver
  - [x] OTF Antialiasing
 ### Known Client Bugs
- - [ ] 2.9.x Effects Bug
- - [ ] Tsuserver DR Beta Connection Bug
- - [ ] Demo Replay Pausing Bug
+ - [ ] 2.9.x Effects
+ - [ ] TsuserverDR Beta Connection
  - [ ] Showname Clipping with Chatbox
 
 
@@ -40,5 +39,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ1MTIwM119
+eyJoaXN0b3J5IjpbMTg5MzgwNTI0MV19
 -->
