@@ -1,5 +1,5 @@
 # Content Creation Hub
-If you're looking in this folder, chances are you're interested in making something for the client - Whether that be a spiffy new character you want to use, working on a custom theme for that 4k res monitor you have ~~(why are you using AO on a 4k monitor?)~~ - Whatever it is, we've got you covered.
+If you're looking in this folder, chances are you're interested in making something for the client - Whether that be a spiffy new character you want to use, working on a custom theme for that 4k res monitor you have ~~(why are you using AO on a 4k monitor?)~~ - Whatever it is, we've got you covered with the documentation.
 
 - Backgrounds
 - Characters
@@ -29,5 +29,6 @@ Here's a list of tools and additional tutorials that can help you out along the 
 		- You can also use XnConvert for the same functionality as this link, if you already have it.
 	- [libwebp](https://developers.google.com/speed/webp/download)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MjgyNTE1MCwxMTg1NzA1MTc5XX0=
+eyJoaXN0b3J5IjpbLTkwNDgyNzg3NywxMzcyODI1MTUwLDExOD
+U3MDUxNzldfQ==
 -->
