@@ -64,9 +64,15 @@ Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatbla
 
 Added in 2.9.1, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
 
-Subthemes act like regular themes, but are placed within another theme's folder. They will first inherit missing aspects from the
+Subthemes act like regular themes, but are placed within another theme's folder. It will appear akin to this:
+```
+base\
+	themes\
+		default\
+			chatboxes_aastyle
+```
 Currently, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxODMxMTI5NSwtNzQyODA1MTgxLC0xNz
-Y1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
+eyJoaXN0b3J5IjpbNTQ2NDY3NTUxLC03NDI4MDUxODEsLTE3Nj
+U2MTc5MDgsMTc0NDMxMDgzNV19
 -->
