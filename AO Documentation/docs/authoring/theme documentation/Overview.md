@@ -83,7 +83,13 @@ You can specify a new default theme for themes, so instead of falling back to th
 
 ### Animated UI
 Starting in 2.9.0, it is possible to have elements of your UI be animated. To take advantage of this, make sure that you have `Animated Themes` checked in your settings, and use an animated format (WebP, APNG, or GIF) with your animated image. ***Please be aware that an overabundance of animated elements may impact AO's performance.***
+
+### Stickers
+Characters can now have an additional portrait displayed over the chatbox when they are talking.
+
+To use this feature, place your sticker in a directory named  `sticker`  inside of your theme's folder. The sticker image must be named after the folder name of the character, and the image must be the size of the viewport.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTg1NDA4MDQsLTEzNTMzMzY5MjMsLT
-c0MjgwNTE4MSwtMTc2NTYxNzkwOCwxNzQ0MzEwODM1XX0=
+eyJoaXN0b3J5IjpbLTE0MTgyNjY3NTYsLTIwMTg1NDA4MDQsLT
+EzNTMzMzY5MjMsLTc0MjgwNTE4MSwtMTc2NTYxNzkwOCwxNzQ0
+MzEwODM1XX0=
 -->
