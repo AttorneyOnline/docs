@@ -69,12 +69,14 @@ Subthemes act like regular themes, but are placed within another theme's folder,
 base\
 	themes\
 		KFO 2x Theme\
-			chatboxes_aastyle\
-			chatboxes_bigger\
+			thin\
+			wider\
 ```
-In this example, if the `chatboxes_aastyle` subtheme is chosen, it will inherit 
+In this example, if the `thin` subtheme is chosen, it will use the `KFO 2x Theme` folder for a basis, and then elements included in the `thin` subtheme will be used instead of the elements in `KFO 2x Theme`. Partial `.ini` and `.edits
+
+
 Currently, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ5NzQxMzQ2LC03NDI4MDUxODEsLTE3Nj
-U2MTc5MDgsMTc0NDMxMDgzNV19
+eyJoaXN0b3J5IjpbLTQ1NTM5OTgzNCwtNzQyODA1MTgxLC0xNz
+Y1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
 -->
