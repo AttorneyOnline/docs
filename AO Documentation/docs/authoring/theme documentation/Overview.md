@@ -62,7 +62,7 @@ Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatbla
 
 ### Theme Inheritance
 
-Added in 2.9.1, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
+Added in 2.9.0, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
 
 #### Subthemes
 
@@ -81,6 +81,6 @@ As of 2.9.1, the client makes no attempts to differentiate folders for the main 
 #### Parent Themes
 You can specify a new default theme for themes, so instead of falling back to the theme called `default`, you can fall back to any theme of your choice. To do this, add a `default_theme=` value in `courtroom_design.ini`. Note that it is not recursive, so if the default theme you selected has a `default_theme=` value as well, it won't fall back a second time, nor will it fall back to `default`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTMzMzY5MjMsLTc0MjgwNTE4MSwtMT
-c2NTYxNzkwOCwxNzQ0MzEwODM1XX0=
+eyJoaXN0b3J5IjpbLTI4ODY0Mjg0LC0xMzUzMzM2OTIzLC03ND
+I4MDUxODEsLTE3NjU2MTc5MDgsMTc0NDMxMDgzNV19
 -->
