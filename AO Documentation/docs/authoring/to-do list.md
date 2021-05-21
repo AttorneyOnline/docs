@@ -1,35 +1,35 @@
 ### 2.9.1
-- Update CSS listing
-- Include Documentation on some CSS tricks that have been done
-- Explain how Timers work
-- Scaling Methods
-- Blankposting/Narrator
-- Scaling Override
-- Custom SFX Names
+Update CSS listing
+ - [ ] Include Documentation on some CSS tricks that have been done
+ - [ ] Explain how Timers work
+ - [ ] Scaling Methods
+ - [ ] Blankposting/Narrator
+ - [ ] Scaling Override
+ - [ ] Custom SFX Names
 ### 2.9.0
-- Charlist Sidebar
-- Stickers
-- Subthemes & Parenting
-- Animated UI
-- New Deskmods
-- Demo Files
-- Fonts Folder
-- Custom Shout Dialogue
+ - [ ] Charlist Sidebar
+ - [ ] Stickers
+ - [ ] Subthemes & Parenting
+ - [ ] Animated UI
+ - [ ] New Deskmods
+ - [ ] Demo Files
+ - [x] Fonts Folder
+ - [ ] Custom Shout Dialogue
 ### 2.8.x
-- Animated Backgrounds
-- Background Overlays
-- Custom Background Positions
-- Effects and Effect Pathing
+ - [ ] Animated Backgrounds
+ - [ ] Background Overlays
+ - [ ] Custom Background Positions
+ - [ ] Effects and Effect Pathing
 ### Common Issues
--  Missing DLLs
-- Client Crash when Choosing Character/Changing Emotes
-- Cannot Connect to the Masterserver
-- OTF Antialiasing
+ - [ ]  Missing DLLs
+ - [ ] Client Crash when Choosing Character/Changing Emotes
+ - [ ] Cannot Connect to the Masterserver
+ - [ ] OTF Antialiasing
 ### Known Client Bugs
-- 2.9.x Effects Bug
-- Tsuserver DR Beta Connection Bug
-- Demo Replay Pausing Bug
-- Showname Clipping with Chatbox
+ - [ ] 2.9.x Effects Bug
+ - [ ] Tsuserver DR Beta Connection Bug
+ - [ ] Demo Replay Pausing Bug
+ - [ ] Showname Clipping with Chatbox
 
 
 
@@ -39,5 +39,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3OTMxMjk0XX0=
+eyJoaXN0b3J5IjpbNTU1NjYxMjk1XX0=
 -->
