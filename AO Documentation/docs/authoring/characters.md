@@ -166,7 +166,7 @@ number = 13
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters.
 
 #### `[Shouts]` (optional)
-With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `Eureka!`
+With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
  
 #### `[Time]` (optional)
 
@@ -366,6 +366,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg1ODY5NDY0LC00NTcxMTY2OTQsMTg4OD
-Y1NTc4XX0=
+eyJoaXN0b3J5IjpbLTIwOTkwMzA2MDAsLTQ1NzExNjY5NCwxOD
+g4NjU1NzhdfQ==
 -->
