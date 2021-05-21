@@ -16,7 +16,7 @@
  - (Someone who knows Deskmods can improve upon this)
  - [ ] Demo Files
  - [x] Fonts Folder
- - [ ] Custom Shout Dialogue
+ - [x] Custom Shout Dialogue
 ### 2.8.x
  - [ ] Animated Backgrounds
  - [ ] Background Overlays
@@ -40,6 +40,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzODI1NjUwNSwtMTcxNjMyMjk3NSwxOD
-kzODA1MjQxXX0=
+eyJoaXN0b3J5IjpbLTIwMDEyMjAwNjMsMTIzODI1NjUwNSwtMT
+cxNjMyMjk3NSwxODkzODA1MjQxXX0=
 -->
