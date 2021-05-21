@@ -60,10 +60,11 @@ event = sfx-name.wav
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These can be overriden on a per-character basis, please see the [Character Documentation](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/characters.md) for more details on this override.
 
-### Subthemes and Parent Themes
+### Theme Inheritance
 
 Added in 2.9.1, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
 
+#### Subthemes
 Subthemes act like regular themes, but are placed within another theme's folder, akin to this:
 ```
 base\
@@ -72,11 +73,13 @@ base\
 			thin\
 			wider\
 ```
-In this example, if the `thin` subtheme is chosen, it will use the `KFO 2x Theme` folder for a basis, and then elements included in the `thin` subtheme will be used instead of the elements in `KFO 2x Theme`. Partial `.ini` and `.edits
-
+In this example, if the `thin` subtheme is chosen, it will use the `KFO 2x Theme` folder for a basis, and then elements included in the `thin` subtheme will be used instead of the elements in `KFO 2x Theme`. Partial `.ini` and `.css` edits will act in the same manner.
 
 Currently, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
+
+#### Parent Themes
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NTM5OTgzNCwtNzQyODA1MTgxLC0xNz
-Y1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
+eyJoaXN0b3J5IjpbODQyMzY1MjIyLC03NDI4MDUxODEsLTE3Nj
+U2MTc5MDgsMTc0NDMxMDgzNV19
 -->
