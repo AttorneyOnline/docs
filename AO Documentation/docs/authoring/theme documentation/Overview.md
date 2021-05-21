@@ -65,21 +65,22 @@ Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatbla
 Added in 2.9.1, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
 
 #### Subthemes
-Subthemes act like regular themes, but are placed within another theme's folder, akin to this:
-```
-base\
-	themes\
-		KFO 2x Theme\
-			thin\
-			wider\
-```
-In this example, if the `thin` subtheme is chosen, it will use the `KFO 2x Theme` folder for a basis, and then elements included in the `thin` subtheme will be used instead of the elements in `KFO 2x Theme`. Partial `.ini` and `.css` edits will act in the same manner.
 
-Currently, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
+You can add a folder inside of a theme that can replace anything inside the existing theme. Subthemes are prioritized over your current theme and work like a third layer of inheritance, so the first layer is default theme, second layer is current theme and the last layer is the subtheme. You can manually force your subtheme using the settings screen, set it to "default" to stop subthemes from changing, or "server" to allow the server to suggest which subtheme to use (meaning you can have themes for day/night cycles, different interfaces between investigation/trial segments, etc.)
+
+For example, the fallback order for  `courtroom_design.ini`  will be as follows:
+
+-   `theme/subtheme/courtroom_design.ini`
+-   `theme/courtroom_design.ini`
+-   `default_theme/courtroom_design.ini`
+
+Note that subthemes will never fall back to any subthemes belonging to the default theme.
+
+As of 2.9.1, the client makes no attempts to differentiate folders for the main theme (such as the `effects` folder) from subtheme folders.
 
 #### Parent Themes
-
+Parent themes 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyMzY1MjIyLC03NDI4MDUxODEsLTE3Nj
-U2MTc5MDgsMTc0NDMxMDgzNV19
+eyJoaXN0b3J5IjpbLTE4MTY5MzAzOTEsLTc0MjgwNTE4MSwtMT
+c2NTYxNzkwOCwxNzQ0MzEwODM1XX0=
 -->
