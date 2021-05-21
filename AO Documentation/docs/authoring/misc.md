@@ -1,10 +1,10 @@
 ## `misc` folder
 
-There are some other minor types of assets that are customizable. Like all assets, other players must already have them in order for them to be visible.
+Formerly home to everything that didn't belong in the other folders, with the introduction of themes, the `misc` folder has become vacant. However, it was given a new purpose as the go-to location for some of AO's extra customization potential.
 
 ### Character Themes
 
-Since 2.8, you can define a new character theme as a separate folder inside `base/misc`. Character themes, unlike UI themes, allow the chatbox and interjection effects to be customized at a per-character level. Look in the Character Documentation for more information on this.
+Starting with 2.8, you can define a new character theme as a separate folder inside `base/misc` through `chat = ` in the `char.ini`, allowing characters to use custom **chatboxes** (the box your message appears in) and **interjections**. Input should be a directory in `misc/` containing the chatbox you want to use. (i.e. - `chat = Phoenix Wright` would point to `base/misc/Phoenix Wright`)
 
 ### Overlay Effects
 
@@ -17,7 +17,7 @@ Effects are searched in:
 
 In both cases, `effects.ini` must be present in the effect folder so that the client can determine which effects can be displayed.
 
-Supported effect formats are the same as character animation formats (GIF, PNG, APNG, WebP).
+Supported effect formats are the same as the character formats (GIF, PNG, APNG, WebP).
 
 Effect icons must be `base/misc/[effects folder]/icons` inside the effect folder and should be no bigger than 16x16.
 
@@ -38,5 +38,5 @@ Note that character themes and effect folders can overlap; there is nothing stop
 
 ***Currently, there is a known compatibility bug where effects made during 2.8.x do not appear in the Effects Dropdown Menu for 2.9.x clients.***
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDUxODIzN119
+eyJoaXN0b3J5IjpbLTgzNzQ0NTE0M119
 -->
