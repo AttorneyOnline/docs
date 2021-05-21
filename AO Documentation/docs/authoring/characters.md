@@ -166,7 +166,7 @@ number = 13
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters.
 
 #### `[Shouts]` (optional)
-No longer are interjections lost to the ether when they end, now they are logged in the IC log much like presenting evidence or playing a song. Speaking of presenting evidence, it and logging objections can now optionally be disabled in settings. 
+With 2.9.1, interjections are now logg
  
 #### `[Time]` (optional)
 
@@ -366,6 +366,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzE3NTk3NTUsLTQ1NzExNjY5NCwxOD
-g4NjU1NzhdfQ==
+eyJoaXN0b3J5IjpbLTQzNzkzMjYwMCwtNDU3MTE2Njk0LDE4OD
+g2NTU3OF19
 -->
