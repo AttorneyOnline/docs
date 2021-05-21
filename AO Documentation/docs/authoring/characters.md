@@ -163,7 +163,7 @@ number = 13
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters.
 
 #### `[Shouts]` (optional)
-
+Added in 2.9.0, 
  
 #### `[Time]` (optional)
 
@@ -363,6 +363,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY0ODQ1MzE2LC00NTcxMTY2OTQsMTg4OD
+eyJoaXN0b3J5IjpbNjQ4NDc1NDA0LC00NTcxMTY2OTQsMTg4OD
 Y1NTc4XX0=
 -->
