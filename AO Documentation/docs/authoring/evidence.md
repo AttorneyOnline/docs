@@ -1,10 +1,14 @@
-(Lifted from Crystalwarrior's OOC Rules
+(Most Text and Images are Lifted from Crystalwarrior's OOC Rules)
+**To-Do: Hyperlink to CW's Document, fix Bullets, clear unnecessary/KFO-specific info**
+
+Evidence is located in `base/evidence`, is typically 70x70, and contains a border. (It is also possible to generate a border with Qt CSS Stylesheets, instead of drawing a border inside the image.)
 1.  Using the ![](https://lh4.googleusercontent.com/ZLg-MDJX6UWz5_DPEx5wRwWEIy9nB34TdNJgAB6PxfC1baST2ehjX1aoz_OhLo37ZLiuLqjNZx9BE5caQXyyijdpUeJ62fgYmh2xROxqqR1dNpVIy5roY0NuxcFSswx-J95t5RYu "Evidence") button, you may have an overview of the area you are currently present, including objects and items.
     
 2.  You may be asked to edit pieces of evidence yourself should you interact with it.
     
 
 ![](https://lh4.googleusercontent.com/W90nZfvS4_6__WMUn200BHIJIWLwB-CBd90HqjLUGf5OLD-SVXTEYaoT8NH_6ewWS-WCILiJDip5U62oZa-jqkKADsfUBcEB9GELPU0w8a4S5_59vyJGuLjoTl6nUA_zptKnk__S)
+
 
 1.  Click once to select a piece of evidence. Click ![](https://lh3.googleusercontent.com/Gm6fOCogDT-mpcgcdOJDLhvwzkNpolbAwlH4AUqvobkDCAn9wSgJ39DxB0dZcdkxnWkkD6Jvfma9Jhh_cYNbVhKX-lx4-o926yUGafbrPY_gelZ00coGCx2Z2wojTIXLLbVhK7Ot "Present") button to toggle its state, if it's blacked out like this ![](https://lh4.googleusercontent.com/ousAAsUKk8wzyRwxmu9wdp1afkb_Q_7I_U7hy6z-p4l0Y_96pvdhcdiB_WldsnJXXWTnzBJnkEi8nHwbP_ZKP9KnYSFJkPPB6aX_dA84TL1XlpB3OPoKnqZTnk3hvSkR9ZMni--z "Present Darkened") it means you will present that piece of evidence in your next message.
     
@@ -50,5 +54,5 @@
     
 5.  If you ![](https://lh3.googleusercontent.com/Gm6fOCogDT-mpcgcdOJDLhvwzkNpolbAwlH4AUqvobkDCAn9wSgJ39DxB0dZcdkxnWkkD6Jvfma9Jhh_cYNbVhKX-lx4-o926yUGafbrPY_gelZ00coGCx2Z2wojTIXLLbVhK7Ot "Present") a piece of evidence that's only present in a specific position, it will then show up in all positions, making it visible to everyone.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDMzMDg4MF19
+eyJoaXN0b3J5IjpbLTE2MzI4NjU4NDMsLTQwNDMzMDg4MF19
 -->
