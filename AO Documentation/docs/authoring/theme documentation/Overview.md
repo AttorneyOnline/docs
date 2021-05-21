@@ -58,7 +58,7 @@ event = sfx-name.wav
 
 ### Chatboxes
 
-Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These chatboxes can be overridden on a per-character basis with `chatbox = exampletext`, where the new chatbox can be found in `base/misc/exampletext` (please note that `exampletext` is just a sample name!).
+Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These can be overriden on a per-character basis, please see the [Character Documentation](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/characters.md) for more details.
 
 ### Subthemes and Parent Themes
 
@@ -66,6 +66,6 @@ Added in 2.9.1, it's now possible for themes to inherit elements from other them
 
 `Subthemes` are when the theme has (comparatively) edits made to them (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MjgwNTE4MSwtMTc2NTYxNzkwOCwxNz
-Q0MzEwODM1XX0=
+eyJoaXN0b3J5IjpbMTYwNjczNTA4NSwtNzQyODA1MTgxLC0xNz
+Y1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
 -->
