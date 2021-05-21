@@ -94,6 +94,10 @@ effects = default/effects
 realization = realization
 scaling = fast
 
+[Shouts]
+custom_name = Gotcha!
+custom_message = GOTCHA!
+
 [Emotions]
 number = 13
 1 = pointing#-#pointing#0#
@@ -157,7 +161,10 @@ number = 13
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters.
-- 
+
+#### `[Shouts]` (optional)
+
+ 
 #### `[Time]` (optional)
 
 Made mostly redundant with release 2.8.4. The purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine (read: the inability of the author to read the duration from the file itself). Up until 2.8.4, preanimations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` can still be used to dictate preanim duration, but it is no longer strictly necessary.
@@ -356,5 +363,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NzExNjY5NCwxODg4NjU1NzhdfQ==
+eyJoaXN0b3J5IjpbNTY0ODQ1MzE2LC00NTcxMTY2OTQsMTg4OD
+Y1NTc4XX0=
 -->
