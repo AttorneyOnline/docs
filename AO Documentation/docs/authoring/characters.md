@@ -163,7 +163,7 @@ number = 13
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
-- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added 
+- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added that will automatically apply one of these scaling options if it is not specified in the `char.ini`.
 
 #### `[Shouts]` (optional)
 With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
@@ -366,6 +366,6 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyMzgzODM5LC0yMDk5MDMwNjAwLC00NT
-cxMTY2OTQsMTg4ODY1NTc4XX0=
+eyJoaXN0b3J5IjpbMTE3NjI5NzkwNSwtMjA5OTAzMDYwMCwtND
+U3MTE2Njk0LDE4ODg2NTU3OF19
 -->
