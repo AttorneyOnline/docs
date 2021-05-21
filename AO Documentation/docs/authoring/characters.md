@@ -224,10 +224,11 @@ This is a popular way to declutter the root of your character folder.
 
 ##### `<modifier>`
 
-The modifier value controls pre-animations, sounds, and zooms. The valid inputs here are: 0, 1, 5, and 6.
+The modifier value controls pre-animations, sounds, and zooms. The valid inputs here are: 0, 1, 2, 3, 4, 5, and 6.
 
 - `0`: Tells the client to not play the pre-animation or sound effect associated with the emote, Has no effect on `[FrameSFX]` (more on that later)
 - `1`: Plays the pre-animation and associated sound.
+- - 	
 - `5`: Zoom, in which the foreground desk or witness stand will not be displayed. Additionally, the background is replaced by speed lines. Emotes with `5` will never play pre-animations.
 - `6`: Same as 5, except it will _always_ play pre-animations.
 
@@ -352,5 +353,5 @@ I believe that pretty much sums it up. Happy ini-editing!
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4ODY1NTc4XX0=
+eyJoaXN0b3J5IjpbMTMwNzkxNDE0NywxODg4NjU1NzhdfQ==
 -->
