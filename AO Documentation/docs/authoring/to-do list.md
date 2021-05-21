@@ -12,7 +12,8 @@
  - [x] Subthemes
  - [x] Parent Themes
  - [x] Animated UI
- - [ ] New Deskmods
+ - [x] New Deskmods
+ - (Someone who knows Deskmods can improve upon this)
  - [ ] Demo Files
  - [x] Fonts Folder
  - [ ] Custom Shout Dialogue
@@ -39,5 +40,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTYzMjI5NzUsMTg5MzgwNTI0MV19
+eyJoaXN0b3J5IjpbMTIzODI1NjUwNSwtMTcxNjMyMjk3NSwxOD
+kzODA1MjQxXX0=
 -->
