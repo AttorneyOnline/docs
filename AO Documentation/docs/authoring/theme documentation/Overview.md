@@ -6,10 +6,10 @@ The desktop AO client uses a custom UI loader that reads INI files which define 
 
 Before considering a theme, you must first understand two main limitations of themes:
 
-1. They break immediately on new versions, since new versions have buttons and widgets whose positions will not be defined by your (now outdated) theme. These new values will always be pulled from the Default theme.
+1. They break immediately on newer versions of the client, as there will be buttons and widgets whose positions will not be defined by your (now outdated) theme. These new values will always be pulled from the Default theme.
 2. They are *absolutely positioned*, meaning that they will not adapt to the size of the window.
 
-These limitations will be addressed in a later version, which will replace the in-house theming system with Qt's native theming system. For those who want to ensure compatibility when the replacement occurs, please make sure to back up the *original assets* used to make your theme - The more you save, the less work that will have to be done!
+These limitations will be addressed in a later client version, which will replace the in-house theming system with Qt's native theming system. For those who want to ensure compatibility when the replacement occurs, please make sure to back up the *original assets* used to make your theme - The more you save, the less work that will have to be done later on!
 
 ### Minimum Contents
 
@@ -81,6 +81,6 @@ As of 2.9.1, the client makes no attempts to differentiate folders for the main 
 #### Parent Themes
 You can specify a new default theme for themes, so instead of falling back to the theme called `default`, you can fall back to any theme of your choice. To do this, add a `default_theme=` value in `courtroom_design.ini`. Note that it is not recursive, so if the default theme you selected has a `default_theme=` value as well, it won't fall back a second time, nor will it fall back to `default`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4ODY0Mjg0LC0xMzUzMzM2OTIzLC03ND
-I4MDUxODEsLTE3NjU2MTc5MDgsMTc0NDMxMDgzNV19
+eyJoaXN0b3J5IjpbLTI5NTc2NzU2NiwtMTM1MzMzNjkyMywtNz
+QyODA1MTgxLC0xNzY1NjE3OTA4LDE3NDQzMTA4MzVdfQ==
 -->
