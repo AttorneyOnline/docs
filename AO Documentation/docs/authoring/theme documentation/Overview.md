@@ -62,8 +62,10 @@ Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatbla
 
 ### Subthemes and Parent Themes
 
-Added in 2.9.1, it's now possible for themes to inherit elements from other themes. `Subthemes` are when the theme has slight edits to them that
+Added in 2.9.1, it's now possible for themes to inherit elements from other themes.
+
+`Subthemes` are when the theme has (comparatively) edits made to them (
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NDYzNzEzOSwtMTc2NTYxNzkwOCwxNz
+eyJoaXN0b3J5IjpbLTc0MjgwNTE4MSwtMTc2NTYxNzkwOCwxNz
 Q0MzEwODM1XX0=
 -->
