@@ -325,19 +325,27 @@ QHeaderView::section {
 ### courtroom_fonts.ini
 ***There was no changes made since the previous version.***
 ### courtroom_sounds.ini
-***There was no changes made since the previous version.***
+```ini
+case_call = 
+```
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
+### lobby_fonts.ini
+#### Renamed
+|2.8.x|2.9.0|
+|--| --|
+font|`description_font =`|
 
 ---
 - Documentation pulled together by Crystal, with help from Crystalwarrior
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MzQ0ODgxNiwxMDI2NDAyNTg4LC0xOD
-E2NjIxNzU4LDE0NjE1NTY1NTAsMTIwMzEzODI0MiwxMjEwMTM5
-NDUsMzIwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NTI2MTcxOTgsLT
-IyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEy
-MjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5Nz
-EsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbLTE0MDE2ODg3MzEsMTQ1MzQ0ODgxNiwxMD
+I2NDAyNTg4LC0xODE2NjIxNzU4LDE0NjE1NTY1NTAsMTIwMzEz
+ODI0MiwxMjEwMTM5NDUsMzIwMjcyNzE3LDE2MjI4NDkwOTMsLT
+E4NTI2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEy
+MDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Nj
+k3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+
 -->
