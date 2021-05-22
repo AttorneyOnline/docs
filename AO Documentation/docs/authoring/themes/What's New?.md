@@ -16,7 +16,7 @@ This document is meant for those who want to update their themes to the newest v
 
 If you don't see a "What's new in X" for any of the aforementioned versions, that means there was no update to client themes since the previous release.
 ## What's new in v2.6.2?
-### courtroom_config.ini
+### courtroom_design.ini
 
 ```ini
 ; **COORDINATE SYSTEM RELATIVE TO "viewport"**
@@ -52,7 +52,7 @@ casing_button =
 - Screenshakes
 - Public and Private Evidence screens - No need to advertise to witnesses (and the other benches) what you have in unscripted cases!
 
-### courtroom_config.ini
+### courtroom_design.ini
 ```ini
 ; **COORDINATE SYSTEM RELATIVE TO "viewport"**
 ; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
@@ -125,6 +125,8 @@ Download for new files in Default Theme here
 
 |WAV Files|(These are the interjection background audio)!!)|
 |--|--|
+|counteralt.wav           |gotit.wav                |
+|crosswords.wav           | (Why this is here, idk)|
 #### Deleted
 ***No files have been deleted***
 #### Renamed
@@ -176,7 +178,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTAxMzg1OSwxNjIyODQ5MDkzLC0xOD
+eyJoaXN0b3J5IjpbMTA2OTA0MzU5NywxNjIyODQ5MDkzLC0xOD
 UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
 MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
 wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
