@@ -102,6 +102,7 @@ pair_order_dropdown =
 showname_align = 
 ```
 ### courtroom_fonts.ini
+(Note: Replace `[reference]` with the proper s
 ```ini
 showname_font = 
 showname_color = [r,g,b]
@@ -123,6 +124,11 @@ ms_chatlog_chatlog_color = [r,g,b]
 ms_chatlog_sender_color = [r,g,b]
 ms_chatlog_chatlog_bold = [0 or 1]
 ms_chatlog_chatlog_sharp = [0 or 1]
+server_chatlog_chatlog_font = 
+server_chatlog_chatlog_color = [r,g,b]
+server_chatlog_sender_color = [r,g,b]
+server_chatlog_chatlog_bold = [0 or 1]
+server_chatlog_chatlog_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
@@ -221,8 +227,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDA4NjQ2MzQsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbNDU2Mjc0MDEzLDE2MjI4NDkwOTMsLTE4NT
+I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
+NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
+00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
