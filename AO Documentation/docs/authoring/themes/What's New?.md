@@ -178,7 +178,7 @@ settings = [x, y, width, height]
 server_search =  [x, y, width, height]
 ```
 ### File changes
-Download for the new files in Default Theme [here](https://pipe.miroware.io/608e2adda333fb12a3ace7c4/AO%20Default%20Theme%20Changes/Theme%20Additive%20for%20v2.6.2.7z)
+Download for the new files in Default Theme here
 - It should be noted that in this client version, most filenames are the same as their `courtroom_design.ini` and `lobby_design.ini` counterparts.
 #### Added
 |Images| |
@@ -341,11 +341,11 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzE4NDIwNCwxMTY0NjI5NTM3LDE0NT
-M0NDg4MTYsMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxNDYxNTU2
-NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3MjcxNywxNj
-IyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQy
-MTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMz
-AsMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5
-Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbMTE2NDYyOTUzNywtNzE3MTg0MjA0LDExNj
+Q2Mjk1MzcsMTQ1MzQ0ODgxNiwxMDI2NDAyNTg4LC0xODE2NjIx
+NzU4LDE0NjE1NTY1NTAsMTIwMzEzODI0MiwxMjEwMTM5NDUsMz
+IwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NTI2MTcxOTgsLTIyODEx
+NjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEyMjI1Nj
+UsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5NzEsNTg3
+MjI0NTI2XX0=
 -->
