@@ -28,6 +28,8 @@ casing =
 casing_button = 
 ```
 ## What's new in v2.8.x?
+### Brief Overview
+- Added 
 ### courtroom_config.ini
 ```ini
 ; The scrolling music name display
@@ -79,6 +81,9 @@ showname_align =
 ```
 
 ## What's new in v2.9.0?
+### Brief Overview
+- Addition of Timers
+- Addition of Y-Offsets
 ### courtroom_config.ini
 ```ini
 music_list_animated = 1
@@ -104,5 +109,5 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbLTQyMTk2MDk3MSwtNzI5Njg0NzMyXX0=
 -->
