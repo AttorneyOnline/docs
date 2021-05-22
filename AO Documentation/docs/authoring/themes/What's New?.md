@@ -139,15 +139,13 @@ showname_align =
  - takethat_bubble.gif
 #### Deleted
 #### Renamed
-|  |  |
+| 2.6.2 | 2.8.x |
 |--|--|
-|  |  |
-
- -  -> objection_bubble.gif
- - holdit.gif -> holdit_bubble.gif
- - takethat.gif -> takethat_bubble.gif
- - evidencebackground.png -> evidence_background.png
- - deleteevidence.png -> evidence_delete.png
+| objection.gif | objection_bubble.gif |
+|holdit.gif|holdit_bubble.gif|
+|takethat.gif|takethat_bubble.gif|
+|evidencebackground.png|evidence_background.png|
+|deleteevidence.png|evidence_delete.png|
 
 ## What's new in v2.9.0?
 ### Brief Overview
@@ -189,8 +187,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjIwMTk2OTMsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbODg1MjA2NDAwLDE2MjI4NDkwOTMsLTE4NT
+I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
+NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
+00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
