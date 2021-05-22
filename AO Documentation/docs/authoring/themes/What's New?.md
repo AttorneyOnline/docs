@@ -36,6 +36,8 @@ casing_button =
 ***There was no changes made since the previous version.***
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
+### lobby_design.ini
+***There was no changes made since the previous version.***
 
 ## What's new in v2.8.x?
 ### Brief Overview
@@ -138,7 +140,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjQyMTcxNCwxMDkxMjAzMzUyLC0xOD
-IxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYw
-OTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTY1ODA2Nzc5MCwtNDE2NDIxNzE0LDEwOT
+EyMDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4
+Njk3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ
+==
 -->
