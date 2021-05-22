@@ -118,6 +118,8 @@ Download for new files in Default Theme here
 |reloadtheme.png                |reloadtheme_hover.png          |
 |screenshake.png                |screenshake_pressed.png        |
 
+|Text/Binary Files| |
+|--|--|
 #### Deleted
 ***No files have been deleted***
 #### Renamed
@@ -169,8 +171,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjYyOTk5MDQsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbMTM1MzU1NDE3OCwxNjIyODQ5MDkzLC0xOD
+UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
+MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
+wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
