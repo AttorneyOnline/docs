@@ -32,6 +32,7 @@ right_evidence_icon =
 casing = 
 casing_button = 
 ```
+### courtroom_fonts.ini
 ## What's new in v2.8.x?
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
@@ -133,7 +134,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1ODgyMTA4NSwxMDkxMjAzMzUyLC0xOD
+eyJoaXN0b3J5IjpbMTUzMzQwNzI4OSwxMDkxMjAzMzUyLC0xOD
 IxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYw
 OTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
