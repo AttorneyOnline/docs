@@ -37,7 +37,7 @@ casing_button =
 - Additive text option (Add onto your last statement without refreshing the IC Viewport)
 - Screenshakes
 - Public and Private Evidence screens - No need to advertise to witnesses (and the other benches) what you have in unscripted cases!
-- 
+
 ### courtroom_config.ini
 ```ini
 ; The scrolling music name display
@@ -93,6 +93,7 @@ showname_align =
 - Addition of Timers
 - Addition of Y-Offsets
 - `iniswaps.ini` was given a new incarnation! Alongside the character-specific iniswaps, you can also setup universal iniswaps by having a `iniswaps.ini` located in the root of the `base/` folder.
+- Addition of the Scrollable Character List.
 ### courtroom_config.ini
 ```ini
 music_list_animated = 1
@@ -116,8 +117,10 @@ clock_4 =
  - Updated the Settings Menu (nothing you need to worry about)
  - Added Subthemes & Parent Themes systems
  - Added compatibility with Animated UI Elements
-	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
+	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images.
+
+***There was
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzA0NzUzOCwtNDIxOTYwOTcxLDU4Nz
-IyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTEyMDY0NDk4MDEsLTQyMTk2MDk3MSw1OD
+cyMjQ1MjYsLTcyOTY4NDczMl19
 -->
