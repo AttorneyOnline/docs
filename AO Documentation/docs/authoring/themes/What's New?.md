@@ -278,9 +278,17 @@ clock_4_sharp = [0 or 1]
 ***There was no changes made since the previous version.***
 ### courtroom_stylesheets.ini
 ```css
+AOClockLabel {
+	border: 1px solid rgba(255, 255, 255, 135);
+	border-radius: 2px;
+	background-color: rgba(0, 0, 7, 135);
+	padding: 0px;
+}
 ```
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
+### lobby_stylesheets.ini
+
 ### File changes
 #### Added
 ***There was no changes made since the previous version.***
@@ -315,7 +323,7 @@ clock_4_sharp = [0 or 1]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNzI4OTk5MCwtMTgxNjYyMTc1OCwxND
+eyJoaXN0b3J5IjpbMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxND
 YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
 NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
 QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
