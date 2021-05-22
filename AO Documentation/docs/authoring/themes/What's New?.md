@@ -50,7 +50,7 @@ casing_button =
 ; ****
 ; The scrolling music name display
 music_display = 
-; WARNING: music_name x/y coordinates relative to music_display!
+; WARNING: "music_name x/y coordinates relative to music_display!
 music_name = 
 ; Emote buttons - [490, 98] determines how many columns and rows of buttons are
 ; displayed per page. 49, 49 is the ABSOLUTE MINIMUM, and displays 1 button per
@@ -133,7 +133,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMTM3NDYxOSwtMTgyMTIyMjU2NSwtNT
+eyJoaXN0b3J5IjpbMTAwNDg0NDcwNSwtMTgyMTIyMjU2NSwtNT
 YzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1
 MjYsLTcyOTY4NDczMl19
 -->
