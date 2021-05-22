@@ -197,7 +197,6 @@ Download for new files in Default Theme here
 |INI Files|CSS FIles |
 |--|--|
 |character_soundlist.ini  |courtroom_stylesheets.css|
-|courtroom_config.ini     
 
 |WAV Files|(These are the interjection background audio)!!)|
 |--|--|
@@ -239,7 +238,7 @@ clock_3 = [x, y, width, height]
 clock_4 = [x, y, width, height]
 ```
 ### courtroom_config.ini
-***There was no changes made since the previous version.***
+***File has been depreciated. Please use***
 ### courtroom_fonts.ini
 ***There was no changes made since the previous version.***
 ### courtroom_sounds.ini
@@ -275,7 +274,7 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTc1NDY0MiwzMjAyNzI3MTcsMTYyMj
+eyJoaXN0b3J5IjpbMjA3NDgwNjgxOCwzMjAyNzI3MTcsMTYyMj
 g0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3
 MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLD
 E5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4
