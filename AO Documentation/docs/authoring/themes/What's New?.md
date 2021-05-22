@@ -101,6 +101,12 @@ pair_order_dropdown =
 ;   justify (like in newspapers)
 showname_align = 
 ```
+### courtroom_fonts.ini
+***There was no changes made since the previous version.***
+### courtroom_sounds.ini
+***There was no changes made since the previous version.***
+### lobby_design.ini
+***There was no changes made since the previous version.***
 ### File changes
 Download for new files in Default Theme here
 #### Added
@@ -144,7 +150,7 @@ Download for new files in Default Theme here
 - Addition of Y-Offsets
 - `iniswaps.ini` was given a new incarnation! Alongside the character-specific iniswaps, you can also setup universal iniswaps by having a `iniswaps.ini` located in the root of the `base/` folder.
 - Addition of the Scrollable Character List.
-### courtroom_config.ini
+### courtroom_design.ini
 ```ini
 music_list_animated = 1
 pos_remove = 
@@ -162,6 +168,14 @@ clock_3 =
 ; pro2
 clock_4 = 
 ```
+### courtroom_config.ini
+***There was no changes made since the previous version.***
+### courtroom_fonts.ini
+***There was no changes made since the previous version.***
+### courtroom_sounds.ini
+***There was no changes made since the previous version.***
+### lobby_design.ini
+***There was no changes made since the previous version.***
 ## What's new in v2.9.1?
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
@@ -170,7 +184,15 @@ clock_4 =
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images.
  - *COMPLETE* exposure of the client's Qt Objects. Qt CSS Stylesheets are very powerful, so beware!
  - (Something about [clipping AOImage objects](https://github.com/AttorneyOnline/AO2-Client/pull/322), reminder to get clarification from in1tiate later)
+### courtroom_design.ini
+***There was no changes made since the previous version.***
 ### courtroom_config.ini
+***There was no changes made since the previous version.***
+### courtroom_fonts.ini
+***There was no changes made since the previous version.***
+### courtroom_sounds.ini
+***There was no changes made since the previous version.***
+### lobby_design.ini
 ***There was no changes made since the previous version.***
 
 ---
@@ -178,7 +200,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2OTA0MzU5NywxNjIyODQ5MDkzLC0xOD
+eyJoaXN0b3J5IjpbLTEyMjMzNDEzMywxNjIyODQ5MDkzLC0xOD
 UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
 MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
 wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
