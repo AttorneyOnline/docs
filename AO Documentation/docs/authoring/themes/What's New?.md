@@ -237,8 +237,6 @@ clock_3 = [x, y, width, height]
 ; pro2
 clock_4 = [x, y, width, height]
 ```
-### courtroom_config.ini
-***File has been depreciated. Please use***
 ### courtroom_fonts.ini
 ***There was no changes made since the previous version.***
 ### courtroom_sounds.ini
@@ -247,9 +245,7 @@ clock_4 = [x, y, width, height]
 ***There was no changes made since the previous version.***
 ```
 ### File changes
-#### Added
-#### Renamed
-#### Deleted
+***There was no changes made since the previous version.***
 ## What's new in v2.9.1?
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
@@ -259,8 +255,6 @@ clock_4 = [x, y, width, height]
  - *COMPLETE* exposure of the client's Qt Objects. Qt CSS Stylesheets are very powerful, so beware!
  - (Something about [clipping AOImage objects](https://github.com/AttorneyOnline/AO2-Client/pull/322), reminder to get clarification from in1tiate later)
 ### courtroom_design.ini
-***There was no changes made since the previous version.***
-### courtroom_config.ini
 ***There was no changes made since the previous version.***
 ### courtroom_fonts.ini
 ***There was no changes made since the previous version.***
@@ -274,7 +268,7 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3NDgwNjgxOCwzMjAyNzI3MTcsMTYyMj
+eyJoaXN0b3J5IjpbMjA0MzkyOTA0MiwzMjAyNzI3MTcsMTYyMj
 g0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3
 MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLD
 E5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4
