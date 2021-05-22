@@ -150,7 +150,26 @@ area_list_font =
 area_list_color = [r,g,b]
 area_list_bold = [0 or 1]
 area_list_sharp = [0 or 1]
+
+evidence_name = 
+evidence_name_font = 
+evidence_name_color = 
+evidence_name_bold = 
+evidence_name_sharp = 
+
+evidence_image_name = 
+evidence_image_name_font = 
+evidence_image_name_color = 
+evidence_image_name_bold = 
+evidence_image_name_sharp = 
+
+evidence_description = 
+evidence_description_font = 
+evidence_description_color = 
+evidence_description_bold = 
+evidence_description_sharp = 
 ```
+***`label_color`
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
 ### lobby_design.ini
@@ -248,8 +267,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI0MTYxMTA3LDE2MjI4NDkwOTMsLTE4NT
-I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
-NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
-00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbMjA5NDc1NTQ3MywxNjIyODQ5MDkzLC0xOD
+UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
+MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
+wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
