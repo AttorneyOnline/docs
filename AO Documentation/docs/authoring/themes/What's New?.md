@@ -123,7 +123,7 @@ clock_4 =
  - Added Subthemes & Parent Themes systems
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images.
- - *COMPLETE* exposure of the client's Qt Objects
+ - *COMPLETE* exposure of the client's Qt Objects. Qt CSS Stylesheets are very powerful, so beware!
 
 ### courtroom_config.ini
 ***There was no changes made to the courtroom_config.ini***
@@ -133,6 +133,6 @@ Documentation pulled together by Crystal
 Overviews by Crystal, with references from version changelogs
 (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTA3NTc4ODcsMTk0MjQ3ODY5NywtND
+eyJoaXN0b3J5IjpbLTE2NDIyMTQxNDcsMTk0MjQ3ODY5NywtND
 IxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
