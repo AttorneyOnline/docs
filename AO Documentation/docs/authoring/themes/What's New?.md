@@ -276,6 +276,9 @@ clock_4_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
+### courtroom_stylesheets.ini
+```css
+```
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
 ### File changes
@@ -312,7 +315,7 @@ clock_4_sharp = [0 or 1]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDIwMzUzMiwtMTgxNjYyMTc1OCwxND
+eyJoaXN0b3J5IjpbMjAwNzI4OTk5MCwtMTgxNjYyMTc1OCwxND
 YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
 NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
 QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
