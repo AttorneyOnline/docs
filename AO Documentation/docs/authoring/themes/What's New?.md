@@ -116,7 +116,6 @@ message_sharp = [0 or 1]
 
 ic_chatlog = [font size]
 ic_chatlog_font = 
-ic_chatlog_color = [r,g,b]
 ic_chatlog_bold = [0 or 1]
 ic_chatlog_sharp = [0 or 1]
 
@@ -236,7 +235,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjU1OTc4MjgsMTYyMjg0OTA5MywtMT
+eyJoaXN0b3J5IjpbLTE4NTQ5Mzg4MDMsMTYyMjg0OTA5MywtMT
 g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
 MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
 csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
