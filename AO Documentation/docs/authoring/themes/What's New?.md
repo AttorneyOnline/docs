@@ -128,7 +128,21 @@ showname_align =
  - evidence_transfer.png
  - evidence_transfer_private.png
  - evidence_x.png
- - ev
+ - evidenceok.png
+ - gotit.wav
+ - holdit.wav
+ - holdit_bubble.gif
+ - music_display.png
+ - music_display.webp
+ - objection.wav
+ - objection_bubble.gif
+ - reloadtheme.png
+ - reloadtheme_hover.png
+ - screenshake.png
+ - screenshake_pressed.png
+ - takethat.wav
+ - takethat_bubble.gif
+ - 
 
 ## What's new in v2.9.0?
 ### Brief Overview
@@ -170,8 +184,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5MDY0MTc1NiwxNjIyODQ5MDkzLC0xOD
-UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
-MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
-wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbMTY1MzE1MTQsMTYyMjg0OTA5MywtMTg1Mj
+YxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1
+MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLT
+QyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
