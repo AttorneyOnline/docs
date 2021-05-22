@@ -182,8 +182,7 @@ Download for new files in Default Theme here
 #### Added
 |Images| |
 |--| --|
-|callmod.png                    |callmod_hover.png              |
-|changecharacter.png            |changecharacter_hover.png      |
+|callmod.png                    |changecharacter.png            |
 |chatblank.png                  |chat_arrow.gif                 |
 |evidence_background_private.png|evidence_button.png            |
 |evidence_global.png            |evidence_ok.png                |
@@ -191,8 +190,8 @@ Download for new files in Default Theme here
 |evidence_save.png              |evidence_load.png              |
 |evidence_transfer.png          |evidence_transfer_private.png  |
 |evidence_x.png                 |music_display.png              |
-|reloadtheme.png                |reloadtheme_hover.png          |
 |screenshake.png                |screenshake_pressed.png        |
+|reloadtheme.png                |
 
 |INI Files|CSS FIles |
 |--|--|
@@ -267,7 +266,7 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0NjY0MzM0LDMyMDI3MjcxNywxNjIyOD
+eyJoaXN0b3J5IjpbMTIxMDEzOTQ1LDMyMDI3MjcxNywxNjIyOD
 Q5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcx
 NCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMT
 k0MjQ3ODY5NywtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0
