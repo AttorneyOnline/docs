@@ -15,7 +15,9 @@ This document is meant for those who want to update their themes to the newest v
 	 - Released May 3rd, 2021
 
 If you don't see a "What's new in X" for any of the aforementioned versions, that means there was no update to client themes since the previous release.
-***PLEASE NOTE*** that in all the supplementary downloads included in this document, any files with the suffix `_new[versionnumber]` include *only* the new lines that need to be added to your pre-existing files!
+
+> ***PLEASE NOTE*** that in all the supplementary downloads included in this document, any files with the suffix `_new[versionnumber]` include *only* the new lines that need to be added to your pre-existing files! The bracket references used throughout the rest ofhave been removed from these files, too!
+
 ## What's new in v2.6.2?
 ### courtroom_design.ini
 
@@ -342,7 +344,7 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2MTA1NDAxLC0xODA0MTgzNTIwLDExNj
+eyJoaXN0b3J5IjpbMzU0NzQwMTI3LC0xODA0MTgzNTIwLDExNj
 Q2Mjk1MzcsLTcxNzE4NDIwNCwxMTY0NjI5NTM3LDE0NTM0NDg4
 MTYsMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxNDYxNTU2NTUwLD
 EyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3MjcxNywxNjIyODQ5
