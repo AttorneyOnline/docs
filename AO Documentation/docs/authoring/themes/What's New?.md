@@ -50,7 +50,7 @@ casing_button =
 ; ****
 ; The scrolling music name display
 music_display = 
-; WARNING: "music_name x/y coordinates relative to music_display!
+; WARNING: "music_name" x/y coordinates relative to "music_display"!
 music_name = 
 ; Emote buttons - [490, 98] determines how many columns and rows of buttons are
 ; displayed per page. 49, 49 is the ABSOLUTE MINIMUM, and displays 1 button per
@@ -58,7 +58,7 @@ music_name =
 ; pick a character. If you want X columns and Y rows, you would change it to
 ; 49X, 49Y (ie. 490, 147 if you want 10 columns and 3 rows)
 emote_button_size = 
-; Display the accessible iniswaps on this character (grabbed from iniswaps.ini)
+; Display the accessible iniswaps on this character (which are grabbed from iniswaps.ini)
 iniswap_dropdown = 
 ; The button to remove the current iniswap
 iniswap_remove = 
@@ -133,7 +133,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNDg0NDcwNSwtMTgyMTIyMjU2NSwtNT
+eyJoaXN0b3J5IjpbMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNT
 YzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1
 MjYsLTcyOTY4NDczMl19
 -->
