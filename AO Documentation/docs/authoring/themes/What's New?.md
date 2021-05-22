@@ -137,6 +137,19 @@ music_list_font =
 music_list_color = [r,g,b]
 music_list_bold = [0 or 1]
 music_list_sharp = [0 or 1]
+
+; This affects what's seen in the "music_display" element mentioned in `courtroom_design.ini`
+music_name =
+music_name_font = 
+music_name_color = [r,g,b]
+music_name_bold = [0 or 1]
+music_name_sharp = [0 or 1]
+
+area_list =
+area_list_font = 
+area_list_color = [r,g,b]
+area_list_bold = [0 or 1]
+area_list_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
@@ -235,8 +248,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ5Mzg4MDMsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbOTI0MTYxMTA3LDE2MjI4NDkwOTMsLTE4NT
+I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
+NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
+00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
