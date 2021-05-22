@@ -240,39 +240,39 @@ clock_4 = [x, y, width, height]
 ### courtroom_fonts.ini
 ```ini
 ; universal
-clock_0 = 
+clock_0 = [font size]
 clock_0_font =  
-clock_0_color = 
-clock_0_bold = 
-clock_0_sharp = 
+clock_0_color = [r,g,b]
+clock_0_bold = [0 or 1]
+clock_0_sharp = [0 or 1]
 
 ; def
-clock_1 = 
+clock_1 = [font size]
 clock_1_font = 
-clock_1_color = 
-clock_1_bold = 
-clock_1_sharp = 
+clock_1_color = [r,g,b]
+clock_1_bold = [0 or 1]
+clock_1_sharp = [0 or 1]
 
 ; pro
-clock_2 = 
+clock_2 = [font size]
 clock_2_font = 
-clock_2_color = 
-clock_2_bold = 
-clock_2_sharp = 
+clock_2_color = [r,g,b]
+clock_2_bold = [0 or 1]
+clock_2_sharp = [0 or 1]
 
 ; def 2
-clock_3 = 
+clock_3 = [font size]
 clock_3_font = 
-clock_3_color = 
-clock_3_bold = 
-clock_3_sharp = 
+clock_3_color = [r,g,b]
+clock_3_bold = [0 or 1]
+clock_3_sharp = [0 or 1]
 
 ; pro 2
-clock_4 = 
+clock_4 = [font size]
 clock_4_font = 
-clock_4_color = 
-clock_4_bold = 
-clock_4_sharp = 
+clock_4_color = [r,g,b]
+clock_4_bold = [0 or 1]
+clock_4_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
@@ -312,7 +312,7 @@ clock_4_sharp =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMDgxNzE0NSwtMTgxNjYyMTc1OCwxND
+eyJoaXN0b3J5IjpbMTI0NDIwMzUzMiwtMTgxNjYyMTc1OCwxND
 YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
 NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
 QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
