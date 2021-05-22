@@ -288,7 +288,7 @@ AOClockLabel {
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
 ### lobby_stylesheets.css
-The stylesheet was completely redone, with all previous entries being replaced with this:
+The stylesheet was completely redone, with all previous entries being replaced with the following:
 ```css
 QLineEdit {
 	color:white;
@@ -311,6 +311,7 @@ QHeaderView::section {
 |witnesstestimony|witnesstestimony_bubble.gif|
 #### Deleted
 ***There was no changes made since the previous version.***
+
 ## What's new in v2.9.1?
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
@@ -333,10 +334,10 @@ QHeaderView::section {
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzMxMTMzMTg4LDEwMjY0MDI1ODgsLTE4MT
-Y2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0
-NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMj
-I4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIy
-MjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MS
-w1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbMTQ1MzQ0ODgxNiwxMDI2NDAyNTg4LC0xOD
+E2NjIxNzU4LDE0NjE1NTY1NTAsMTIwMzEzODI0MiwxMjEwMTM5
+NDUsMzIwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NTI2MTcxOTgsLT
+IyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEy
+MjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5Nz
+EsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
