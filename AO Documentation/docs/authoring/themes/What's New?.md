@@ -33,6 +33,10 @@ casing =
 casing_button = 
 ```
 ### courtroom_fonts.ini
+***There was no changes made since the previous version.***
+### courtroom_sounds.ini
+***There was no changes made since the previous version.***
+
 ## What's new in v2.8.x?
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
@@ -127,14 +131,14 @@ clock_4 =
  - *COMPLETE* exposure of the client's Qt Objects. Qt CSS Stylesheets are very powerful, so beware!
 
 ### courtroom_config.ini
-***There was no changes made to the courtroom_config.ini***
+***There was no changes made since the previous version.***
 
 ---
 - Documentation pulled together by Crystal, with help from Crystalwarrior
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzQwNzI4OSwxMDkxMjAzMzUyLC0xOD
+eyJoaXN0b3J5IjpbLTQxNjQyMTcxNCwxMDkxMjAzMzUyLC0xOD
 IxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYw
 OTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
