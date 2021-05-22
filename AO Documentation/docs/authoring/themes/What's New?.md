@@ -276,7 +276,7 @@ clock_4_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
-### courtroom_stylesheets.ini
+### courtroom_stylesheets.css
 ```css
 AOClockLabel {
 	border: 1px solid rgba(255, 255, 255, 135);
@@ -287,8 +287,18 @@ AOClockLabel {
 ```
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
-### lobby_stylesheets.ini
+### lobby_stylesheets.css
+The stylesheet was completely redone, with all previous entries being replaced with this:
+```css
+QLineEdit {
+	color:white;
+	background-color:transparent;
+}
 
+QHeaderView::section {
+    background-color: darkgray;
+}
+```
 ### File changes
 #### Added
 ***There was no changes made since the previous version.***
@@ -323,10 +333,10 @@ AOClockLabel {
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxND
-YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
-NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
-QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
-OTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4NzIyNDUyNi
-wtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbMzMxMTMzMTg4LDEwMjY0MDI1ODgsLTE4MT
+Y2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0
+NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMj
+I4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIy
+MjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MS
+w1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
