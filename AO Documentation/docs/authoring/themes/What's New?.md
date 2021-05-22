@@ -104,9 +104,9 @@ showname_align =
 ### File changes
 Download for new files in Default Theme here
 #### Added
-|  |  |
-|--|--|
-|  |  |
+|Images|
+|--|
+|  |
 
 #### Deleted
 #### Renamed
@@ -158,8 +158,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4NzQ2Mjc2LDE2MjI4NDkwOTMsLTE4NT
-I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
-NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
-00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbLTEyMjU3MDI1MjAsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
