@@ -245,6 +245,8 @@ clock_4 = [x, y, width, height]
 ***There was no changes made since the previous version.***
 ### File changes
 ### Added
+|Images| |
+|--| --|
 
 ### Renamed
 ### Deleted
@@ -270,9 +272,10 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMT
-AxMzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5
-OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMT
-gyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2
-MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbLTE4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMj
+AzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5
+MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMT
+A5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0
+Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl
+19
 -->
