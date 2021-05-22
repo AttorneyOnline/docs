@@ -33,6 +33,8 @@ casing_button =
 - Added a visible Music Display - Now you don't need to scroll through IC logs to see what's playing!
 - Added customizable emote button sizes (used to be hardcoded as a 40x40 button)
 - Added a Sound Effects dropdown menu. No more need to tie Sound Effects to specific sprites (but you still can if you want to)!
+- Added a visible effects dropdown, as well as the ability to let themes have their own visible effects that they can use. (You can find more on the character-specific side in the Characters Overview document)
+- Public and Private Evidence screens - Now
 ### courtroom_config.ini
 ```ini
 ; The scrolling music name display
@@ -113,6 +115,6 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTQ4MTE1MSwtNDIxOTYwOTcxLDU4Nz
+eyJoaXN0b3J5IjpbMTk5MzMzMjE4MywtNDIxOTYwOTcxLDU4Nz
 IyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
