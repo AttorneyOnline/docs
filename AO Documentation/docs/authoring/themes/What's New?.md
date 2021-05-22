@@ -129,10 +129,10 @@ clock_4 =
 ***There was no changes made to the courtroom_config.ini***
 
 ---
-Documentation pulled together by Crystal
-Overviews by Crystal, with references from version changelogs
-(Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
+- Documentation pulled together by Crystal
+- Overviews by Crystal, with references from version changelogs
+- (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDIyMTQxNDcsMTk0MjQ3ODY5NywtND
-IxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00Mj
+E5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
