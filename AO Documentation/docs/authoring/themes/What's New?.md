@@ -104,9 +104,27 @@ showname_align =
 ### File changes
 Download for new files in Default Theme here
 #### Added
-|Images|
-|--|
-|  |
+|Images| |
+|--| --|
+|callmod.png                    |callmod_hover.png              |
+|changecharacter.png            |changecharacter_hover.png      |
+|chatblank.png                  |chat_arrow.gif                 |
+|evidence_background_private.png|evidence_button.png            |
+|
+|evidence_global.png            |evidence_load.png              |
+|
+|evidence_ok.png                |
+|evidence_overlay.png           |
+|evidence_overlay_private.png   |
+|evidence_save.png              |
+|evidence_transfer.png          |
+|evidence_transfer_private.png  |
+|evidence_x.png                 |
+|music_display.png              |
+|reloadtheme.png                |
+|reloadtheme_hover.png          |
+|screenshake.png                |
+|screenshake_pressed.png        |
 
 #### Deleted
 #### Renamed
@@ -158,8 +176,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjU3MDI1MjAsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbLTI5NDQ1NzYxMSwxNjIyODQ5MDkzLC0xOD
+UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
+MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
+wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
