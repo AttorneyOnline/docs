@@ -119,7 +119,7 @@ Download for new files in Default Theme here
 |screenshake.png                |screenshake_pressed.png        |
 
 #### Deleted
-***No f
+***No files have been deleted***
 #### Renamed
 | 2.6.2 | 2.8.x |
 |--|--|
@@ -169,7 +169,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDA2ODYwNzQsMTYyMjg0OTA5MywtMT
+eyJoaXN0b3J5IjpbLTIxMjYyOTk5MDQsMTYyMjg0OTA5MywtMT
 g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
 MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
 csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
