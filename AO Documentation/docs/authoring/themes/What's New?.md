@@ -3,7 +3,7 @@ This document is meant for those who want to update their themes to the newest v
 
  - v2.6.0 (This is the assumed "minimum" version)
 	 - Released December 15th, 2018
- - v2.6.2
+ - [v2.6.2](#whats-new-in-v262)
 	 - Released July 27th, 2019
  - v2.8.4
 	 - Released July 31st, 2020
@@ -122,6 +122,6 @@ clock_4 =
 ### courtroom_config.ini
 ***There was no changes made to the courtroom_config.ini***
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4Nz
-IyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbMTgxNDkwNDU1NCwxOTQyNDc4Njk3LC00Mj
+E5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
