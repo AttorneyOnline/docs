@@ -241,7 +241,7 @@ clock_4 = [x, y, width, height]
 ```ini
 ; universal
 clock_0 = 
-clock_0_font = 
+clock_0_font =  
 clock_0_color = 
 clock_0_bold = 
 clock_0_sharp = 
@@ -255,24 +255,24 @@ clock_1_sharp =
 
 ; pro
 clock_2 = 
-clock_2_font = Arial
-clock_2_color = 255, 0, 0
-clock_2_bold = 0
-clock_2_sharp = 1
+clock_2_font = 
+clock_2_color = 
+clock_2_bold = 
+clock_2_sharp = 
 
 ; def 2
-clock_3 = 8
-clock_3_font = Arial
-clock_3_color = 0, 128, 255
-clock_3_bold = 0
-clock_3_sharp = 1
+clock_3 = 
+clock_3_font = 
+clock_3_color = 
+clock_3_bold = 
+clock_3_sharp = 
 
 ; pro 2
-clock_4 = 8
-clock_4_font = Arial
-clock_4_color = 255, 0, 0
-clock_4_bold = 0
-clock_4_sharp = 1
+clock_4 = 
+clock_4_font = 
+clock_4_color = 
+clock_4_bold = 
+clock_4_sharp = 
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
@@ -312,7 +312,7 @@ clock_4_sharp = 1
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NzQzMTY5MCwtMTgxNjYyMTc1OCwxND
+eyJoaXN0b3J5IjpbMjAwMDgxNzE0NSwtMTgxNjYyMTc1OCwxND
 YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
 NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
 QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
