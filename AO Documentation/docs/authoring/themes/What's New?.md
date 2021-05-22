@@ -22,15 +22,15 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 ; **COORDINATE SYSTEM RELATIVE TO "viewport"**
 ; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
 ;; These icons are played whenever evidence is presented - It's the animation prior to actually showing what the presented evidence is!
-left_evidence_icon = 
-right_evidence_icon =
+left_evidence_icon = [x, y, width, height]
+right_evidence_icon = [x, y, width, height]
 ; These two are casing-related inputs.
 ; "casing" is a tickbox that toggles whether you should receive case alerts or
 ; not (you can set your preferences, and its default value, in the Settings!)
 ; "casing_button" is an interface to help you announce a case (you have to be
 ; a CM first to be able to announce cases). 
-casing = 
-casing_button = 
+casing = [x, y, width, height]
+casing_button = [x, y, width, height]
 ```
 ### courtroom_fonts.ini
 ***There was no changes made since the previous version.***
@@ -58,41 +58,41 @@ casing_button =
 ; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
 ; ****
 ; The scrolling music name display
-music_display = 
+music_display = [x, y, width, height]
 ; WARNING: "music_name" x/y coordinates relative to "music_display"!
-music_name = 
+music_name = [x, y, width, height]
 ; Emote buttons - [490, 98] determines how many columns and rows of buttons are
 ; displayed per page. 49, 49 is the ABSOLUTE MINIMUM, and displays 1 button per
 ; page. Having either number lower than 49 crashes the client when you try to
 ; pick a character. If you want X columns and Y rows, you would change it to
 ; 49X, 49Y (ie. 490, 147 if you want 10 columns and 3 rows)
-emote_button_size = 
+emote_button_size = [x, y, width, height]
 ; Display the accessible iniswaps on this character (which are grabbed from iniswaps.ini)
-iniswap_dropdown = 
+iniswap_dropdown = [x, y, width, height]
 ; The button to remove the current iniswap
-iniswap_remove = 
+iniswap_remove = [x, y, width, height]
 ; Display the accessible sfx on this character (grabbed from soundlist.ini). If none found, courtroom_soundlist.ini will be used.
-sfx_dropdown = 
+sfx_dropdown = [x, y, width, height]
 ; The button to remove the current iniswap
-sfx_remove = 
+sfx_remove = [x, y, width, height]
 ; Display the list of overlay effects accessible
-effects_dropdown = 
+effects_dropdown = [x, y, width, height]
 ; The size of the icons for dropdown entries
-effects_icon_size =
+effects_icon_size = [width, height]
 ; Additive button. Allows for people to add onto their previous message without completely refreshing the IC viewport
-additive = 
+additive = [x, y, width, height]
 ; Screenshake
-screenshake = 
+screenshake = [x, y, width, height]
 ; Buttons for Loading and Saving Evidence to a file
-evidence_load = 
-evidence_save = 
+evidence_load = [x, y, width, height]
+evidence_save = [x, y, width, height]
 ; Buttons to transfer Evidence between public and private inventories
-evidence_transfer = 
-evidence_switch = 
+evidence_transfer = [x, y, width, height]
+evidence_switch = [x, y, width, height]
 ; How large are the evidence icons?
-evidence_button_size = 
-evidence_ok = 
-pair_order_dropdown = 
+evidence_button_size = [width, height
+evidence_ok = [x, y, width, height]
+pair_order_dropdown = [x, y, width, height]
 ; Where the text will be aligned in the showname box.
 ; Possible options include:
 ;   left
@@ -139,31 +139,31 @@ music_list_bold = [0 or 1]
 music_list_sharp = [0 or 1]
 
 ; This affects what's seen in the "music_display" element mentioned in `courtroom_design.ini`
-music_name =
+music_name = [font size]
 music_name_font = 
 music_name_color = [r,g,b]
 music_name_bold = [0 or 1]
 music_name_sharp = [0 or 1]
 
-area_list =
+area_list = [font size]
 area_list_font = 
 area_list_color = [r,g,b]
 area_list_bold = [0 or 1]
 area_list_sharp = [0 or 1]
 
-evidence_name = 
+evidence_name = [font size]
 evidence_name_font = 
 evidence_name_color = [r,g,b]
 evidence_name_bold = [0 or 1]
 evidence_name_sharp = [0 or 1]
 
-evidence_image_name = 
+evidence_image_name = [font size]
 evidence_image_name_font = 
 evidence_image_name_color = [r,g,b]
 evidence_image_name_bold = [0 or 1]
 evidence_image_name_sharp = 
 
-evidence_description = 
+evidence_description = [font size]
 evidence_description_font = 
 evidence_description_color = [r,g,b]
 evidence_description_bold = [0 or 1]
@@ -270,8 +270,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2OTg0NTY1MCwxNjIyODQ5MDkzLC0xOD
-UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
-MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
-wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTE1NzIwNjY2NTUsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
