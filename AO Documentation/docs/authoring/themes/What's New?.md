@@ -39,6 +39,7 @@ casing_button =
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
 ### File changes
+***There was no changes made since the previous version.***
 
 ## What's new in v2.8.x?
 ### Brief Overview
@@ -100,6 +101,9 @@ pair_order_dropdown =
 ;   justify (like in newspapers)
 showname_align = 
 ```
+### File changes
+
+ - Addition of 
 
 ## What's new in v2.9.0?
 ### Brief Overview
@@ -141,8 +145,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMj
-I4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIy
-MjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MS
-w1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbLTE2NjAwNTA4NDMsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
