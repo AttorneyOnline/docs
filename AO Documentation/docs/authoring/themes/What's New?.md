@@ -244,12 +244,17 @@ clock_4 = [x, y, width, height]
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
 ### File changes
-### Added
-|Images| |
+#### Added
+***There was no changes made since the previous version.***
+#### Renamed
+|2.8.x|2.9.0|
 |--| --|
-
-### Renamed
-### Deleted
+|crossexamination|crossexamination_bubble.gif|
+|guilty|guilty_bubble.gif|
+|notguilty|notguilty_bubble.gif|
+|witnesstestimony|witnesstestimony_bubble.gif|
+#### Deleted
+***There was no changes made since the previous version.***
 ## What's new in v2.9.1?
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
@@ -272,10 +277,10 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMj
-AzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5
-MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMT
-A5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0
-Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl
-19
+eyJoaXN0b3J5IjpbLTEwNTUxNjk4ODIsLTE4MTY2MjE3NTgsMT
+Q2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3
+MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC
+00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYz
+MjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1Mj
+YsLTcyOTY4NDczMl19
 -->
