@@ -102,41 +102,12 @@ pair_order_dropdown =
 showname_align = 
 ```
 ### File changes
+Download for new files in Default Theme here
 #### Added
- - callmod.png
- - callmod_hover.png
- - changecharacter.png
- - changecharacter_hover.png
- - character_soundlist.ini
- - chat_arrow.gif
- - chatblank
- - counteralt.wav
- - coutroom_config.ini
- - courtroom_stylesheets.css
- - crosswords.wav
- - evidence_background_private.png
- - evidence_button.png
- - evidence_global.png
- - evidence_load.png
- - evidence_ok.png
- - evidence_overlay.png
- - evidence_overlay_private.png
- - evidence_save.png
- - evidence_transfer.png
- - evidence_transfer_private.png
- - evidence_x.png
- - gotit.wav
- - holdit.wav
- - holdit_bubble.gif
- - music_display.png
- - objection.wav
- - objection_bubble.gif
- - reloadtheme.png
- - reloadtheme_hover.png
- - screenshake.png
- - screenshake_pressed.png
- - takethat.wav
- - takethat_bubble.gif
+|  |  |
+|--|--|
+|  |  |
+
 #### Deleted
 #### Renamed
 | 2.6.2 | 2.8.x |
@@ -187,7 +158,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg1MjA2NDAwLDE2MjI4NDkwOTMsLTE4NT
+eyJoaXN0b3J5IjpbNjY4NzQ2Mjc2LDE2MjI4NDkwOTMsLTE4NT
 I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
 NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
 00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
