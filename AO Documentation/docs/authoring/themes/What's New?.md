@@ -246,6 +246,11 @@ clock_4 = [x, y, width, height]
 ***There was no changes made since the previous version.***
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
+```
+### File changes
+#### Added
+#### Renamed
+#### Deleted
 ## What's new in v2.9.1?
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
@@ -270,8 +275,9 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NT
-I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
-NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
-00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbMTE4NTc1NDY0MiwzMjAyNzI3MTcsMTYyMj
+g0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3
+MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLD
+E5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4
+NDczMl19
 -->
