@@ -21,7 +21,7 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 ```ini
 ; **COORDINATE SYSTEM RELATIVE TO "viewport"**
 ; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
-;; These
+;; These icons are played whenever evidence is presented - It's the animation prior to actually showing what the presented evidence is!
 left_evidence_icon = 
 right_evidence_icon =
 ; These two are casing-related inputs.
@@ -133,6 +133,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00Mj
-E5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOT
+QyNDc4Njk3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3
+MzJdfQ==
 -->
