@@ -332,20 +332,19 @@ case_call =
 ***There was no changes made since the previous version.***
 ### lobby_fonts.ini
 #### Renamed
-|2.8.x|2.9.0|
+|2.9.0|2.9.1|
 |--| --|
-font|`description_font =`|
+|`font_description = `|`description_font =`|
 
 ---
 - Documentation pulled together by Crystal, with help from Crystalwarrior
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDE2ODg3MzEsMTQ1MzQ0ODgxNiwxMD
-I2NDAyNTg4LC0xODE2NjIxNzU4LDE0NjE1NTY1NTAsMTIwMzEz
-ODI0MiwxMjEwMTM5NDUsMzIwMjcyNzE3LDE2MjI4NDkwOTMsLT
-E4NTI2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEy
-MDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Nj
-k3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
-
+eyJoaXN0b3J5IjpbMTE2NDYyOTUzNywxNDUzNDQ4ODE2LDEwMj
+Y0MDI1ODgsLTE4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4
+MjQyLDEyMTAxMzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
