@@ -66,7 +66,7 @@ music_name = [x, y, width, height]
 ; page. Having either number lower than 49 crashes the client when you try to
 ; pick a character. If you want X columns and Y rows, you would change it to
 ; 49X, 49Y (ie. 490, 147 if you want 10 columns and 3 rows)
-emote_button_size = [x, y, width, height]
+emote_button_size = [width, height]
 ; Display the accessible iniswaps on this character (which are grabbed from iniswaps.ini)
 iniswap_dropdown = [x, y, width, height]
 ; The button to remove the current iniswap
@@ -341,11 +341,11 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NDYyOTUzNywtNzE3MTg0MjA0LDExNj
-Q2Mjk1MzcsMTQ1MzQ0ODgxNiwxMDI2NDAyNTg4LC0xODE2NjIx
-NzU4LDE0NjE1NTY1NTAsMTIwMzEzODI0MiwxMjEwMTM5NDUsMz
-IwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NTI2MTcxOTgsLTIyODEx
-NjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEyMjI1Nj
-UsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5NzEsNTg3
-MjI0NTI2XX0=
+eyJoaXN0b3J5IjpbLTE4MDQxODM1MjAsMTE2NDYyOTUzNywtNz
+E3MTg0MjA0LDExNjQ2Mjk1MzcsMTQ1MzQ0ODgxNiwxMDI2NDAy
+NTg4LC0xODE2NjIxNzU4LDE0NjE1NTY1NTAsMTIwMzEzODI0Mi
+wxMjEwMTM5NDUsMzIwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NTI2
+MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMzNT
+IsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC00
+MjE5NjA5NzFdfQ==
 -->
