@@ -119,8 +119,9 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images.
 
-***There was
+### courtroom_config.ini
+***There was no changes made to the courtroom_config.ini***
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDY0NDk4MDEsLTQyMTk2MDk3MSw1OD
-cyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4Nz
+IyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
