@@ -114,25 +114,30 @@ message_color = [r,g,b]
 message_bold = [0 or 1]
 message_sharp = [0 or 1]
 
-ic_chatlog =
+ic_chatlog = [font size]
 ic_chatlog_font = 
 ic_chatlog_color = [r,g,b]
 ic_chatlog_bold = [0 or 1]
 ic_chatlog_sharp = [0 or 1]
 
-ms_chatlog =
+ms_chatlog = [font size]
 ms_chatlog_font = 
 ms_chatlog_color = [r,g,b]
-ms_sender_color = [r,g,b]
+ms_chatlog_sender_color = [r,g,b]
 ms_chatlog_bold = [0 or 1]
 ms_chatlog_sharp = [0 or 1]
 
-server_chatlog =
+server_chatlog = [font size]
 server_chatlog_font = 
 server_chatlog_color = [r,g,b]
-server_sender_color = [r,g,b]
+server_chatlog_sender_color = [r,g,b]
 server_chatlog_bold = [0 or 1]
 server_chatlog_sharp = [0 or 1]
+
+music_list_font = 
+music_list_color = [r,g,b]
+music_list_bold = [0 or 1]
+music_list_sharp = [0 or 1]
 ```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
@@ -231,8 +236,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDAxOTA3NiwxNjIyODQ5MDkzLC0xOD
-UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
-MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
-wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTEwNjU1OTc4MjgsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
