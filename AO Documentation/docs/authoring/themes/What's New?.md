@@ -45,6 +45,9 @@ casing_button =
 
 ### courtroom_config.ini
 ```ini
+; **COORDINATE SYSTEM RELATIVE TO "viewport"**
+; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
+; ****
 ; The scrolling music name display
 music_display = 
 ; WARNING: music_name x/y coordinates relative to music_display!
@@ -71,9 +74,6 @@ effects_icon_size =
 additive = 
 ; Screenshake
 screenshake = 
-; **COORDINATE SYSTEM RELATIVE TO "viewport"**
-; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
-; ****
 ; Buttons for Loading and Saving Evidence to a file
 evidence_load = 
 evidence_save = 
@@ -133,7 +133,7 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOT
-QyNDc4Njk3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3
-MzJdfQ==
+eyJoaXN0b3J5IjpbMTkzMTM3NDYxOSwtMTgyMTIyMjU2NSwtNT
+YzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1
+MjYsLTcyOTY4NDczMl19
 -->
