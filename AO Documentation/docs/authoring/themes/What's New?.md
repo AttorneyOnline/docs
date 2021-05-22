@@ -23,7 +23,12 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 ; x/y coordinates 0,0 will start at top-left of the "viewport" for everything below until specified otherwise.
 ;; These
 left_evidence_icon = 
-right_evidence_icon = 
+right_evidence_icon =
+; These two are casing-related inputs.
+; "casing" is a tickbox that toggles whether you should receive case alerts or
+; not (you can set your preferences, and its default value, in the Settings!)
+; "casing_button" is an interface to help you announce a case (you have to be
+; a CM first to be able to announce cases). 
 casing = 
 casing_button = 
 ```
@@ -121,7 +126,12 @@ clock_4 =
 
 ### courtroom_config.ini
 ***There was no changes made to the courtroom_config.ini***
+
+---
+Documentation pulled together by Crystal
+Overviews by Crystal, with references from V
+(Almost) All annotations 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyODk4MTY3LDE5NDI0Nzg2OTcsLTQyMT
+eyJoaXN0b3J5IjpbNDU2MzQ4OTg4LDE5NDI0Nzg2OTcsLTQyMT
 k2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
