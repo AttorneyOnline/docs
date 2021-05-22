@@ -90,7 +90,7 @@ evidence_save = [x, y, width, height]
 evidence_transfer = [x, y, width, height]
 evidence_switch = [x, y, width, height]
 ; How large are the evidence icons?
-evidence_button_size = [width, height
+evidence_button_size = [width, height]
 evidence_ok = [x, y, width, height]
 pair_order_dropdown = [x, y, width, height]
 ; Where the text will be aligned in the showname box.
@@ -222,21 +222,21 @@ Download for new files in Default Theme here
 - Addition of the Scrollable Character List.
 ### courtroom_design.ini
 ```ini
-music_list_animated = 1
-pos_remove = 
-char_list = 
-pair_vert_offset_spinbox = 
+music_list_animated = [0 or 1]
+pos_remove = [x, y, width, height]
+char_list = [x, y, width, height]
+pair_vert_offset_spinbox = [x, y, width, height]
 ; timers
 ; universal
-clock_0 =
+clock_0 = [x, y, width, height]
 ; def
-clock_1 = 
+clock_1 = [x, y, width, height]
 ; pro
-clock_2 = 
+clock_2 = [x, y, width, height]
 ; def2
-clock_3 = 
+clock_3 = [x, y, width, height]
 ; pro2
-clock_4 = 
+clock_4 = [x, y, width, height]
 ```
 ### courtroom_config.ini
 ***There was no changes made since the previous version.***
@@ -270,8 +270,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzIwNjY2NTUsMTYyMjg0OTA5MywtMT
-g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
-MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
-csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbMzIwMjcyNzE3LDE2MjI4NDkwOTMsLTE4NT
+I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
+NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
+00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
