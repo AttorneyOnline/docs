@@ -19,6 +19,7 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 > ***PLEASE NOTE*** that in all the supplementary downloads included in this document, any files with the suffix `_new[versionnumber]` include *only* the new lines that need to be added to your pre-existing files! The bracket references used throughout the rest of the document have also been removed from these files, too!
 
 ## What's new in v2.6.2?
+
 ### courtroom_design.ini
 
 ```ini
@@ -45,6 +46,7 @@ casing_button = [x, y, width, height]
 ***There was no changes made since the previous version.***
 
 ## What's new in v2.8.x?
+Download for the new files in Default Theme here
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
 - Added a visible Music Display - Now you don't need to scroll through IC logs to see what's playing!
@@ -181,7 +183,6 @@ settings = [x, y, width, height]
 server_search =  [x, y, width, height]
 ```
 ### File changes
-Download for the new files in Default Theme here
 - It should be noted that in this client version, most filenames are the same as their `courtroom_design.ini` and `lobby_design.ini` counterparts.
 #### Added
 |Images| |
@@ -344,11 +345,11 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNzE5ODQyMiwtMTgwNDE4MzUyMCwxMT
-Y0NjI5NTM3LC03MTcxODQyMDQsMTE2NDYyOTUzNywxNDUzNDQ4
-ODE2LDEwMjY0MDI1ODgsLTE4MTY2MjE3NTgsMTQ2MTU1NjU1MC
-wxMjAzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3MTcsMTYyMjg0
-OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MT
-QsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5
-NDI0Nzg2OTddfQ==
+eyJoaXN0b3J5IjpbLTE0MTMzNDA2NzYsLTE4MDQxODM1MjAsMT
+E2NDYyOTUzNywtNzE3MTg0MjA0LDExNjQ2Mjk1MzcsMTQ1MzQ0
+ODgxNiwxMDI2NDAyNTg4LC0xODE2NjIxNzU4LDE0NjE1NTY1NT
+AsMTIwMzEzODI0MiwxMjEwMTM5NDUsMzIwMjcyNzE3LDE2MjI4
+NDkwOTMsLTE4NTI2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNz
+E0LDEwOTEyMDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwx
+OTQyNDc4Njk3XX0=
 -->
