@@ -114,7 +114,21 @@ showname_align =
  - counteralt.wav
  - coutroom_config.ini
  - courtroom_stylesheets.css
- - cross
+ - crosswords.wav
+ - evidence_background.png
+ - evidence_background_private.png
+ - evidence_button.png
+ - evidence_delete.png
+ - evidence_global.png
+ - evidence_load.png
+ - evidence_ok.png
+ - evidence_overlay.png
+ - evidence_overlay_private.png
+ - evidence_save.png
+ - evidence_transfer.png
+ - evidence_transfer_private.png
+ - evidence_x.png
+ - ev
 
 ## What's new in v2.9.0?
 ### Brief Overview
@@ -156,8 +170,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3NTI4MjE4LDE2MjI4NDkwOTMsLTE4NT
-I2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNzE0LDEwOTEyMDMz
-NTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwxOTQyNDc4Njk3LC
-00MjE5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbMTQ5MDY0MTc1NiwxNjIyODQ5MDkzLC0xOD
+UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
+MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
+wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
