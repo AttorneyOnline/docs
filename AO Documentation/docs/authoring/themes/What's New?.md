@@ -29,7 +29,9 @@ casing_button =
 ```
 ## What's new in v2.8.x?
 ### Brief Overview
-- Added 
+- Added in-client iniswapping via 
+- Added a visible Music Display - Now you don't need to scroll through IC logs to see what's playing!
+- Added customizable emote button sizes (used to be hardcoded as a 40x40 button)
 ### courtroom_config.ini
 ```ini
 ; The scrolling music name display
@@ -109,6 +111,6 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTQyMT
-k2MDk3MSwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbNTQyNDU0MzM3LC00MjE5NjA5NzEsNTg3Mj
+I0NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
