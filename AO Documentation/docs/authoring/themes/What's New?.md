@@ -3,7 +3,7 @@ This document is meant for those who want to update their themes to the newest v
 
  - v2.6.0 (This is the assumed "minimum" version)
 	 - Released December 15th, 2018
- - [v2.6.2](## What's new in v2.6.2?)
+ - [v2.6.2](#What's new in v2.6.2?)
 	 - Released July 27th, 2019
  - v2.8.4
 	 - Released July 31st, 2020
@@ -109,6 +109,6 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3MjI0NTI2LC00MjE5NjA5NzEsLTcyOT
-Y4NDczMl19
+eyJoaXN0b3J5IjpbMTY3NDk1ODUzOSw1ODcyMjQ1MjYsLTQyMT
+k2MDk3MSwtNzI5Njg0NzMyXX0=
 -->
