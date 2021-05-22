@@ -29,7 +29,7 @@ casing_button =
 ```
 ## What's new in v2.8.x?
 ### Brief Overview
-- Added in-client iniswapping via 
+- Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
 - Added a visible Music Display - Now you don't need to scroll through IC logs to see what's playing!
 - Added customizable emote button sizes (used to be hardcoded as a 40x40 button)
 ### courtroom_config.ini
@@ -86,6 +86,7 @@ showname_align =
 ### Brief Overview
 - Addition of Timers
 - Addition of Y-Offsets
+- `iniswaps.ini` was given a new incarnation! Alongside the character-specific iniswaps, 
 ### courtroom_config.ini
 ```ini
 music_list_animated = 1
@@ -111,6 +112,6 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyNDU0MzM3LC00MjE5NjA5NzEsNTg3Mj
-I0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbLTQ5MTA0MjQzMywtNDIxOTYwOTcxLDU4Nz
+IyNDUyNiwtNzI5Njg0NzMyXX0=
 -->
