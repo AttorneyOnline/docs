@@ -238,7 +238,42 @@ clock_3 = [x, y, width, height]
 clock_4 = [x, y, width, height]
 ```
 ### courtroom_fonts.ini
-***There was no changes made since the previous version.***
+```ini
+; universal
+clock_0 = 
+clock_0_font = 
+clock_0_color = 
+clock_0_bold = 
+clock_0_sharp = 
+
+; def
+clock_1 = 
+clock_1_font = 
+clock_1_color = 
+clock_1_bold = 
+clock_1_sharp = 
+
+; pro
+clock_2 = 
+clock_2_font = Arial
+clock_2_color = 255, 0, 0
+clock_2_bold = 0
+clock_2_sharp = 1
+
+; def 2
+clock_3 = 8
+clock_3_font = Arial
+clock_3_color = 0, 128, 255
+clock_3_bold = 0
+clock_3_sharp = 1
+
+; pro 2
+clock_4 = 8
+clock_4_font = Arial
+clock_4_color = 255, 0, 0
+clock_4_bold = 0
+clock_4_sharp = 1
+```
 ### courtroom_sounds.ini
 ***There was no changes made since the previous version.***
 ### lobby_design.ini
@@ -277,10 +312,10 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTUxNjk4ODIsLTE4MTY2MjE3NTgsMT
-Q2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3
-MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC
-00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYz
-MjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MSw1ODcyMjQ1Mj
-YsLTcyOTY4NDczMl19
+eyJoaXN0b3J5IjpbLTM2NzQzMTY5MCwtMTgxNjYyMTc1OCwxND
+YxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3Mjcx
+NywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLT
+QxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMy
+OTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4NzIyNDUyNi
+wtNzI5Njg0NzMyXX0=
 -->
