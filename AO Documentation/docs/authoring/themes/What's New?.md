@@ -169,9 +169,9 @@ evidence_description_color =
 evidence_description_bold = 
 evidence_description_sharp = 
 ```
-***`label_color`
+***`label_color` has been depreciated, and can be set through the use of CSS Stylesheets***
 ### courtroom_sounds.ini
-***There was no changes made since the previous version.***
+It is no longer necessary to specify the extension of the audio files
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
 ### File changes
@@ -267,8 +267,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NDc1NTQ3MywxNjIyODQ5MDkzLC0xOD
-UyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAz
-MzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0MjQ3ODY5Ny
-wtNDIxOTYwOTcxLDU4NzIyNDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbLTE5NTk0NDU0MTIsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1MiwtMTgyMTIyMjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OT
+csLTQyMTk2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
