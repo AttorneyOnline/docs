@@ -19,7 +19,7 @@ Extremely old file bases may have characters that have files with the prefix "`(
 
 Another commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
 
-Many assets used in the UI were also stored in `misc/` on AO1, some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
+Many assets used in the UI were also stored in `misc/` on AO1 - as themes were nonexistent - some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDMwNDMyNV19
+eyJoaXN0b3J5IjpbNzczMjc4NzldfQ==
 -->
