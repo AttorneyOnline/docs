@@ -178,7 +178,7 @@ settings = [x, y, width, height]
 server_search =  [x, y, width, height]
 ```
 ### File changes
-Download for new files in Default Theme here
+Download for the new files in Default Theme here
 - It should be noted that in this client version, most filenames are the same as their `courtroom_design.ini` and `lobby_design.ini` counterparts.
 #### Added
 |Images| |
@@ -267,9 +267,9 @@ clock_4 = [x, y, width, height]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE1NTM1NDksMTIxMDEzOTQ1LDMyMD
-I3MjcxNywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3
-MDAsLTQxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC
-01NjMyOTEwMzAsMTk0MjQ3ODY5NywtNDIxOTYwOTcxLDU4NzIy
-NDUyNiwtNzI5Njg0NzMyXX0=
+eyJoaXN0b3J5IjpbMTIwMzEzODI0MiwxMjEwMTM5NDUsMzIwMj
+cyNzE3LDE2MjI4NDkwOTMsLTE4NTI2MTcxOTgsLTIyODExNjcw
+MCwtNDE2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEyMjI1NjUsLT
+U2MzI5MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5NzEsNTg3MjI0
+NTI2LC03Mjk2ODQ3MzJdfQ==
 -->
