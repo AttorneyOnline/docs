@@ -132,8 +132,7 @@ clock_4 =
  - Added compatibility with Animated UI Elements
 	 - If you're having issues with any of the interjection bubbles replacing their button counterparts, rename the bubbles to `[original name]_bubble`. This is caused by AO's hierarchy of file formats, where animated images are favored over still images.
  - *COMPLETE* exposure of the client's Qt Objects. Qt CSS Stylesheets are very powerful, so beware!
-	 - All AOImage elements 
-
+ - (Something about [clipping AOImage objects](https://github.com/AttorneyOnline/AO2-Client/pull/322), reminder to get clarification from in1tiate later)
 ### courtroom_config.ini
 ***There was no changes made since the previous version.***
 
@@ -142,8 +141,8 @@ clock_4 =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTI2MTcxOTgsLTIyODExNjcwMCwtND
-E2NDIxNzE0LDEwOTEyMDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5
-MTAzMCwxOTQyNDc4Njk3LC00MjE5NjA5NzEsNTg3MjI0NTI2LC
-03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMj
+I4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIy
+MjU2NSwtNTYzMjkxMDMwLDE5NDI0Nzg2OTcsLTQyMTk2MDk3MS
+w1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
