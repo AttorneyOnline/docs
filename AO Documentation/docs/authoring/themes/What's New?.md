@@ -5,13 +5,13 @@ This document is meant for those who want to update their themes to the newest v
 	 - Released December 15th, 2018
  - [v2.6.2](#whats-new-in-v262)
 	 - Released July 27th, 2019
- - v2.8.4
+ - [v2.8.4](#whats-new-in-v28x)
 	 - Released July 31st, 2020
- - v2.8.5
+ - [v2.8.5](#whats-new-in-v28x)
 	 - Released August 21st, 2020
- - v2.9.0
+ - [v2.9.0](#whats-new-in-v290)
 	 - Released March 6th, 2021
- - v2.9.1
+ - [v2.9.1](#whats-new-in-v291)
 	 - Released May 3rd, 2021
 
 If you don't see a "What's new in X" for any of the aforementioned versions, that means there was no update to client themes since the previous release.
@@ -122,6 +122,6 @@ clock_4 =
 ### courtroom_config.ini
 ***There was no changes made to the courtroom_config.ini***
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxNDkwNDU1NCwxOTQyNDc4Njk3LC00Mj
-E5NjA5NzEsNTg3MjI0NTI2LC03Mjk2ODQ3MzJdfQ==
+eyJoaXN0b3J5IjpbNTQyODk4MTY3LDE5NDI0Nzg2OTcsLTQyMT
+k2MDk3MSw1ODcyMjQ1MjYsLTcyOTY4NDczMl19
 -->
