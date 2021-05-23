@@ -19,7 +19,7 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 > ***PLEASE NOTE*** that in all the supplementary downloads included in this document, any files with the suffix `_new[versionnumber]` include *only* the new lines that need to be added to your pre-existing files! The bracket references used throughout the rest of the document have also been removed from these files, too!
 
 ## What's new in v2.6.2?
-
+Download for the new files in Default Theme here
 ### courtroom_design.ini
 
 ```ini
@@ -218,6 +218,7 @@ server_search =  [x, y, width, height]
 |deleteevidence.png|evidence_delete.png|
 
 ## What's new in v2.9.0?
+Download for the new files in Default Theme here
 ### Brief Overview
 - Addition of Timers
 - Addition of Y-Offsets
@@ -317,6 +318,7 @@ QHeaderView::section {
 ***There was no changes made since the previous version.***
 
 ## What's new in v2.9.1?
+Download for the new files in Default Theme here
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
  - Added Subthemes & Parent Themes systems
@@ -345,11 +347,11 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTMzNDA2NzYsLTE4MDQxODM1MjAsMT
-E2NDYyOTUzNywtNzE3MTg0MjA0LDExNjQ2Mjk1MzcsMTQ1MzQ0
-ODgxNiwxMDI2NDAyNTg4LC0xODE2NjIxNzU4LDE0NjE1NTY1NT
-AsMTIwMzEzODI0MiwxMjEwMTM5NDUsMzIwMjcyNzE3LDE2MjI4
-NDkwOTMsLTE4NTI2MTcxOTgsLTIyODExNjcwMCwtNDE2NDIxNz
-E0LDEwOTEyMDMzNTIsLTE4MjEyMjI1NjUsLTU2MzI5MTAzMCwx
-OTQyNDc4Njk3XX0=
+eyJoaXN0b3J5IjpbODQ4NzU3MzEwLC0xODA0MTgzNTIwLDExNj
+Q2Mjk1MzcsLTcxNzE4NDIwNCwxMTY0NjI5NTM3LDE0NTM0NDg4
+MTYsMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxNDYxNTU2NTUwLD
+EyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3MjcxNywxNjIyODQ5
+MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNC
+wxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0
+MjQ3ODY5N119
 -->
