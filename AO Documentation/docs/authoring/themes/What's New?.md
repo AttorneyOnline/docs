@@ -48,7 +48,7 @@ casing_button = [x, y, width, height]
 ## What's new in v2.8.x?
 Download for the new files in Default Theme here
 
-> `lobby_fonts.ini` is pre-filled
+> `lobby_fonts.ini` is pre-filled out, taken directly from 2.8.5's `default` theme. This is because it is a new file added with this version, and will not 
 
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
@@ -350,7 +350,7 @@ case_call = [sfx name]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzUwMzIzMzcsLTc2ODc3NDcwLDg0OD
+eyJoaXN0b3J5IjpbLTE5OTc5NDUwNDMsLTc2ODc3NDcwLDg0OD
 c1NzMxMCwtMTgwNDE4MzUyMCwxMTY0NjI5NTM3LC03MTcxODQy
 MDQsMTE2NDYyOTUzNywxNDUzNDQ4ODE2LDEwMjY0MDI1ODgsLT
 E4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAx
