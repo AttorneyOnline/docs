@@ -19,7 +19,7 @@ If you don't see a "What's new in X" for any of the aforementioned versions, tha
 > ***PLEASE NOTE*** that in all the supplementary downloads included in this document, any files with the suffix `_new[versionnumber]` include *only* the new lines that need to be added to your pre-existing files! The bracket references used throughout the rest of the document have also been removed from these files, too!
 
 ## What's new in v2.6.2?
-Download for the new files in Default Theme here
+Download for the new files in Default Theme [here](https://pipe.miroware.io/608e2adda333fb12a3ace7c4/AO%20Default%20Theme%20Changes/Theme%20Additive%20for%20v2.6.2.7z)
 ### courtroom_design.ini
 
 ```ini
@@ -46,9 +46,9 @@ casing_button = [x, y, width, height]
 ***There was no changes made since the previous version.***
 
 ## What's new in v2.8.x?
-Download for the new files in Default Theme here
+Download for the new files in Default Theme [here](https://pipe.miroware.io/608e2adda333fb12a3ace7c4/AO%20Default%20Theme%20Changes/Theme%20Additive%20for%20v2.8.x.7z)
 
-> `lobby_fonts.ini` is pre-filled out, taken directly from 2.8.5's `default` theme. This is because it is a new file added with this version, and will not 
+> `lobby_fonts.ini` is pre-filled out, taken directly from 2.8.5's `default` theme. This is because it is a new file added with this version, and will not be documented here.
 
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
@@ -221,7 +221,7 @@ server_search =  [x, y, width, height]
 |deleteevidence.png|evidence_delete.png|
 
 ## What's new in v2.9.0?
-Download for the new files in Default Theme here
+Download for the new files in Default Theme [here](https://pipe.miroware.io/608e2adda333fb12a3ace7c4/AO%20Default%20Theme%20Changes/Theme%20Additive%20for%20v2.9.0.7z)
 ### Brief Overview
 - Addition of Timers
 - Addition of Y-Offsets
@@ -321,7 +321,7 @@ QHeaderView::section {
 ***There was no changes made since the previous version.***
 
 ## What's new in v2.9.1?
-Download for the new files in Default Theme here
+Download for the new files in Default Theme [here](https://pipe.miroware.io/608e2adda333fb12a3ace7c4/AO%20Default%20Theme%20Changes/Theme%20Additive%20for%20v2.9.1.7z)
 ### Brief Overview
  - Updated the Settings Menu (nothing you need to worry about)
  - Added Subthemes & Parent Themes systems
@@ -350,11 +350,11 @@ case_call = [sfx name]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTc5NDUwNDMsLTc2ODc3NDcwLDg0OD
-c1NzMxMCwtMTgwNDE4MzUyMCwxMTY0NjI5NTM3LC03MTcxODQy
-MDQsMTE2NDYyOTUzNywxNDUzNDQ4ODE2LDEwMjY0MDI1ODgsLT
-E4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAx
-Mzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OC
-wtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgy
-MTIyMjU2NV19
+eyJoaXN0b3J5IjpbMTI3NTc0MzIxNSwtNzY4Nzc0NzAsODQ4Nz
+U3MzEwLC0xODA0MTgzNTIwLDExNjQ2Mjk1MzcsLTcxNzE4NDIw
+NCwxMTY0NjI5NTM3LDE0NTM0NDg4MTYsMTAyNjQwMjU4OCwtMT
+gxNjYyMTc1OCwxNDYxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEz
+OTQ1LDMyMDI3MjcxNywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC
+0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIx
+MjIyNTY1XX0=
 -->
