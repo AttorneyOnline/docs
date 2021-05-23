@@ -47,6 +47,9 @@ casing_button = [x, y, width, height]
 
 ## What's new in v2.8.x?
 Download for the new files in Default Theme here
+
+> `lobby_fonts.ini` is pre-filled
+
 ### Brief Overview
 - Added in-client iniswapping via a dropdown menu that refers to `iniswaps.ini`
 - Added a visible Music Display - Now you don't need to scroll through IC logs to see what's playing!
@@ -347,11 +350,11 @@ case_call = [sfx name]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2ODc3NDcwLDg0ODc1NzMxMCwtMTgwND
-E4MzUyMCwxMTY0NjI5NTM3LC03MTcxODQyMDQsMTE2NDYyOTUz
-NywxNDUzNDQ4ODE2LDEwMjY0MDI1ODgsLTE4MTY2MjE3NTgsMT
-Q2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3
-MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC
-00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYz
-MjkxMDMwXX0=
+eyJoaXN0b3J5IjpbLTE0NzUwMzIzMzcsLTc2ODc3NDcwLDg0OD
+c1NzMxMCwtMTgwNDE4MzUyMCwxMTY0NjI5NTM3LC03MTcxODQy
+MDQsMTE2NDYyOTUzNywxNDUzNDQ4ODE2LDEwMjY0MDI1ODgsLT
+E4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAx
+Mzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OC
+wtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgy
+MTIyMjU2NV19
 -->
