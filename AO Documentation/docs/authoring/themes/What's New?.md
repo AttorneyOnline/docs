@@ -332,7 +332,7 @@ Download for the new files in Default Theme here
 ***There was no changes made since the previous version.***
 ### courtroom_sounds.ini
 ```ini
-case_call = 
+case_call = [sfx name]
 ```
 ### lobby_design.ini
 ***There was no changes made since the previous version.***
@@ -347,11 +347,11 @@ case_call =
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ4NzU3MzEwLC0xODA0MTgzNTIwLDExNj
-Q2Mjk1MzcsLTcxNzE4NDIwNCwxMTY0NjI5NTM3LDE0NTM0NDg4
-MTYsMTAyNjQwMjU4OCwtMTgxNjYyMTc1OCwxNDYxNTU2NTUwLD
-EyMDMxMzgyNDIsMTIxMDEzOTQ1LDMyMDI3MjcxNywxNjIyODQ5
-MDkzLC0xODUyNjE3MTk4LC0yMjgxMTY3MDAsLTQxNjQyMTcxNC
-wxMDkxMjAzMzUyLC0xODIxMjIyNTY1LC01NjMyOTEwMzAsMTk0
-MjQ3ODY5N119
+eyJoaXN0b3J5IjpbLTc2ODc3NDcwLDg0ODc1NzMxMCwtMTgwND
+E4MzUyMCwxMTY0NjI5NTM3LC03MTcxODQyMDQsMTE2NDYyOTUz
+NywxNDUzNDQ4ODE2LDEwMjY0MDI1ODgsLTE4MTY2MjE3NTgsMT
+Q2MTU1NjU1MCwxMjAzMTM4MjQyLDEyMTAxMzk0NSwzMjAyNzI3
+MTcsMTYyMjg0OTA5MywtMTg1MjYxNzE5OCwtMjI4MTE2NzAwLC
+00MTY0MjE3MTQsMTA5MTIwMzM1MiwtMTgyMTIyMjU2NSwtNTYz
+MjkxMDMwXX0=
 -->
