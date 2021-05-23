@@ -212,7 +212,7 @@ server_search =  [x, y, width, height]
 #### Deleted
 ***No files have been deleted***
 #### Renamed
-| 2.6.2 | 2.8.x |
+| **2.6.2** | **2.8.x** |
 |--|--|
 | objection.gif | objection_bubble.gif |
 |holdit.gif|holdit_bubble.gif|
@@ -311,7 +311,7 @@ QHeaderView::section {
 #### Added
 ***There was no changes made since the previous version.***
 #### Renamed
-|2.8.x|2.9.0|
+|**2.8.x**|**2.9.0**|
 |--| --|
 |crossexamination|crossexamination_bubble.gif|
 |guilty|guilty_bubble.gif|
@@ -341,7 +341,7 @@ case_call = [sfx name]
 ***There was no changes made since the previous version.***
 ### lobby_fonts.ini
 #### Renamed
-|2.9.0|2.9.1|
+|**2.9.0**|**2.9.1**|
 |--| --|
 |`font_description = `|`description_font =`|
 
@@ -350,11 +350,11 @@ case_call = [sfx name]
 - Overviews by Crystal, with references from version changelogs
 - (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTc0MzIxNSwtNzY4Nzc0NzAsODQ4Nz
-U3MzEwLC0xODA0MTgzNTIwLDExNjQ2Mjk1MzcsLTcxNzE4NDIw
-NCwxMTY0NjI5NTM3LDE0NTM0NDg4MTYsMTAyNjQwMjU4OCwtMT
-gxNjYyMTc1OCwxNDYxNTU2NTUwLDEyMDMxMzgyNDIsMTIxMDEz
-OTQ1LDMyMDI3MjcxNywxNjIyODQ5MDkzLC0xODUyNjE3MTk4LC
-0yMjgxMTY3MDAsLTQxNjQyMTcxNCwxMDkxMjAzMzUyLC0xODIx
-MjIyNTY1XX0=
+eyJoaXN0b3J5IjpbNzM3NDI2MDMxLDEyNzU3NDMyMTUsLTc2OD
+c3NDcwLDg0ODc1NzMxMCwtMTgwNDE4MzUyMCwxMTY0NjI5NTM3
+LC03MTcxODQyMDQsMTE2NDYyOTUzNywxNDUzNDQ4ODE2LDEwMj
+Y0MDI1ODgsLTE4MTY2MjE3NTgsMTQ2MTU1NjU1MCwxMjAzMTM4
+MjQyLDEyMTAxMzk0NSwzMjAyNzI3MTcsMTYyMjg0OTA5MywtMT
+g1MjYxNzE5OCwtMjI4MTE2NzAwLC00MTY0MjE3MTQsMTA5MTIw
+MzM1Ml19
 -->
