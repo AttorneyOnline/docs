@@ -46,7 +46,10 @@ First, let's check to see if your computer can actually *see* the masterserver's
  ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
  - Open [this link](http://52.47.209.216:27016/). 
 This time, if you don't see something like the below image, then join the AO Discord and hit `#tech_support`
+![](https://puu.sh/HJxfl/42cc1034d2.png)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODI2ODU2OCw4ODM3NDg4NDAsMTAyOD
-UyMTc2OV19
+eyJoaXN0b3J5IjpbODk3NDUzODgzLDg4Mzc0ODg0MCwxMDI4NT
+IxNzY5XX0=
 -->
