@@ -33,7 +33,8 @@ Here's what Avast would look like if this issue occurs (and you don't have it se
 ![](https://puu.sh/HJxe0/aad0af8617.png)
 
 ## I can't select a character!
-If you see something like this when selecting a character, then please grab the download for
+If you see something like this when selecting a character, then please grab the download for the chosen server's content.
+![](https://cdn.discordapp.com/attachments/278576491191599104/845981134436565012/unknown.png)
 
 
 ## I can't connect to the Masterserver!
@@ -54,7 +55,8 @@ This time, if you don't see something like the below image, then join the AO Dis
 
 ---
 Thanks to the Official AO Discord and the AO2 Dev Team for the solutions to these issues.
-Screenshots are provided by Crystal#5638
+(Most) Screenshots are provided by Crystal#5638
+Cannot Select Character screenshot provided by chloroxic#2276
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjI4MDg4MjZdfQ==
+eyJoaXN0b3J5IjpbLTExOTA4MjQ4MDZdfQ==
 -->
