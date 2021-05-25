@@ -6,7 +6,7 @@ It's regretful how I have to type this section up (considering #tech_support and
 
 Okay, there's 4 different issues you'll run into for this one, to which there's 3 solutions. I'll go through each issue one-by-one:
 
-### You get an error pop-up that has either (0xc000007b) or MSVCP140_1.dll
+### I got an error pop-up saying either the app didn't start correctly (0xc000007b) or MSVCP140_1.dll is missing!
 
 This one, thankfully for you, is pretty simple. The tl;dr here is that your computer's complaining about not having some files that didn't come with AO (as we would've hoped by now that your probably-massive Steam library beat you to the install first).
 
@@ -23,8 +23,8 @@ If you get this error, probably means you did one of two things:
 
 ### My client's .exe disappeared / My Antivirus thinks this program's a virus!
 
-Tell your antivirus to shut up by adding an exception for AO's folder. Google's your best friend on how to do this, and in the case of "my client's .exe disappeared", either go to AO2 Github Repository and [download the latest version](https://github.com/AttorneyOnline/AO2-Client/releases/) of the client, or re-extract from the files that your server has provided 
+Tell your antivirus to shut up by adding an exception for AO's folder. Google's your best friend on how to do this, and in the case of "my client's .exe disappeared", either go to AO2 Github Repository and [download the latest version](https://github.com/AttorneyOnline/AO2-Client/releases/) of the client, or re-extract from the files that your server has provided you.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MDk0ODQ3MCw4ODM3NDg4NDAsMTAyOD
+eyJoaXN0b3J5IjpbMTk3MTkzNzkzOSw4ODM3NDg4NDAsMTAyOD
 UyMTc2OV19
 -->
