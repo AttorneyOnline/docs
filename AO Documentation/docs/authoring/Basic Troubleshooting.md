@@ -47,8 +47,8 @@ First, let's check to see if your computer can actually *see* the masterserver's
 
  - Open the Command Prompt
  - Type `nslookup master.aceattorneyonline.com` and hit Enter.
- If you don't get a response along the lines of the below image from the Command Prompt, join the AO Discord and hit `#tech_support` for more help. If you do see something like this, then move on to the next step.
- ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
+ If you don't get a response along the lines of the below image from the Command Prompt, join the AO Discord and hit `#tech_support` for more help. If you do see something like this, then move on to the next step. 
+  ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
  - Open [this link](http://52.47.209.216:27016/). 
 This time, if you don't see something like the below image, then join the AO Discord and hit `#tech_support`
 ![](https://puu.sh/HJxfl/42cc1034d2.png)
@@ -58,5 +58,5 @@ Thanks to the Official AO Discord and the AO2 Dev Team for the solutions to thes
 (Most) Screenshots are provided by Crystal#5638
 Cannot Select Character screenshot provided by chloroxic#2276
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTA4MjQ4MDZdfQ==
+eyJoaXN0b3J5IjpbMTkwODM3MDA0NiwtMTE5MDgyNDgwNl19
 -->
