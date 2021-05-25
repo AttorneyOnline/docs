@@ -12,8 +12,16 @@ This one, thankfully for you, is pretty simple. The tl;dr here is that your comp
 
 Just download and install [this](https://aka.ms/vs/16/release/vc_redist.x86.exe), and it'll be up and running!
 
-## "It looks like your client isn't s
+## "It looks like your client isn't set up correctly"
+
+If you get this error, probably means you did one of two things:
+
+ - You downloaded only the executable and the DLLs needed for it
+ - The download that your non-Vanilla server gave you is fucked up.
+ - 
+ The solution for both those scenarios? 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NTcwMTkyOCw4ODM3NDg4NDAsMTAyOD
+eyJoaXN0b3J5IjpbMTgyMzczMTAwOSw4ODM3NDg4NDAsMTAyOD
 UyMTc2OV19
 -->
