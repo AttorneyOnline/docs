@@ -36,7 +36,7 @@ Here's what Avast would look like if this issue occurs (and you don't have it se
 
 Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
 
-This is less of a "how to fix" and more of a "let's diagnose what's 
+This is less of a "how to fix" and more of a "let's get some basic troubleshooting as to what's going on here". If neither comparison with the screenshots provided give you an idea of what to do, go to the Official AO Discord with your own version of the screenshots prepared, as chances are you *will* be asked to provide them.
 
 First, let's check to see if your computer can actually *see* the masterserver's domain.
 
@@ -47,6 +47,6 @@ First, let's check to see if your computer can actually *see* the masterserver's
  - Open [this link](http://52.47.209.216:27016/). 
 This time, if you don't see something like the below image, then join the AO Discord and hit `#tech_support`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI1NzUxNjM2LDg4Mzc0ODg0MCwxMDI4NT
-IxNzY5XX0=
+eyJoaXN0b3J5IjpbMTAyODI2ODU2OCw4ODM3NDg4NDAsMTAyOD
+UyMTc2OV19
 -->
