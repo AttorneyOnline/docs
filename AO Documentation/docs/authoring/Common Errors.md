@@ -33,8 +33,12 @@ Another case of "shut up, Mr. Antivirus". It's caused by your antivirus not liki
 
 Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
 
-First, 
+First, let's check to see if your computer can actually *see* the masterserver's domain.
+
+ - Open the Command Prompt
+ - Type `nslookup master.aceattorneyonline.com` and hit Enter.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1ODg2OTY3NSw4ODM3NDg4NDAsMTAyOD
-UyMTc2OV19
+eyJoaXN0b3J5IjpbODMxMDYxMzAzLDg4Mzc0ODg0MCwxMDI4NT
+IxNzY5XX0=
 -->
