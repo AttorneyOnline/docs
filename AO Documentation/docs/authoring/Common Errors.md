@@ -37,9 +37,10 @@ First, let's check to see if your computer can actually *see* the masterserver's
 
  - Open the Command Prompt
  - Type `nslookup master.aceattorneyonline.com` and hit Enter.
- If by now, you don't see something like this ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
+ If you don't get a response along the lines of this from the Command Prompt, join the AO Discord and hit `#tech_support` for more help. 
+ ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNjA5MDEzNyw4ODM3NDg4NDAsMTAyOD
-UyMTc2OV19
+eyJoaXN0b3J5IjpbLTEwNjQ3MDg3OTcsODgzNzQ4ODQwLDEwMj
+g1MjE3NjldfQ==
 -->
