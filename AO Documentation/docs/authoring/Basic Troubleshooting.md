@@ -33,7 +33,7 @@ Here's what Avast would look like if this issue occurs (and you don't have it se
 ![](https://puu.sh/HJxe0/aad0af8617.png)
 
 ## I can't connect to the Masterserver!
-
+***This is for both Client and WebAO users***
 Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
 
 This is less of a "how to fix" and more of a "let's get some basic troubleshooting as to what's going on here". If neither comparison with the screenshots provided give you an idea of what to do, go to the Official AO Discord with your own version of the screenshots prepared, as chances are you *will* be asked to provide them.
@@ -48,7 +48,8 @@ First, let's check to see if your computer can actually *see* the masterserver's
 This time, if you don't see something like the below image, then join the AO Discord and hit `#tech_support`
 ![](https://puu.sh/HJxfl/42cc1034d2.png)
 
-
+---
+Thanks to the AO Discord for the solui
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzY1NDY2MDVdfQ==
+eyJoaXN0b3J5IjpbLTEyNDkzMDQzMDddfQ==
 -->
