@@ -31,8 +31,10 @@ Another case of "shut up, Mr. Antivirus". It's caused by your antivirus not liki
 
 ## I can't connect to the Masterserver!
 
-Sorry, our Linux and MacOS buddies, but this solution's built for Windows (
+Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
+
+First, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzMDU0MzA0MCw4ODM3NDg4NDAsMTAyOD
+eyJoaXN0b3J5IjpbMTc1ODg2OTY3NSw4ODM3NDg4NDAsMTAyOD
 UyMTc2OV19
 -->
