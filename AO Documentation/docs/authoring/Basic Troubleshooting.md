@@ -54,9 +54,13 @@ This time, if you don't see something like the below image, then join the AO Dis
 ![](https://puu.sh/HJxfl/42cc1034d2.png)
 
 ---
-Thanks to the Official AO Discord and the AO2 Dev Team for the solutions to these issues.
-(Most) Screenshots are provided by Crystal#5638
-Cannot Select Character screenshot provided by chloroxic#2276
+
+ - Thanks to the Official AO Discord and the AO2 Dev Team for the
+   solutions to these issues.
+ - (Most) Screenshots are provided by Crystal#5638
+ - Cannot Select Character screenshot provided by chloroxic#2276
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NjY0NTcwMSwtMTE5MDgyNDgwNl19
+eyJoaXN0b3J5IjpbLTIxMzAwNjU3NjYsLTExOTA4MjQ4MDZdfQ
+==
 -->
