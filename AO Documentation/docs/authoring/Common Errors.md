@@ -25,10 +25,10 @@ If you get this error, probably means you did one of two things:
 
 Tell your antivirus to shut up by adding an exception for AO's folder. Google's your best friend on how to do this, and in the case of "my client's .exe disappeared", either go to AO2 Github Repository and [download the latest version](https://github.com/AttorneyOnline/AO2-Client/releases/) of the client, or re-extract from the files that your server has provided you.
 
-## My client crashed while selecting a character and/or changing the selected emote!
+## My client crashed/froze while selecting a character and/or changing the selected emote!
 
-Another case of "shut up, Mr. Antivirus". 
+Another case of "shut up, Mr. Antivirus". It's caused by your antivirus not liking the fact that AO's writing the `_on.png` buttons for an emote, and what some antiviruses just outright don't tell you what they're doing, which results in the crash and/or freeze. Add an exception to AO's folder, and your problem will be fixed.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTM4ODc2NCw4ODM3NDg4NDAsMTAyOD
-UyMTc2OV19
+eyJoaXN0b3J5IjpbLTExNDgyNTYyMDcsODgzNzQ4ODQwLDEwMj
+g1MjE3NjldfQ==
 -->
