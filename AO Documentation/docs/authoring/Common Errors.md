@@ -19,9 +19,9 @@ If you get this error, probably means you did one of two things:
  - You downloaded only the executable and the DLLs needed for it
  - The download that your non-Vanilla server gave you is fucked up.
  - 
- The solution for both those scenarios? 
+ The solution for both those scenarios? Download the latest *official* release of the client, or get someone from your server's Discord to give you a download that includes at *minimum* the `base\themes` folder. **Please note that you won't be able to join any servers as a character until you have downl
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMzczMTAwOSw4ODM3NDg4NDAsMTAyOD
-UyMTc2OV19
+eyJoaXN0b3J5IjpbNzYyNTg2NTMwLDg4Mzc0ODg0MCwxMDI4NT
+IxNzY5XX0=
 -->
