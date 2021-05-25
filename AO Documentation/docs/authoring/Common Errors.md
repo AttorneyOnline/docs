@@ -29,6 +29,8 @@ Tell your antivirus to shut up by adding an exception for AO's folder. Google's 
 
 Another case of "shut up, Mr. Antivirus". It's caused by your antivirus not liking the fact that AO's writing the `_on.png` buttons for an emote, and what some antiviruses just outright don't tell you what they're doing, which results in the crash and/or freeze. Add an exception to AO's folder, and your problem will be fixed.
 
+Here's what Avas
+
 ## I can't connect to the Masterserver!
 
 Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
@@ -41,6 +43,6 @@ First, let's check to see if your computer can actually *see* the masterserver's
  ![](https://cdn.discordapp.com/attachments/278576491191599104/825387567138471986/unknown.png)
  - Open [this link](http://52.47.209.216:27016/). 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcyNjk0ODk1LDg4Mzc0ODg0MCwxMDI4NT
-IxNzY5XX0=
+eyJoaXN0b3J5IjpbLTE3NDk2MzYwNCw4ODM3NDg4NDAsMTAyOD
+UyMTc2OV19
 -->
