@@ -2,7 +2,11 @@
 
 It's regretful how I have to type this section up (considering #tech_support and #content exists on the AO Discord), but for the uninitiated who don't know how to use the Discord search bar, this document is made just for you.
 
-## 0xc000007b
+## My client won't start!
+
+Okay, there's 4 different issues you'll run into for this one, to which there's 3 solutions. I'll go through each issue one-by-one:
+
+			The code execution cannot proceed because MSVCPXXX.dll was not found``` and/or 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODUyMTc2OV19
+eyJoaXN0b3J5IjpbLTEwOTY1NDgyNDMsMTAyODUyMTc2OV19
 -->
