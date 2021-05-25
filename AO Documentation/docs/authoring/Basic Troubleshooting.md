@@ -1,6 +1,6 @@
 # Basic Troubleshooting
 
-It's regretful how have to type this section up (considering #tech_support and #content exists on the AO Discord), but for the uninitiated who don't know how to use the Discord search bar, this document is made just for you.
+It's regretful how we have to type this section up (considering #tech_support and #content exists on the AO Discord), but for the uninitiated who don't know how to use the Discord search bar, this document is made just for you. ***Please note that unless the section states otherwise, all of these situations will occur ONLY on the Client Version of Attorney Online.***
 
 ## My client won't start!
 
@@ -50,5 +50,5 @@ This time, if you don't see something like the below image, then join the AO Dis
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDA5MzkyMDddfQ==
+eyJoaXN0b3J5IjpbLTE5MzY1NDY2MDVdfQ==
 -->
