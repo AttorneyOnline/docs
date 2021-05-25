@@ -23,8 +23,8 @@ If you get this error, probably means you did one of two things:
 
 ### My client's .exe disappeared / My Antivirus thinks this program's a virus!
 
-Tell your antivirus to shut up by adding an exception for AO's folder. Y
+Tell your antivirus to shut up by adding an exception for AO's folder. Google's your best friend on how to do this, and in the case of "my client's .exe disappeared", either go to AO2 Github Repository and [download the latest version](https://github.com/AttorneyOnline/AO2-Client/releases/) of the client, or re-extract from the files that your server has provided 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzkxMTM3MzMsODgzNzQ4ODQwLDEwMj
-g1MjE3NjldfQ==
+eyJoaXN0b3J5IjpbMjA0MDk0ODQ3MCw4ODM3NDg4NDAsMTAyOD
+UyMTc2OV19
 -->
