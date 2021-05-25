@@ -32,6 +32,10 @@ Another case of "shut up, Mr. Antivirus". It's caused by your antivirus not liki
 Here's what Avast would look like if this issue occurs (and you don't have it set to silent mode):
 ![](https://puu.sh/HJxe0/aad0af8617.png)
 
+## I can't select a character!
+If you see something like this when selecting a character, then please grab the download for
+
+
 ## I can't connect to the Masterserver!
 ***This is for both Client and WebAO users***
 Sorry to our Linux and MacOS buddies, but this solution's built for Windows (until a Linux chad like Longbyte walks in and adds something for you buckos. MacOS, we're sorry, but you're underappreciated because Apple is a nightmare to work with. Use bootcamp and get a Windows install going).
@@ -49,8 +53,8 @@ This time, if you don't see something like the below image, then join the AO Dis
 ![](https://puu.sh/HJxfl/42cc1034d2.png)
 
 ---
-Thanks to the Official AO Discord and theDev Team for the solutions to these solutions.
+Thanks to the Official AO Discord and the AO2 Dev Team for the solutions to these issues.
 Screenshots are provided by Crystal#5638
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDA0NDUyMl19
+eyJoaXN0b3J5IjpbLTEyMjI4MDg4MjZdfQ==
 -->
