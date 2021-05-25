@@ -6,8 +6,10 @@ It's regretful how I have to type this section up (considering #tech_support and
 
 Okay, there's 4 different issues you'll run into for this one, to which there's 3 solutions. I'll go through each issue one-by-one:
 
-### You get an error pop-up s
+### You get an error pop-up that has either (0xc000007b) or MSVCP140_1.dll
+
+This one, thankfully for you, is pretty simple. The tl;dr here is that your computer's complaining about not having 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNzE3ODczNSw4ODM3NDg4NDAsMTAyOD
+eyJoaXN0b3J5IjpbLTcxMDc2ODM4OSw4ODM3NDg4NDAsMTAyOD
 UyMTc2OV19
 -->
