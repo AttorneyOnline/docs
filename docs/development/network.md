@@ -116,6 +116,12 @@ Introduced in 2.9.1:
 
 - `auth_packet`: Enables the use of the `AUTH` packet.
 
+#### Asset Link
+
+**Server:** `ASS#{asset_link}#%`
+
+Specifies the asset link of the server. It allows server to set a custom content repository, which is used for WebAO or client music streaming.
+
 #### Player count
 
 **Server:** `PN#{players}#{max}#%`
