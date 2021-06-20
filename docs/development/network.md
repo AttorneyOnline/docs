@@ -138,7 +138,6 @@ Requests a full list of characters. Note that `char_desc` is obsolete and likely
 
 #### Evidence list
 
-**Client:** `RE#%`<br>
 **Server:** `LE#{name}&{description}&{image}#...#%`
 
 See the [evidence list](#list) packet.
@@ -444,7 +443,6 @@ Supported by 2.4 onward. Every evidence item has three attributes: name, descrip
 
 #### List
 
-**Client:** `RE#%`<br>
 **Server:** `LE#{name}&{description}&{image}#...#%`
 
 #### Add
@@ -729,6 +727,10 @@ Shows an overlay on the client using `char_id` that indicates that they are mute
 **Server:** first server<br>
 **Client:** `SR#{n}#%`<br>
 **Server:** server of index `n`
+
+### Evidence list   
+**Client:** `RE#%`
+Clients had a packet to request the server evidence list. However, this is deprecated and unused.
 
 ----
 
