@@ -51,6 +51,12 @@ As of 2.8, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io
 Some default sounds can be customized in `courtroom_sounds.ini`. The syntax is as follows:
 
 ```ini
+event = sfx-name
+```
+
+Prior to 2.8.4 the extension is specififed for the sound. The syntax is as follows : 
+
+```ini
 ; must include correct extension (*.wav, *.opus)
 event = sfx-name.wav
 ```
