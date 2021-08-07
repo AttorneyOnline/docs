@@ -26,7 +26,6 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Available positions](#available-positions)
   - [Out-of-character message](#out-of-character-message)
   - [Evidence](#evidence)
-    - [List](#list)
     - [Add](#add)
     - [Remove](#remove)
     - [Edit](#edit)
@@ -54,6 +53,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Mod password](#mod-password)
     - [IP list](#ip-list)
     - [Mute](#mute)
+    - [Evidence list](#evidence-list)
 - [Master server protocol](#master-server-protocol)
   - [Paginated list (obsolete)](#paginated-list-obsolete)
 
@@ -728,8 +728,10 @@ Shows an overlay on the client using `char_id` that indicates that they are mute
 **Client:** `SR#{n}#%`<br>
 **Server:** server of index `n`
 
-### Evidence list   
+### Evidence list
+
 **Client:** `RE#%`
+
 Clients had a packet to request the server evidence list. However, this is deprecated and unused.
 
 ----
