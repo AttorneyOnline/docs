@@ -7,6 +7,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Hard drive ID](#hard-drive-id)
     - [Client version information](#client-version-information)
     - [Feature list](#feature-list)
+    - [Asset Link](#asset-link)
     - [Player count](#player-count)
     - [Resource counts](#resource-counts)
     - [Character list](#character-list)
@@ -115,6 +116,12 @@ Introduced in 2.9:
 Introduced in 2.9.1:
 
 - `auth_packet`: Enables the use of the `AUTH` packet.
+
+#### Asset link
+
+**Server:** `ASS#{asset_link}#%`
+
+Specifies the asset link of the server. It allows server to set a custom content repository, which is used for WebAO or client music streaming.
 
 #### Player count
 
