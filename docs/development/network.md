@@ -60,17 +60,25 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 
 ### Handshake
 
+#### Start handshake
+
+**Client:** `askchaa#%`
+**Server:** `decryptor#{key}#%`
+
+Starts the handshake. This was formerly used to send the [FantaCrypt](#fantacrypt) decryption key, but since 2.4 the argument is no longer used in any capacity.
+
 #### Hard drive ID
 
 **Client:** `HI#{hdid}#%`
 
 Sends the client's hard drive ID (supposedly a unique identifier) to the server for ban tracking. This increases the work needed to evade a ban, as it is not as simple as using a VPN.
 
-#### Client version information
+#### Version information
 
+**Server:** `ID#{player number}#{version}#%`
 **Client:** `ID#{client}#{version}#%`
 
-Sends the client name and version to the server.
+Sends the player number (not used) and the server version to the client. The client replies with its name and version.
 
 **Response:** Player count, feature list
 
@@ -123,18 +131,18 @@ Introduced in 2.9.1:
 
 Specifies the asset link of the server. It allows server to set a custom content repository, which is used for WebAO or client music streaming.
 
-#### Player count
-
-**Server:** `PN#{players}#{max}#%`
-
-Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
-
 #### Resource counts
 
 **Client:** `askchaa#%`<br>
 **Server:** `SI#{char_cnt}#{evi_cnt}#{music_cnt}#%`
 
 Requests character, evidence, and track counts ahead of time for memory allocation.
+
+#### Player count
+
+**Server:** `PN#{players}#{max}#%`
+
+Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
 
 #### Character list
 
