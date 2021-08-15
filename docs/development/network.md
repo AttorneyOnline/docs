@@ -65,7 +65,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 **Client:** `askchaa#%`
 **Server:** `decryptor#{key}#%`
 
-Starts the handshake. This was formerly used to send the [FantaCrypt](#fantacrypt) decryption key, but since 2.4 the argument is no longer used in any capacity.
+Starts the handshake. This was formerly used to send the [FantaCrypt](#fantacrypt) decryption key, but since 2.8.5 the argument is no longer used in any capacity.
 
 #### Hard drive ID
 
