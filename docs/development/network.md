@@ -75,6 +75,12 @@ Sends the player number (not used) and the server version to the client. The cli
 
 **Response:** Player count, feature list
 
+#### Player count
+
+**Server:** `PN#{players}#{max}#%`
+
+Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
+
 #### Feature list
 
 **Server:** `FL#{feature1}#{feature2}#...#%`
@@ -130,12 +136,6 @@ Specifies the asset link of the server. It allows server to set a custom content
 **Server:** `SI#{char_cnt}#{evi_cnt}#{music_cnt}#%`
 
 Requests character, evidence, and track counts ahead of time for memory allocation.
-
-#### Player count
-
-**Server:** `PN#{players}#{max}#%`
-
-Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
 
 #### Character list
 
