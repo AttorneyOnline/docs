@@ -60,13 +60,6 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 
 ### Handshake
 
-#### Start handshake
-
-**Client:** `askchaa#%`
-**Server:** `decryptor#{key}#%`
-
-Starts the handshake. This was formerly used to send the [FantaCrypt](#fantacrypt) decryption key, but since 2.8.5 the argument is no longer used in any capacity.
-
 #### Hard drive ID
 
 **Client:** `HI#{hdid}#%`
@@ -683,6 +676,11 @@ However, there was a major flaw in the implementation of FantaCrypt: the server 
 Many clients do not actually even implement the FantaCrypt algorithm, but instead use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet. This is because the 'decryptor' packet argument is the key to be used, but encrypted. The decryptor value is always encrypted with a magic number key value: 322 decimal. Moreover, FantaCrypt is only used in messages sent by the client to the server and not vice versa.
 
 The encryption algorithm was likely plagiarized from a [Stack Overflow answer](https://stackoverflow.com/questions/14411975/simple-code-to-encrypt-an-ini-file-string-using-a-password).
+
+The protocol for FantaCrypt is as follows:
+
+**Server:** `decryptor#{key}#%`
+**Client:** `<encrypted traffic>`
 
 #### Slow loading
 
