@@ -66,13 +66,20 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 
 Sends the client's hard drive ID (supposedly a unique identifier) to the server for ban tracking. This increases the work needed to evade a ban, as it is not as simple as using a VPN.
 
-#### Client version information
+#### Version information
 
+**Server:** `ID#{player number}#{version}#%`
 **Client:** `ID#{client}#{version}#%`
 
-Sends the client name and version to the server.
+Sends the player number (not used) and the server version to the client. The client replies with its name and version.
 
 **Response:** Player count, feature list
+
+#### Player count
+
+**Server:** `PN#{players}#{max}#%`
+
+Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
 
 #### Feature list
 
@@ -122,12 +129,6 @@ Introduced in 2.9.1:
 **Server:** `ASS#{asset_link}#%`
 
 Specifies the asset link of the server. It allows server to set a custom content repository, which is used for WebAO or client music streaming.
-
-#### Player count
-
-**Server:** `PN#{players}#{max}#%`
-
-Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
 
 #### Resource counts
 
@@ -675,6 +676,11 @@ However, there was a major flaw in the implementation of FantaCrypt: the server 
 Many clients do not actually even implement the FantaCrypt algorithm, but instead use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet. This is because the 'decryptor' packet argument is the key to be used, but encrypted. The decryptor value is always encrypted with a magic number key value: 322 decimal. Moreover, FantaCrypt is only used in messages sent by the client to the server and not vice versa.
 
 The encryption algorithm was likely plagiarized from a [Stack Overflow answer](https://stackoverflow.com/questions/14411975/simple-code-to-encrypt-an-ini-file-string-using-a-password).
+
+The protocol for FantaCrypt is as follows:
+
+**Server:** `decryptor#{key}#%`
+**Client:** `<encrypted traffic>`
 
 #### Slow loading
 
