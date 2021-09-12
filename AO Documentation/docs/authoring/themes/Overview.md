@@ -52,8 +52,8 @@ As of 2.8, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io
 Some default sounds can be customized in `courtroom_sounds.ini`. The syntax is as follows:
 
 ```ini
-; must include correct extension (*.wav, *.opus)
-event = sfx-name.wav
+; must include correct extension (*.wav, *.opus) in version 2.8.4 and older
+event = sfx-name
 ```
 
 ### Chatboxes
@@ -88,6 +88,3 @@ Starting in 2.9.0, it is possible to have elements of your UI be animated. To ta
 Characters can now have an additional portrait displayed over the chatbox when they are talking.
 
 To use this feature, place your sticker in a directory named  `sticker`  inside of your theme's folder. The sticker image must be named after the folder name of the character, and the image must be the size of the viewport.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTgyNjY3NTZdfQ==
--->

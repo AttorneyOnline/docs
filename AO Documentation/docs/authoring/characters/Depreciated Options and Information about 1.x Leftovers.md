@@ -4,7 +4,7 @@ Older char.inis may contain sections or options not mentioned in this guide. Her
 
 - `firstmode`: Technically never deprecated - `firstmode` was never used by AO2 in the first place. This is another holdover from AO1, and if you see this in a char.ini you can probably assume it's _very_ old. The purpose of `firstmode` was to work around a limitation in the unofficial Attorney Online 1.8 client which you can read more about [here.](https://sites.google.com/site/attorneyonlinedev/updates/asmallpatchandastoryaboutbuttons)
 
-- `shouts`: (Depreciated in 2.9.0, functionality merged with `chat`.) modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
+- `shouts`: (Depreciated in 2.9.0, functionality merged with `chat`) Modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
 
 - `gender`: (Renamed to `blips` in 2.9.0)
 
@@ -20,6 +20,3 @@ Extremely old file bases may have characters that have files with the prefix "`(
 Another commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
 
 Many assets used in the UI were also stored in `misc/` on AO1 - as themes were nonexistent - some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbNzczMjc4NzldfQ==
--->

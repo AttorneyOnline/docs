@@ -128,7 +128,7 @@ number = 13
 
 #### `[Options]`
 
-- `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._)
+- `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._ However, this ini-swap method is unnecessary, as AO 2.9.x introduced the ini-swap dropdown bar)
 
 - `showname` (optional): this name will appear on the nameplate whenever the character speaks, however it is fetched locally which means if you write `showname = FINIX RAIT`, only you will see it. If you want to change your nameplate for everyone, type it in the "Showname" field while playing.
 
@@ -227,7 +227,7 @@ char.ini
 		thinking.gif
 ```
 
-This is a popular way to declutter the root of your character folder.
+This is a popular way to declutter the root of your character folder. If you're creating a character for WebAO, please note that the `(a)`/`(b)` folder arrangement is not currently supported.
 
 ##### `<modifier>`
 
@@ -343,6 +343,3 @@ I believe that pretty much sums it up. Happy ini-editing!
 ---
 
 _Much of this content was adapted from the_ [Attorney Online User Manual](https://docs.google.com/document/d/1Si-d8lsJZla-BB0lhjDAwrUmawrRaMIf1EGaVNFEE_s/edit#) _and_ [A comprehensive guide to ini-editing](https://docs.google.com/document/d/1q21JTx5ca28VsBFgE12MAEKHxTO6zyYfpYYd-nJfuVk/edit#heading=h.cpfyd4n0hpqp) _written by OmniTroid._
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc1MTU3MTgxXX0=
--->

@@ -32,11 +32,9 @@ Each entry is self-explanatory, but to explain what each one does:
 
  - `effect_name`: The name given to the effect, which will be shown in the Effects Dropdown menu.
  - `effect_stretch`: (Introduced in 2.9.0) Affects whether or not the effect stretch/squish with the viewport or not, if the aspect ratio differs from that of the viewport.
- - `effect_under_chatbox`: (Introduced in 2.9.0) 
+ - `effect_under_chatbox`: (Introduced in 2.9.0) When False, the effect will display over the chatbox (much like the Realization effect)
 
 Note that character themes and effect folders can overlap; there is nothing stopping them from doing so.
 
 ***Currently, there is a known compatibility bug where effects made during 2.8.x do not appear in the Effects Dropdown Menu for 2.9.x clients.***
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNzQ0NTE0M119
--->
+***Currently, there is a bug within AO 2.9.1 clients that prevent effects from being shown***

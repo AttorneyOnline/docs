@@ -53,6 +53,3 @@ Evidence is located in `base/evidence`, is typically 70x70, and contains a borde
 4.  If there are multiple positions, different evidence may show up in different positions as well.
     
 5.  If you ![](https://lh3.googleusercontent.com/Gm6fOCogDT-mpcgcdOJDLhvwzkNpolbAwlH4AUqvobkDCAn9wSgJ39DxB0dZcdkxnWkkD6Jvfma9Jhh_cYNbVhKX-lx4-o926yUGafbrPY_gelZ00coGCx2Z2wojTIXLLbVhK7Ot "Present") a piece of evidence that's only present in a specific position, it will then show up in all positions, making it visible to everyone.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzI4NjU4NDMsLTQwNDMzMDg4MF19
--->

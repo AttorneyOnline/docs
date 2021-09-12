@@ -5,6 +5,3 @@ Sound effects are located in `base/sounds/general` and can be `.wav`, `.ogg`, or
 #### Blips
 
 Since 2.8, you can add blips in the `base/sounds/blips` folder instead of in `base/sounds/general`.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNjcyODMzMV19
--->

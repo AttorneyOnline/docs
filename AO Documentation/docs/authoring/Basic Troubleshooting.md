@@ -59,8 +59,3 @@ This time, if you don't see something like the below image, then join the AO Dis
    solutions to these issues.
  - (Most) Screenshots are provided by Crystal#5638
  - Cannot Select Character screenshot provided by chloroxic#2276
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzAwNjU3NjYsLTExOTA4MjQ4MDZdfQ
-==
--->
