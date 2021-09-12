@@ -1,4 +1,4 @@
-# What's New?
+# What's New
 This document is meant for those who want to update their themes to the newest version, but aren't sure what needs to be added (both file-wise and line-wise), with commentary on what exactly the new items *are*.  Currently, the milestone client versions for this document are as follows:
 
  - v2.6.0 (This is the assumed "minimum" version)
