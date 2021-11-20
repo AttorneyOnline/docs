@@ -189,11 +189,13 @@ Consider using subfolders if your character has a lot of files.
 
 Between the next #'s is the name of the actual animation when the character is idle and speaking, starting with `(a)` and `(b)` in the character folder, respectively. For instance, if your animation is named "cough", then the engine expects your idle animation to be named `(a)cough.gif` on the file system, and your talking animation to be named `(b)cough.gif`.
 
+If something like `(c)cough.gif` is provided, that (c) animation will play during the transition from speaking to idle.
+
 The engine will also scan for other supported file formats, such as `.apng` and `.webp`, as described above.
 
 If no animations are found for an emote, the engine will fall back to static emotes. Static emotes don't use `(a)`/`(b)` prefixes - instead, an static emote named `cough` would be expected to be in the file `cough.png`.
 
-If you're the type who likes to organize, you can also place files in subfolders, though the method is somewhat different from that of preanimations. To use subfolders, you must prefix your emotes with a forward slash (`/`). For `(a)`/`(b)` type emotes in subfolder mode, create two folders named `(a)` and `(b)` and place your prefix-less files in the appropriate folders. For example, the emote `/angry` will search for a file named `angry.gif` in `(a)/` and `(b)/` for idle and talking respectively.
+If you're the type who likes to organize, you can also place files in subfolders, though the method is somewhat different from that of preanimations. To use subfolders, you must prefix your emotes with a forward slash (`/`). For `(a)`/`(b)` type emotes in subfolder mode, create two folders named `(a)` and `(b)` and place your prefix-less files in the appropriate folders. For example, the emote `/angry` will search for a file named `angry.gif` in `(a)/` and `(b)/` for idle and talking respectively. The same works for (c) animations.
 
 As another example, the emote `/def/thinking` will search for a set of files arranged like this:
 
@@ -302,13 +304,11 @@ Older char.inis may contain sections or options not mentioned in this guide. Her
 
 > **TODO:** It's possible to use static and animated emotes at the same time by including only the `(a)` or the `(b)` animation and putting an identically named static emote in the root folder. Determine if this is intended, and if it is, add a section about it here. - in1tiate
 
-##### `(c)` emotes, DemoThings, and cluttered up miscs
+##### DemoThings, and cluttered up miscs
 
 > **TODO:** I wrote this section and then realized it doesn't really fit in a character creation guide. As I'm certain many will find the storied history of AO1 as entertaining as I do, I suggest a dedicated page for documenting it. - in1tiate
 
-Extremely old file bases may have characters that have files with the prefix "`(c)`". These are a remnant of a never-realized feature in AO1 that would allow the specification of a third animation to play once the character was done talking. It was never implemented, and thus `(c)` emotes are never used.
-
-Another commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
+A commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
 
 Many assets used in the UI were also stored in `misc/` on AO1, some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
 
