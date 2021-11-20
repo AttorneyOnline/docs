@@ -307,8 +307,8 @@ Older char.inis may contain sections or options not mentioned in this guide. Her
 ##### DemoThings, and cluttered up miscs
 
 > **TODO:** I wrote this section and then realized it doesn't really fit in a character creation guide. As I'm certain many will find the storied history of AO1 as entertaining as I do, I suggest a dedicated page for documenting it. - in1tiate
-> 
-> A commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
+
+A commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
 
 Many assets used in the UI were also stored in `misc/` on AO1, some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
 
