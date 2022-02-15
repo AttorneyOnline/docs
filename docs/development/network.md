@@ -677,7 +677,7 @@ However, there was a major flaw in the implementation of FantaCrypt: the server 
 
 Many clients do not actually even implement the FantaCrypt algorithm, but instead use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet. This is because the 'decryptor' packet argument is the key to be used, but encrypted. The decryptor value is always encrypted with a magic number key value: 322 decimal. Moreover, FantaCrypt is only used in messages sent by the client to the server and not vice versa.
 
-The encryption algorithm was likely plagiarized from a [Stack Overflow answer](https://stackoverflow.com/questions/14411975/simple-code-to-encrypt-an-ini-file-string-using-a-password).
+The encryption algorithm was plagiarized from a [Stack Overflow answer](https://stackoverflow.com/questions/6798188/delphi-simple-string-encryption).
 
 The protocol for FantaCrypt is as follows:
 
