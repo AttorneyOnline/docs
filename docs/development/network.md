@@ -77,9 +77,11 @@ Sends the player number (not used) and the server version to the client. The cli
 
 #### Player count
 
-**Server:** `PN#{players}#{max}#%`
+**Server:** `PN#{players}#{max}#%`<br/>
+**Server:** `PN#{players}#{max}#{server_description}#%` (since 2.10)
 
-Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.
+Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.<br/>
+Since 2.10 the server description is appended to the packet to support server descriptions in the favourite tab.
 
 #### Feature list
 
