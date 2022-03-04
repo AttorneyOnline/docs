@@ -12,7 +12,7 @@ First, you need to find or create content that you wish to make emotes out of.
 
 #### Sizing
 
-The minimum recommended size of your content is 256x192. Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
+The ***absolute minimum*** recommended size of your content is 256x192 (most servers will recommend a minimum of 512x384 or 960x540). Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
 
 > **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
