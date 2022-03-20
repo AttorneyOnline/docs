@@ -377,8 +377,8 @@ Clients can set the background with a server chat command, such as `/bg`.
 
 #### Music
 
-**Client:** `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}#%`<br>
-**Server:** same
+**Client:** `MC#{songname}#{char_id}#{showname}#{effects}#%`<br>
+**Server:** `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}#%`
 
 Plays the specified track (with file extension) and records the event to the IC log.
 
