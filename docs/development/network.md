@@ -47,6 +47,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
   - [Keep alive](#keep-alive)
   - [Subtheme switching](#subtheme-switching)
   - [Timers](#timers)
+  - [Judge controls](#judge-controls)
   - [Escape codes](#escape-codes)
   - [Obsolete](#obsolete)
     - [FantaCrypt](#fantacrypt)
@@ -651,6 +652,17 @@ Instructs the client to manipulate the timers on its UI.
   * `3`: Hide timer
 * **time:** The time to display on the timer, in milliseconds.
 
+### Judge controls
+
+**Server:** `JD#{state: int}#%`
+
+Instructs the client to show or hide the judge controls.
+
+**Parameters:**
+* **state:**
+  * `-1`: Show or hide the judge controls, depending on the client's position.
+  * `0`: Hide the judge controls.
+  * `1`: Show the judge controls.
 
 ### Escape codes
 
