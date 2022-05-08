@@ -20,3 +20,6 @@ S: "OPPASS#6772D3268E447943#%"
 S: "DONE#%"
 S: "CT#$H#=== Areas ===\r\nArea 0: Basement (users: 18) [*]\r\n[IDLE]\r\nArea 1: Courtroom 1 (users: 5)\r\n[BUILDING-OPEN]\r\nArea 2: Courtroom 2 (users: 0)\r\n[IDLE]\r\nArea 3: Courtroom 3 (users: 1)\r\n[IDLE]\r\nArea 4: Courtroom 4 (users: 0)\r\n[IDLE]\r\nArea 5: Crossover Courtroom (users: 0)\r\n[IDLE]\r\nArea 6: Arcade (users: 1)\r\n[IDLE]\r\nArea 7: Lounge (users: 1)\r\n[IDLE]#%"
 S: "CT#$H#=== MOTD ===\r\nWelcome to AOV! If you are new, be sure to read the newbie guide: http://tiny.cc/AOVnewbieguide \r\nHere is a link to the mod contact discord if you have any questions or anything https://discord.gg/pz6CKBF \r\nMain doc with basic info and rules: http://tiny.cc/AOVmaindoc \r\nLink to the wiki's Case Archive: http://tiny.cc/AOVwiki \r\nAO2 was released: http://tiny.cc/getao2 \r\nLittle handy guide to changing the layout of AO2: http://tiny.cc/AO2modfying \r\nHave a nice day of casing.\r\n=============#%"
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIxNDM0MDMyMTNdfQ==
+-->

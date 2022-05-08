@@ -23,3 +23,6 @@ and along with that maybe even a web server to host the content for hosts who do
 
 assign the client an inventory of items
 in vanilla AO2 this is managed via the evidence
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc2NTcwNjgzNl19
+-->

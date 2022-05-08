@@ -12,18 +12,19 @@ First, you need to find or create content that you wish to make emotes out of.
 
 #### Sizing
 
-The minimum recommended size of your content is 256x192. Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
+The ***absolute minimum*** recommended size of your content is 256x192 (most servers will recommend a minimum of 512x384 or 960x540). Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
 
 > **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
 That being said, here are some basic rules when the viewport is not the same size as your content:
 
-- If the viewport's size is an exact multiple of that of the content, it will be scaled using **nearest neighbor** filtering. This makes sure that sprite art doesn't get blurry.
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
 - Content with an aspect ratio wider than the viewport will be centered and cropped at the left and right edges.
 - Content with an aspect ratio narrower than the viewport will simply be centered within it.
+- In Client Versions prior to 2.9.0, if the viewport's size is an exact multiple of that of the content, it was to be scaled using **nearest neighbor** filtering. The handling of scaling filters is now user-defined, and can be found in ####options
 
-We recommend that you make your content on a 4:3 canvas for the best all-around compatibility.
+We recommend that you make your content on a 4:3 canvas for the best all-around compatibility with all client versions.
+**Note**: Starting with Client Version 2.8.0, it is possible to create characters on any canvas ratio without a loss of quality.
 
 #### Animations
 
@@ -35,6 +36,13 @@ You will encounter certain technical limitations of GIF rather quickly. There ar
 
 - The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this. *APNG is recommended for 2D characters.*
 - Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended. *Lossy WebP is recommended for 3D characters with high frame rates.*
+
+**Beware of having multiple formats with the same file name** *(i.e. - Default.WEBP and Default.GIF)***, as the Engine will always load the file that's higher on the list in this order:**
+
+1) WebP
+2) APNG
+3) GIF
+4) PNG
 
 #### Buttons
 
@@ -77,13 +85,20 @@ name = Phoenix
 showname = Wright
 needs_showname = true
 side = def
-gender = male
+blips = male
 chat = aa
 chat_font = Igiari
 chat_size = 10
-shouts = aa
 effects = default/effects
 realization = realization
+scaling = fast
+
+[Shouts]
+holdit_message = This is a custom Hold it! message!
+custom_name = My custom shout
+custom_message = This is my custom shout!
+custom2_name = My second custom shout
+custom2_message = This is my second custom shout!
 
 [Emotions]
 number = 13
@@ -113,7 +128,7 @@ number = 13
 
 #### `[Options]`
 
-- `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._)
+- `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._ However, this ini-swap method is unnecessary, as AO 2.9.x introduced the ini-swap dropdown bar)
 
 - `showname` (optional): this name will appear on the nameplate whenever the character speaks, however it is fetched locally which means if you write `showname = FINIX RAIT`, only you will see it. If you want to change your nameplate for everyone, type it in the "Showname" field while playing.
 
@@ -129,10 +144,10 @@ number = 13
     - `jur` - Juror (since 2.6)
     - `sea` - Seance (since 2.6)
 
-- `gender`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**).
+- `blips`: (optional, defaults to "male") modifies the sound that plays while your message text scrolls (colloquially called a **"blip"**).
   Blip sound effects can be located in `sounds/blips/` (recommended) or `sounds/general/` with the prefix `sfx-[blip]` (not recommended).
 
-- `chat`: (optional, defaults to your theme's chatbox) allows characters to use custom **chatboxes** (the box your message appears in). Input should be a directory in `misc/` containing the chatbox you want to use.
+- `chat`: (optional, defaults to your theme's  chatbox) allows characters to use custom **chatboxes** (the box your message appears in) and **interjections**. Input should be a directory in `misc/` containing the chatbox you want to use.
   - For example, a character with `chat = dgs` will attempt to use the chatbox contained in `misc/dgs/`.
   - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
   > **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
@@ -141,22 +156,27 @@ number = 13
 
 - `chat_size`: (optional, same defaults as `chat_font`) modifies the size of your message text. Like `chat_font`, this is also clientside.
 
-- `shouts`: (optional, defaults to your theme and is overridden by your character files) modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
-
 - `effects` (optional, defaults to `default/effects`): specifies misc folder to search for overlay effects, like `chat` and `shouts`.
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
+- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added that will automatically apply one of these scaling options if it is not specified in the `char.ini`.
+
+#### `[Shouts]` (optional)
+With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
+ 
 #### `[Time]` (optional)
 
-Made mostly redundant with release 2.8.4. The purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine (read: the inability of the author to read the duration from the file itself). Up until 2.8.4, preanimations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` can still be used to dictate preanim duration, but it is no longer strictly necessary.
+Made mostly redundant with release 2.8.4. The purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine. Up until 2.8.4, pre-animations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` can still be used to dictate pre-animation's duration, but it is no longer strictly necessary.
 
 
 #### `[Emotions]`
 
-Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your ini will likely be here.
+Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your char.ini will likely be here.
 
 The `number` option is pretty self-explanatory. It specifies the number of emotes. Make sure this is correct - if it's too low, you won't be able to use all your emotes. If it's too high (or if you don't specify a `number`), you'll end up with placeholder emotes that'll clutter up your pages.
+
+All characters will follow the format of `<emote number> = <comment>#<preanim>#<emote>#modifier[#<deskmod>]`, where `<this>` is required and `{this}` is optional.
 
 Now for the specific emotions.
 
@@ -209,7 +229,7 @@ char.ini
 		thinking.gif
 ```
 
-This is a popular way to declutter the root of your character folder.
+This is a popular way to declutter the root of your character folder. If you're creating a character for WebAO, please note that the `(a)`/`(b)` folder arrangement is not currently supported.
 
 ##### `<modifier>`
 
@@ -227,6 +247,10 @@ This option allows an emote to either force the desk/witness stand/overlay to be
 - `-1`: Forcibly show the desks while this emote is displayed, except for `jud`/`hld`/`hlp` positions.
 - `0`: Forcibly hide the desks while this emote is displayed.
 - `1`: Forcibly show the desks while this emote is displayed.
+- `2`: Hides the overlay during  pre-animation, shows it again once the  pre-animation is finished
+- `3`: Shows the overlay _only_ during the  pre-animation, and hides the overlay when the pre-animation ends
+- `4`: Same as `2`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
+- `5`: Same as `3`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
 
 #### `[SoundN]`
 
@@ -294,24 +318,6 @@ This section defines at which frame a screen shake should occur.
 32 = 1
 ```
 
-#### Special quirks
-
-##### Deprecated options
-
-Older char.inis may contain sections or options not mentioned in this guide. Here are a few of them and a brief explanation of each, for posterity:
-
-- `firstmode`: Technically never deprecated - `firstmode` was never used by AO2 in the first place. This is another holdover from AO1, and if you see this in a char.ini you can probably assume it's _very_ old. The purpose of `firstmode` was to work around a limitation in the unofficial Attorney Online 1.8 client which you can read more about [here.](https://sites.google.com/site/attorneyonlinedev/updates/asmallpatchandastoryaboutbuttons)
-
-> **TODO:** It's possible to use static and animated emotes at the same time by including only the `(a)` or the `(b)` animation and putting an identically named static emote in the root folder. Determine if this is intended, and if it is, add a section about it here. - in1tiate
-
-##### DemoThings, and cluttered up miscs
-
-> **TODO:** I wrote this section and then realized it doesn't really fit in a character creation guide. As I'm certain many will find the storied history of AO1 as entertaining as I do, I suggest a dedicated page for documenting it. - in1tiate
-
-A commonality in AO1-era file bases is the presence of a "DemoThings" folder located under `misc/`. This folder's name is somewhat nonsensical - on AO1, its purpose was to store the `char_icon` of every character so that they could be displayed on the character selection screen. AO2 uses the much more sane solution of storing the icon inside the character folder.
-
-Many assets used in the UI were also stored in `misc/` on AO1, some of which have seen continued use to this day - including the ever-popular Missingno placeholder.
-
 ### 3. Distributing
 
 Generally, characters are distributed in a bundle. A typical zip file looks like this:
@@ -321,13 +327,14 @@ Generally, characters are distributed in a bundle. A typical zip file looks like
 base/
     characters/
         MyCharacter1/
+	        README.txt
         ...
         MyCharacter2/
+	        README.txt
     ...
     sounds/
     general/
     ...
-README.txt
 
 ```
 

@@ -24,3 +24,6 @@ Once you've downloaded the game, copy the contents of the ZIP file to any folder
 ### Running
 
 Double-click the Attorney Online executable file. For new releases, you may get a SmartScreen or antivirus warning; our software is not very popular, so sometimes it can take a while for virus scanners to recognize it as safe. You can safely ignore the warning.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEyOTEyMTgxODRdfQ==
+-->
