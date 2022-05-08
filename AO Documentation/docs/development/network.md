@@ -764,6 +764,3 @@ Clients had a packet to request the server evidence list. However, this is depre
 ----
 
 Thanks to stonedDiscord and Aleks for initial AO1 reverse engineering; OmniTroid for AO2 protocol documentation; and Cerapter for 2.6 protocol documentation.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NTEyMDMzN119
--->

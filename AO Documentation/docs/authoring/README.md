@@ -28,7 +28,3 @@ Here's a list of tools and additional tutorials that can help you out along the 
 	- [Still Image to WebP (Online)](https://nsspot.herokuapp.com/imagetowebp/#)
 		- You can also use XnConvert for the same functionality as this link, if you already have it.
 	- [libwebp](https://developers.google.com/speed/webp/download)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDgyNzg3NywxMzcyODI1MTUwLDExOD
-U3MDUxNzldfQ==
--->

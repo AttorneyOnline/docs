@@ -36,6 +36,3 @@ In *Danganronpa* class trials, players are provided with character sheets and di
 ---
 
 *Game formats and descriptions were adapted from Attorney Online Vidya's [format page](http://aovidya.com/formats).*
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MDU5OTQ2M119
--->

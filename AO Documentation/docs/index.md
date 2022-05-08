@@ -19,6 +19,3 @@ This compendium is split into four main sections:
    - [Roadmap](development/roadmap.md)
    - [Network Protocol](development/network.md)
    - Using Qt
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTM1MTk4MTFdfQ==
--->
