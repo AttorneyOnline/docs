@@ -494,8 +494,11 @@ The first argument indicates the information being sent about every area:
 
 - `0`: player counts
 - `1`: area statuses
+  -  Recognized statuses: `IDLE`, `LOOKING-FOR-PLAYERS`, `CASING`, `RECESS`, `RP`, `GAMING`
 - `2`: case managers (CMs)
+  - This should be set to `FREE` if there are no case managers in the area. 
 - `3`: locked states (string, not boolean)
+  - Recognized lock states: `FREE`, `SPECTATABLE`, `LOCKED` 
 
 This packet has as many pieces (plus one) as there are areas on the server. It describes, in order, every area's given property.
 
