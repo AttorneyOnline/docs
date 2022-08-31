@@ -60,6 +60,8 @@ event = sfx-name
 
 Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatblank`, `chatmed`, and `chatbig` are also used depending on the length of the showname. (`chatbox` can also be used if multiple chatbox images seems unnecessary.) These can be overriden on a per-character basis, please see the [Character Documentation](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/characters.md) for more details on this override.
 
+Note that you may override the layout settings of custom chatboxes to better suit your theme. Custom chatboxes are generally located under `base/misc`. If you have a version under `[theme]/misc`, it will be used instead. Custom chatboxes have layout overrides via a `courtroom_design.ini` placed in their folder. Only chatbox-related settings may be overridden in this way.
+
 ### Theme Inheritance
 
 Added in 2.9.0, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
