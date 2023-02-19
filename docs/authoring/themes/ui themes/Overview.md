@@ -21,6 +21,32 @@ Technically, a theme has no minimum files. It can be empty; any files not in you
 
 Since UI files do not support comments, be sure to have read the Qt Designer Documentation!
 
+### Ressource File Creation
+
+To create a Ressource File you will need to create a QRC file, which defines what files to be bundled, and the RCC compiler. They can either be sourced from the Qt Website, requiring an account
+A simple one can look like this :
+
+```xml
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/base/themes/[YourThemeName]">
+    <file>lobby.ui</file>
+    <file>version</file>
+</qresource>
+</RCC>
+```
+
+With its corresponding folderstructure being:
+
+```
+Root
+  - lobby.ui
+  - version.ui
+  - theme.qrc
+```
+
+Do note that only the version and .ui files need to follow the prefix convention. Other items may be sorted elsewhere, but need to be correctly pathed for them to show up.
+Though in general it is useful to keep it consistent. Absolute paths are not supported as they are non-portable.
+
 ### Fonts
 
 AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will work, but have several issues (see [AO2-Client#224](https://github.com/AttorneyOnline/AO2-Client/issues/224)) making them look terrible in some cases. If the font you want to use is in OpenType format (OTF), this documentation recommends the use of [otf2ttf](https://pypi.org/project/otf2ttf/) to convert the font to TrueType format. 
