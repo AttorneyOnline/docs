@@ -1,6 +1,6 @@
 ## Creating Themes
 
-*Note: This section is only applicable to desktop AO post 2.10.*
+*Note: This section is only applicable to desktop AO post 2.10*
 
 The desktop AO client uses Qt's UI loader that reads UI files from RCC ressources files which define layout of every widget in the lobby.
 
@@ -30,4 +30,4 @@ AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will 
 
 As part of the UI file [Qt CSS stylesheets](https://doc.qt.io/Qt-5/stylesheet-syntax.html), which allows significantly greater freedom in widget and font styles can be applied to any widget in the hierarchy.
 
-As of 2.10.1, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io/Qt-5/stylesheet-syntax.html), which allows significantly greater freedom in widget and font styles. Please see [Qt CSS Objects](https://github.com/Crystal2002/docs/blob/master/AO%20Documentation/docs/authoring/theme%20documentation/Qt%20CSS%20Objects.md) for the required object names and type of each UI file of the client (the documentation assumes you already either know how to use [Designer](https://doc.qt.io/qt-5/qtdesigner-manual.html), or you're a fast learner.)
+As of 2.10.1, you can customize the UI using [Qt CSS stylesheets](https://doc.qt.io/Qt-5/stylesheet-syntax.html), which allows significantly greater freedom in widget and font styles. Please see [Qt CSS Objects](https://github.com/AttorneyOnline/docs/tree/master/docs/authoring/themes/ui%20themes/Qt%20Required%20Objects.md) for the required object names and type of each UI file of the client (the documentation assumes you already either know how to use [Designer](https://doc.qt.io/qt-5/qtdesigner-manual.html), or you're a fast learner.)
