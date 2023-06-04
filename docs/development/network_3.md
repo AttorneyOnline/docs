@@ -18,17 +18,16 @@ The server will respond with a reponse header when an error is encountered.
 `Normal Packet:`
 ```json
 {
-  "type": "HEADER",
-  "content": {
-    "key": "value"
-  }
+  "type": "type_name",
+  "content": "",
+  "content": ""
 }
 ```
 `On-Error Packet:`
 ```json
 {
   "header": "ERROR",
-  "header" : "HEADER",
+  "type" : "typename",
   "error" : "errortext"
 }
 ```
