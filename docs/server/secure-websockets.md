@@ -5,17 +5,17 @@
 As you might have noticed, practically every web connection to AO servers is unencrypted.
 This materializes on the web in the form of the ever-present warning:
 
-insert annoying warning image here
+![image](https://github.com/Troid-Tech/docs/assets/14360110/bf810697-e88f-4472-a4c3-a11f49db9b7c)
 
 As well as a blaring NOT SECURE in the address bar:
 
-insert NOT SEcURE
+![image](https://github.com/Troid-Tech/docs/assets/14360110/12123741-09d2-43ea-b289-1051f8b745a6)
 
 The modern web strongly prefers being encrypted, so deviating from that
-raises some warning here and there.
+raises some warnings here and there.
 
 There is also the issue of privacy at play. Since the traffic is unencrypted, practically
-anyone can eavesdrop on traffic going to and from and AO server. This may be unfortunate for
+anyone can eavesdrop (and even modify!) traffic going to and from an AO server. This may be unfortunate for
 a number of reasons.
 
 If you want to make joining your server more convenient (no more warning) and secure (encrypted),
@@ -41,17 +41,18 @@ Most of what's going to happen is actually _outside_ the AO server, since managi
 them typically isn't handled by application servers. We're basically going to let another program
 handle the encryption and then just forward the unencrypted traffic (locally) to the AO server.
 
-insert snazzy diagram here
+<img width="928" alt="Untitled" src="https://github.com/Troid-Tech/docs/assets/14360110/974d375f-a55e-489b-a29b-20a85f4ed0da">
 
 As you can see, we're going to need an intermediate program to handle the encryption and decryption.
 We typically call this a "reverse proxy" for reasons we don't need to talk about right now.
 
 For the sake of this example, we'll use these example values:
-- Domain name: coolserver.example.com
-- Server IP: 1.2.3.4
-- Websocket port: 50001
-- Secure websocket port: 50002
-- Webroot: /var/www/coolserver.example.com (where the webserver will look for files to serve)
+- Domain name: `coolserver.example.com`
+- Server IP: `1.2.3.4`
+- Websocket port: `50001`
+- Secure websocket port: `50002`
+- Webroot: `/var/www/coolserver.example.com` (where the webserver will look for files to serve)
+- Certbot folder: `/path/to/certbot/` (where certbot keeps its files)
 
 ## Configuring DNS
 
@@ -129,7 +130,8 @@ out of terror, anger, confusion or any combination of the three.
 
 Now that we have a working webserver, we can set up the reverse proxy.
 
-We'll need to modify the `coolserver.example.com`(you might want to take a backup of the old one)
+We'll need to modify the `coolserver.example.com` config file
+(you might want to take a backup of the old one)
 file to look like this instead:
 
 ```nginx
@@ -176,5 +178,5 @@ we connect securely.
 
 ## Trouble?
 
-If you're having serious trouble with this process, you can always ask for help in the #tech_support channel on the
-[Official Discord server](https://discord.gg/wWvQ3pw).
+If you're having serious trouble with this process, you can always ask for help in the #tech_support channel in the
+[official Discord server](https://discord.gg/wWvQ3pw).
