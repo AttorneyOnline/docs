@@ -1,0 +1,20 @@
+text speed control:
+{ - slow down
+} - speed up
+
+slash codes:
+\f - screen flash
+\s - screen shake
+\n - line break
+
+inline color formatting characters:
+` (backtick) = green
+~ (tilde) = red
+| (pipe character) = orange
+() (parenthesis) = blue
+º (U+00BA MASCULINE ORDINAL INDICATOR) = yellow
+№ (U+2116 NUMERO SIGN) = magenta
+√ (U+221A SQUARE ROOT) = cyan
+[] (square brackets) = gray
+
+formatting codes can be printed as-is by escaping them with a backslash (\)
