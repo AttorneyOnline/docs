@@ -227,7 +227,8 @@ MS#
 {frames_realization}#
 {frames_sfx}#
 {additive}#
-{effect}#%
+{effect}#
+{blips}#%
 ```
 
 **Server**:
@@ -262,7 +263,8 @@ MS#
 {frames_realization}#
 {frames_sfx}#
 {additive}#
-{effect}#%
+{effect}#
+{blips}#%
 ```
 
 An in-character (IC) message is a basic form of viewport event in which a animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
@@ -363,7 +365,9 @@ Reference of fields:
 
 - **effect**: The overlay effect to be displayed.
 
-All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+.
+- **blips**: The sound effect to play while processing text, colloquially the "blips."
+
+All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+. `blips` onward is 2.10.2+.
 
 > Note that servers may modify specific values of this message. For example, disemvoweling and shaking modify your text, and `/force_nonint_pres` forces your preanims to be noninterrupting. Therefore, to determine if your message was successfully sent, the character ID should be compared instead of the message text or the entire packet.
 
