@@ -35,9 +35,6 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Area updates](#area-updates)
     - [Music list](#music-list-1)
     - [Area list](#area-list)
-  - [Casing](#casing)
-    - [Case preferences update](#case-preferences-update)
-    - [Case alert](#case-alert)
   - [Moderator commands](#moderator-commands)
     - [Authentication](#authenticate)
     - [Call mod](#call-mod)
@@ -56,8 +53,11 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [IP list](#ip-list)
     - [Mute](#mute)
     - [Evidence list](#evidence-list)
-- [Master server protocol](#master-server-protocol)
-  - [Paginated list (obsolete)](#paginated-list-obsolete)
+    - [Master server protocol](#master-server-protocol)
+      - [Paginated list (obsolete)](#paginated-list-obsolete)
+    - [Casing](#casing)
+      - [Case preferences update](#case-preferences-update)
+      - [Case alert](#case-alert)
 
 ### Handshake
 
@@ -536,55 +536,6 @@ This can be used to add and remove areas dynamically.
 
 This packet was added in 2.8.
 
-### Casing
-
-#### Case preferences update
-
-**Client:** `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
-
-Updates the user's casing alert preferences.
-
-Parameters:
-
-- **caselist**: the list of cases this user is willing to host (assuming they are also willing to CM) (not used)
-- **cm**: `1` if the user is willing to host cases (not used)
-- **def**: `1` if the user is willing to defend a case / play as a defense attorney (or a co-defense attorney)
-- **pro**: `1` if the user is willing to prosecute a case / play as a prosecutor (or a co-prosecutor)
-- **judge**: `1` if the user is willing to judge a case
-- **jury**: `1` if the user is willing to be a member of the jury in a case
-- **steno**: `1` if the user is willing to be the stenographer of a case
-
-It is up to the server to decide what to do with this packet. By default, tsuserver does nothing with this information (though it is stored, for some reason) and sends all case alerts to every connected client.
-
-Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
-
-#### Case alert
-
-**Client:** `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{need_steno}#%`<br>
-**Server:** same, except `{message}` instead of `{case_title}`
-
-Sends an alert to players about a case needing participants.
-
-Where the arguments are:
-
-- **case_title**: the title of the case being played
-- **message**: the title of the case, but may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
-- **need_def**: `1` if the user needs a defense attorney,
-- **need_pro**: `1` if the user needs a prosecutor,
-- **need_judge**: `1` if the user needs a judge,
-- **need_jury**: `1` if the user needs jurors,
-- **need_steno**: `1` if the user need a stenographer.
-
-The above packet, when sent from clientside, requests the server to sent the serverside packet to all relevant users.
-
-Users are targeted if:
-* they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet). ([akashi](https://github.com/AttorneyOnline/akashi))
-* they are currently connected to the server, regardless of casing preferences ([tsuserver3](https://github.com/AttorneyOnline/tsuserver3))
-
-This packet may be rate-limited.
-
-####
-
 ### Moderator commands
 
 #### Authenticate
@@ -767,6 +718,55 @@ Shows an overlay on the client using `char_id` that indicates that they are mute
 **Client:** `RE#%`
 
 Clients had a packet to request the server evidence list. However, this is deprecated and unused.
+
+### Casing
+
+#### Case preferences update
+
+**Client:** `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
+
+Updates the user's casing alert preferences.
+
+Parameters:
+
+- **caselist**: the list of cases this user is willing to host (assuming they are also willing to CM) (not used)
+- **cm**: `1` if the user is willing to host cases (not used)
+- **def**: `1` if the user is willing to defend a case / play as a defense attorney (or a co-defense attorney)
+- **pro**: `1` if the user is willing to prosecute a case / play as a prosecutor (or a co-prosecutor)
+- **judge**: `1` if the user is willing to judge a case
+- **jury**: `1` if the user is willing to be a member of the jury in a case
+- **steno**: `1` if the user is willing to be the stenographer of a case
+
+It is up to the server to decide what to do with this packet. By default, tsuserver does nothing with this information (though it is stored, for some reason) and sends all case alerts to every connected client.
+
+Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
+
+#### Case alert
+
+**Client:** `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{need_steno}#%`<br>
+**Server:** same, except `{message}` instead of `{case_title}`
+
+Sends an alert to players about a case needing participants.
+
+Where the arguments are:
+
+- **case_title**: the title of the case being played
+- **message**: the title of the case, but may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
+- **need_def**: `1` if the user needs a defense attorney,
+- **need_pro**: `1` if the user needs a prosecutor,
+- **need_judge**: `1` if the user needs a judge,
+- **need_jury**: `1` if the user needs jurors,
+- **need_steno**: `1` if the user need a stenographer.
+
+The above packet, when sent from clientside, requests the server to sent the serverside packet to all relevant users.
+
+Users are targeted if:
+* they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet). ([akashi](https://github.com/AttorneyOnline/akashi))
+* they are currently connected to the server, regardless of casing preferences ([tsuserver3](https://github.com/AttorneyOnline/tsuserver3))
+
+This packet may be rate-limited.
+
+####
 
 ----
 
