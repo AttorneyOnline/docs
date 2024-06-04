@@ -42,6 +42,31 @@ If the background is AO2-compatible (read: contains `stand.png`, `defensedesk.pn
 
 As of Client Version 2.8, you can define custom positions through `design.ini`.
 
+### Slide-ready backgrounds (2.10.2+)
+
+To set up backgrounds for use with slide transitions, first acquire a suitable image. These images are typically wide and have multiple "positions" included in them - All 2D Ace Attorney games have these.
+
+Place the image and its overlay (if it has one) in the background's folder like any normal position. If it's a courtroom, you should name it `court.png` - this will enable the client to automatically use it for legacy positions (def, wit, pro).
+
+Define each position in `design.ini` as follows:
+
+```
+[image:pos]
+rect=x, y, w, h
+slide_ms_pos3=550
+slide_ms_pos2=500
+```
+- `image` - the name of the image, with no extension i.e. `court` for `court.png`
+- `pos` - the name of the position, i.e. `def`
+- `rect` - a rectangle around the part of the image you want this position to occupy. You can think of this like a rectangular cut-out of the full image.
+ - `x` - the x coordinate of the top left corner of the rectangle
+ - `y` - the y coordinate of the top left corner of the rectangle (this should generally be 0)
+ - `w` - the width of the rectangle
+ - `h` - the height of the rectangle
+- `slide_ms_<pos2>` - the duration of the slide animation between `pos` and `pos2`, in milliseconds
+
+If you're using `court.png`, the three positions you should define are `court:def`, `court:wit`, and `court:pro`, as the client will automatically translate these for you. The vanilla content base should contain an already-created background for you to reference.
+
 ### AO1 backgrounds
 
 For the sake of documentation, it should be noted that some AO1-era backgrounds use different dimensions for desks. These desks' filenames are in Spanish (`bancodefensa`, `bancoacusacion`, `estrado`). (Why are they in Spanish if Fanat is Russian? I don't know!)
