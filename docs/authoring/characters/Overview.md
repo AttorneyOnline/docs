@@ -16,8 +16,6 @@ The ***absolute minimum*** recommended size of your content is any image with a 
 
 Keep in mind that if your image is taller than the **viewport** (the area where characters appear; its size is controlled by your theme - default being 256x192), your content will be scaled down to fit within the vertical boundaries.
 
-> **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
-
 That being said, here are some basic rules when the viewport is not the same size as your content:
 
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
@@ -164,8 +162,19 @@ number = 13
 
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added that will automatically apply one of these scaling options if it is not specified in the `char.ini`.
 
-### `[Shouts]` (optional)
+#### `[Options2]` etc (optional)
+You may optionally define up to 4 extra `[Options]` with limited settings available - as of 2.10.2, only `showname` and `blips` may be overridden in this manner:
+```
+[Options2]
+showname = Trilo
+blips = female
+```
+This will only apply to the emotes which have been set to use it via `[OptionsN]` - see below.
+
+#### `[Shouts]` (optional)
 With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
+
+You **do not need** to define `holdit`, `objection`, or `takethat` - these values are already handled by the client itself. You should only override them when a character's default shouts are different from the default ones.
  
 ### `[Time]` (optional)
 
@@ -281,7 +290,18 @@ For each entry, the sound effect will loop if the value is `1`.
 sound = 1
 ```
 
-### `[<emote>_FrameSFX]`
+#### `[OptionsN] (optional)`
+
+The counterpart to the above `[Options2]` and et cetera. This section defines which emotes should use an alternate `[Options]` block, and which one to use. For each entry, the integer used should correspond to the `[Options]` block to use. In this case, `1` implicitly means the default block:
+
+```
+[OptionsN]
+1 = 1
+2 = 1
+3 = 2
+```
+
+#### `[<emote>_FrameSFX]`
 
 This section lists the sound effects that should play at certain frame numbers, for a specified emote.
 
@@ -298,7 +318,7 @@ This section lists the sound effects that should play at certain frame numbers, 
 212 = soj-sarge-hatch
 ```
 
-### `[<emote>_FrameRealization]`
+#### `[<emote>_FrameRealization]`
 
 This section defines at which frame a screen flash should occur. (The realization sound effect is not played.)
 
@@ -309,7 +329,7 @@ This section defines at which frame a screen flash should occur. (The realizatio
 32 = 1
 ```
 
-### `[<emote>_FrameScreenshake]`
+#### `[<emote>_FrameScreenshake]`
 
 This section defines at which frame a screen shake should occur.
 
