@@ -1,63 +1,65 @@
-## Creating Characters
+# Creating Characters
 
 You're here because you want to make a character! There are three simple steps to creating a character:
 
-1. Collect content (images and animations). The minimum recommended size is 256x192, but bigger content is fine too.
+1. Collect content (images, animations and sounds).
 2. Create a `char.ini` file that describes them.
 3. Package and distribute.
 
-### 1. Collecting Content
+## 1. Collecting Content
 
 First, you need to find or create content that you wish to make emotes out of.
 
-#### Sizing
+### Sizing
 
-The ***absolute minimum*** recommended size of your content is 256x192 (most servers will recommend a minimum of 512x384 or 960x540). Keep in mind that if your content's aspect ratio is different from the **viewport** (the area where characters appear; its size is controlled by your theme), your content will be resized to fit the viewport.
+The ***absolute minimum*** recommended size of your content is any image with a height of 192 pixels, though most community servers will recommend minimum precise dimensions of 512x384 or 960x540. 
+
+Keep in mind that if your image is taller than the **viewport** (the area where characters appear; its size is controlled by your theme - default being 256x192), your content will be scaled down to fit within the vertical boundaries.
 
 > **TODO:** Example screenshots would be nice, this section is pretty word-y - in1tiate
 
 That being said, here are some basic rules when the viewport is not the same size as your content:
 
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
-- Content with an aspect ratio wider than the viewport will be centered and cropped at the left and right edges.
-- Content with an aspect ratio narrower than the viewport will simply be centered within it.
-- In Client Versions prior to 2.9.0, if the viewport's size is an exact multiple of that of the content, it was to be scaled using **nearest neighbor** filtering. The handling of scaling filters is now user-defined, and can be found in ####options
+- Content maintains its aspect ratio; if the content is wider than the viewport it will be cropped to fit, while if it is slimmer it will be centered.
+- Starting with client version 2.9.0, multiple user-defined scaling filters can now be used. Info on these can be found in the "Options" portion of this guide.
 
-We recommend that you make your content on a 4:3 canvas for the best all-around compatibility with all client versions.
-**Note**: Starting with Client Version 2.8.0, it is possible to create characters on any canvas ratio without a loss of quality.
+For best compatibility with legacy versions of the client, it is recommended that you keep your sprites on a canvas with a 4:3 aspect ratio. Please note that client versions prior to 2.8.0 are unable to handle alternative canvas aspect ratios without a loss of quality.
 
-#### Animations
+### Animations
 
-Emotes may be static or animated. For animated emotes, you'll want to make two animations: an _idle_ animation and a _talking_ animation. Some emotes may also have a _preanimation_.
+Emotes may be static or animated. For animated emotes, you'll want two animations: an _idle_ animation and a _talking_ animation. Some emotes may also have a third animation known as a _preanimation_.
 
-You will need to name your emotes in a specific convention to be detected by the engine. For an animated emote called `foo`, the idle animation must be named `(a)foo.gif` and the talking animation `(b)foo.gif`. For a static emote, `foo.png` is enough. The preanimation can be any name (since they are often recycled).
+You will need to name your emotes in a specific convention to be detected by the engine. For an animated emote called `foo`, the idle animation must be named `(a)foo` and the talking animation `(b)foo`. For a static emote, `foo` is enough. The preanimation can be any name (since they are often recycled).
 
-You will encounter certain technical limitations of GIF rather quickly. There are two animation formats other than GIF which are fully supported:
+There are a number of animated filetypes that are compatible with the engine:
+- The GIF format is easy to produce due to being extremely common on the web, but has a number of limitations making it less than ideal for most situations. It's highly recommended you use any other format.
+- The Animated PNG (APNG) format, unlike GIF, allows for 8-bit transparency, palettes greater than 256 colors, and smaller file sizes making it *ideal for 2D characters.* The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for producing content in this format. Please note that APNG images _must_ have the extension ".apng" in order to be loaded as animations.
+- Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended for producing content in this format. *Lossy WebP is recommended for 3D characters with high frame rates.*
 
-- The animated PNG (APNG) format allows 8-bit transparency, palettes greater than 256 colors, and smaller file sizes. The [APNG Assembler](https://sourceforge.net/projects/apngasm/) is recommended for this. Note that APNG images _must_ have the extension ".apng" in order to be loaded as animations. *APNG is recommended for 2D characters.*
-- Google's WebP is a format that provides not only the benefits of APNG, but also allows video-like animations to also enjoy small file sizes. The [official WebP utilities](https://developers.google.com/speed/webp/download) are recommended. *Lossy WebP is recommended for 3D characters with high frame rates.*
-
-**Beware of having multiple formats with the same file name** *(i.e. - Default.WEBP and Default.GIF)***, as the Engine will always load the file that's higher on the list in this order:**
+**Beware of having multiple formats with the same file name** *(i.e. - Default.WEBP and Default.GIF)***, as the engine will prioritize filetypes in order of this list, going from highest to lowest:**
 
 1) WebP
 2) APNG
 3) GIF
 4) PNG
 
-#### Buttons
+### Buttons
 
-Once you have created your emotes, you will need to make button icons for them in an `emotions` folder inside the character folder. For each emote, there must be an "on" and "off" button named `buttonX_[off/on].png`, where X is the emote number which you will specify in the `char.ini` below. Icons should be 40x40.
+Once you have created your emotes, you will need to make button icons for them in an `emotions` folder inside the character folder. For each emote, there must be at least a button named `buttonX_off.png`, where X is the emote number which you will specify in the `char.ini` file. Optionally, you may also include a `buttonX_on.png` which displays when the emote is selected. If you choose not to create one yourself, it will be generated automatically when you first select that emote in the engine. 
 
-The character icon is always named `char_icon.png` and is 60x60 in size.
+Button icons should be an aspect ratio of 1:1 with a minimum size of 40x40 for maximum compatibility.
 
-#### Interjections (shouts)
+The character icon is always named `char_icon.png` and is a 1:1 aspect ratio with a minimum size of 60x60.
+
+### Interjections (Shouts)
 
 You may also wish to customize the **interjections**, each of which have a fixed name:
 
-- "Hold it!" (`holdit.wav`)
-- "Take that!" (`takethat.wav`)
-- "Objection!" (`objection.wav`)
-- Custom (`custom.wav`)
+- "Hold it!" (`holdit.gif`|`holdit.wav`)
+- "Take that!" (`takethat.gif`|`takethat.wav`)
+- "Objection!" (`objection.gif`|`objection.wav`)
+- Custom (`custom.gif`|`custom.wav`)
 
 You can have more than 1 custom interjection, which the player can use by right-clicking the "Custom" button. To do this, you need to place the interjection audio and animation in `custom_objections`. The folder structure will look like this:
 
@@ -67,17 +69,17 @@ characters/
 	    custom.gif
 	    custom.wav
 	custom_objections/
-        awesomecustomobj.gif
-        awesomecustomobj.wav
-        sadcustom.apng
-        sadcustom.ogg
+		awesomecustomobj.gif
+		awesomecustomobj.wav
+		sadcustom.apng
+		sadcustom.ogg
 ```
 
 Since WAV files are very large, the Ogg Vorbis (`.ogg`) or Ogg Opus (`.opus`) format may also be used for any sound effect or interjection. *Opus is recommended.*
 
-### 2. Creating a `char.ini`
+## 2. Creating a `char.ini`
 
-#### Sample INI file
+### Sample INI file
 
 ```ini
 [Options]
@@ -126,7 +128,7 @@ number = 13
 7 = 4
 ```
 
-#### `[Options]`
+### `[Options]`
 
 - `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._ However, this ini-swap method is unnecessary, as AO 2.9.x introduced the ini-swap dropdown bar)
 
@@ -162,15 +164,15 @@ number = 13
 
 - `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added that will automatically apply one of these scaling options if it is not specified in the `char.ini`.
 
-#### `[Shouts]` (optional)
+### `[Shouts]` (optional)
 With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
  
-#### `[Time]` (optional)
+### `[Time]` (optional)
 
 Made mostly redundant with release 2.8.4. The purpose of this section was to dictate the duration of pre-animations. This was a carry-over from AO1, which required it because of limitations in its engine. Up until 2.8.4, pre-animations would have to be "declared" in this section before they could be used in order to maintain backwards compatibility with AO1. `[Time]` can still be used to dictate pre-animation's duration, but it is no longer strictly necessary.
 
 
-#### `[Emotions]`
+### `[Emotions]`
 
 Onward to the `[Emotions]` section. This is where you configure what emotes your character has and how they work. The bulk of text in your char.ini will likely be here.
 
@@ -180,11 +182,11 @@ All characters will follow the format of `<emote number> = <comment>#<preanim>#<
 
 Now for the specific emotions.
 
-##### `<comment>`
+#### `<comment>`
 
 Emote **comments** will display in the dropdown menu and on the emote button itself if an emote icon for it could not be found. You can think of this as the "name" of the emote. You should make this pretty short - if it's too long, it'll probably get shortened by your theme.
 
-##### `<preanim>`
+#### `<preanim>`
 
 The next section defines the **preanimation**, or the animation played before the character actually starts speaking. If there is none, a placeholder called `-` is typically used. Preanimations can be either in the root of the character folder or stored in a subfolder (generally named `anim`). To use a preanimation file from a subfolder, you must prefix the file name with the name of the folder. For example, a preanimation of `anim/deskslam` would correspond to this structure:
 
@@ -205,7 +207,7 @@ anim/
 
 Consider using subfolders if your character has a lot of files.
 
-##### `<emote>` (idle and speaking animations)
+#### `<emote>` (idle and speaking animations)
 
 Between the next #'s is the name of the actual animation when the character is idle and speaking, starting with `(a)` and `(b)` in the character folder, respectively. For instance, if your animation is named "cough", then the engine expects your idle animation to be named `(a)cough.gif` on the file system, and your talking animation to be named `(b)cough.gif`.
 
@@ -231,7 +233,7 @@ char.ini
 
 This is a popular way to declutter the root of your character folder. If you're creating a character for WebAO, please note that the `(a)`/`(b)` folder arrangement is not currently supported.
 
-##### `<modifier>`
+#### `<modifier>`
 
 The modifier value controls pre-animations, sounds, and zooms. The valid inputs here are: 0, 1, 5, and 6.
 
@@ -240,7 +242,7 @@ The modifier value controls pre-animations, sounds, and zooms. The valid inputs 
 - `5`: Zoom, in which the foreground desk or witness stand will not be displayed. Additionally, the background is replaced by speed lines. Emotes with `5` will never play pre-animations.
 - `6`: Same as 5, except it will _always_ play pre-animations.
 
-##### `<deskmod>` (optional)
+#### `<deskmod>` (optional)
 
 This option allows an emote to either force the desk/witness stand/overlay to be displayed, or force it to disappear. This takes precedence over all other factors affecting desk visibility.
 
@@ -252,7 +254,7 @@ This option allows an emote to either force the desk/witness stand/overlay to be
 - `4`: Same as `2`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
 - `5`: Same as `3`, except the pre-animation will ignore the current character's X/Y Offsets and any the paired characters will be hidden for its duration.
 
-#### `[SoundN]`
+### `[SoundN]`
 
 Under `[SoundN]`, we see a list of numbers equaling something else. The leftmost number is the emotion number and the value to the right is the sound effect associated with that emotion. In many cases, there isn't one, and therefore the line can be completely omitted. You'll notice in the sample char.ini below, only four emotes are included under `[SoundN]`. Many ini-editors will include emotes with no sounds as `= 1` - this is a holdover from AO1 and is not necessary.
 
@@ -260,13 +262,13 @@ Sounds specified will be searched for under `sounds/general/`. Subfolders can be
 
 Note that the sound effect will only play when the "Pre" tick is checked, even if the emote has no valid preanimation.
 
-#### `[SoundT]`
+### `[SoundT]`
 
 `[SoundT]` is essentially the delay before the sound effect is played. The input it takes is in **ticks**, which are 60 milliseconds each. The minimum value is `0`, which also happens to be the default. If there is no sound, or if the sound should be played instantly, it's safe to omit the line entirely.
 
 The only value here is `7 = 4`, which is the `deskslam` emote. As you probably know, the `deskslam` sound is only supposed to play when hands actually come in contact with the desk and not in the start of the animation; the '4' value makes sure of that. Again, each tick is 60 milliseconds, so a value of `4` causes a wait of 240 milliseconds before the sound is played.
 
-#### `[SoundL]`
+### `[SoundL]`
 
 This section defines which emotes (by emote number) should loop sound effects, or which sound effects in general (by name) should loop.
 
@@ -318,7 +320,7 @@ This section defines at which frame a screen shake should occur.
 32 = 1
 ```
 
-### 3. Distributing
+## 3. Distributing
 
 Generally, characters are distributed in a bundle. A typical zip file looks like this:
 
@@ -333,7 +335,7 @@ base/
 	        README.txt
     ...
     sounds/
-    general/
+    	general/
     ...
 
 ```
