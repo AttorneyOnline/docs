@@ -33,15 +33,22 @@ widget_name = x, y, width, height
 Fonts are defined in `courtroom_fonts.ini` and `lobby_fonts.ini`, and are highly recommended to be placed into the `base\fonts` folder for distribution. The syntax for the INI file is as follows:
 
 ```ini
-fontname = size
-fontname_font = name
-fontname_color = r, g, b
-fontname_bold = 0/1
-fontname_sharp = 0/1
+element = fontsize
+element_font = name
+element_color = r, g, b
+element_bold = 0/1
+element_sharp = 0/1
 ```
 
 AO2 only supports TrueType format (TTF) fonts. OpenType format (OTF) fonts will work, but have several issues (see [AO2-Client#224](https://github.com/AttorneyOnline/AO2-Client/issues/224)) making them look terrible in some cases. If the font you want to use is in OpenType format (OTF), this documentation recommends the use of [otf2ttf](https://pypi.org/project/otf2ttf/) to convert the font to TrueType format. 
 ***DO NOT USE ONLINE CONVERSION SITES.*** Many OTF fonts that exist have special properties that cause these web converters to fail, resulting in TFF files that are unusable. Please use the tool provided above instead.
+
+For the `showname` element, special code allows for outlined text. This requires extra configuration:
+```ini
+showname_outlined = 0/1
+showname_outline_color = r, g, b,
+showname_outline_width = int (e.g. 3)
+```
 
 ### Qt Stylesheets
 
