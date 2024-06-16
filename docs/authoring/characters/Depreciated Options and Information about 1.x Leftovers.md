@@ -8,6 +8,8 @@ Older char.inis may contain sections or options not mentioned in this guide. Her
 
 - `gender`: (Renamed to `blips` in 2.9.0)
 
+- `chat_font` & `chat_size`: (Deprecated, use chatboxes for this instead)
+
 > **TODO:** It's possible to use static and animated emotes at the same time by including only the `(a)` or the `(b)` animation and putting an identically named static emote in the root folder. Determine if this is intended, and if it is, add a section about it here. - in1tiate
 
 
