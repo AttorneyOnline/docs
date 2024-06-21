@@ -14,6 +14,10 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Evidence list](#evidence-list)
     - [Music list](#music-list)
     - [Final confirmation](#final-confirmation)
+  - [Players](#players)
+    - [Player list](#player-list)
+    - [Player list update](#update-player-list)
+    - [Update player](#update-player)
   - [Character selection](#character-selection)
     - [Taken characters](#taken-characters)
     - [Choose character](#choose-character)
@@ -170,6 +174,80 @@ Music tracks must contain file extensions.
 **Server:** `DONE#%`
 
 The client confirms that it has joined the server and is ready to join the default room. Typically, before `DONE` is sent, the list of taken characters is also sent, among other information such as the message of the day (displayed in OOC chat).
+
+### Players
+
+The servers sends information about the current players.
+
+#### Player list
+
+A json array list of player json data objects.
+* `json_array`: A json list of player data.
+
+##### Player data json object
+* `id`: Id of the player as provided by the server when first connecting.
+* `name`: Name of the player.
+* `character`: Character of the player.
+* `character_name`: The name (aka alias) of the player for the character they have selected.
+* `area_id`: The id of the area in which the player resides.
+
+```json
+{
+  "id": 5,
+  "name": "My Name Is Awesome",
+  "character": "Phoenix",
+  "character_name": "Actually Furio",
+  "area_id": 2
+}
+```
+
+**Server:** `PL#[{"id":5,"name":"My Name Is Awesome","character":"Phoenix","character_name":"Actually Furio","area_id":2}, ...]#%`
+
+#### Update player list
+
+Signals whatever to add or remove a player to the list.
+* `json_object`: A json object.
+
+##### Json object data
+* `id`: Id of the player.
+* `type`: Update type enum.
+
+###### Update type
+* `0`: Add player
+* `1`: Remove player
+
+```json
+{
+  "id": 2,
+  "type": 0
+}
+```
+
+#### Update player
+
+Provides new information regarding an existing player.
+* `json_object`: A json object.
+
+##### Json object data
+* `id`: Id of the player.
+* `type`: Data type enum.
+* `data`: Data
+
+###### Data type
+* `0`: Name
+* `1`: Character
+* `2`: Character name
+* `3`: Area id
+
+```json
+{
+  "id": 10,
+  "type": 1,
+  "data": "Apollo"
+}
+```
+
+**Server:** `PU#{"id":1,"type":0,"data":"My Best Name"}#%`
 
 ### Character selection
 
