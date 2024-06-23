@@ -1,6 +1,4 @@
-```md
 ## Creating Effects
-
 Starting in AO 2.8.X, effects are added as an additional layer to the viewport, acting as a temporary overlay.
 
 The content, without any reasonable consideration, is located in two places.
@@ -36,7 +34,6 @@ scaling = smooth
 sticky = false
 stretch = true
 ```
-
 A brief explanation follows:
 The ini is versioned, unlike other AO2 configuration files:
 - `Version`
@@ -60,4 +57,3 @@ This block is per-effect:
   - `scaling`: The scaling algorithm used. `smooth` (bilinear) or `pixel` (nearest neighbour)
   - `sticky`: If true the effect stays selected in the dropdown.
   - `stretch`: Whether to stretch the effect across the viewport.
-```
