@@ -6,6 +6,6 @@ The following resize modes are available:
 * `pixel` (aka `fast`): A pixelated look (nearest neighbour) is retained when scaled.
 * `smooth`: A smoother look (bilinear) is applied when scaled. (For example, edges may appear rounded.)
 
-When resizing content to fit within the viewport, **if a predetermined resize mode is set to `auto` or is not specified**, a set of rules to determine what mode is used to provide the final image. The following rules apply:
+When resizing content to fit within the viewport, **if a predetermined resize mode is set to `auto` or is not specified**, a set of rules are used to determine what mode is used for the final image. The following rules apply:
 * If content is set to stretch within the layer it belongs to or if the content is larger vertically than the layer it belongs to, the resize mode is changed to `smooth`.
   * If the above condition is not met, the resize mode is changed to `pixel`.
