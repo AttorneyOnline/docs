@@ -31,7 +31,7 @@ effect_under_chatbox=true
 Each entry is self-explanatory, but to explain what each one does:
 
  - `effect_name`: The name given to the effect, which will be shown in the Effects Dropdown menu.
- - `effect_stretch`: (Introduced in 2.9.0) Affects whether or not the effect stretch/squish with the viewport or not, if the aspect ratio differs from that of the viewport.
+ - `effect_stretch`: (Introduced in 2.9.0) Affects whether or not the effect stretch/squish with the viewport or not, if the aspect ratio differs from that of the viewport. This affects the resize mode. For more information, see [Viewport](viewport.md)
  - `effect_under_chatbox`: (Introduced in 2.9.0) When False, the effect will display over the chatbox (much like the Realization effect)
 
 Note that character themes and effect folders can overlap; there is nothing stopping them from doing so.
