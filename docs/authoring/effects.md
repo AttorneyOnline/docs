@@ -30,7 +30,7 @@ loop = false
 max_duration = 60
 respect_flip = false
 respect_offset = false
-scaling = smooth
+scaling = pixel
 sticky = false
 stretch = true
 ```
@@ -54,6 +54,6 @@ This block is per-effect:
   - `max_duration`: Maximum duration for this effect in milliseconds. Put at 0 for no maximum effect time.
   - `respect_flip`: Whether the character flip state is applied to the effect.
   - `respect_offset`: Whether the character offset is applied to the effect. 
-  - `scaling`: The scaling algorithm used. `smooth` (bilinear) or `pixel` (nearest neighbour)
+  - `scaling`: The resize mode used. For more information, see [Viewport](viewport.md)
   - `sticky`: If true the effect stays selected in the dropdown.
   - `stretch`: Whether to stretch the effect across the viewport.
