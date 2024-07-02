@@ -19,10 +19,16 @@ Keep in mind that if your image is taller than the **viewport** (the area where 
 That being said, here are some basic rules when the viewport is not the same size as your content:
 
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
-- Content maintains its aspect ratio; if the content is wider than the viewport it will be cropped to fit, while if it is slimmer it will be centered.
-- Starting with client version 2.9.0, multiple user-defined scaling filters can now be used. Info on these can be found in the "Options" portion of this guide.
+- Content maintains its aspect ratio; if the content is wider than the viewport it will be cropped to fit, while if it is slimmer it will be centered.*
+- Content-defined scaling may be defined. (e.g. force smooth or pixelated scaling)
 
-For best compatibility with legacy versions of the client, it is recommended that you keep your sprites on a canvas with a 4:3 aspect ratio. Please note that client versions prior to 2.8.0 are unable to handle alternative canvas aspect ratios without a loss of quality.
+#### Resizing
+Unless specified by of the settings of the character (see Options) the images used will have their resizing mode adjusted automatically to the following modes:
+* `smooth`
+  * When the image is stretch mode is set to fill. 
+  * When the image is vertically higher than the layer in which it belongs.
+* `pixel`
+  * When the image is vertically smaller than the layer in which it belongs.
 
 ### Animations
 
@@ -158,7 +164,7 @@ number = 13
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
-- `scaling` (optional): specifies the scaling resampler used. It's recommended to use `fast` for any pixelated characters and `smooth` for HD-resolution characters. Please note that in 2.9.1, a global default setting was added that will automatically apply one of these scaling options if it is not specified in the `char.ini`.
+- `scaling` (optional): specifies the scaling resampler used. If not specified the resizing mode is adjusted automatically depending on the image and theme.
 
 #### `[Options2]` etc (optional)
 You may optionally define up to 4 extra `[Options]` with limited settings available - as of 2.10.2, only `showname` and `blips` may be overridden in this manner:
