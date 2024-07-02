@@ -19,16 +19,7 @@ Keep in mind that if your image is taller than the **viewport** (the area where 
 That being said, here are some basic rules when the viewport is not the same size as your content:
 
 - Content that is not exactly the same size as the viewport will be scaled according to its height.
-- Content maintains its aspect ratio; if the content is wider than the viewport it will be cropped to fit, while if it is slimmer it will be centered.*
-- Content-defined scaling may be defined. (e.g. force smooth or pixelated scaling)
-
-#### Resizing
-Unless specified by of the settings of the character (see Options) the images used will have their resizing mode adjusted automatically to the following modes:
-* `smooth`
-  * When the image is stretch mode is set to fill. 
-  * When the image is vertically higher than the layer in which it belongs.
-* `pixel`
-  * When the image is vertically smaller than the layer in which it belongs.
+- Content maintains its aspect ratio; if the content is wider than the viewport it will be cropped to fit, while if it is slimmer it will be centered.
 
 ### Animations
 
@@ -95,7 +86,7 @@ blips = male
 chat = aa
 effects = default/effects
 realization = realization
-scaling = fast
+scaling = smooth
 
 [Shouts]
 holdit_message = This is a custom Hold it! message!
@@ -164,7 +155,7 @@ number = 13
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
 
-- `scaling` (optional): specifies the scaling resampler used. If not specified the resizing mode is adjusted automatically depending on the image and theme.
+- `scaling` (optional): The resize mode used. For more information, see [Viewport](../viewport.md)
 
 #### `[Options2]` etc (optional)
 You may optionally define up to 4 extra `[Options]` with limited settings available - as of 2.10.2, only `showname` and `blips` may be overridden in this manner:
