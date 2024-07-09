@@ -10,13 +10,13 @@ Starting in AO 2.9.x, backgrounds no longer have to follow the default naming sy
 Additionally, since 2.9 backgrounds can have **custom positions**. The images for these positions should be the name of the position, and the overlay should be the name of the position with the suffix `\_overlay`. These will only appear in the positions dropdown if they are added to a file called `design.ini` in the background's folder. An example of a correctly formatted design.ini is as follows:
 
 ```ini
-scaling = smooth
+scaling = pixel
 positions = pos1,pos2,pos3,pos4
 judges = pos2,pos4
 ```
 A brief explanation follows:
 
-- `scaling`: Defines the type of scaling to be use when upscaling this background. Default is `fast`, for nearest-neighbor. The only other option is `smooth`.
+- `scaling`: The resize mode used. For more information, see [Viewport](viewport.md)
 - `positions`: A list of all the custom positions for this background, separated by commas.
 - `judges`: (since 2.9.1) A list of all the positions for this background that should have access to the judge controls. Note that "jud" will always have access to the controls regardless of this setting.
 
