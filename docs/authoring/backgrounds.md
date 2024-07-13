@@ -52,17 +52,13 @@ Define each position in `design.ini` as follows:
 
 ```
 [image:pos]
-rect=x, y, w, h
+origin=160
 slide_ms_pos3=550
 slide_ms_pos2=500
 ```
 - `image` - the name of the image, with no extension i.e. `court` for `court.png`
 - `pos` - the name of the position, i.e. `def`
-- `rect` - a rectangle around the part of the image you want this position to occupy. You can think of this like a rectangular cut-out of the full image.
-  - `x` - the x coordinate of the top left corner of the rectangle
-  - `y` - the y coordinate of the top left corner of the rectangle (this should generally be 0)
-  - `w` - the width of the rectangle
-  - `h` - the height of the rectangle
+- `origin` - the x coordinate of the position within the image
 - `slide_ms_<pos2>` - the duration of the slide animation between `pos` and `pos2`, in milliseconds
 
 If you're using `court.png`, the three positions you should define are `court:def`, `court:wit`, and `court:pro`, as the client will automatically translate these for you. The vanilla content base should contain an already-created background for you to reference.
