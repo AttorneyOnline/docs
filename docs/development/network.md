@@ -4,9 +4,8 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 
 - [Network Protocol](#network-protocol)
   - [Handshake](#handshake)
+    - [Version information](#version-information)
     - [Hard drive ID](#hard-drive-id)
-    - [Client version information](#client-version-information)
-    - [Feature list](#feature-list)
     - [Asset Link](#asset-link)
     - [Player count](#player-count)
     - [Resource counts](#resource-counts)
@@ -15,8 +14,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Music list](#music-list)
     - [Final confirmation](#final-confirmation)
   - [Players](#players)
-    - [Player list](#player-list)
-    - [Player list update](#update-player-list)
+    - [Catalog player](#catalog-player)
     - [Update player](#update-player)
   - [Character selection](#character-selection)
     - [Taken characters](#taken-characters)
@@ -50,117 +48,65 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
   - [Timers](#timers)
   - [Judge controls](#judge-controls)
   - [Escape codes](#escape-codes)
-  - [Obsolete](#obsolete)
-    - [FantaCrypt](#fantacrypt)
-    - [Slow loading](#slow-loading)
-    - [Mod password](#mod-password)
-    - [IP list](#ip-list)
-    - [Mute](#mute)
-    - [Evidence list](#evidence-list)
-    - [Master server protocol](#master-server-protocol)
-      - [Paginated list (obsolete)](#paginated-list-obsolete)
-    - [Casing](#casing)
-      - [Case preferences update](#case-preferences-update)
-      - [Case alert](#case-alert)
+  - [Special thanks](#special-thanks)
 
 ### Handshake
 
+#### Version information
+
+**Client:** `ID#{client}#{version}#{protocol version}%`
+**Server:** `ID#{player number}#{server}#{version}%`
+
+Sends the client's name, version and supported protocol version. The server replies with the player number, server internal name and version.
+
+**Server response:** Version information
+**Client response:** Hard drive ID
+
 #### Hard drive ID
 
-**Client:** `HI#{hdid}#%`
+**Client:** `HI#{hdid}`
 
 Sends the client's hard drive ID (supposedly a unique identifier) to the server for ban tracking. This increases the work needed to evade a ban, as it is not as simple as using a VPN.
 
-#### Version information
-
-**Server:** `ID#{player number}#{version}#%`
-**Client:** `ID#{client}#{version}#%`
-
-Sends the player number (not used) and the server version to the client. The client replies with its name and version.
-
-**Response:** Player count, feature list
+**Server response:** Player count, asset link (if defined)
 
 #### Player count
 
-**Server:** `PN#{players}#{max}#%`<br/>
-**Server:** `PN#{players}#{max}#{server_description}#%` (since 2.10)
+**Server:** `PN#{players}#{max}#{server_description}`
 
 Specifies the number of players in the server and the player limit. The player limit is not enforced in the client, and often not in the server either.<br/>
 Since 2.10 the server description is appended to the packet to support server descriptions in the favourite tab.
 
-#### Feature list
-
-**Server:** `FL#{feature1}#{feature2}#...#%`
-
-Lists the features supported by the server, essentially acting as a list of feature flags.
-
-(The FL packet was introduced in 2.3.3; prior to 2.3.3, features depended on detecting a compatible server version.)
-
-Features introduced in 2.1.0 (the first AO2 release):
-
-- `yellowtext`: Enables the use of yellow text.
-- `flipping`: Enables the use of emote flipping.
-- `customobjections`: Enables the use of a single custom objection named `custom`.
-- `fastloading`: Enables the use of "fast loading" instead of the legacy loading protocol.
-- `noencryption`: Disables FantaCrypt for the remainder of the session.
-
-Introduced in 2.3 - 2.5:
-
-- `deskmod`: Allows forcing desk/no desk. Introduced in 2.3.2.
-- `evidence`: Enables evidence. Introduced in 2.4.0.
-
-Introduced in 2.6:
-
-- `cccc_ic_support`: Enables 2.6 extensions for the in-character command.
-- `arup`: Indicates that the server broadcasts area updates.
-- `casing_alerts`: Enables casing alerts.
-- `modcall_reason`: Enables calling moderators with a custom reason.
-
-Introduced in 2.8:
-
-- `looping_sfx`: Enables looping SFX extensions for the in-character command.
-- `additive`: Enables additive text.
-- `effects`: Enables effect overlays.
-
-Introduced in 2.9:
-
-- `y_offset`: Enables vertical offset support.
-- `expanded_desk_mods`: Enables desk modifiers 2 through 5.
-
-Introduced in 2.9.1:
-
-- `auth_packet`: Enables the use of the `AUTH` packet.
-
 #### Asset link
 
-**Server:** `ASS#{asset_link}#%`
+**Server:** `ASS#{asset_link}`
 
 Specifies the asset link of the server. It allows server to set a custom content repository, which is used for WebAO or client music streaming.
 
 #### Resource counts
 
-**Client:** `askchaa#%`<br>
-**Server:** `SI#{char_cnt}#{evi_cnt}#{music_cnt}#%`
+**Client:** `askchaa`<br>
+**Server:** `SI#{char_cnt}#{evi_cnt}#{music_cnt}`
 
 Requests character, evidence, and track counts ahead of time for memory allocation.
 
 #### Character list
 
-**Client:** `RC#%`<br>
-**Server:** `SC#{char_name}&{char_desc}#...#%`
+**Client:** `RC`<br>
+**Server:** `SC#{char_name}&{char_desc}#...`
 
 Requests a full list of characters. Note that `char_desc` is obsolete and likely not present.
 
 #### Evidence list
 
-**Server:** `LE#{name}&{description}&{image}#...#%`
+**Server:** `LE#{name}&{description}&{image}#...`
 
 See the [evidence list](#list) packet.
 
 #### Music list
 
-**Client:** `RM#%`<br>
-**Server:** `SM#{music_name}#...#%`
+**Client:** `RM`<br>
+**Server:** `SM#{music_name}#...`
 
 Requests a full list of music tracks.
 
@@ -170,8 +116,8 @@ Music tracks must contain file extensions.
 
 #### Final confirmation
 
-**Client:** `RD#%`<br>
-**Server:** `DONE#%`
+**Client:** `RD`<br>
+**Server:** `DONE`
 
 The client confirms that it has joined the server and is ready to join the default room. Typically, before `DONE` is sent, the list of taken characters is also sent, among other information such as the message of the day (displayed in OOC chat).
 
@@ -179,56 +125,25 @@ The client confirms that it has joined the server and is ready to join the defau
 
 The servers sends information about the current players.
 
-#### Player list
-
-A json array list of player json data objects.
-* `json_array`: A json list of player data.
-
-##### Player data json object
-* `id`: Id of the player as provided by the server when first connecting.
-* `name`: Name of the player.
-* `character`: Character of the player.
-* `character_name`: The name (aka alias) of the player for the character they have selected.
-* `area_id`: The id of the area in which the player resides.
-
-```json
-{
-  "id": 5,
-  "name": "My Name Is Awesome",
-  "character": "Phoenix",
-  "character_name": "Actually Furio",
-  "area_id": 2
-}
-```
-
-**Server:** `PL#[{"id":5,"name":"My Name Is Awesome","character":"Phoenix","character_name":"Actually Furio","area_id":2}, ...]#%`
-
-#### Update player list
+#### Catalog player
 
 Signals whatever to add or remove a player to the list.
-* `json_object`: A json object.
 
-##### Json object data
+**Server:** `PC#{id}#{update}`
+
 * `id`: Id of the player.
-* `type`: Update type enum.
+* `update`: Update type enum.
 
 ###### Update type
 * `0`: Add player
 * `1`: Remove player
-
-```json
-{
-  "id": 2,
-  "type": 0
-}
-```
-
+  
 #### Update player
 
 Provides new information regarding an existing player.
-* `json_object`: A json object.
 
-##### Json object data
+**Server:** `PU#{id}#{type}#{data}`
+
 * `id`: Id of the player.
 * `type`: Data type enum.
 * `data`: Data
@@ -239,21 +154,11 @@ Provides new information regarding an existing player.
 * `2`: Character name
 * `3`: Area id
 
-```json
-{
-  "id": 10,
-  "type": 1,
-  "data": "Apollo"
-}
-```
-
-**Server:** `PU#{"id":1,"type":0,"data":"My Best Name"}#%`
-
 ### Character selection
 
 #### Taken characters
 
-**Server:** `CharsCheck#{taken}#...#%`
+**Server:** `CharsCheck#{taken}#...`
 
 The server sends an array of numbers representing whether or not each character of that index is taken or not.
 
@@ -264,8 +169,8 @@ The server sends an array of numbers representing whether or not each character 
 
 #### Choose character
 
-**Client:** `CC#0#{char_id}#{hdid}#%`<br>
-**Server:** `PV#{player_id}#CID#{char_id}#%`
+**Client:** `CC#0#{char_id}#{hdid}`<br>
+**Server:** `PV#{player_id}#CID#{char_id}`
 
 The client selects a character to use in the room. Note that `hdid` is an obsolete parameter. (The first parameter was once a player ID, but player IDs are also obsolete.)
 
@@ -306,7 +211,7 @@ MS#
 {frames_sfx}#
 {additive}#
 {effect}#
-{blips}#%
+{blips}
 ```
 
 **Server**:
@@ -342,7 +247,7 @@ MS#
 {frames_sfx}#
 {additive}#
 {effect}#
-{blips}#%
+{blips}
 ```
 
 An in-character (IC) message is a basic form of viewport event in which a animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
@@ -460,8 +365,8 @@ Clients can set the background with a server chat command, such as `/bg`.
 
 #### Music
 
-**Client:** `MC#{songname}#{char_id}#{showname}#{effects}#%`<br>
-**Server:** `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}#%`
+**Client:** `MC#{songname}#{char_id}#{showname}#{effects}`<br>
+**Server:** `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}`
 
 Plays the specified track (with file extension) and records the event to the IC log.
 
@@ -481,7 +386,7 @@ The canonical "empty track" is `~stop.mp3`.
 
 #### Penalty (health) bars
 
-**Client:** `HP#{bar}#{value}#%`<br>
+**Client:** `HP#{bar}#{value}`<br>
 **Server:** same
 
 Updates the penalty bar. This is typically only allowed when the player is in the judge (`jud`) position.
@@ -493,36 +398,38 @@ Updates the penalty bar. This is typically only allowed when the player is in th
 
 #### Witness Testimony/Cross Examination (WT/CE)
   
-**Client:** `RT#{animation}#%`<br>
+**Client:** `RT#{animation}#{variant}`<br>
 **Server:** same
 
 Overlays a non-looping special animation. This is typically only allowed when the player is in the judge (`jud`) position.
 
 **animation** may be one of the following:
-
-- `testimony1` - "Witness Testimony"
-- `testimony2` - "Cross Examination"
-- `judgeruling#0` - "Not Guilty" (since 2.6)
-- `judgeruling#1` - "Guilty" (since 2.6)
-- `testimony1#1` - Hides the "Testimony" indicator (since 2.9)
-- Anything else - Custom splash. SFX name and animation filename are exactly the string provided (since 2.9)
+  - `testimony1` - "Witness Testimony"
+  - `testimony2` - "Cross Examination"
+  - `judgeruling` - "Not Guilty/Guilty"
+  - Anything else - Custom splash. SFX name and animation filename are exactly the string provided (since 2.9)
+**variant** variant of the animation to use depending on certain types.
+  - `testimony1` Disables the testimony overlay.
+  - `judgeruling`
+    - `0` Plays Not Guilty animation.
+    - `1` Plays Guilty animation.
 
 #### Set position
 
-**Server:** `SP#{side}#%`
+**Server:** `SP#{side}`
 
 Sets the position dropdown on the client to `side`. Added in 2.8.
 
 #### Available positions
 
-**Server:** `SD#{side1}*{side2}*...#%`
+**Server:** `SD#{side1}*{side2}*...`
 
 Overrides the position dropdown on the client to the specified list of positions. Added in 2.8.
 
 ### Out-of-character message
 
-**Client:** `CT#{name}#{message}#%`<br>
-**Server:** `CT#{name}#{message}#{is_from_server}#%`
+**Client:** `CT#{name}#{message}`<br>
+**Server:** `CT#{name}#{message}#{is_from_server}`
 
 Represents a simple message with name and text. OOC is used to convey information without interrupting ongoing gameplay.
 
@@ -536,25 +443,25 @@ Supported by 2.4 onward. Every evidence item has three attributes: name, descrip
 
 #### List
 
-**Server:** `LE#{name}&{description}&{image}#...#%`
+**Server:** `LE#{name}&{description}&{image}#...`
 
 #### Add
 
-**Client:** `PE#{name}#{description}#{image}#%`
+**Client:** `PE#{name}#{description}#{image}`
 
 #### Remove
 
-**Client:** `DE#{id}#%`
+**Client:** `DE#{id}`
 
 #### Edit
 
-**Client:** `EE#{id}#{name}#{description}#{image}#%`
+**Client:** `EE#{id}#{name}#{description}#{image}`
 
 ### Areas
 
 #### Switch area
 
-**Client:** `MC#{area_name}#{char_id}#%`
+**Client:** `MC#{area_name}#{char_id}`
 
 Switches to a different area/room. As areas are more or less a hack built into the music list, the `MC` packet is reused for this purpose.
 
@@ -565,10 +472,10 @@ If the specified area does not exist, the packet is ignored.
 #### Area updates
 
 **Server:**
-- `ARUP#0#{area1_players}#{area2_players}#...#%`
-- `ARUP#1##{area1_status}##{area2_status}##...#%`
-- `ARUP#2##{area1_cm}##{area2_cm}##...#%`
-- `ARUP#3##{area1_locked}##{area2_locked}##...#%`
+- `ARUP#0#{area1_players}#{area2_players}#...`
+- `ARUP#1##{area1_status}##{area2_status}##...`
+- `ARUP#2##{area1_cm}##{area2_cm}##...`
+- `ARUP#3##{area1_locked}##{area2_locked}##...`
 
 Indicates additional information about all areas.
 
@@ -584,7 +491,7 @@ The first argument indicates the information being sent about every area:
 
 This packet has as many pieces (plus one) as there are areas on the server. It describes, in order, every area's given property.
 
-For instance, a packet of `ARUP#0#4#3#7#2#0#0#%` would mean that:
+For instance, a packet of `ARUP#0#4#3#7#2#0#0` would mean that:
 
 - There are 4 players in the first area (or, technically, in the zeroth area)
 - There are 3 in the second,
@@ -596,7 +503,7 @@ This packet was added in 2.6.
 
 #### Music list
 
-**Server:** `FM#{track1}#{track2}#...#%`
+**Server:** `FM#{track1}#{track2}#...`
 
 Like the standard music list packet, but excludes areas.
 
@@ -606,7 +513,7 @@ This packet was added in 2.8.
 
 #### Area list
 
-**Server:** `FM#{area1}#{area2}#...#%`
+**Server:** `FM#{area1}#{area2}#...`
 
 Like the standard music list packet, but excludes music and only lists areas.
 
@@ -617,7 +524,7 @@ This packet was added in 2.8.
 ### Moderator commands
 
 #### Authenticate
-**Server:** `AUTH#{state: int}#%`
+**Server:** `AUTH#{state: int}`
 
 **Parameters:**
 **state:**
@@ -627,26 +534,27 @@ This packet was added in 2.8.
 
 #### Call mod
   
-**Client:** `ZZ#{reason}#%`<br>
-**Server:** `ZZ#{message}#%`<br>
+Alerts all mods on guard with a sound cue. The call mod message typically contains information such as which character called, which area they called from, and a user-specified message.
 
-Alerts all mods on guard with a sound cue.
+**Client:** `ZZ#{reason}#{client id}`<br>
+**Server:** `ZZ#{reason}`<br>
 
-The call mod message typically contains information such as which character called, which area they called from, and a user-specified message.
+`reason`: Reason provided by the caller.
+`client id`: The client ID of the callee or -1 if it's a general call.
 
 #### Kick
 
-**Server:** `KK#{reason}#%`
+**Server:** `KK#{reason}`
 
 Notifies a client that they were kicked.
 
 #### Ban
 
-**Server:** `KB#{reason}#%`
+**Server:** `KB#{reason}`
 
 Notifies a client that they were kicked and banned.
   
-**Server:** `BD#{reason}#%`
+**Server:** `BD#{reason}`
   
 Notifies a client that they cannot join because they are banned.
 
@@ -658,14 +566,14 @@ Notifies a client with a popup containing the specified **message**.
 
 ### Keep alive
   
-**Client:** `CH#<char_id: int>#%`<br>
-**Server:** `CHECK#%`
+**Client:** `CH#<char_id: int>`<br>
+**Server:** `CHECK`
 
 Sent to ensure that the server and client are still alive. Some servers expect the client to send this packet as often as 10 seconds.
 
 ### Subtheme switching
 
-**Server:** `ST#{subtheme}#{reload}#%`
+**Server:** `ST#{subtheme}#{reload}`
 
 Instructs the client to switch to a given subtheme. The client can ignore this if the user's subtheme is manually set.
 
@@ -675,7 +583,7 @@ Instructs the client to switch to a given subtheme. The client can ignore this i
 
 ### Timers
 
-**Server:** `TI#{timer_id: int}#{command: int}#{time: int}#%`
+**Server:** `TI#{timer_id: int}#{command: int}#{time: int}`
 
 Instructs the client to manipulate the timers on its UI.
 
@@ -690,7 +598,7 @@ Instructs the client to manipulate the timers on its UI.
 
 ### Judge controls
 
-**Server:** `JD#{state: int}#%`
+**Server:** `JD#{state: int}`
 
 Instructs the client to show or hide the judge controls.
 
@@ -709,143 +617,6 @@ Escape codes allows characters like '#' to be sent in messages.
 - `$`: `<dollar>`
 - `&`: `<and>`
 
-### Obsolete
-
-#### FantaCrypt
-
-AO1 encrypted the headers of the packets sent by the client to the server.
-
-- FantaCrypt seeds a PRNG with a known value (the decryption key), where the lower two bytes are used in the PRNG, and the upper byte of those two bytes is used in the cipher.
-- The current key is XOR'ed with the current byte.
-- To get the key value for the next byte, the byte and key are added together.
-- Then, some multiplication and addition is done to that value. (This PRNG behavior is similar to a [linear congruential generator](https://en.wikipedia.org/wiki/Linear_congruential_generator).)
-- Finally, everything but the lower two bytes are discarded.
-
-However, there was a major flaw in the implementation of FantaCrypt: the server supplies the client with the initial key to use for every packet. Thus, it is totally vulnerable to a replay attack.
-
-Many clients do not actually even implement the FantaCrypt algorithm, but instead use a hardcoded key of 5, which is sent as 0x34 in the 'decryptor' packet. This is because the 'decryptor' packet argument is the key to be used, but encrypted. The decryptor value is always encrypted with a magic number key value: 322 decimal. Moreover, FantaCrypt is only used in messages sent by the client to the server and not vice versa.
-
-The encryption algorithm was plagiarized from a [Stack Overflow answer](https://stackoverflow.com/questions/6798188/delphi-simple-string-encryption).
-
-The protocol for FantaCrypt is as follows:
-
-**Server:** `decryptor#{key}#%`
-**Client:** `<encrypted traffic>`
-
-#### Slow loading
-
-Before "fast loading" character and music requests were developed, a slower, paginated set of requests was used:
-
-|Message|Description|Typical response
-|-------|-----------|--------
-|`askchar2#%`|Get first page of characters|`CI#0#...#%`
-|`AN#{n}#%`|Get page `n` of characters|`CI#{n}#...#%`, or `EI#1#...#%` if nonexistent page
-|`AE#{n}#%`|Get `n`th evidence|`EI#{n}#...#%`, or `EM#0#...#%` if nonexistent page
-|`EM#{n}#%`|Get page `n` of tracks |`EM#{n}#...#%`, or `CharsCheck#...#%` and remainder of handshake
-
-#### Mod password
-
-**Server:** `OPPASS#{modpass in hex}#%`
-
-Previously, servers would send the mod password in hex encoding to the clients; the reason for this was to allow a clientside login check to show the moderator UI. It is entirely unknown how it was considered logical to send the mod password in plain text to all clients.
-
-#### IP list
-
-**Server:** `IL#{ip}|{char_name}|{char_id}#...#%`
-
-Sends a list of all players. This is an infrequently used command and is typically sent as a response to `/ip` (an obsolete command).
-
-The server might opt to send an OOC message instead.
-
-#### Mute
-
-**Server:** `MU#{char_id}#%` (mute)<br>
-**Server:** `UM#{char_id}#%` (unmute)
-
-Shows an overlay on the client using `char_id` that indicates that they are muted.
-
-
-## Master server protocol
-
-|Function     |Message       |Direction|
-|-------------|--------------|---------|
-|Chat|`CT#[username]#[message]#%`|Server|
-|Version check|`VC#%`|Server|
-|Client version (AO2)|`ID#[client software]#[version]#%`|Server|
-|Hard drive ID (or anything in practice)|`HI#[hdid]#%`|Server|
-|Get all servers (AO2)|`ALL#%`|Server|
-|Server entry (paginated) (AO1)|`SN#[entry number]#[ip]#[server version]#[port]#[name]#[desc]#%`|Client|
-|Server entry (all) (AO2)|`ALL#[[name]&[desc]&[ip]&[port]#]%`|Client|
-|Server version|`SV#[version]#%`|Client|
-|Ping|`PING#%`|Server|
-|Server not advertised (reply to ping)|`NOSERV#%`|Advertiser|
-|Heartbeat|`SCC#[port]#[name]#[description]#[server software]#%`|Server|
-|Heartbeat success|`PSDD#0#%`|Advertiser|
-|Keepalive|`CHECK#%`|Advertiser|
-|Global ban|`DOOM#%`|Client|
-
-### Paginated list (obsolete)
- 
-**Client:** `askforservers#%` (returns first server on the list starting from 0)<br>
-**Server:** first server<br>
-**Client:** `SR#{n}#%`<br>
-**Server:** server of index `n`
-
-### Evidence list
-
-**Client:** `RE#%`
-
-Clients had a packet to request the server evidence list. However, this is deprecated and unused.
-
-### Casing
-
-#### Case preferences update
-
-**Client:** `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
-
-Updates the user's casing alert preferences.
-
-Parameters:
-
-- **caselist**: the list of cases this user is willing to host (assuming they are also willing to CM) (not used)
-- **cm**: `1` if the user is willing to host cases (not used)
-- **def**: `1` if the user is willing to defend a case / play as a defense attorney (or a co-defense attorney)
-- **pro**: `1` if the user is willing to prosecute a case / play as a prosecutor (or a co-prosecutor)
-- **judge**: `1` if the user is willing to judge a case
-- **jury**: `1` if the user is willing to be a member of the jury in a case
-- **steno**: `1` if the user is willing to be the stenographer of a case
-
-It is up to the server to decide what to do with this packet. By default, tsuserver does nothing with this information (though it is stored, for some reason) and sends all case alerts to every connected client.
-
-Additionally, this packet is sent everytime the "Casing" tickbox on the game area is toggled. When it is turned off, a `SETCASE#""#0#0#0#0#0#0#%` packet is sent (indicating that the user is not interested in casing).
-
-#### Case alert
-
-**Client:** `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{need_steno}#%`<br>
-**Server:** same, except `{message}` instead of `{case_title}`
-
-Sends an alert to players about a case needing participants.
-
-Where the arguments are:
-
-- **case_title**: the title of the case being played
-- **message**: the title of the case, but may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
-- **need_def**: `1` if the user needs a defense attorney,
-- **need_pro**: `1` if the user needs a prosecutor,
-- **need_judge**: `1` if the user needs a judge,
-- **need_jury**: `1` if the user needs jurors,
-- **need_steno**: `1` if the user need a stenographer.
-
-The above packet, when sent from clientside, requests the server to sent the serverside packet to all relevant users.
-
-Users are targeted if:
-* they marked themselves as at least one of the roles the announcement is looking for (using the `SETCASE` packet). ([akashi](https://github.com/AttorneyOnline/akashi))
-* they are currently connected to the server, regardless of casing preferences ([tsuserver3](https://github.com/AttorneyOnline/tsuserver3))
-
-This packet may be rate-limited.
-
-####
-
-----
+### Special thanks
 
 Thanks to stonedDiscord and Aleks for initial AO1 reverse engineering; OmniTroid for AO2 protocol documentation; and Cerapter for 2.6 protocol documentation.
