@@ -193,7 +193,7 @@ Signals whatever to add or remove a player to the list.
 * `0`: Add player
 * `1`: Remove player
 
-**Server:** `PR#id#type#%`
+**Server:** `PR#{id}#{type}#%`
 
 #### Update player
 
@@ -210,7 +210,7 @@ Provides new information regarding an existing player.
 * `2`: Character name
 * `3`: Area id
 
-**Server:** `PU#id#type#data#%`
+**Server:** `PU#{id}#{type}#{data}#%`
 
 #### Moderator Action
 
@@ -221,7 +221,7 @@ Signals a moderator action to the server.
 * `duration`: Duration of the action in hours.
 * `reason`: Provided reason by the moderator.
 
-**Client:** `MA#id#duration#reason`
+**Client:** `MA#{id}#{duration}#{reason}#%`
 
 ### Character selection
 
