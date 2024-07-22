@@ -5,19 +5,19 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
 - [Network Protocol](#network-protocol)
   - [Handshake](#handshake)
     - [Hard drive ID](#hard-drive-id)
-    - [Client version information](#client-version-information)
-    - [Feature list](#feature-list)
-    - [Asset Link](#asset-link)
+    - [Version information](#version-information)
     - [Player count](#player-count)
+    - [Feature list](#feature-list)
+    - [Asset link](#asset-link)
     - [Resource counts](#resource-counts)
     - [Character list](#character-list)
     - [Evidence list](#evidence-list)
     - [Music list](#music-list)
     - [Final confirmation](#final-confirmation)
   - [Players](#players)
-    - [Player list](#player-list)
-    - [Player list update](#update-player-list)
+    - [Update player list](#update-player-list)
     - [Update player](#update-player)
+    - [Moderator Action](#moderator-action)
   - [Character selection](#character-selection)
     - [Taken characters](#taken-characters)
     - [Choose character](#choose-character)
@@ -31,6 +31,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Available positions](#available-positions)
   - [Out-of-character message](#out-of-character-message)
   - [Evidence](#evidence)
+    - [List](#list)
     - [Add](#add)
     - [Remove](#remove)
     - [Edit](#edit)
@@ -40,7 +41,7 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Music list](#music-list-1)
     - [Area list](#area-list)
   - [Moderator commands](#moderator-commands)
-    - [Authentication](#authenticate)
+    - [Authenticate](#authenticate)
     - [Call mod](#call-mod)
     - [Kick](#kick)
     - [Ban](#ban)
@@ -56,12 +57,13 @@ Attorney Online's network protocol is one with a rich and colorful past. It has 
     - [Mod password](#mod-password)
     - [IP list](#ip-list)
     - [Mute](#mute)
-    - [Evidence list](#evidence-list)
-    - [Master server protocol](#master-server-protocol)
-      - [Paginated list (obsolete)](#paginated-list-obsolete)
-    - [Casing](#casing)
-      - [Case preferences update](#case-preferences-update)
-      - [Case alert](#case-alert)
+- [Master server protocol](#master-server-protocol)
+  - [Paginated list (obsolete)](#paginated-list-obsolete)
+  - [Evidence list](#evidence-list-1)
+  - [Casing](#casing)
+    - [Case preferences update](#case-preferences-update)
+    - [Case alert](#case-alert)
+    - [](#)
 
 ### Handshake
 
@@ -179,75 +181,47 @@ The client confirms that it has joined the server and is ready to join the defau
 
 The servers sends information about the current players.
 
-#### Player list
-
-A json array list of player json data objects.
-* `json_array`: A json list of player data.
-
-##### Player data json object
-* `id`: Id of the player as provided by the server when first connecting.
-* `name`: Name of the player.
-* `character`: Character of the player.
-* `character_name`: The name (aka alias) of the player for the character they have selected.
-* `area_id`: The id of the area in which the player resides.
-
-```json
-{
-  "id": 5,
-  "name": "My Name Is Awesome",
-  "character": "Phoenix",
-  "character_name": "Actually Furio",
-  "area_id": 2
-}
-```
-
-**Server:** `PL#[{"id":5,"name":"My Name Is Awesome","character":"Phoenix","character_name":"Actually Furio","area_id":2}, ...]#%`
-
 #### Update player list
 
 Signals whatever to add or remove a player to the list.
-* `json_object`: A json object.
 
-##### Json object data
+`Packet Data`
 * `id`: Id of the player.
 * `type`: Update type enum.
 
-###### Update type
+`Update type`
 * `0`: Add player
 * `1`: Remove player
 
-```json
-{
-  "id": 2,
-  "type": 0
-}
-```
+**Server:** `PR#id#type#%`
 
 #### Update player
 
 Provides new information regarding an existing player.
-* `json_object`: A json object.
 
-##### Json object data
+`Packet Data`
 * `id`: Id of the player.
 * `type`: Data type enum.
 * `data`: Data
 
-###### Data type
+`Update type`
 * `0`: Name
 * `1`: Character
 * `2`: Character name
 * `3`: Area id
 
-```json
-{
-  "id": 10,
-  "type": 1,
-  "data": "Apollo"
-}
-```
+**Server:** `PU#id#type#data#%`
 
-**Server:** `PU#{"id":1,"type":0,"data":"My Best Name"}#%`
+#### Moderator Action
+
+Signals a moderator action to the server.
+
+`Packet data`
+* `id`: Id of the player.
+* `duration`: Duration of the action in hours.
+* `reason`: Provided reason by the moderator.
+
+**Client:** `MA#id#duration#reason`
 
 ### Character selection
 
