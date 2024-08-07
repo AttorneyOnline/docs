@@ -218,7 +218,7 @@ Signals a moderator action to the server.
 
 `Packet data`
 * `id`: Id of the player.
-* `duration`: Duration of the action in hours.
+* `duration`: Duration of the action in minutes.
 * `reason`: Provided reason by the moderator.
 
 **Client:** `MA#{id}#{duration}#{reason}#%`
