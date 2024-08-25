@@ -345,7 +345,10 @@ case_call = [sfx name]
 |--| --|
 |`font_description = `|`description_font =`|
 
----
-- Documentation pulled together by Crystal, with help from Crystalwarrior
-- Overviews by Crystal, with references from version changelogs
-- (Almost) All annotations come from the v2.9.1 versions of the aforementioned files.
+## What's new in v2.11.0?
+Download the latest themes from the AO2 Theme Repository [here](https://github.com/AttorneyOnline/AO2-Themes)
+### Brief Overview
+ - Added the PlayerList UI Element
+ - Deprecated most of the Animated Themes due to severe performance issues
+### courtroom_design.ini
+ - Add UI element `player_list`

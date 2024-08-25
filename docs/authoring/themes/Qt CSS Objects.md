@@ -87,6 +87,7 @@ Try putting these examples into your courtroom_stylesheets.css, and watch what h
 
 - ui_mute_list
 - ui_pair_list
+- ui_player_list
 
 ## QMenu
 - ui_custom_obj_menu
