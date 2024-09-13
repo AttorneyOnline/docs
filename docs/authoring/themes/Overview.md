@@ -69,6 +69,14 @@ Prior to 2.8, the chatbox was governed solely by `chat.png`. Since 2.8, `chatbla
 
 Note that you may override the layout settings of custom chatboxes to better suit your theme. Custom chatboxes are generally located under `base/misc`. If you have a version under `[theme]/misc`, it will be used instead. Custom chatboxes have layout overrides via a `courtroom_design.ini` placed in their folder. Only chatbox-related settings may be overridden in this way.
 
+To use the nameplate expanding functionality, create a base `chat.png` with a nameplate of reasonable length. Then, create three variants of it:
+
+- `chatblank.png` - No nameplate
+- `chatmed.png` - `chat.png`, but with the nameplate extended by a certain number of pixels **(write this down!)**
+- `chatbig.png` - `chat.png`, but with the nameplate extended by exactly twice the amount of pixels you used for `chatmed`.
+
+Lastly, set `showname_extra_width` to the amount of pixels you extended the nameplate by. Then, you can set up the chatbox's coordinates for `chat.png`, and they will be adjusted for `chatmed` and `chatbig` automagically.
+
 ### Theme Inheritance
 
 Added in 2.9.0, it's now possible for themes to inherit elements from other themes. These are done by way of `Subthemes` and `Parent Themes`.
