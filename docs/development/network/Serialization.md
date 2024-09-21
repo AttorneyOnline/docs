@@ -24,6 +24,8 @@ Pseudocode for serializing a simple packet:
 header + '#' + '#'.join(values) + '#%'
 ```
 
+Note that values must be encoded as UTF-8.
+
 ### Escapes
 As certain characters is used as control characters, they must be
 escaped if they appear in values.
