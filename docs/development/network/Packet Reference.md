@@ -14,7 +14,7 @@
 |--------|-------------|-------|
 | `hdid` | `string`    |       |
 
-- `hdid` is a value that uniquely identifies the device (eg. hard drive ID, browser fingerprint)
+`hdid` is a value that uniquely identifies the device (eg. hard drive ID, browser fingerprint)
 
 ### Behavior
 
@@ -24,19 +24,23 @@ respond with `ID`.
 ## Version information (Server->Client)
 
 - Header: `ID`
-- Direction: `Server-Client`
+- Direction: `Server->Client`
 
 ### Fields
 
 | Key             | Type     | Rules                       |
 |-----------------|----------|-----------------------------|
 | `player_number` | `number` | Positive integer            |
+| `software`      | `string` | Name of the software        |
 | `version`       | `string` | Should be in format `x.y.z` |
 
-- `player_number` should be the number of players currently on the server
+`player_number` should be the number of players currently on the server
+`software` should be the name of the software the server is on
+`version` is the server software's version
 
 ### Behavior
 
+When the Client receives ID it should send ID back.
 
 ## Version information (Client->Server)
 
