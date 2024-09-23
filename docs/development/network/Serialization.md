@@ -1,7 +1,7 @@
 # Serialization
 
 Packets can primarily be serialized into network data in two ways:
-FantaCode and JSON.
+FantaCode or JSON.
 
 ## FantaCode
 
@@ -65,5 +65,5 @@ Packets can also be serialized as JSON using this format:
 Header must always be a string, but the rest of the values
 can have any type permitted by the JSON standard.
 Note that for the serialization to be considered valid,
-the values must adhere to what's specified in Packet Reference.
+the values must adhere to what's specified in Network Protocol.
 Invalid packets may be dropped.
