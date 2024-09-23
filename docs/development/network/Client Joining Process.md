@@ -1,4 +1,4 @@
-# Client Connection Process
+# Client Joining Process
 
 ## Client states
 
