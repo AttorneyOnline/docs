@@ -1,7 +1,7 @@
 # Serialization
 
-Packets can primarily be serialized into network data in two ways:
-FantaCode or JSON.
+Packets must be serialized into network bytes using a proprietary
+format called FantaCode.
 
 ## FantaCode
 
@@ -26,6 +26,9 @@ header + '#' + '#'.join(values) + '#%'
 
 Note that values must be encoded as UTF-8.
 
+Certain packets may also have certain caveats in serialization.
+Please refer to existing implementations.
+
 ### Escapes
 As certain characters is used as control characters, they must be
 escaped if they appear in values.
@@ -47,23 +50,3 @@ value
 ```
 
 Vice versa for unescaping.
-
-## JSON
-
-Packets can also be serialized as JSON using this format:
-```(json)
-{
-    "header": "<header>",
-    "data": {
-        "key1": <value1>,
-        "key2": <value2>,
-        ...
-    }
-}
-```
-
-Header must always be a string, but the rest of the values
-can have any type permitted by the JSON standard.
-Note that for the serialization to be considered valid,
-the values must adhere to what's specified in Network Protocol.
-Invalid packets may be dropped.
