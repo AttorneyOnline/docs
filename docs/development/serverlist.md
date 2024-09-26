@@ -45,9 +45,7 @@ This field contains the port where the server is listening to incoming TCP conne
 
 This field contains the port where the server is listening to incoming WebSocket connections.
 
-### wss_port (Work in progress)
-
-> **Note:** This section is currently a work in progress. The serverlist does not yet support WSS.
+### wss_port
 
 This field contains the port where the server is listening to incoming Secure WebSocket connections.
 
