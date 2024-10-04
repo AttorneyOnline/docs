@@ -10,6 +10,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ASS](#ASS)
 - [AUTH](#AUTH)
 - [BD](#BD)
+- [BN](#BN)
 - [CASEA](#CASEA)
 - [CC](#CC)
 - [CH](#CH)
@@ -126,6 +127,18 @@ Receivers: `Client`
 
 When the Client receives this, it should inform the player that they cannot
 join the server because they are banned and give `reason` as the reason.
+
+# BN
+
+Receivers: `Client`
+
+| Key          | Type     | Rules        |
+|--------------|----------|--------------|
+| `background` | `string` |              |
+| `position`   | `string` |              |
+
+When Client receives this, it should set the background to `background`
+and the position to `position`.
 
 # CASEA
 
