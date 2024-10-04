@@ -17,6 +17,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
+- [ZZ](#ZZ)
 
 # ARUP
 
@@ -234,3 +235,17 @@ is it interpreted as an area.
 
 When received, the Client should store this data in memory for later use.
 It should also display a list of these (using `name`) to the user (both music and areas).
+
+# ZZ
+
+Receivers: `Client, Server`
+
+| Key      | Type     | Rules                     |
+|----------|----------|---------------------------|
+| `reason` | `string` | Length `<=255` (Optional) |
+
+This packet is used to notify mods of rulebreaking (call mod).
+
+When the Server receives this, it should send the same packet to all connected mods.
+When the Client receives this, it should send an audio/visual notification and show the reason somewhere
+(subject to Client settings).
