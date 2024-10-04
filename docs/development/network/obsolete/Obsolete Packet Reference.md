@@ -12,6 +12,7 @@ Do not use these headers when defining new packets.
 - [MU](#MU)
 - [OPPASS](#OPPASS)
 - [SN](#SN)
+- [SV](#SV)
 - [UM](#UM)
 - [VC](#VC)
 - [IL](#IL)
@@ -94,6 +95,7 @@ Sends the modpass to the client. Please never implement this.
 
 # SN
 
+Sender: `Masterserver`
 Receiver: `Client`
 
 | Key               | Type     | Rules |
@@ -107,6 +109,17 @@ Receiver: `Client`
 
 When the Client receives this it should append the single entry to
 the serverlist in the UI.
+
+# SV
+
+Sender: `Masterserver`
+Receiver: `Client`
+
+| Key       | Type     | Rules |
+|-----------|----------|-------|
+| `version` | `string` |       |
+
+Version from the Masterserver.
 
 # UM
 
