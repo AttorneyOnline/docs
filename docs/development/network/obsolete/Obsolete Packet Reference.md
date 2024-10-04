@@ -3,6 +3,8 @@
 These packets are considered obsolete and should no longer be used.
 Do not use these headers when defining new packets.
 
+- [ALL (Masterserver)](#ALL-masterserver)
+- [ALL (Client)](#ALL-client)
 - [decryptor](#decryptor)
 - [CT](#CT)
 - [HI](#HI)
@@ -12,6 +14,26 @@ Do not use these headers when defining new packets.
 - [UM](#UM)
 - [VC](#VC)
 - [IL](#IL)
+
+# ALL (Masterserver)
+
+Receiver: `Masterserver`
+
+When the Masterserver receives this, it should respond with `ALL (Client)`.
+
+# ALL (Client)
+
+Receiver: `Client`
+
+| Key    | Type     | Rules |
+|--------|----------|-------|
+| `name` | `string` |       |
+| `desc` | `string` |       |
+| `ip`   | `string` |       |
+| `port` | `string` |       |
+
+When the Client receives this, it should render a list of servers
+along with their description.
 
 # decryptor
 
