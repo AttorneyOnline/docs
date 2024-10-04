@@ -31,6 +31,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PE](#PE)
 - [PN](#PN)
 - [PR](#PR)
+- [PU](#PU)
 - [RC](#RC)
 - [RD](#RD)
 - [SC](#SC)
@@ -437,6 +438,26 @@ When the Client receives this, it should add or remove a player to their playerl
 - `type` is the update type:
 - - `0`: Add player
 - - `1`: Remove player
+
+# PU
+
+Receivers: `Client`
+
+| Key    | Type             | Rules |
+|--------|------------------|-------|
+| `id`   | `number`         |       |
+| `type` | `number`         |       |
+| `data` | `string\|number` |       |
+
+When the Client receives this, it should update data about a player in their playerlist.
+
+- `id` is the player's ID.
+- `type` is the data type:
+- - `0`: Update player's name
+- - `1`: Update player's character id
+- - `2`: Update player's character name
+- - `3`: Update player's area id
+- `data` is the new data.
 
 # RC
 
