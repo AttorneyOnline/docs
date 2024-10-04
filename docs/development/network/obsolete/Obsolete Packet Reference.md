@@ -10,6 +10,7 @@ Do not use these headers when defining new packets.
 - [HI](#HI)
 - [ID](#ID)
 - [MU](#MU)
+- [NOSERV](#NOSERV)
 - [OPPASS](#OPPASS)
 - [PING](#PING)
 - [SN](#SN)
@@ -88,6 +89,11 @@ Receivers: `Client`
 When the Client receives this, it should visually indicate that the player
 has been muted.
 
+# NOSERV
+
+Sender: `Masterserver`
+Receiver: `Server`
+
 # OPPASS
 
 Sender: `Server`
@@ -101,10 +107,11 @@ Sends the modpass to the client. Please never implement this.
 
 # PING
 
-Sender: `Client`
+Sender: `Server`
 Receiver: `Masterserver`
 
-Likely a keepalive packet.
+When Masterserver receives this, it should respond with `NOSERV` if the server is
+not listed.
 
 # SN
 
