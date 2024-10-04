@@ -20,6 +20,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ID (Server)](#ID-Server)
 - [KB](#KB)
 - [KK](#KK)
+- [LE](#LE)
 - [MS](#MS)
 - [PN](#PN)
 - [RC](#RC)
@@ -262,6 +263,25 @@ Receivers: `Client`
 
 When the Client receives this, it should notify the player that they
 have been kicked and give `reason` as the reason.
+
+# LE
+
+Receivers: `Client`
+
+| Key        | Type                   | Rules |
+|------------|------------------------|-------|
+| `evidence` | `array[evidence_data]` |       |
+
+## evidence_data
+
+| Key           | Type     | Rules                   |
+|---------------|----------|-------------------------|
+| `name`        | `string` | Length `<=255`          |
+| `description` | `string` | Length `<=255`          |
+| `image`       | `string` | Length `<=255`          |
+
+When Client receives `LE` it should update its evidence list
+and show the new evidence using the values in the packet.
 
 # MS
 
