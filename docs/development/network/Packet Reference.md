@@ -10,6 +10,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ASS](#ASS)
 - [AUTH](#AUTH)
 - [BD](#BD)
+- [CH](#CH)
+- [CHECK](#CHECK)
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
@@ -104,6 +106,30 @@ Receivers: `Client`
 
 When the Client receives this, it should inform the player that they cannot
 join the server because they are banned and give `reason` as the reason.
+
+# CH
+
+Receiver: `Server`
+
+| Key       | Type     | Rules            |
+|-----------|----------|------------------|
+| `char_id` | `number` | Positive integer |
+
+`char_id` is the character id of the Client that sent `CH`.
+The Client is expected to send `CH` at least once every 10 seconds.
+This indicates that the Client is still connected.
+
+When the Server receives `CH` it should respond with `CHECK` and
+reset the timeout timer for the Client.
+
+# CHECK
+
+Receiver: `Client`
+
+(no fields)
+
+Sent by the server as a response to `CH`. No further action is needed
+by the client.
 
 # FL
 
