@@ -16,6 +16,8 @@ Do not use these headers when defining new packets.
 - [NOSERV](#NOSERV)
 - [OPPASS](#OPPASS)
 - [PING](#PING)
+- [PSDD](#PSDD)
+- [RE](#RE)
 - [SCC](#SCC)
 - [SN](#SN)
 - [SR](#SR)
@@ -148,6 +150,15 @@ Receiver: `Server`
 
 Has one field called `status` which is always `0` (presumably). Indicates
 successful listing.
+
+# RE
+
+Sender: `Client`
+Receiver: `Server`
+
+(no fields)
+
+When the Server receives this, it should respond with `LE`.
 
 # SCC
 
