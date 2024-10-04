@@ -12,6 +12,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [BD](#BD)
 - [CASEA](#CASEA)
 - [CH](#CH)
+- [CharsCheck](#CharsCheck)
 - [CHECK](#CHECK)
 - [DE](#DE)
 - [DONE](#DONE)
@@ -163,6 +164,25 @@ This indicates that the Client is still connected.
 
 When the Server receives `CH` it should respond with `CHECK` and
 reset the timeout timer for the Client.
+
+# CharsCheck
+
+Receiver: `Client`
+
+| Key     | Type            | Rules |
+|---------|-----------------|-------|
+| `taken` | `array[number]` |       |
+
+This packet indicates which characters are taken and not.
+
+The value of `taken` may be one of the following:
+- `-1`: character is taken
+- ` 0`: character is free
+
+The position in the array decides which character this corresponds to.
+
+When the client receives this packet, it should visually indicate which
+characters are taken.
 
 # CHECK
 
