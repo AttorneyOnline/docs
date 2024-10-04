@@ -153,6 +153,14 @@ Receivers: `Server`
 
 When the Server receives `RC` it should respond with `SC`.
 
+# RM
+
+Receivers: `Server`
+
+(no fields)
+
+When the Server receives `RM`, it should respond with `SM`.
+
 # SC
 
 Receivers: `Client`
@@ -176,3 +184,20 @@ Receivers: `Client`
 `evidence` is the character's evidence(?).
 
 When received, the Client should store this data in memory for later use.
+
+# SM
+
+Receivers: `Client`
+
+| Key          | Type            | Rules                           |
+|--------------|-----------------|---------------------------------|
+| `music_list` | `array[object]` | Object must be valid music_data |
+
+## music_data
+
+| Key    | Type     | Rules          |
+|--------|----------|----------------|
+| `name` | `string` | Length `<=150` |
+
+When received, the Client should store this data in memory for later use.
+It should also display a list of these (using `name`) to the user.
