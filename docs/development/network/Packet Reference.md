@@ -26,6 +26,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [KB](#KB)
 - [KK](#KK)
 - [LE](#LE)
+- [MA](#MA)
 - [MC](#MC)
 - [MS](#MS)
 - [PE](#PE)
@@ -354,6 +355,22 @@ Receivers: `Client`
 When Client receives `LE` it should update its evidence list
 and show the new evidence using the values in the packet. `image` is
 the filename of the image to use.
+
+# MA
+
+Receivers: `Client`
+
+| Key        | Type     | Rules |
+|------------|----------|-------|
+| `id`       | `number` |       |
+| `duration` | `number` |       |
+| `reason`   | `string` |       |
+
+This packet indicates that moderator action has been taken against a player.
+
+- `id`: Id of the player.
+- `duration`: Duration of the action in minutes.
+- `reason`: Provided reason by the moderator.
 
 # MC
 
