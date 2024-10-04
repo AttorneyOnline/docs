@@ -22,6 +22,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [KK](#KK)
 - [LE](#LE)
 - [MS](#MS)
+- [PE](#PE)
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
@@ -281,11 +282,25 @@ Receivers: `Client`
 | `image`       | `string` | Length `<=255`          |
 
 When Client receives `LE` it should update its evidence list
-and show the new evidence using the values in the packet.
+and show the new evidence using the values in the packet. `image` is
+the filename of the image to use.
 
 # MS
 
 Has its own page. See MS Packet Reference.
+
+# PE
+
+Receivers: `Server`
+
+| Key           | Type     | Rules                   |
+|---------------|----------|-------------------------|
+| `name`        | `string` | Length `<=255`          |
+| `description` | `string` | Length `<=255`          |
+| `image`       | `string` | Length `<=255`          |
+
+When the Server receives this it should update its corresponding evidence list
+and send `LE` to all Clients in the corresponding area.
 
 # PN
 
