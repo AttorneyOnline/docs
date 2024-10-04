@@ -133,17 +133,6 @@ Receiver: `Client`
 Sent by the server as a response to `CH`. No further action is needed
 by the client.
 
-# decryptor
-
-Receiver: `Client`
-
-| Key   | Type     | Rules            |
-|-------|----------|------------------|
-| `key` | `number` | Positive integer |
-
-This packet is involved in an obsolete mechanism for encrypting
-client headers. See FantaCrypt for more info.
-
 # FL
 
 Receivers: `Client`
