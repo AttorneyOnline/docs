@@ -11,6 +11,7 @@ Do not use these headers when defining new packets.
 - [ID](#ID)
 - [MU](#MU)
 - [OPPASS](#OPPASS)
+- [PING](#PING)
 - [SN](#SN)
 - [SV](#SV)
 - [UM](#UM)
@@ -50,7 +51,8 @@ client headers. See FantaCrypt for more info.
 
 # CT
 
-Receiver: `Masterserver`
+Sender: `Client, Masterserver`
+Receiver: `Client, Masterserver`
 
 The masterserver used to support OOC chat like the Server does.
 This is no longer the case. The specification is the same (See Packet Reference).
@@ -58,6 +60,7 @@ Note that `CT` with Server as receiver is not obsolete.
 
 # HI
 
+Sender: `Client`
 Receiver: `Masterserver`
 
 The masterserver used to support HI packets like the Server does.
@@ -66,6 +69,7 @@ Note that `HI` with Server as receiver is not obsolete.
 
 # ID
 
+Sender: `Client`
 Receiver: `Masterserver`
 
 The masterserver used to support ID packets like the Server does.
@@ -74,6 +78,7 @@ Note that `ID` with Server as receiver is not obsolete.
 
 # MU
 
+Sender: `Server`
 Receivers: `Client`
 
 | Key       | Type     | Rules            |
@@ -85,6 +90,7 @@ has been muted.
 
 # OPPASS
 
+Sender: `Server`
 Receivers: `Client`
 
 | Key           | Type           | Rules                |
@@ -92,6 +98,13 @@ Receivers: `Client`
 | `modpass`     | `string`       | Valid hex (0-9, A-F) |
 
 Sends the modpass to the client. Please never implement this.
+
+# PING
+
+Sender: `Client`
+Receiver: `Masterserver`
+
+Likely a keepalive packet.
 
 # SN
 
@@ -123,6 +136,7 @@ Version from the Masterserver.
 
 # UM
 
+Sender: `Server`
 Receivers: `Client`
 
 | Key       | Type     | Rules            |
@@ -134,12 +148,14 @@ has been unmuted.
 
 # VC
 
+Sender: `Client`
 Receivers: `Masterserver`
 
 Purpose unknown.
 
 # IL
 
+Sender: `Server`
 Receivers: `Client`
 
 | Key       | Type                 | Rules                                |
