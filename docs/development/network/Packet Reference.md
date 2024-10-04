@@ -11,6 +11,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [AUTH](#AUTH)
 - [BD](#BD)
 - [CASEA](#CASEA)
+- [CC](#CC)
 - [CH](#CH)
 - [CharsCheck](#CharsCheck)
 - [CHECK](#CHECK)
@@ -34,6 +35,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PN](#PN)
 - [PR](#PR)
 - [PU](#PU)
+- [PV](#PV)
 - [RC](#RC)
 - [RD](#RD)
 - [SC](#SC)
@@ -149,6 +151,23 @@ Receivers: `Server, Client`
 
 When Server receives this, it should send it to all connected Clients.
 When Client receives this, it can render `message` in OOC chat, but may disable it through configuration.
+
+# CC
+
+Receiver: `Server`
+
+| Key       | Type     | Rules            |
+|-----------|----------|------------------|
+| `char_id` | `number` | Positive integer |
+| `hdid`    | `string` |                  |
+
+This packet is sent by the Client to the Server to indicate that the Client
+tries to select a character.
+
+When the Server receives this, it should send `PV` if the character was
+selected successfully.
+
+Serialized as `CC#0#{char_id}#{hdid}#%` (hardcoded 0)
 
 # CH
 
@@ -495,6 +514,22 @@ When the Client receives this, it should update data about a player in their pla
 - - `2`: Update player's character name
 - - `3`: Update player's area id
 - `data` is the new data.
+
+# PV
+
+Receivers: `Client`
+
+| Key         | Type             | Rules |
+|-------------|------------------|-------|
+| `player_id` | `number`         |       |
+| `char_id`   | `number`         |       |
+
+When the Client receives this, it should hide char select and
+initialize the character for use, using the `char_id` provided.
+
+Serialized as `PV#{player_id}#CID#{char_id}#%`
+
+> **Note:** A `PV` response may be sent at any time to force a character switch, and the character ID may not necessarily be the one requested by the player.
 
 # RC
 
