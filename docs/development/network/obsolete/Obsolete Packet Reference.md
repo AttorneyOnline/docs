@@ -13,6 +13,7 @@ Do not use these headers when defining new packets.
 - [NOSERV](#NOSERV)
 - [OPPASS](#OPPASS)
 - [PING](#PING)
+- [SCC](#SCC)
 - [SN](#SN)
 - [SV](#SV)
 - [UM](#UM)
@@ -112,6 +113,21 @@ Receiver: `Masterserver`
 
 When Masterserver receives this, it should respond with `NOSERV` if the server is
 not listed.
+
+# SCC
+
+Sender: `Server`
+Receiver: `Masterserver`
+
+| Key               | Type     | Rules |
+|-------------------|----------|-------|
+| `port`            | `number` |       |
+| `name`            | `string` |       |
+| `description`     | `string` |       |
+| `server_software` | `string` |       |
+
+Requests listing on the Masterserver.
+When the Masterserver receives this, it should list the Server and send `PSDD`.
 
 # SN
 
