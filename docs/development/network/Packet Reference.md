@@ -8,6 +8,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ARUP](#ARUP)
 - [askchaa](#askchaa)
 - [ASS](#ASS)
+- [AUTH](#AUTH)
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
@@ -64,6 +65,21 @@ Receivers: `Client`
 | `asset_url` | `string`    | Valid URL (http(s)) |
 
 Indicates what base URL Client should use for fetching assets via web.
+
+# AUTH
+
+Receivers: `Client`
+
+| Key          | Type     | Rules      |
+|--------------|----------|------------|
+| `auth_state` | `number` | `-1, 0, 1` |
+
+`auth_state` indicates the state of authentication (for moderator) the Client should be in.
+
+Valid states are:
+- `1`, Successful login. Displays the guard button.
+- `0`, Unsuccessful login attempt.
+- `-1`, Logout. Hides the guard button.
 
 # FL
 
