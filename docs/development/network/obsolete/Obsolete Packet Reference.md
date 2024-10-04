@@ -6,6 +6,7 @@ Do not use these headers when defining new packets.
 - [ALL (Masterserver)](#ALL-masterserver)
 - [ALL (Client)](#ALL-client)
 - [decryptor](#decryptor)
+- [CHECK](#CHECK)
 - [CT](#CT)
 - [HI](#HI)
 - [ID](#ID)
@@ -42,6 +43,7 @@ along with their description.
 
 # decryptor
 
+Sender: `Server`
 Receiver: `Client`
 
 | Key   | Type     | Rules            |
@@ -50,6 +52,13 @@ Receiver: `Client`
 
 This packet is involved in an obsolete mechanism for encrypting
 client headers. See FantaCrypt for more info.
+
+# CHECK
+
+Sender: `Masterserver`
+Receiver: `Server`
+
+Keepalive packet.
 
 # CT
 
@@ -113,6 +122,14 @@ Receiver: `Masterserver`
 
 When Masterserver receives this, it should respond with `NOSERV` if the server is
 not listed.
+
+# PSDD
+
+Sender: `Masterserver`
+Receiver: `Server`
+
+Has one field called `status` which is always `0` (presumably). Indicates
+successful listing.
 
 # SCC
 
