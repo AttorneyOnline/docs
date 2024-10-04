@@ -11,6 +11,7 @@ Do not use these headers when defining new packets.
 - [ID](#ID)
 - [MU](#MU)
 - [OPPASS](#OPPASS)
+- [SN](#SN)
 - [UM](#UM)
 - [VC](#VC)
 - [IL](#IL)
@@ -90,6 +91,22 @@ Receivers: `Client`
 | `modpass`     | `string`       | Valid hex (0-9, A-F) |
 
 Sends the modpass to the client. Please never implement this.
+
+# SN
+
+Receiver: `Client`
+
+| Key               | Type     | Rules |
+|-------------------|----------|-------|
+| `entry_number`    | `number` |       |
+| `ip`              | `string` |       |
+| `server_version`  | `string` |       |
+| `port`            | `number` |       |
+| `name`            | `string` |       |
+| `desc`            | `string` |       |
+
+When the Client receives this it should append the single entry to
+the serverlist in the UI.
 
 # UM
 
