@@ -8,10 +8,13 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ARUP](#ARUP)
 - [askchaa](#askchaa)
 - [ASS](#ASS)
+- [FL](#FL)
 - [HI](#HI)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
 - [PN](#PN)
+- [RC](#RC)
+- [SC](#SC)
 
 # ARUP
 
@@ -141,3 +144,35 @@ Receivers: `Client`
 `player_count` indicates how many players are currently on the Server.
 `max_players` also indicates how many players are the most permitted. Note that this is rarely enforced in practice.
 `Server description` is a textual description of the server.
+
+# RC
+
+Receivers: `Server`
+
+(no fields)
+
+When the Server receives `RC` it should respond with `SC`.
+
+# SC
+
+Receivers: `Client`
+
+| Key         | Type            | Rules                          |
+|-------------|-----------------|--------------------------------|
+| `char_data` | `array[object]` | Object must be valid char_data |
+
+## char_data
+
+| Key        | Type     | Rules          |
+|------------|----------|----------------|
+| `id`       | `number` | Value `>=0`    |
+| `name`     | `string` | Length `<=100` |
+| `desc`     | `string` | Length `<=100` |
+| `evidence` | `string` | Length `<=100` |
+
+`id` is the character's unique ID
+`name` is the character's name
+`desc` is the character's description. This is mostly unused.
+`evidence` is the character's evidence(?).
+
+When received, the Client should store this data in memory for later use.
