@@ -10,6 +10,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ASS](#ASS)
 - [AUTH](#AUTH)
 - [BD](#BD)
+- [CASEA](#CASEA)
 - [CH](#CH)
 - [CHECK](#CHECK)
 - [FL](#FL)
@@ -109,6 +110,31 @@ Receivers: `Client`
 
 When the Client receives this, it should inform the player that they cannot
 join the server because they are banned and give `reason` as the reason.
+
+# CASEA
+
+Receivers: `Server, Client`
+
+| Key          | Type     | Rules          |
+|--------------|----------|----------------|
+| `case_title` | `string` | Length `<=255` |
+| `message`    | `string` | Length `<=255` |
+| `need_def`   | `number` | `0, 1`         |
+| `need_pro`   | `number` | `0, 1`         |
+| `need_judge` | `number` | `0, 1`         |
+| `need_jury`  | `number` | `0, 1`         |
+| `need_steno` | `number` | `0, 1`         |
+
+- `case_title`: the title of the case being played
+- `message`: the title of the case, but may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
+- `need_def`: `1` if the user needs a defense attorney, `0` otherwise
+- `need_pro`: `1` if the user needs a prosecutor, `0` otherwise
+- `need_judge`: `1` if the user needs a judge, `0` otherwise
+- `need_jury`: `1` if the user needs jurors, `0` otherwise
+- `need_steno`: `1` if the user need a stenographer, `0` otherwise
+
+When Server receives this, it should send it to all connected Clients.
+When Client receives this, it can render `message` in OOC chat, but may disable it through configuration.
 
 # CH
 
