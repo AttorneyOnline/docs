@@ -9,6 +9,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [askchaa](#askchaa)
 - [ASS](#ASS)
 - [FL](#FL)
+- [FM](#FM)
 - [HI](#HI)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
@@ -92,6 +93,19 @@ Valid features and what they indicate support for:
 - `y_offset`, using y offset in `MS`
 - `expanded_desk_mods`, using `deskmod` modifiers 2 through 5 in `MS`
 - `auth_packet`, using the `AUTH` packet
+
+# FM
+
+Receivers: `Client`
+
+| Key          | Type            | Rules                           |
+|--------------|-----------------|---------------------------------|
+| `music_list` | `array[object]` | Object must be valid music_data |
+
+For the `music_data` object, see `SM`. This packet functions like `SM`, but does never include areas.
+
+When received, the Client should store this data in memory for later use.
+It should also display a list of these (using `name`) to the user.
 
 # HI
 
