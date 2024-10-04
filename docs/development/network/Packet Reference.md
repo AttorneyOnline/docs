@@ -15,6 +15,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [CHECK](#CHECK)
 - [DE](#DE)
 - [EE](#EE)
+- [FA](#FA)
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
@@ -188,6 +189,22 @@ Receivers: `Server`
 | `image`       | `string` | Length `<=255` |
 
 When the Server receives this, it should update the evidence with the associated `id` with the new data.
+
+# FA
+
+Receivers: `Client`
+
+| Key     | Type               | Rules        |
+|---------|--------------------|--------------|
+| `areas` | `array[area_data]` |              |
+
+## area_data
+
+| Key    | Type     | Rules          |
+|--------|----------|----------------|
+| `name` | `string` | Length `<=255` |
+
+When the Client receives this, it should update its area list accordingly.
 
 # FL
 
