@@ -20,6 +20,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [ID (Server)](#ID-Server)
 - [KB](#KB)
 - [KK](#KK)
+- [MS](#MS)
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
@@ -261,6 +262,10 @@ Receivers: `Client`
 
 When the Client receives this, it should notify the player that they
 have been kicked and give `reason` as the reason.
+
+# MS
+
+Has its own page. See MS Packet Reference.
 
 # PN
 
