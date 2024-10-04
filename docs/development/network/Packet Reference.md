@@ -14,6 +14,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [CH](#CH)
 - [CHECK](#CHECK)
 - [DE](#DE)
+- [DONE](#DONE)
 - [EE](#EE)
 - [FA](#FA)
 - [FL](#FL)
@@ -178,6 +179,15 @@ Receivers: `Server`
 | `id` | `number` |       |
 
 When the Server receives this, it should delete the evidence with the associated `id`.
+
+# DONE
+
+Receivers: `Client`
+
+(no fields)
+
+When the Client receives this, the joining process is complete and it
+should render character select.
 
 # EE
 
