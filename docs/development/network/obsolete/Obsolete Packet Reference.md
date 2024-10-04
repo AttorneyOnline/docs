@@ -1,11 +1,16 @@
 # Obsolete Packet Reference
 
 These packets are considered obsolete and should no longer be used.
+Do not use these headers when defining new packets.
 
 - [decryptor](#decryptor)
+- [CT](#CT)
+- [HI](#HI)
+- [ID](#ID)
 - [MU](#MU)
 - [OPPASS](#OPPASS)
 - [UM](#UM)
+- [VC](#VC)
 - [IL](#IL)
 
 # decryptor
@@ -18,6 +23,30 @@ Receiver: `Client`
 
 This packet is involved in an obsolete mechanism for encrypting
 client headers. See FantaCrypt for more info.
+
+# CT
+
+Receiver: `Masterserver`
+
+The masterserver used to support OOC chat like the Server does.
+This is no longer the case. The specification is the same (See Packet Reference).
+Note that `CT` with Server as receiver is not obsolete.
+
+# HI
+
+Receiver: `Masterserver`
+
+The masterserver used to support HI packets like the Server does.
+This is no longer the case. The specification is the same (See Packet Reference).
+Note that `HI` with Server as receiver is not obsolete.
+
+# ID
+
+Receiver: `Masterserver`
+
+The masterserver used to support ID packets like the Server does.
+This is no longer the case. The specification is the same (See Packet Reference).
+Note that `ID` with Server as receiver is not obsolete.
 
 # MU
 
@@ -50,6 +79,12 @@ Receivers: `Client`
 
 When the Client receives this, it should visually indicate that the player
 has been unmuted.
+
+# VC
+
+Receivers: `Masterserver`
+
+Purpose unknown.
 
 # IL
 
