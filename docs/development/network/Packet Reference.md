@@ -22,6 +22,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
+- [ST](#ST)
+- [TI](#TI)
 - [ZZ](#ZZ)
 
 # ARUP
@@ -306,6 +308,42 @@ is it interpreted as an area.
 
 When received, the Client should store this data in memory for later use.
 It should also display a list of these (using `name`) to the user (both music and areas).
+
+# ST
+
+Receivers: `Client`
+
+| Key             | Type     | Rules          |
+|-----------------|----------|----------------|
+| `subtheme_name` | `string` | Length `<=100` |
+| `should_reload` | `number` | `0, 1`         |
+
+When the Client receives this, it should switch to the subtheme specified by
+`subtheme_name`. If `should_reload` is `1`, it should reload the theme.
+If it's 0, it does not need to reload.
+
+# TI
+
+Receivers: `Client`
+
+| Key        | Type     | Rules            |
+|------------|----------|------------------|
+| `timer_id` | `number` | `0-4`            |
+| `command`  | `number` | `0-3`            |
+| `time`     | `number` | Positive integer |
+
+When the Client receives this, it should adjust the timers in the UI accordingly.
+
+`timer_id`,  the ID of the timer to manipulate.
+Typically, `0` is used as a "global" timer (be it server-wide or per-"hub")
+
+`command`:
+- `0`: Start/resume/sync timer at `time`
+- `1`: Pause timer at `time`
+- `2`: Show timer
+- `3`: Hide timer
+
+`time`, the time to display on the timer, in milliseconds.
 
 # ZZ
 
