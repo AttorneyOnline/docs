@@ -9,11 +9,14 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [askchaa](#askchaa)
 - [ASS](#ASS)
 - [AUTH](#AUTH)
+- [BD](#BD)
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
+- [KB](#KB)
+- [KK](#KK)
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
@@ -81,6 +84,17 @@ Valid states are:
 - `1`, Successful login. Displays the guard button.
 - `0`, Unsuccessful login attempt.
 - `-1`, Logout. Hides the guard button.
+
+# BD
+
+Receivers: `Client`
+
+| Key       | Type     | Rules                       |
+|-----------|----------|-----------------------------|
+| `reason`  | `string` | Length `<=255`              |
+
+When the Client receives this, it should inform the player that they cannot
+join the server because they are banned and give `reason` as the reason.
 
 # FL
 
@@ -161,6 +175,28 @@ Receivers: `Server`
 |------------|----------|-----------------------------|
 | `software` | `string` | Name of software            |
 | `version`  | `string` | Should be in format `x.y.z` |
+
+# KB
+
+Receivers: `Client`
+
+| Key       | Type     | Rules                       |
+|-----------|----------|-----------------------------|
+| `reason`  | `string` | Length `<=255`              |
+
+When the Client receives this, it should notify the player that they
+have been banned and give `reason` as the reason.
+
+# KK
+
+Receivers: `Client`
+
+| Key       | Type     | Rules                       |
+|-----------|----------|-----------------------------|
+| `reason`  | `string` | Length `<=255`              |
+
+When the Client receives this, it should notify the player that they
+have been kicked and give `reason` as the reason.
 
 # PN
 
