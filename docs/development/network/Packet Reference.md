@@ -30,6 +30,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [MS](#MS)
 - [PE](#PE)
 - [PN](#PN)
+- [PR](#PR)
 - [RC](#RC)
 - [RD](#RD)
 - [SC](#SC)
@@ -420,6 +421,22 @@ Receivers: `Client`
 `player_count` indicates how many players are currently on the Server.
 `max_players` also indicates how many players are the most permitted. Note that this is rarely enforced in practice.
 `Server description` is a textual description of the server.
+
+# PR
+
+Receivers: `Client`
+
+| Key    | Type     | Rules |
+|--------|----------|-------|
+| `id`   | `number` |       |
+| `type` | `number` |       |
+
+When the Client receives this, it should add or remove a player to their playerlist.
+
+- `id` is the player's ID.
+- `type` is the update type:
+- - `0`: Add player
+- - `1`: Remove player
 
 # RC
 
