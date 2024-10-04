@@ -5,6 +5,7 @@ Do not use these headers when defining new packets.
 
 - [ALL (Masterserver)](#ALL-masterserver)
 - [ALL (Client)](#ALL-client)
+- [askforservers](#askforservers)
 - [decryptor](#decryptor)
 - [CHECK](#CHECK)
 - [CT](#CT)
@@ -17,6 +18,7 @@ Do not use these headers when defining new packets.
 - [PING](#PING)
 - [SCC](#SCC)
 - [SN](#SN)
+- [SR](#SR)
 - [SV](#SV)
 - [UM](#UM)
 - [VC](#VC)
@@ -41,6 +43,13 @@ Receiver: `Client`
 
 When the Client receives this, it should render a list of servers
 along with their description.
+
+# askforservers
+
+Sender: `Client`
+Receiver: `Masterserver`
+
+When Masterserver receives this, it should send `SN` containing the first Server info.
 
 # decryptor
 
@@ -171,6 +180,17 @@ Receiver: `Client`
 
 When the Client receives this it should append the single entry to
 the serverlist in the UI.
+
+# SR
+
+Sender: `Client`
+Receiver: `Masterserver`
+
+| Key               | Type     | Rules |
+|-------------------|----------|-------|
+| `entry_number`    | `number` |       |
+
+When Masterserver receives this, it should send the Server info at `entry_number`.
 
 # SV
 
