@@ -30,6 +30,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PE](#PE)
 - [PN](#PN)
 - [RC](#RC)
+- [RD](#RD)
 - [SC](#SC)
 - [SETCASE](#SETCASE)
 - [ST](#ST)
@@ -417,6 +418,14 @@ Receivers: `Server`
 (no fields)
 
 When the Server receives `RC` it should respond with `SC`.
+
+# RD
+
+Receivers: `Server`
+
+(no fields)
+
+When the Server receives `RD` it should respond with `DONE`.
 
 # RM
 
