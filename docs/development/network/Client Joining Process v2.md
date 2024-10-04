@@ -1,4 +1,4 @@
-# Client Joining Process
+# Client Joining Process v2
 
 ## Client states
 
