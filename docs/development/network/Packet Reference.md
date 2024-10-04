@@ -23,6 +23,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [KB](#KB)
 - [KK](#KK)
 - [LE](#LE)
+- [MC](#MC)
 - [MS](#MS)
 - [PE](#PE)
 - [PN](#PN)
@@ -309,6 +310,43 @@ Receivers: `Client`
 When Client receives `LE` it should update its evidence list
 and show the new evidence using the values in the packet. `image` is
 the filename of the image to use.
+
+# MC
+
+Receivers: `Server, Client`
+
+| Key        | Type     | Rules                   |
+|------------|----------|-------------------------|
+| `name`     | `string` | Length `<=255`          |
+| `char_id`  | `number` |                         |
+| `showname` | `string` | Length `<=255`          |
+| `looping`  | `string` | Not present from Client |
+| `channel`  | `string` | Not present from Client |
+| `effects`  | `number` | `0-2`                   |
+
+The purpose of this packet is two-fold. The simplest use is by the Client to change
+area. In that case, it simply sends area name in `name` and its current character in `char_id`.
+
+However, if `name` has a file extension, it is considered to be a music change.
+
+When the Server receives this packet, it should simply send it to connected Clients in the area.
+
+When the Client receives this packet, it should play the specified song in `name`.
+
+Since 2.8, the track is expected to loop clientside. Before 2.8, the track was not expected to loop, and thus servers had to add a looping feature where the `MC` packet is sent to replay the track.
+
+- `name`: the name of the song
+- `char_id`: id of the char that played the song
+- `showname`: Showname that should be shown (`<showname>` played song.mp3)
+- `looping`: if `1`, indicates client-side looping. `0` otherwise.
+- `channel`: channel number to play on (`0-3`)
+  - Typically, channel `0` is used as the main BGM channel, whereas channel `1` is used for area-specific soundscapes.
+- `effects`: transition effects:
+  - `0`: fade in
+  - `1`: fade out
+  - `2`: sync position
+
+The canonical "empty track" is `~stop.mp3`.
 
 # MS
 
