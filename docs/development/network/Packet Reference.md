@@ -21,6 +21,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [HI](#HI)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
+- [JD](#JD)
 - [KB](#KB)
 - [KK](#KK)
 - [LE](#LE)
@@ -285,6 +286,19 @@ Receivers: `Server`
 |------------|----------|-----------------------------|
 | `software` | `string` | Name of software            |
 | `version`  | `string` | Should be in format `x.y.z` |
+
+# JD
+
+Receivers: `Client`
+
+| Key     | Type     | Rules |
+|---------|----------|-------|
+| `state` | `number` |       |
+
+When Client receives this, it should show or hide judge controls:
+- `-1`: Show or hide the judge controls, depending on the client's position (by convention, show if `jud`)
+- `0`: Hide the judge controls.
+- `1`: Show the judge controls.
 
 # KB
 
