@@ -85,6 +85,15 @@ Valid states are:
 - `0`, Unsuccessful login attempt.
 - `-1`, Logout. Hides the guard button.
 
+# BB
+
+| Key       | Type     | Rules              |
+|-----------|----------|--------------------|
+| `message` | `string` | Length `<=255`     |
+
+When the Client receives this, it should show the player `message`
+in a popup window or similar.
+
 # BD
 
 Receivers: `Client`
