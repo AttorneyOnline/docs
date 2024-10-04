@@ -61,6 +61,35 @@ Receivers: `Client`
 
 Indicates what base URL Client should use for fetching assets via web.
 
+# FL
+
+Receivers: `Client`
+
+| Key        | Type            | Rules |
+|------------|-----------------|-------|
+| `features` | `array[string]` |       |
+
+Indicates which features the Server supports.
+
+Valid features and what they indicate support for:
+- `yellowtext`, using yellow text (and more colors?) in `MS`
+- `flipping`, horizontally mirroring a characters sprite in `MS`
+- `customobjections`, using a custom objection in `MS` (named `custom.gif`)
+- `fastloading`, using the joining process v2 (fast loading) (See Client Joining Process)
+- `noencryption`, using unencrypted headers (FantaCrypt). This means all subsequent headers must not be encrypted.
+- `deskmod`, using `deskmod` in `MS`
+- `evidence`, using evidence in `MS`
+- `cccc_ic_support`, pairing characters in `MS`
+- `arup`, the Server sending the `ARUP` packet
+- `casing_alerts`, broadcasting casing alerts.
+- `modcall_reason`, modcalling with a reason (see `ZZ`)
+- `looping_sfx` , using looping sfx in `MS`
+- `additive`, using additive text in `MS`
+- `effects`, using effect overlays in `MS`
+- `y_offset`, using y offset in `MS`
+- `expanded_desk_mods`, using `deskmod` modifiers 2 through 5 in `MS`
+- `auth_packet`, using the `AUTH` packet
+
 # HI
 
 Receivers: `Server`
