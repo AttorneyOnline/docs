@@ -8,6 +8,7 @@ Do not use these headers when defining new packets.
 - [decryptor](#decryptor)
 - [CHECK](#CHECK)
 - [CT](#CT)
+- [DOOM](#DOOM)
 - [HI](#HI)
 - [ID](#ID)
 - [MU](#MU)
@@ -68,6 +69,14 @@ Receiver: `Client, Masterserver`
 The masterserver used to support OOC chat like the Server does.
 This is no longer the case. The specification is the same (See Packet Reference).
 Note that `CT` with Server as receiver is not obsolete.
+
+# DOOM
+
+Sender: `Masterserver`
+Receiver: `Client`
+
+Indicates that the Client has been banned from AO. When the client receives this,
+it should display a popup reading "Glory to Arstotzka!" before closing the program.
 
 # HI
 
