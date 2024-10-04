@@ -162,7 +162,9 @@ Receiver: `Server`
 | `hdid`    | `string` |                  |
 
 This packet is sent by the Client to the Server to indicate that the Client
-tries to select a character.
+tries to select the character identified by `char_id`.
+
+`hdid` is considered obsolete and can be omitted.
 
 When the Server receives this, it should send `PV` if the character was
 selected successfully.
