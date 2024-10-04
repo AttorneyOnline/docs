@@ -11,6 +11,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [HI](#HI)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
+- [PN](#PN)
 
 # ARUP
 
@@ -75,7 +76,7 @@ respond with `ID`. See also Client Joining Process.
 
 # ID (Client)
 
-- Receivers: `Client`
+Receivers: `Client`
 
 | Key             | Type     | Rules                       |
 |-----------------|----------|-----------------------------|
@@ -87,17 +88,27 @@ respond with `ID`. See also Client Joining Process.
 `software` should be the name of the software the server is on
 `version` is the server software's version
 
-When the Client receives ID it should send ID back.
+When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
 # ID (Server)
 
-- Header: `ID`
-- Receiver: `Server`
-
-### Fields
+Receivers: `Server`
 
 | Key        | Type     | Rules                       |
 |------------|----------|-----------------------------|
 | `software` | `string` | Name of software            |
 | `version`  | `string` | Should be in format `x.y.z` |
 
+# PN
+
+Receivers: `Client`
+
+| Key                  | Type     | Rules            |
+|----------------------|----------|------------------|
+| `player_count`       | `number` | Positive integer |
+| `max_players`        | `number` | Positive integer |
+| `server_description` | `string` | Optional field   |
+
+`player_count` indicates how many players are currently on the Server.
+`max_players` also indicates how many players are the most permitted. Note that this is rarely enforced in practice.
+`Server description` is a textual description of the server.
