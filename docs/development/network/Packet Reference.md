@@ -199,5 +199,8 @@ Receivers: `Client`
 |--------|----------|----------------|
 | `name` | `string` | Length `<=150` |
 
+`name` is the full name of the song OR area. If it does not have an extension (containing `.`),
+is it interpreted as an area.
+
 When received, the Client should store this data in memory for later use.
-It should also display a list of these (using `name`) to the user.
+It should also display a list of these (using `name`) to the user (both music and areas).
