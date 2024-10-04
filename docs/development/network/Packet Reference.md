@@ -13,6 +13,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [CASEA](#CASEA)
 - [CH](#CH)
 - [CHECK](#CHECK)
+- [DE](#DE)
+- [EE](#EE)
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
@@ -162,6 +164,29 @@ Receiver: `Client`
 
 Sent by the server as a response to `CH`. No further action is needed
 by the client.
+
+# DE
+
+Receivers: `Server`
+
+| Key  | Type     | Rules |
+|------|----------|-------|
+| `id` | `number` |       |
+
+When the Server receives this, it should delete the evidence with the associated `id`.
+
+# EE
+
+Receivers: `Server`
+
+| Key           | Type     | Rules          |
+|---------------|----------|----------------|
+| `id`          | `number` |                |
+| `name`        | `string` | Length `<=255` |
+| `description` | `string` | Length `<=255` |
+| `image`       | `string` | Length `<=255` |
+
+When the Server receives this, it should update the evidence with the associated `id` with the new data.
 
 # FL
 
