@@ -22,6 +22,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PN](#PN)
 - [RC](#RC)
 - [SC](#SC)
+- [SETCASE](#SETCASE)
 - [ST](#ST)
 - [TI](#TI)
 - [ZZ](#ZZ)
@@ -288,6 +289,30 @@ Receivers: `Client`
 `evidence` is the character's evidence(?).
 
 When received, the Client should store this data in memory for later use.
+
+# SETCASE
+
+Receivers: `Server`
+
+| Key        | Type     | Rules  |
+|------------|----------|--------|
+| `caselist` | `array`  |        |
+| `cm`       | `string` | `0, 1` |
+| `def`      | `string` | `0, 1` |
+| `pro`      | `string` | `0, 1` |
+| `judge`    | `string` | `0, 1` |
+| `jury`     | `string` | `0, 1` |
+| `steno`    | `string` | `0, 1` |
+
+- `caselist`: the list of cases this user is willing to host (assuming they are also willing to CM) (not used)
+- `cm`: `1` if the user is willing to host cases (not used), `0` otherwise
+- `def`: `1` if the user is willing to defend a case / play as a defense attorney (or a co-defense attorney), `0` otherwise
+- `pro`: `1` if the user is willing to prosecute a case / play as a prosecutor (or a co-prosecutor), `0` otherwise
+- `judge`: `1` if the user is willing to judge a case, `0` otherwise
+- `jury`: `1` if the user is willing to be a member of the jury in a case, `0` otherwise
+- `steno`: `1` if the user is willing to be the stenographer of a case, `0` otherwise
+
+Not clear how this is used in practice.
 
 # SM
 
