@@ -32,6 +32,8 @@ Receiver: `Masterserver`
 
 When the Masterserver receives this, it should respond with `ALL (Client)`.
 
+Serialized: `ALL#%`
+
 # ALL (Client)
 
 Receiver: `Client`
@@ -46,17 +48,21 @@ Receiver: `Client`
 When the Client receives this, it should render a list of servers
 along with their description.
 
+Serialized: `ALL#{server1_name}&{server1_desc}&{server1_ip}&{server1_port}#{server2_name}&{server2_desc}&{server2_ip}&{server2_port}#...#%`
+
 # askforservers
 
-Sender: `Client`
-Receiver: `Masterserver`
+- Sender: `Client`
+- Receiver: `Masterserver`
 
 When Masterserver receives this, it should send `SN` containing the first Server info.
 
+Serialized: `askforservers#%`
+
 # decryptor
 
-Sender: `Server`
-Receiver: `Client`
+- Sender: `Server`
+- Receiver: `Client`
 
 | Key   | Type     | Rules            |
 |-------|----------|------------------|
@@ -65,17 +71,21 @@ Receiver: `Client`
 This packet is involved in an obsolete mechanism for encrypting
 client headers. See FantaCrypt for more info.
 
+Serialized: `decryptor#{key}#%`
+
 # CHECK
 
-Sender: `Masterserver`
-Receiver: `Server`
+- Sender: `Masterserver`
+- Receiver: `Server`
 
 Keepalive packet.
 
+Serialized: `CHECK#%`
+
 # CT
 
-Sender: `Client, Masterserver`
-Receiver: `Client, Masterserver`
+- Sender: `Client, Masterserver`
+- Receivers: `Client, Masterserver`
 
 The masterserver used to support OOC chat like the Server does.
 This is no longer the case. The specification is the same (See Packet Reference).
@@ -83,16 +93,30 @@ Note that `CT` with Server as receiver is not obsolete.
 
 # DOOM
 
-Sender: `Masterserver`
-Receiver: `Client`
+- Sender: `Masterserver`
+- Receiver: `Client`
 
 Indicates that the Client has been banned from AO. When the client receives this,
 it should display a popup reading "Glory to Arstotzka!" before closing the program.
 
+Serialized: `DOOM#%`
+
+# EVENT
+
+- Sender: `Masterserver`
+- Receiver: `Client`
+
+Indicates the start of a special event.
+
+When Client receives this, it should display a scripted dialogue of Sho asking the player to bring FanatSors to his lair
+or face certain destruction.
+
+Serialized: `EVENT%`
+
 # HI
 
-Sender: `Client`
-Receiver: `Masterserver`
+- Sender: `Client`
+- Receiver: `Masterserver`
 
 The masterserver used to support HI packets like the Server does.
 This is no longer the case. The specification is the same (See Packet Reference).
@@ -100,8 +124,8 @@ Note that `HI` with Server as receiver is not obsolete.
 
 # ID
 
-Sender: `Client`
-Receiver: `Masterserver`
+- Sender: `Client`
+- Receiver: `Masterserver`
 
 The masterserver used to support ID packets like the Server does.
 This is no longer the case. The specification is the same (See Packet Reference).
@@ -109,8 +133,8 @@ Note that `ID` with Server as receiver is not obsolete.
 
 # MU
 
-Sender: `Server`
-Receivers: `Client`
+- Sender: `Server`
+- Receivers: `Client`
 
 | Key       | Type     | Rules            |
 |-----------|----------|------------------|
@@ -119,15 +143,21 @@ Receivers: `Client`
 When the Client receives this, it should visually indicate that the player
 has been muted.
 
+Serialized: `MU#{char_id}#%`
+
 # NOSERV
 
-Sender: `Masterserver`
-Receiver: `Server`
+- Sender: `Masterserver`
+- Receiver: `Server`
+
+Indicates that the server is not listed on the Masterserver.
+
+Serialized: `NOSERV#%`
 
 # OPPASS
 
-Sender: `Server`
-Receivers: `Client`
+- Sender: `Server`
+- Receivers: `Client`
 
 | Key           | Type           | Rules                |
 |---------------|----------------|----------------------|
@@ -135,35 +165,43 @@ Receivers: `Client`
 
 Sends the modpass to the client. Please never implement this.
 
+Serialized: `OPPASS#{modpass}#%`
+
 # PING
 
-Sender: `Server`
-Receiver: `Masterserver`
+- Sender: `Server`  
+- Receiver: `Masterserver`
 
 When Masterserver receives this, it should respond with `NOSERV` if the server is
-not listed.
+not listed and `PSDD` if it is.
+
+Serialized: `PING#%`
 
 # PSDD
 
-Sender: `Masterserver`
-Receiver: `Server`
+- Sender: `Masterserver`
+- Receiver: `Server`
 
 Has one field called `status` which is always `0` (presumably). Indicates
 successful listing.
 
+Serialized: `PSDD#0#%`
+
 # RE
 
-Sender: `Client`
-Receiver: `Server`
+- Sender: `Client`
+- Receiver: `Server`
 
 (no fields)
 
 When the Server receives this, it should respond with `LE`.
 
+Serialized: `RE#%`
+
 # SCC
 
-Sender: `Server`
-Receiver: `Masterserver`
+- Sender: `Server`
+- Receiver: `Masterserver`
 
 | Key               | Type     | Rules |
 |-------------------|----------|-------|
@@ -175,10 +213,12 @@ Receiver: `Masterserver`
 Requests listing on the Masterserver.
 When the Masterserver receives this, it should list the Server and send `PSDD`.
 
+Serialized: `SCC#{port}#{name}#{description}#{server_software}#%`
+
 # SN
 
-Sender: `Masterserver`
-Receiver: `Client`
+- Sender: `Masterserver`
+- Receiver: `Client`
 
 | Key               | Type     | Rules |
 |-------------------|----------|-------|
@@ -192,10 +232,12 @@ Receiver: `Client`
 When the Client receives this it should append the single entry to
 the serverlist in the UI.
 
+Serialized: `SN#{entry number}#{ip}#{server version}#{port}#{name}#{desc}#%`
+
 # SR
 
-Sender: `Client`
-Receiver: `Masterserver`
+- Sender: `Client`
+- Receiver: `Masterserver`
 
 | Key               | Type     | Rules |
 |-------------------|----------|-------|
@@ -203,10 +245,12 @@ Receiver: `Masterserver`
 
 When Masterserver receives this, it should send the Server info at `entry_number`.
 
+Serialized: `SR#{entry_number}#%`
+
 # SV
 
-Sender: `Masterserver`
-Receiver: `Client`
+- Sender: `Masterserver`
+- Receiver: `Client`
 
 | Key       | Type     | Rules |
 |-----------|----------|-------|
@@ -214,10 +258,12 @@ Receiver: `Client`
 
 Version from the Masterserver.
 
+Serialized: `SV#{version}#%`
+
 # UM
 
-Sender: `Server`
-Receivers: `Client`
+- Sender: `Server`
+- Receiver: `Client`
 
 | Key       | Type     | Rules            |
 |-----------|----------|------------------|
@@ -226,17 +272,21 @@ Receivers: `Client`
 When the Client receives this, it should visually indicate that the player
 has been unmuted.
 
+Serialized: `UM#{char_id}#%`
+
 # VC
 
-Sender: `Client`
-Receivers: `Masterserver`
+- Sender: `Client`
+- Receiver: `Masterserver`
 
 Purpose unknown.
 
+Serialized: `VC#%`
+
 # IL
 
-Sender: `Server`
-Receivers: `Client`
+- Sender: `Server`
+- Receiver: `Client`
 
 | Key       | Type                 | Rules                                |
 |-----------|----------------------|--------------------------------------|
@@ -253,4 +303,4 @@ Receivers: `Client`
 This packet contains a list of all connected players.
 When the Client receives it, it should show a list of player data.
 
-FantaCode serialization: `IL#{ip}|{char_name}|{char_id}#...#%`
+Serialized: `IL#{player1_ip}|{player1_char_name}|{player1_char_id}#{player2_ip}|{player2_char_name}|{player2_char_id}#...#%` (note the unusual separator)
