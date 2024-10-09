@@ -47,7 +47,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 
 # ARUP
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key           | Type                 | Rules |
 |---------------|----------------------|-------|
@@ -83,7 +83,7 @@ Serialized:
 
 # askchaa
 
-Receivers: `Server`
+Receiver: `Server`
 
 (no fields)
 
@@ -93,7 +93,7 @@ Serialized: `askchaa#%`
 
 # ASS
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key         | Type        | Rules               |
 |-------------|-------------|---------------------|
@@ -105,7 +105,7 @@ Serialized: `ASS#{asset_url}#%`
 
 # AUTH
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key          | Type     | Rules      |
 |--------------|----------|------------|
@@ -133,7 +133,7 @@ Serialized: `BB#{message}#%`
 
 # BD
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key       | Type     | Rules                       |
 |-----------|----------|-----------------------------|
@@ -146,7 +146,7 @@ Serialized: `BD#{reason}#%`
 
 # BN
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key          | Type     | Rules                 |
 |--------------|----------|-----------------------|
@@ -253,7 +253,7 @@ Serialized: `CHECK#%`
 
 # DE
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key  | Type     | Rules |
 |------|----------|-------|
@@ -265,7 +265,7 @@ Serialized: `DE#{id}#%`
 
 # DONE
 
-Receivers: `Client`
+Receiver: `Client`
 
 (no fields)
 
@@ -276,7 +276,7 @@ Serialized: `DONE#%`
 
 # EE
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key           | Type     | Rules          |
 |---------------|----------|----------------|
@@ -291,7 +291,7 @@ Serialized:  `EE#{id}#{name}#{description}#{image}#%`
 
 # FA
 
-Receivers: `Client`
+Receiver: `Client`
 
 This packet indicates the areas available on the Server.
 
@@ -311,7 +311,7 @@ Serialized: `FA#{area1_name}#{area2_name}#...#%`
 
 # FL
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key        | Type            | Rules |
 |------------|-----------------|-------|
@@ -342,7 +342,7 @@ Serialized: `FL#{feature1}#{feature2}#...#%`
 
 # FM
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key          | Type            | Rules                           |
 |--------------|-----------------|---------------------------------|
@@ -357,7 +357,7 @@ Serialized: `FM#{track1}#{track2}#...#%`
 
 # HI
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key    | Type        | Rules |
 |--------|-------------|-------|
@@ -372,7 +372,7 @@ Serialized: `HI#{hdid}#%`
 
 # ID (Client)
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key             | Type     | Rules                       |
 |-----------------|----------|-----------------------------|
@@ -390,7 +390,7 @@ Serialized: `ID#{player_number}#{software}#{version}#%`
 
 # ID (Server)
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key        | Type     | Rules                       |
 |------------|----------|-----------------------------|
@@ -401,7 +401,7 @@ Serialized: `ID#{software}#{version}#%`
 
 # JD
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key     | Type     | Rules |
 |---------|----------|-------|
@@ -416,7 +416,7 @@ Serialized: `JD#{state}#%`
 
 # KB
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key       | Type     | Rules                       |
 |-----------|----------|-----------------------------|
@@ -429,7 +429,7 @@ Serialized: `KB#{reason}#%`
 
 # KK
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key       | Type     | Rules                       |
 |-----------|----------|-----------------------------|
@@ -442,7 +442,7 @@ Serialized: `KK#{reason}#%`
 
 # LE
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key        | Type                   | Rules |
 |------------|------------------------|-------|
@@ -464,7 +464,7 @@ Serialized: `LE#{evi1_name}&{evi1_description}&{evi1_image}#{evi2_name}&{evi2_de
 
 # MA
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key        | Type     | Rules |
 |------------|----------|-------|
@@ -527,7 +527,7 @@ Has its own page. See MS Packet Reference.
 
 # PE
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key           | Type     | Rules                   |
 |---------------|----------|-------------------------|
@@ -542,7 +542,7 @@ Serialized: `PE#{name}#{description}#{image}#%`
 
 # PN
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key                  | Type     | Rules                  |
 |----------------------|----------|------------------------|
@@ -558,7 +558,7 @@ Serialized: `PN#{players}#{max}#{server_description}#%`
 
 # PR
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key    | Type     | Rules |
 |--------|----------|-------|
@@ -576,7 +576,7 @@ Serialized: `PR#{id}#{type}#%`
 
 # PU
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key    | Type             | Rules |
 |--------|------------------|-------|
@@ -598,7 +598,7 @@ Serialized: `PU#{id}#{type}#{data}#%`
 
 # PV
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key         | Type             | Rules |
 |-------------|------------------|-------|
@@ -614,7 +614,7 @@ Serialized: `PV#{player_id}#CID#{char_id}#%`
 
 # RC
 
-Receivers: `Server`
+Receiver: `Server`
 
 (no fields)
 
@@ -624,7 +624,7 @@ Serialized: `RC#%`
 
 # RD
 
-Receivers: `Server`
+Receiver: `Server`
 
 (no fields)
 
@@ -634,7 +634,7 @@ Serialized: `RD#%`
 
 # RM
 
-Receivers: `Server`
+Receiver: `Server`
 
 (no fields)
 
@@ -644,7 +644,7 @@ Serialized: `RM#%`
 
 # SC
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key         | Type            | Rules                          |
 |-------------|-----------------|--------------------------------|
@@ -669,7 +669,7 @@ Serialized: `SC#{char1_name}&{char1_desc}&{char1_evidence}&#{char2_name}&{char2_
 
 # SETCASE
 
-Receivers: `Server`
+Receiver: `Server`
 
 | Key        | Type     | Rules  |
 |------------|----------|--------|
@@ -695,7 +695,7 @@ Serialized: `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
 
 # SM
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key          | Type            | Rules                           |
 |--------------|-----------------|---------------------------------|
@@ -717,7 +717,7 @@ Serialized: `SM#{music1_name}#{music2_name}#...#%`
 
 # ST
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key             | Type     | Rules          |
 |-----------------|----------|----------------|
@@ -732,7 +732,7 @@ Serialized: `ST#{subtheme_name}#{should_reload}#%`
 
 # TI
 
-Receivers: `Client`
+Receiver: `Client`
 
 | Key        | Type     | Rules            |
 |------------|----------|------------------|
