@@ -580,7 +580,7 @@ This packet was added in 2.8.
 
 #### Area list
 
-**Server:** `FM#{area1}#{area2}#...#%`
+**Server:** `FA#{area1}#{area2}#...#%`
 
 Like the standard music list packet, but excludes music and only lists areas.
 
