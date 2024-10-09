@@ -292,6 +292,8 @@ Serialized: `VC#%`
 |-----------|----------------------|--------------------------------------|
 | `players` | `array[player_data]` | `player_data` must be a valid object |
 
+Sends a list of player data to the Client.
+
 ## player_data
 
 | Key         | Type     | Rules  |
