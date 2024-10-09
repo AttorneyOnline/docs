@@ -75,6 +75,12 @@ For instance, a packet FantaCoded as `ARUP#0#4#3#7#2#0#0#%` would mean that:
 - There are 2 in the fourth,
 - And 0 in the last two.
 
+Serialized:
+- `ARUP#0#{area1_players}#{area2_players}#...#%`
+- `ARUP#1##{area1_status}#{area2_status}#...#%`
+- `ARUP#2##{area1_cm}#{area2_cm}#...#%`
+- `ARUP#3##{area1_locked}#{area2_locked}#...#%`
+
 # askchaa
 
 Receivers: `Server`
@@ -82,6 +88,8 @@ Receivers: `Server`
 (no fields)
 
 When Server receives `askchaa` it should respond with `SI`.
+
+Serialized: `askchaa#%`
 
 # ASS
 
@@ -92,6 +100,8 @@ Receivers: `Client`
 | `asset_url` | `string`    | Valid URL (http(s)) |
 
 Indicates what base URL Client should use for fetching assets via web.
+
+Serialized: `ASS#{asset_url}#%`
 
 # AUTH
 
@@ -108,6 +118,8 @@ Valid states are:
 - `0`, Unsuccessful login attempt.
 - `-1`, Logout. Hides the guard button.
 
+Serialized: `AUTH#{auth_state}#%`
+
 # BB
 
 | Key       | Type     | Rules              |
@@ -116,6 +128,8 @@ Valid states are:
 
 When the Client receives this, it should show the player `message`
 in a popup window or similar.
+
+Serialized: `BB#{message}#%`
 
 # BD
 
@@ -128,17 +142,21 @@ Receivers: `Client`
 When the Client receives this, it should inform the player that they cannot
 join the server because they are banned and give `reason` as the reason.
 
+Serialized: `BD#{reason}#%`
+
 # BN
 
 Receivers: `Client`
 
-| Key          | Type     | Rules        |
-|--------------|----------|--------------|
-| `background` | `string` |              |
-| `position`   | `string` |              |
+| Key          | Type     | Rules                 |
+|--------------|----------|-----------------------|
+| `background` | `string` |                       |
+| `position`   | `string` | Optional(Default: "") |
 
 When Client receives this, it should set the background to `background`
 and the position to `position`.
+
+Serialized: `BN#{background}#{position}#%`
 
 # CASEA
 
@@ -147,15 +165,13 @@ Receivers: `Server, Client`
 | Key          | Type     | Rules          |
 |--------------|----------|----------------|
 | `case_title` | `string` | Length `<=255` |
-| `message`    | `string` | Length `<=255` |
 | `need_def`   | `number` | `0, 1`         |
 | `need_pro`   | `number` | `0, 1`         |
 | `need_judge` | `number` | `0, 1`         |
 | `need_jury`  | `number` | `0, 1`         |
 | `need_steno` | `number` | `0, 1`         |
 
-- `case_title`: the title of the case being played
-- `message`: the title of the case, but may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
+- `case_title`: the title of the case being played, may be modified by the server -- for example, by default, tsuserver adds the "X user needs this and that for Turnabout Y." text instead.
 - `need_def`: `1` if the user needs a defense attorney, `0` otherwise
 - `need_pro`: `1` if the user needs a prosecutor, `0` otherwise
 - `need_judge`: `1` if the user needs a judge, `0` otherwise
@@ -163,7 +179,9 @@ Receivers: `Server, Client`
 - `need_steno`: `1` if the user need a stenographer, `0` otherwise
 
 When Server receives this, it should send it to all connected Clients.
-When Client receives this, it can render `message` in OOC chat, but may disable it through configuration.
+When Client receives this, it can render `case_title` in OOC chat, but may disable it through configuration.
+
+Serialized: `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{need_steno}#%`
 
 # CC
 
@@ -182,7 +200,7 @@ tries to select the character identified by `char_id`.
 When the Server receives this, it should send `PV` if the character was
 selected successfully.
 
-Serialized as `CC#0#{char_id}#{hdid}#%` (hardcoded 0)
+Serialized: `CC#0#{char_id}#{hdid}#%` (note the hardcoded 0)
 
 # CH
 
@@ -198,6 +216,8 @@ This indicates that the Client is still connected.
 
 When the Server receives `CH` it should respond with `CHECK` and
 reset the timeout timer for the Client.
+
+Serialized: `CH#{char_id}#%`
 
 # CharsCheck
 
@@ -218,6 +238,8 @@ The position in the array decides which character this corresponds to.
 When the client receives this packet, it should visually indicate which
 characters are taken.
 
+Serialized: `CharsCheck#{char0_taken}#{char1_taken}#...#%`
+
 # CHECK
 
 Receiver: `Client`
@@ -226,6 +248,8 @@ Receiver: `Client`
 
 Sent by the server as a response to `CH`. No further action is needed
 by the client.
+
+Serialized: `CHECK#%`
 
 # DE
 
@@ -237,14 +261,18 @@ Receivers: `Server`
 
 When the Server receives this, it should delete the evidence with the associated `id`.
 
+Serialized: `DE#{id}#%`
+
 # DONE
 
 Receivers: `Client`
 
 (no fields)
 
-When the Client receives this, the joining process is complete and it
+When the Client receives this, the joining process is complete, and it
 should render character select.
+
+Serialized: `DONE#%`
 
 # EE
 
@@ -259,9 +287,13 @@ Receivers: `Server`
 
 When the Server receives this, it should update the evidence with the associated `id` with the new data.
 
+Serialized:  `EE#{id}#{name}#{description}#{image}#%`
+
 # FA
 
 Receivers: `Client`
+
+This packet indicates the areas available on the Server.
 
 | Key     | Type               | Rules        |
 |---------|--------------------|--------------|
@@ -274,6 +306,8 @@ Receivers: `Client`
 | `name` | `string` | Length `<=255` |
 
 When the Client receives this, it should update its area list accordingly.
+
+Serialized: `FA#{area1_name}#{area2_name}#...#%`
 
 # FL
 
@@ -304,6 +338,8 @@ Valid features and what they indicate support for:
 - `expanded_desk_mods`, using `deskmod` modifiers 2 through 5 in `MS`
 - `auth_packet`, using the `AUTH` packet
 
+Serialized: `FL#{feature1}#{feature2}#...#%`
+
 # FM
 
 Receivers: `Client`
@@ -317,6 +353,8 @@ For the `music_data` object, see `SM`. This packet functions like `SM`, but does
 When received, the Client should store this data in memory for later use.
 It should also display a list of these (using `name`) to the user.
 
+Serialized: `FM#{track1}#{track2}#...#%`
+
 # HI
 
 Receivers: `Server`
@@ -329,6 +367,8 @@ Receivers: `Server`
 
 When the Server receives `HI` it should
 respond with `ID`. See also Client Joining Process.
+
+Serialized: `HI#{hdid}#%`
 
 # ID (Client)
 
@@ -346,6 +386,8 @@ Receivers: `Client`
 
 When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
+Serialized: `ID#{player_number}#{software}#{version}#%`
+
 # ID (Server)
 
 Receivers: `Server`
@@ -354,6 +396,8 @@ Receivers: `Server`
 |------------|----------|-----------------------------|
 | `software` | `string` | Name of software            |
 | `version`  | `string` | Should be in format `x.y.z` |
+
+Serialized: `ID#{software}#{version}#%`
 
 # JD
 
@@ -368,6 +412,8 @@ When Client receives this, it should show or hide judge controls:
 - `0`: Hide the judge controls.
 - `1`: Show the judge controls.
 
+Serialized: `JD#{state}#%`
+
 # KB
 
 Receivers: `Client`
@@ -379,6 +425,8 @@ Receivers: `Client`
 When the Client receives this, it should notify the player that they
 have been banned and give `reason` as the reason.
 
+Serialized: `KB#{reason}#%`
+
 # KK
 
 Receivers: `Client`
@@ -389,6 +437,8 @@ Receivers: `Client`
 
 When the Client receives this, it should notify the player that they
 have been kicked and give `reason` as the reason.
+
+Serialized: `KK#{reason}#%`
 
 # LE
 
@@ -410,6 +460,8 @@ When Client receives `LE` it should update its evidence list
 and show the new evidence using the values in the packet. `image` is
 the filename of the image to use.
 
+Serialized: `LE#{evi1_name}&{evi1_description}&{evi1_image}#{evi2_name}&{evi2_description}&{evi2_image}#...#%`
+
 # MA
 
 Receivers: `Client`
@@ -425,6 +477,8 @@ This packet indicates that moderator action has been taken against a player.
 - `id`: Id of the player.
 - `duration`: Duration of the action in minutes.
 - `reason`: Provided reason by the moderator.
+
+Serialized: `MA#{id}#{duration}#{reason}#%`
 
 # MC
 
@@ -463,6 +517,10 @@ Since 2.8, the track is expected to loop clientside. Before 2.8, the track was n
 
 The canonical "empty track" is `~stop.mp3`.
 
+Serialized:
+- Server as Receiver: `MC#{songname}#{char_id}#{showname}#{effects}#%`
+- Client as Receiver: `MC#{songname}#{char_id}#{showname}#{looping}#{channel}#{effects}#%`
+
 # MS
 
 Has its own page. See MS Packet Reference.
@@ -477,22 +535,26 @@ Receivers: `Server`
 | `description` | `string` | Length `<=255`          |
 | `image`       | `string` | Length `<=255`          |
 
-When the Server receives this it should update its corresponding evidence list
+When the Server receives this it should add an evidence item to the corresponding evidence list
 and send `LE` to all Clients in the corresponding area.
+
+Serialized: `PE#{name}#{description}#{image}#%`
 
 # PN
 
 Receivers: `Client`
 
-| Key                  | Type     | Rules            |
-|----------------------|----------|------------------|
-| `player_count`       | `number` | Positive integer |
-| `max_players`        | `number` | Positive integer |
-| `server_description` | `string` | Optional field   |
+| Key                  | Type     | Rules                  |
+|----------------------|----------|------------------------|
+| `player_count`       | `number` | Positive integer       |
+| `max_players`        | `number` | Positive integer       |
+| `server_description` | `string` | Optional, default:`""` |
 
 `player_count` indicates how many players are currently on the Server.
 `max_players` also indicates how many players are the most permitted. Note that this is rarely enforced in practice.
 `Server description` is a textual description of the server.
+
+Serialized: `PN#{players}#{max}#{server_description}#%`
 
 # PR
 
@@ -509,6 +571,8 @@ When the Client receives this, it should add or remove a player to their playerl
 - `type` is the update type:
 - - `0`: Add player
 - - `1`: Remove player
+
+Serialized: `PR#{id}#{type}#%`
 
 # PU
 
@@ -530,6 +594,8 @@ When the Client receives this, it should update data about a player in their pla
 - - `3`: Update player's area id
 - `data` is the new data.
 
+Serialized: `PU#{id}#{type}#{data}#%`
+
 # PV
 
 Receivers: `Client`
@@ -542,7 +608,7 @@ Receivers: `Client`
 When the Client receives this, it should hide char select and
 initialize the character for use, using the `char_id` provided.
 
-Serialized as `PV#{player_id}#CID#{char_id}#%`
+Serialized: `PV#{player_id}#CID#{char_id}#%`
 
 > **Note:** A `PV` response may be sent at any time to force a character switch, and the character ID may not necessarily be the one requested by the player.
 
@@ -554,6 +620,8 @@ Receivers: `Server`
 
 When the Server receives `RC` it should respond with `SC`.
 
+Serialized: `RC#%`
+
 # RD
 
 Receivers: `Server`
@@ -562,6 +630,8 @@ Receivers: `Server`
 
 When the Server receives `RD` it should respond with `DONE`.
 
+Serialized: `RD#%`
+
 # RM
 
 Receivers: `Server`
@@ -569,6 +639,8 @@ Receivers: `Server`
 (no fields)
 
 When the Server receives `RM`, it should respond with `SM`.
+
+Serialized: `RM#%`
 
 # SC
 
@@ -580,19 +652,20 @@ Receivers: `Client`
 
 ## char_data
 
-| Key        | Type     | Rules          |
-|------------|----------|----------------|
-| `id`       | `number` | Value `>=0`    |
-| `name`     | `string` | Length `<=100` |
-| `desc`     | `string` | Length `<=100` |
-| `evidence` | `string` | Length `<=100` |
+| Key        | Type     | Rules                                  |
+|------------|----------|----------------------------------------|
+| `name`     | `string` | Length `<=100`                         |
+| `desc`     | `string` | Length `<=100`, optional, default=`""` |
+| `evidence` | `string` | Length `<=100`, optional, default=`""` |
 
-`id` is the character's unique ID
-`name` is the character's name
-`desc` is the character's description. This is mostly unused.
-`evidence` is the character's evidence(?).
+- `name` is the character's name
+- `desc` is the character's description. This is mostly unused.
+- `evidence` is the character's evidence(?). This is mostly unused.
 
-When received, the Client should store this data in memory for later use.
+When received, the Client should store this data in memory for later use and send `RM` to the Server
+in case it is sent as part of a Joining Process.
+
+Serialized: `SC#{char1_name}&{char1_desc}&{char1_evidence}&#{char2_name}&{char2_desc}&{char2_evidence}#...#%`
 
 # SETCASE
 
@@ -618,6 +691,8 @@ Receivers: `Server`
 
 Not clear how this is used in practice.
 
+Serialized: `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
+
 # SM
 
 Receivers: `Client`
@@ -638,6 +713,8 @@ is it interpreted as an area.
 When received, the Client should store this data in memory for later use.
 It should also display a list of these (using `name`) to the user (both music and areas).
 
+Serialized: `SM#{music1_name}#{music2_name}#...#%`
+
 # ST
 
 Receivers: `Client`
@@ -650,6 +727,8 @@ Receivers: `Client`
 When the Client receives this, it should switch to the subtheme specified by
 `subtheme_name`. If `should_reload` is `1`, it should reload the theme.
 If it's 0, it does not need to reload.
+
+Serialized: `ST#{subtheme_name}#{should_reload}#%`
 
 # TI
 
@@ -674,6 +753,8 @@ Typically, `0` is used as a "global" timer (be it server-wide or per-"hub")
 
 `time`, the time to display on the timer, in milliseconds.
 
+Serialized: `TI#{timer_id}#{command}#{time}#%`
+
 # ZZ
 
 Receivers: `Client, Server`
@@ -687,3 +768,5 @@ This packet is used to notify mods of rulebreaking (call mod).
 When the Server receives this, it should send the same packet to all connected mods.
 When the Client receives this, it should send an audio/visual notification and show the reason somewhere
 (subject to Client settings).
+
+Serialized: `ZZ#{reason}#%`
