@@ -250,7 +250,6 @@ The modifier value controls pre-animations, sounds, and zooms. The valid inputs 
 
 This option allows an emote to either force the desk/witness stand/overlay to be displayed, or force it to disappear. This takes precedence over all other factors affecting desk visibility.
 
-- `-1`: Forcibly show the desks while this emote is displayed, except for `jud`/`hld`/`hlp` positions.
 - `0`: Forcibly hide the desks while this emote is displayed.
 - `1`: Forcibly show the desks while this emote is displayed.
 - `2`: Hides the overlay during  pre-animation, shows it again once the  pre-animation is finished
