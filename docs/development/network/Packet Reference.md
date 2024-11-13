@@ -221,6 +221,35 @@ reset the timeout timer for the Client.
 
 Serialized: `CH#{char_id}#%`
 
+# CT (Client)
+
+Receiver: `Server`
+
+| Key       | Type     | Rules            |
+|-----------|----------|------------------|
+| `name`    | `string` |                  |
+| `message` | `string` |                  |
+
+Represents a simple message with name and text. OOC is used to convey information without interrupting ongoing gameplay.
+
+When the Server receives `CT (Client)` it should broadcast `CT (Server)` to all clients in the area.
+
+Serialized: `CT#{name}#{message}#%`
+
+# CT (Server)
+
+Receiver: `Client`
+
+| Key              | Type     | Rules            |
+|------------------|----------|------------------|
+| `name`           | `string` |                  |
+| `message`        | `string` |                  |
+| `is_from_server` | `number` | Optional         |
+
+- `is_from_server` - If set to 1, indicates a server-sent system message rather than a player message.
+
+Serialized: `CT#{name}#{message}#{is_from_server}#%`
+
 # CharsCheck
 
 Receiver: `Client`
@@ -669,6 +698,8 @@ Receiver: `Client`/`Server`
 Since 2.9, `animation` may also be an arbitrary string, in which case that string indicates both which animation to display and which sound effect to play.
 
 When the server receives `RT`, it should broadcast it to all clients in the current area.
+
+Serialized: `RT#{animation}#%`
 
 # RM
 
