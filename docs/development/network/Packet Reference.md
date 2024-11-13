@@ -61,11 +61,11 @@ Should only be sent to clients who have sent `arup` in `FL`.
 
 `update_type` indicates what data is being updated
 
-- `0`: player counts, ts means `update_data` contains the number of players in each area
+- `0`: player counts, this means `update_data` contains the number of players in each area
 - `1`: area statuses, `update_data` contains the status of each area
   -  Valid statuses: `IDLE`, `LOOKING-FOR-PLAYERS`, `CASING`, `RECESS`, `RP`, `GAMING`
-- `2`: case managers, ts means `update_data` contains the name of CM(s)? (uncertain)
-  - Ts should be set to `FREE` if there are no case managers in the area.
+- `2`: case managers, this means `update_data` contains the name of CM(s)? (uncertain)
+  - This should be set to `FREE` if there are no case managers in the area.
 - `3`: locked states, (string, not boolean)
   - Valid lock states: `FREE`, `SPECTATABLE`, `LOCKED`
 
@@ -73,7 +73,7 @@ For instance, a packet FantaCoded as `ARUP#0#4#3#7#2#0#0#%` would mean that:
 
 - There are 4 players in the first area (or, technically, in the zeroth area)
 - There are 3 in the second,
-- There are 7 in the trd,
+- There are 7 in the third,
 - There are 2 in the fourth,
 - And 0 in the last two.
 
