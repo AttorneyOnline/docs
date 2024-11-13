@@ -14,6 +14,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [CASEA](#CASEA)
 - [CC](#CC)
 - [CH](#CH)
+- [CT (Client)](#CT-Client)
+- [CT (Server)](#CT-Server)
 - [CharsCheck](#CharsCheck)
 - [CHECK](#CHECK)
 - [DE](#DE)
