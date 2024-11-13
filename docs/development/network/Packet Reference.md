@@ -14,6 +14,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [CASEA](#CASEA)
 - [CC](#CC)
 - [CH](#CH)
+- [CT (Client)](#CT-Client)
+- [CT (Server)](#CT-Server)
 - [CharsCheck](#CharsCheck)
 - [CHECK](#CHECK)
 - [DE](#DE)
@@ -23,6 +25,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [FL](#FL)
 - [FM](#FM)
 - [HI](#HI)
+- [HP](#HP)
 - [ID (Client)](#ID-Client)
 - [ID (Server)](#ID-Server)
 - [JD](#JD)
@@ -39,6 +42,7 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [PV](#PV)
 - [RC](#RC)
 - [RD](#RD)
+- [RT](#RT)
 - [SC](#SC)
 - [SETCASE](#SETCASE)
 - [ST](#ST)
@@ -219,6 +223,35 @@ reset the timeout timer for the Client.
 
 Serialized: `CH#{char_id}#%`
 
+# CT (Client)
+
+Receiver: `Server`
+
+| Key       | Type     | Rules            |
+|-----------|----------|------------------|
+| `name`    | `string` |                  |
+| `message` | `string` |                  |
+
+Represents a simple message with name and text. OOC is used to convey information without interrupting ongoing gameplay.
+
+When the Server receives `CT (Client)` it should broadcast `CT (Server)` to all clients in the area.
+
+Serialized: `CT#{name}#{message}#%`
+
+# CT (Server)
+
+Receiver: `Client`
+
+| Key              | Type     | Rules            |
+|------------------|----------|------------------|
+| `name`           | `string` |                  |
+| `message`        | `string` |                  |
+| `is_from_server` | `number` | Optional         |
+
+- `is_from_server` - If set to 1, indicates a server-sent system message rather than a player message.
+
+Serialized: `CT#{name}#{message}#{is_from_server}#%`
+
 # CharsCheck
 
 Receiver: `Client`
@@ -370,6 +403,24 @@ respond with `ID`. See also Client Joining Process.
 
 Serialized: `HI#{hdid}#%`
 
+# HP
+
+Receiver: `Client`/`Server`
+
+| Key             | Type     | Rules                       |
+|-----------------|----------|-----------------------------|
+| `bar`           | `number` | 1 or 2 only                 |
+| `value`         | `number` | 0 through 10 inclusive      |
+
+Updates the penalty bar.
+
+- `bar` should be either 1 (for the defense bar) or 2 (for the prosecution bar)
+- `value` should be a value between 0 and 10 inclusive representing a percentage out of 10 to display on the bar
+
+When the Client sends `HP`, the server should broadcast it to all clients in the area. The server may also use it when a client changes areas to update the bars.
+
+Serialized: `HP#{bar}#{value}#%`
+
 # ID (Client)
 
 Receiver: `Client`
@@ -380,9 +431,9 @@ Receiver: `Client`
 | `software`      | `string` |                             |
 | `version`       | `string` | Should be in format `x.y.z` |
 
-`player_number` should be the number of players currently on the server
-`software` should be the name of the software the server is on
-`version` is the server software's version
+- `player_number` should be the number of players currently on the server
+- `software` should be the name of the software the server is on
+- `version` is the server software's version
 
 When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
@@ -631,6 +682,26 @@ Receiver: `Server`
 When the Server receives `RD` it should respond with `DONE`.
 
 Serialized: `RD#%`
+
+# RT
+
+Receiver: `Client`/`Server`
+
+| Key         | Type             | Rules |
+|-------------|------------------|-------|
+| `animation` | `string`         |       |
+
+`animation` may be any of the following values:
+- `testimony1` - "Witness Testimony"
+- `testimony2` - "Cross-Examination"
+- `judgeruling#0` - "Not Guilty" (since 2.6)
+- `judgeruling#1` - "Guilty" (since 2.6)
+
+Since 2.9, `animation` may also be an arbitrary string, in which case that string indicates both which animation to display and which sound effect to play.
+
+When the server receives `RT`, it should broadcast it to all clients in the current area.
+
+Serialized: `RT#{animation}#%`
 
 # RM
 
