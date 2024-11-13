@@ -383,8 +383,8 @@ Receiver: `Client`/`Server`
 
 Updates the penalty bar.
 
-`bar` should be either 1 (for the defense bar) or 2 (for the prosecution bar)
-`value` should be a value between 0 and 10 inclusive representing a percentage out of 10 to display on the bar
+- `bar` should be either 1 (for the defense bar) or 2 (for the prosecution bar)
+- `value` should be a value between 0 and 10 inclusive representing a percentage out of 10 to display on the bar
 
 When the Client sends `HP`, the server should broadcast it to all clients in the area. The server may also use it when a client changes areas to update the bars.
 
@@ -400,9 +400,9 @@ Receiver: `Client`
 | `software`      | `string` |                             |
 | `version`       | `string` | Should be in format `x.y.z` |
 
-`player_number` should be the number of players currently on the server
-`software` should be the name of the software the server is on
-`version` is the server software's version
+- `player_number` should be the number of players currently on the server
+- `software` should be the name of the software the server is on
+- `version` is the server software's version
 
 When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
