@@ -8,7 +8,7 @@ Do not use these headers when defining new packets.
 - [askforservers](#askforservers)
 - [decryptor](#decryptor)
 - [CHECK](#CHECK)
-- [CT](#CT)
+- [CT (Masterserver)](#CT-masterserver)
 - [DOOM](#DOOM)
 - [HI](#HI)
 - [ID](#ID)
@@ -82,7 +82,7 @@ Keepalive packet.
 
 Serialized: `CHECK#%`
 
-# CT
+# CT (Masterserver)
 
 - Sender: `Client, Masterserver`
 - Receivers: `Client, Masterserver`
