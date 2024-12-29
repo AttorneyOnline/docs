@@ -83,7 +83,7 @@ Reference of fields:
   - `1`: "Hold it!"
   - `2`: "Objection!"
   - `3`: "Take that!"
-  - `4&{name}`: custom shout (since 2.8)
+  - `4` or `4&{name}`: custom shout (since 2.6 or 2.8 respectively)
 
 - `evidence`: ID of the evidence presented. 0 is no evidence presented, so evidence ID effectively starts from 1.
 
