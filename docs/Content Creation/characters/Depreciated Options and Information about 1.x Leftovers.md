@@ -2,7 +2,7 @@
 
 Older char.inis may contain sections or options not mentioned in this guide. Here are a few of them and a brief explanation of each, for posterity:
 
-- `firstmode`: Technically never deprecated - `firstmode` was never used by AO2 in the first place. This is another holdover from AO1, and if you see this in a char.ini you can probably assume it's _very_ old. The purpose of `firstmode` was to work around a limitation in the unofficial Attorney Online 1.8 client which you can read more about [here.](https://sites.google.com/site/attorneyonlinedev/updates/asmallpatchandastoryaboutbuttons)
+- - `firstmode`: Technically never deprecated - `firstmode` was never used by AO2 in the first place. This is another holdover from AO1, and if you see this in a char.ini you can safely assume it's _very_ old. The purpose of `firstmode` was to dictate how many emotes were selectable on the first page of emotes, due to limitations in how Attorney Online 1.X displayed them resulting in a maximum of 20 emotes without clipping into the IC Log. It was altered in the unofficial Attorney Online 1.8 version as seen [here](https://web.archive.org/web/20201025015210/https://sites.google.com/site/attorneyonlinedev/updates/asmallpatchandastoryaboutbuttons) to allow for theoretically infinite emotes without this clipping issue, though it still affected how many emote buttons would display on the first page.
 
 - `shouts`: (Depreciated in 2.9.0, functionality merged with `chat`) Modifies the interjections, zooms, and realization flash your character will use if they aren't included in your character folder. These are located in `misc/`, just like `chat` - in fact, they often share a folder.
 
