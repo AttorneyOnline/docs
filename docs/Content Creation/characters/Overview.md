@@ -123,6 +123,8 @@ number = 13
 
 ### `[Options]`
 
+#### ❗❗ Options marked "(optional)" are optional! Consider leaving out options which don't need changing. ❗❗
+
 - `name`: specifies which folder to look for character assets, i.e. this should be named the same as the character folder. (Mischievious players can change this name to something else to use another character; this is called _ini-swapping._ However, this ini-swap method is unnecessary, as AO 2.9.x introduced the ini-swap dropdown bar)
 
 - `showname` (optional): this name will appear on the nameplate whenever the character speaks, however it is fetched locally which means if you write `showname = FINIX RAIT`, only you will see it. If you want to change your nameplate for everyone, type it in the "Showname" field while playing.
@@ -147,10 +149,6 @@ number = 13
   - Assuming `chat_font` and `chat_size` are not set, this will also use the custom chatbox's font settings if it has them.
   > **TODO:** `misc/` folders have become somewhat more like miniature themes as of 2.8.4, and should have either a section in this guide or their own page. - in1tiate
 
-- `chat_font`: (optional, defaults to either the one specified by `chat` or the one in your theme, in that order) modifies the font your message text will be in. This is clientside, so don't get any ideas about screwing with people by setting it to Comic Sans - you'll only be screwing with yourself!
-
-- `chat_size`: (optional, same defaults as `chat_font`) modifies the size of your message text. Like `chat_font`, this is also clientside.
-
 - `effects` (optional, defaults to `default/effects`): specifies misc folder to search for overlay effects, like `chat` and `shouts`.
 
 - `realization` (optional): specifies custom realization sound to be played; must be located in `base/sound/general`.
@@ -169,7 +167,7 @@ This will only apply to the emotes which have been set to use it via `[OptionsN]
 #### `[Shouts]` (optional)
 With 2.9.0, interjections are now logged in the IC logs. This sections allows for content creators to define both custom interjections, and custom messages for each character's interjection. For examples in-action, please look at Apollo's `GOTCHA!`  and Miles' `EUREKA!`
 
-You **do not need** to define `holdit`, `objection`, or `takethat` - these values are already handled by the client itself. You should only override them when a character's default shouts are different from the default ones.
+#### ❗❗ You **do not need** to define `holdit`, `objection`, or `takethat` - these values are already handled by the client itself. You should only override them when a character's default shouts are different from the default ones.
  
 ### `[Time]` (optional)
 
