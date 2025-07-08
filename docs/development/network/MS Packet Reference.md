@@ -102,7 +102,10 @@ Reference of fields:
   - `3`: orange
   - `4`: blue (disables talking animation)
   - `5`: yellow
-  - `6`: rainbow (removed in 2.8)
+  - `6`: pink
+  - `7`: cyan
+  - `8`: grey
+  - `9`: rainbow
 
 - `showname`: If used, this will show a custom name (showname) for the character.
 
