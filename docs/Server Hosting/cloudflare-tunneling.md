@@ -89,10 +89,6 @@ This should correctly advertise the server as using secure websockets and let cl
 Note that if you used a different port than 50001 earlier, you have to change that here too.
 The domain here (ao.example.com) is just an example, you'll need to use yours to make it work.
 
-(As a sidenote, KFO-Server will technically advertise its websocket port as 50001, but trying to directly connect
-on that port won't work.
-But with this config, the server should advertise a secure websocket port and clients should always use that instead, so it's fine.)
-
 ## Debugging issues
 
 If you're running into issues, you should first check the following:
