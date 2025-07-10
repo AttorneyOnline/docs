@@ -7,9 +7,9 @@ As an added bonus, it permits clients to connect via wss (secure websockets), wh
 
 You will need an account and a domain registered in cloudflare. This requires a small yearly payment, but it's quite simple to set up. You can get started with that [here](https://domains.cloudflare.com/).
 
-## Process
+## Setting up the tunnel
 
-For this demonstration, we will use troidtech.com as an example domain.
+For this demonstration, we will use example.com as an example domain. When setting this up, please replace example.com with your own domain.
 
 First, you will want to go to [one.dash.cloudflare.com](https://one.dash.cloudflare.com/)
 
@@ -53,4 +53,71 @@ Once you start cloudflared, you should see it come up under 'Connectors':
 
 ![Cloudflared running](https://i.imgur.com/1v5STux.png)
 
-Then, you can click "Next".
+Then, you can click "Next":
+
+![Next](https://i.imgur.com/9Dd1fyp.png)
+
+In this section, you need to fill out some info.
+- Subdomain: can be anything, but often good to keep it simple like 'ao'
+- Domain: choose the domain you want to use from the dropdown
+- Type: HTTP
+- URL: localhost:50001
+
+You can use a different port than 50001 as long as you do that in the config file later as well.
+Once this is done, click 'Complete setup'.
+Assuming cloudflared is running, you should see something like this:
+
+![Cloudflared running](https://i.imgur.com/0ZZzyZW.png)
+
+## Configuring the server
+
+### KFO-Server
+
+If you are using KFO-Server, use the following configuration in config.yaml:
+
+```yaml
+use_websockets: true
+websocket_port: 50001
+use_securewebsockets: true
+secure_websocket_port: 443
+use_masterserver: true
+masterserver_custom_hostname: ao.example.com
+```
+
+This should correctly advertise the server as using secure websockets and let clients connect.
+
+Note that if you used a different port than 50001 earlier, you have to change that here too.
+The domain here (ao.example.com) is just an example, you'll need to use yours to make it work.
+
+(As a sidenote, KFO-Server will technically advertise its websocket port as 50001, but trying to directly connect
+on that port won't work.
+But with this config, the server should advertise a secure websocket port and clients should always use that instead, so it's fine.)
+
+## Debugging issues
+
+If you're running into issues, you should first check the following:
+- Is your AO server running?
+- Is your cloudflared tunnel running?
+- Is your AO server listening to the correct port?
+
+You can always construct the webAO connection URL like this:
+```
+https://web.aceattorneyonline.com/client.html?mode=join&connect=wss://ao.example.com
+```
+
+Then simply replacing ao.example.com with your own domain.
+
+If it doesn't connect, you can use `wscat` to debug it.
+You can do something like this:
+```
+wscat --connect wss://ao.example.com
+```
+
+What you're looking for here is the following
+```
+Connected (press CTRL+C to quit)
+< decryptor#NOENCRYPT#%
+>
+```
+
+That means the AO server accepted the connection and should in principle be joinable from the machine you're running wscat on.
