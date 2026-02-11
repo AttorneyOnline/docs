@@ -642,9 +642,9 @@ When the Client receives this, it should update data about a player in their pla
 
 - `id` is the player's ID.
 - `type` is the data type:
-- - `0`: Update player's name
-- - `1`: Update player's character id
-- - `2`: Update player's character name
+- - `0`: Update player's OOC name
+- - `1`: Update player's character name
+- - `2`: Update player's showname
 - - `3`: Update player's area id
 - `data` is the new data.
 
