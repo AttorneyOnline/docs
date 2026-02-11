@@ -621,6 +621,9 @@ Receiver: `Client`
 
 When the Client receives this, it should add or remove a player to their playerlist.
 
+The Server should send the initial playerlist using this after Client has sent `RD` as part of the joining process
+and keep the Client updated whenever there is a change in the playerlist.
+
 - `id` is the player's ID.
 - `type` is the update type:
 - - `0`: Add player
@@ -639,6 +642,9 @@ Receiver: `Client`
 | `data` | `string\|number` |       |
 
 When the Client receives this, it should update data about a player in their playerlist.
+
+The Server should send the initial playerlist using this after Client has sent `RD` as part of the joining process
+and keep the Client updated whenever there is a change in the playerlist.
 
 - `id` is the player's ID.
 - `type` is the data type:
