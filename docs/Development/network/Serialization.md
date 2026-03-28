@@ -35,7 +35,7 @@ escaped if they appear in values.
 
 | Character | Escape code |
 |-----------|-------------|
-| `#`       | `<pound>`   |
+| `#`       | `<num>`     |
 | `&`       | `<and>`     |
 | `%`       | `<percent>` |
 | `$`       | `<dollar>`  |
