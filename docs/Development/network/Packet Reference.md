@@ -45,6 +45,8 @@ In these cases, the packet is marked with (Client) and (Server), respectively.
 - [RM](#RM)
 - [RT](#RT)
 - [SC](#SC)
+- [SD](#SD)
+- [SP](#SP)
 - [SETCASE](#SETCASE)
 - [SI](#SI)
 - [SM](#SM)
@@ -545,7 +547,7 @@ Receivers: `Server, Client`
 | `showname` | `string` | Length `<=255`          |
 | `looping`  | `string` | Not present from Client |
 | `channel`  | `string` | Not present from Client |
-| `effects`  | `number` | `0-2`                   |
+| `effects`  | `number` | Bitfield                |
 
 The purpose of this packet is two-fold. The simplest use is by the Client to change
 area. In that case, it simply sends area name in `name` and its current character in `char_id`.
@@ -564,10 +566,10 @@ Since 2.8, the track is expected to loop clientside. Before 2.8, the track was n
 - `looping`: if `1`, indicates client-side looping. `0` otherwise.
 - `channel`: channel number to play on (`0-3`)
   - Typically, channel `0` is used as the main BGM channel, whereas channel `1` is used for area-specific soundscapes.
-- `effects`: transition effects:
-  - `0`: fade in
-  - `1`: fade out
-  - `2`: sync position
+- `effects`: a bitfield of transition effects:
+  - Bit 0: fade in
+  - Bit 1: fade out
+  - Bit 2: sync position
 
 The canonical "empty track" is `~stop.mp3`.
 
@@ -705,6 +707,7 @@ Receiver: `Client`/`Server`
 - `testimony2` - "Cross-Examination"
 - `judgeruling#0` - "Not Guilty" (since 2.6)
 - `judgeruling#1` - "Guilty" (since 2.6)
+- `testimony1#1` - Hides the "Testimony" indicator (since 2.9)
 
 Since 2.9, `animation` may also be an arbitrary string, in which case that string indicates both which animation to display and which sound effect to play.
 
@@ -814,6 +817,35 @@ When received, the Client should store this data in memory for later use.
 It should also display a list of these (using `name`) to the user (both music and areas).
 
 Serialized: `SM#{music1_name}#{music2_name}#...#%`
+
+# SP
+
+Receiver: `Client`
+
+| Key    | Type     | Rules              |
+|--------|----------|--------------------|
+| `side` | `string` | Must be a valid side |
+
+When the Client receives this, it should set the position dropdown to `side`.
+
+Added in 2.8.
+
+Serialized: `SP#{side}#%`
+
+# SD
+
+Receiver: `Client`
+
+| Key     | Type            | Rules |
+|---------|-----------------|-------|
+| `sides` | `array[string]` |       |
+
+When the Client receives this, it should override the position dropdown
+to the specified list of positions.
+
+Added in 2.8.
+
+Serialized: `SD#{side1}*{side2}*...#%` (note the `*` separator)
 
 # ST
 
