@@ -199,17 +199,17 @@ Receiver: `Server`
 | Key       | Type     | Rules            |
 |-----------|----------|------------------|
 | `char_id` | `number` | Positive integer |
-| `hdid`    | `string` |                  |
+| `char_pw` | `string` |                  |
 
 This packet is sent by the Client to the Server to indicate that the Client
 tries to select the character identified by `char_id`.
 
-`hdid` is considered obsolete and can be omitted.
+`char_pw` is considered obsolete and can be omitted.
 
 When the Server receives this, it should send `PV` if the character was
 selected successfully.
 
-Serialized: `CC#0#{char_id}#{hdid}#%` (note the hardcoded 0)
+Serialized: `CC#0#{char_id}#{char_pw}#%` (note the hardcoded 0)
 
 # CH
 
