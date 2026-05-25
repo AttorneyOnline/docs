@@ -28,6 +28,8 @@ Receivers: `Server, Client`
 | `other_name`              | `number` | Not present from Client |
 | `other_emote`             | `number` | Not present from Client |
 | `self_offset`             | `number` |                         |
+| `other_offset`            | `number` |                         |
+| `other_flip`              | `number` |                         |
 | `noninterrupting_preanim` | `number` |                         |
 | `sfx_looping`             | `number` |                         |
 | `screenshake`             | `number` |                         |
@@ -37,6 +39,7 @@ Receivers: `Server, Client`
 | `additive`                | `number` |                         |
 | `effect`                  | `number` |                         |
 | `blips`                   | `number` |                         |
+| `slide`                   | `number` |                         |
 
 An in-character (IC) message is a basic form of viewport event in which a animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
 
@@ -130,7 +133,8 @@ Reference of fields:
 - `additive`: If `1`, does not clear the chatbox's previous message.
 - `effect`: The overlay effect to be displayed.
 - `blips`: The sound effect to play while processing text, colloquially the "blips."
+- `slide`: If `1`, allow this message to trigger a slide animation when the character's position changes. Servers may freely choose how to handle this flag.
 
-All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+. `blips` onward is 2.10.2+.
+All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+. `blips` and `slide` onward is 2.10.2+.
 
 > Note that the Server may freely modify any value of this message. For example, disemvoweling and shaking modify your text, and `/force_nonint_pres` forces your preanims to be noninterrupting. Therefore, to determine if your message was successfully sent, the character ID should be compared instead of the message text or the entire packet.
