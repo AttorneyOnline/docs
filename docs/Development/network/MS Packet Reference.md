@@ -48,7 +48,6 @@ An in-character (IC) message is a basic form of viewport event in which an anima
 Reference of fields:
 
 - `desk_modifier`: Whether or not to override desk appearance.
-  - `chat`: Positions "def", "pro", and "wit" default to desk and the positions "hld", "hlp" and "jud" to no desk.
   - `0`: desk is hidden
   - `1`: desk is shown
   - `2`: desk is hidden during preanim, shown when it ends
