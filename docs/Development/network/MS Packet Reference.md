@@ -15,7 +15,7 @@ Receivers: `Server, Client`
 | `message`                 | `string`  |                         |
 | `side`                    | `string`  | Must be a valid side    |
 | `sfx_name`                | `string`  |                         |
-| `emote_modifier`          | `number`  | `0`, `1`, `2`, `5`, `6` |
+| `emote_modifier`          | `number`  | `0-6`                   |
 | `char_id`                 | `number`  |                         |
 | `sfx_delay`               | `number`  |                         |
 | `shout_modifier`          | `number`  | `0-4`                   |
