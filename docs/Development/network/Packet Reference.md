@@ -780,21 +780,21 @@ Serialized: `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
 
 Receiver: `Client`
 
-| Key        | Type     | Rules                             |
-|------------|----------|-----------------------------------|
-| `char_cnt` | `number` |Positive integer                   |
-| `evi_cnt`  | `number` |Positive integer, but usually 0    |
-| `mus_cnt`  | `number` |Positive integer                   |
+| Key          | Type     | Rules                             |
+|--------------|----------|-----------------------------------|
+| `char_count` | `number` |Positive integer                   |
+| `evi_count`  | `number` |Positive integer, but usually 0    |
+| `mus_count`  | `number` |Positive integer                   |
 
-- `char_cnt`: The character list length of the server.
-- `evi_cnt`: The amount of evidence the server supports. Akashi and tsuserver always sends `0`.
-- `mus_cnt`: The music list length of the server. 
+- `char_count`: The character list length of the server.
+- `evi_count`: The amount of evidence the server supports. Akashi and tsuserver always sends `0`.
+- `mus_count`: The music list length of the server. 
 
-Note that akashi adds its area count to mus_cnt, but tsuserver does not. The client is intended to use this for memory allocation. 
+Note that akashi adds its area count to mus_count, but tsuserver does not. The client is intended to use this for memory allocation. 
 
 The client should send [RC](#RC) next.
 
-Serialized: `SI#{char_cnt}#{evi_cnt}#{mus_cnt}#%`
+Serialized: `SI#{char_count}#{evi_count}#{mus_count}#%`
 
 # SM
 
