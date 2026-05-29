@@ -430,19 +430,19 @@ Serialized: `HP#{bar}#{value}#%`
 
 Receiver: `Client`
 
-| Key            | Type     | Rules                       |
-|----------------|----------|-----------------------------|
-| `player_count` | `number` | Positive integer            |
-| `software`     | `string` | Name of the software        |
-| `version`      | `string` | Should be in format `x.y.z` |
+| Key         | Type     | Rules                       |
+|-------------|----------|-----------------------------|
+| `player_id` | `number` | Positive integer            |
+| `software`  | `string` | Name of the software        |
+| `version`   | `string` | Should be in format `x.y.z` |
 
-- `player_count` should be the number of players currently on the server
+- `player_id` is the player's ID assigned by the server
 - `software` should be the name of the software the server is on
 - `version` is the server software's version
 
 When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
-Serialized: `ID#{player_count}#{software}#{version}#%`
+Serialized: `ID#{player_id}#{software}#{version}#%`
 
 # ID (Server)
 
