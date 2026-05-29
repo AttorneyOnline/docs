@@ -436,7 +436,7 @@ Receiver: `Client`
 | `software`  | `string` | Name of the software        |
 | `version`   | `string` | Should be in format `x.y.z` |
 
-- `player_id` is the player's ID assigned by the server
+- `player_id` is the player's ID assigned by the server (rarely used in practice)
 - `software` should be the name of the software the server is on
 - `version` is the server software's version
 
