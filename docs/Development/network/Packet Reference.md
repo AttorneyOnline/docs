@@ -196,20 +196,25 @@ Serialized: `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{
 
 Receiver: `Server`
 
-| Key       | Type     | Rules            |
-|-----------|----------|------------------|
-| `char_id` | `number` | Positive integer |
-| `char_pw` | `string` |                  |
+| Key         | Type     | Rules            |
+|-------------|----------|------------------|
+| `player_id`     | `number` | Positive integer |
+| `char_id`       | `number` | Positive integer |
+| `char_password` | `string` |                  |
 
 This packet is sent by the Client to the Server to indicate that the Client
 tries to select the character identified by `char_id`.
 
-`char_pw` is considered obsolete and can be omitted.
+`player_id` is the same ID the Server sent in [ID (Client)](#ID-Client).
+
+`char_password` is considered obsolete and can be omitted. Note that some
+servers (e.g. KFO-server) will not accept an empty `char_password`, so a
+placeholder value may be required.
 
 When the Server receives this, it should send `PV` if the character was
 selected successfully.
 
-Serialized: `CC#0#{char_id}#{char_pw}#%` (note the hardcoded 0)
+Serialized: `CC#{player_id}#{char_id}#{char_password}#%`
 
 # CH
 
@@ -436,7 +441,7 @@ Receiver: `Client`
 | `software`  | `string` | Name of the software        |
 | `version`   | `string` | Should be in format `x.y.z` |
 
-- `player_id` is the player's ID assigned by the server (rarely used in practice)
+- `player_id` is the player's ID assigned by the server
 - `software` should be the name of the software the server is on
 - `version` is the server software's version
 
