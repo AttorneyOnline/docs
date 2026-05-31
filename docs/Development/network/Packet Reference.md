@@ -196,20 +196,25 @@ Serialized: `CASEA#{case_title}#{need_def}#{need_pro}#{need_judge}#{need_jury}#{
 
 Receiver: `Server`
 
-| Key       | Type     | Rules            |
-|-----------|----------|------------------|
-| `char_id` | `number` | Positive integer |
-| `char_pw` | `string` |                  |
+| Key         | Type     | Rules            |
+|-------------|----------|------------------|
+| `player_id`     | `number` | Positive integer |
+| `char_id`       | `number` | Positive integer |
+| `char_password` | `string` |                  |
 
 This packet is sent by the Client to the Server to indicate that the Client
 tries to select the character identified by `char_id`.
 
-`char_pw` is considered obsolete and can be omitted.
+`player_id` is the same ID the Server sent in [ID (Client)](#ID-Client).
+
+`char_password` is considered obsolete and can be omitted. Note that some
+servers (e.g. KFO-server) will not accept an empty `char_password`, so a
+placeholder value may be required.
 
 When the Server receives this, it should send `PV` if the character was
 selected successfully.
 
-Serialized: `CC#0#{char_id}#{char_pw}#%` (note the hardcoded 0)
+Serialized: `CC#{player_id}#{char_id}#{char_password}#%`
 
 # CH
 
@@ -430,19 +435,19 @@ Serialized: `HP#{bar}#{value}#%`
 
 Receiver: `Client`
 
-| Key             | Type     | Rules                       |
-|-----------------|----------|-----------------------------|
-| `player_number` | `number` | Positive integer            |
-| `software`      | `string` |                             |
-| `version`       | `string` | Should be in format `x.y.z` |
+| Key         | Type     | Rules                       |
+|-------------|----------|-----------------------------|
+| `player_id` | `number` | Positive integer            |
+| `software`  | `string` | Name of the software        |
+| `version`   | `string` | Should be in format `x.y.z` |
 
-- `player_number` should be the number of players currently on the server
+- `player_id` is the player's ID assigned by the server
 - `software` should be the name of the software the server is on
 - `version` is the server software's version
 
 When the Client receives `ID (Client)` it should send `ID (Server)` back.
 
-Serialized: `ID#{player_number}#{software}#{version}#%`
+Serialized: `ID#{player_id}#{software}#{version}#%`
 
 # ID (Server)
 
@@ -780,21 +785,21 @@ Serialized: `SETCASE#{caselist}#{cm}#{def}#{pro}#{judge}#{jury}#{steno}#%`
 
 Receiver: `Client`
 
-| Key        | Type     | Rules                             |
-|------------|----------|-----------------------------------|
-| `char_cnt` | `number` |Positive integer                   |
-| `evi_cnt`  | `number` |Positive integer, but usually 0    |
-| `mus_cnt`  | `number` |Positive integer                   |
+| Key          | Type     | Rules                             |
+|--------------|----------|-----------------------------------|
+| `char_count` | `number` |Positive integer                   |
+| `evi_count`  | `number` |Positive integer, but usually 0    |
+| `mus_count`  | `number` |Positive integer                   |
 
-- `char_cnt`: The character list length of the server.
-- `evi_cnt`: The amount of evidence the server supports. Akashi and tsuserver always sends `0`.
-- `mus_cnt`: The music list length of the server. 
+- `char_count`: The character list length of the server.
+- `evi_count`: The amount of evidence the server supports. Akashi and tsuserver always sends `0`.
+- `mus_count`: The music list length of the server. 
 
-Note that akashi adds its area count to mus_cnt, but tsuserver does not. The client is intended to use this for memory allocation. 
+Note that akashi adds its area count to mus_count, but tsuserver does not. The client is intended to use this for memory allocation. 
 
 The client should send [RC](#RC) next.
 
-Serialized: `SI#{char_cnt}#{evi_cnt}#{mus_cnt}#%`
+Serialized: `SI#{char_count}#{evi_count}#{mus_count}#%`
 
 # SM
 
