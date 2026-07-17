@@ -6,50 +6,49 @@ That is why it has its own page here.
 
 Receivers: `Server, Client`
 
-| Key                       | Type     | Rules                   |
-|---------------------------|----------|-------------------------|
-| `desk_mod`                | `number` | `0-5`                   |
-| `preanim`                 | `number` |                         |
-| `character`               | `string` | `0-5`                   |
-| `emote`                   | `number` |                         |
-| `message`                 | `string` |                         |
-| `side`                    | `string` | Must be a valid side    |
-| `sfx-name`                | `string` |                         |
-| `emote_modifier`          | `number` |                         |
-| `char_id`                 | `number` |                         |
-| `sfx_delay`               | `number` |                         |
-| `shout_modifier`          | `number` |                         |
-| `evidence`                | `number` |                         |
-| `flip`                    | `number` |                         |
-| `realization`             | `number` |                         |
-| `text_color`              | `number` |                         |
-| `showname`                | `string` |                         |
-| `other_charid`            | `number` |                         |
-| `other_name`              | `number` | Not present from Client |
-| `other_emote`             | `number` | Not present from Client |
-| `self_offset`             | `number` |                         |
-| `other_offset`            | `number` |                         |
-| `other_flip`              | `number` |                         |
-| `noninterrupting_preanim` | `number` |                         |
-| `sfx_looping`             | `number` |                         |
-| `screenshake`             | `number` |                         |
-| `frames_shake`            | `number` |                         |
-| `frames_realization`      | `number` |                         |
-| `frames_sfx`              | `number` |                         |
-| `additive`                | `number` |                         |
-| `effect`                  | `number` |                         |
-| `blips`                   | `number` |                         |
-| `slide`                   | `number` |                         |
+| Key                       | Type      | Rules                   |
+|---------------------------|-----------|-------------------------|
+| `desk_modifier`           | `number`  | `0-5`                   |
+| `preanim`                 | `string`  |                         |
+| `character`               | `string`  |                         |
+| `emote`                   | `string`  |                         |
+| `message`                 | `string`  |                         |
+| `side`                    | `string`  | Must be a valid side    |
+| `sfx_name`                | `string`  |                         |
+| `emote_modifier`          | `number`  | `0-6`                   |
+| `char_id`                 | `number`  |                         |
+| `sfx_delay`               | `number`  |                         |
+| `shout_modifier`          | `number`  | `0-4`                   |
+| `evidence_id`             | `number`  |                         |
+| `flip`                    | `number`  | `0` or `1`              |
+| `realization`             | `boolean` | `0` or `1`              |
+| `text_color`              | `number`  | `0-9`                   |
+| `showname`                | `string`  |                         |
+| `paired_charid`           | `number`  |                         |
+| `paired_name`             | `string`  | Client as receiver only |
+| `paired_emote`            | `string`  | Client as receiver only |
+| `offset`                  | `string`  | `{x}&{y}`               |
+| `paired_offset`           | `string`  | Client as receiver only; `{x}&{y}` |
+| `paired_flip`             | `number`  | Client as receiver only; `0` or `1` |
+| `noninterrupting_preanim` | `boolean` | `0` or `1`              |
+| `sfx_looping`             | `boolean` | `0` or `1`              |
+| `screenshake`             | `boolean` | `0` or `1`              |
+| `frames_shake`            | `string`  |                         |
+| `frames_realization`      | `string`  |                         |
+| `frames_sfx`              | `string`  |                         |
+| `additive`                | `boolean` | `0` or `1`              |
+| `effect`                  | `string`  |                         |
+| `blips`                   | `number`  |                         |
+| `slide`                   | `number`  |                         |
 
-An in-character (IC) message is a basic form of viewport event in which a animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
+An in-character (IC) message is a basic form of viewport event in which an animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
 
-> Note that the only difference between the client and server messages is that the client does not have the `other_name` or `other_emote` fields.
+> Note: the Server-as-receiver wire form (Client -> Server) omits four fields entirely: `paired_name`, `paired_emote`, `paired_offset`, and `paired_flip`. The server fills these in from the paired client's state when broadcasting.
 
 Reference of fields:
 
-- `desk_mod`: Whether or not to override desk appearance.
-  -`chat`: Positions "def", "pro", and "wit" default to desk and the positions "hld", "hlp" and "jud" to no desk.
-  -`0`: desk is hidden
+- `desk_modifier`: Whether or not to override desk appearance.
+  - `0`: desk is hidden
   - `1`: desk is shown
   - `2`: desk is hidden during preanim, shown when it ends
   - `3`: desk is shown during preanim, hidden when it ends
@@ -69,7 +68,7 @@ Reference of fields:
 - `sfx_name`: Name of the sound effect that should play during the preanimation (if the preanimation is enabled).
 
 - `emote_modifier`: A number that dictates emote behavior:
-  - `0`: do not play preanimation; overridden to 2 by a non-`0` objection modifier
+  - `0`: do not play preanimation; overridden to 2 by a non-`0` `shout_modifier`
   - `1`: play preanimation (and sfx)
   - `2`: play preanimation and play objection
   - `3`: _unused_
@@ -81,14 +80,14 @@ Reference of fields:
 
 - `sfx_delay`: Dictates how long in milliseconds the client should wait after the preanimation has started playing before playing the associated sound effect.
 
-- `objection_modifier`: Dictates if the player uses a shout.
+- `shout_modifier`: Dictates if the player uses a shout.
   - `0`: nothing
   - `1`: "Hold it!"
   - `2`: "Objection!"
   - `3`: "Take that!"
   - `4` or `4&{name}`: custom shout (since 2.6 or 2.8 respectively)
 
-- `evidence`: ID of the evidence presented. 0 is no evidence presented, so evidence ID effectively starts from 1.
+- `evidence_id`: ID of the evidence presented. 0 is no evidence presented, so evidence ID effectively starts from 1.
 
 - `flip`: Dictates if the emote should be flipped.
   - `0`: no flip
@@ -112,18 +111,19 @@ Reference of fields:
 
 - `showname`: If used, this will show a custom name (showname) for the character.
 
-- `other_charid`: The character ID of the person the player wishes to pair up with.
+- `paired_charid`: The character ID of the person the player wishes to pair up with.
 
-- `other_name`: The folder name of the character the player is pairing up with (in case of INI swapping).
+- `paired_name`: The folder name of the character the player is pairing up with (in case of INI swapping). Client as receiver only (server fills it in on broadcast).
 
-- `other_emote`: The emote the user's pair was doing. Note that by default, zooms (that are correctly defined as such) do not update this value, so a pair of zooms will not appear. Zooms also enjoy special privileges, in that (assuming they are correctly defined, again) they make the pair disappear in the client and get centered.
+- `paired_emote`: The emote the user's pair was doing. Note that by default, zooms (that are correctly defined as such) do not update this value, so a pair of zooms will not appear. Zooms also enjoy special privileges, in that (assuming they are correctly defined, again) they make the pair disappear in the client and get centered. Client as receiver only (server fills it in on broadcast).
 
-- `self_offset`: the percentage by which the character is shifted horizontally, from `-100` (one whole screen's worth to the left) to `100` (one whole screen's worth to the right). This parameter also stores vertical offset, which is self-explanatory.
+- `offset`: The percentage by which the character is shifted horizontally, from `-100` (one whole screen's worth to the left) to `100` (one whole screen's worth to the right). This parameter also stores vertical offset, which is self-explanatory.
   - `{x_offset}`: <2.9
   - `{x_offset}&{y_offset}`: 2.9+
+  - Note: some implementations may erroneously encode `&` as the FantaCode control sequence `<and>` (so the literal bytes look like `{x_offset}<and>{y_offset}`); this needs to be handled carefully on decode.
 
-- `other_offset`: The user's pair's `self_offset`, basically.
-- `other_flip`: The user's pair's `char_id2/flip`, basically.
+- `paired_offset`: The user's pair's `offset`, basically. Client as receiver only (server fills it in on broadcast).
+- `paired_flip`: The user's pair's `flip`, basically. Client as receiver only (server fills it in on broadcast).
 - `noninterrupting_preanim`: If `1`, the text begins at the same time as the preanimation.
 - `sfx_looping`: If `1`, the sound effect loops until another emote is played.
 - `screenshake`: If `1`, the screen shakes (TODO: on preanimation or on chat?).
@@ -135,6 +135,6 @@ Reference of fields:
 - `blips`: The sound effect to play while processing text, colloquially the "blips."
 - `slide`: If `1`, allow this message to trigger a slide animation when the character's position changes. Servers may freely choose how to handle this flag.
 
-All sections from `showname` onwards is 2.6+. `sfx_looping` onwards is 2.8+. `blips` and `slide` onward is 2.10.2+.
+All fields from `showname` onwards are 2.6+. `sfx_looping` onwards is 2.8+. `blips` and `slide` onward is 2.10.2+.
 
 > Note that the Server may freely modify any value of this message. For example, disemvoweling and shaking modify your text, and `/force_nonint_pres` forces your preanims to be noninterrupting. Therefore, to determine if your message was successfully sent, the character ID should be compared instead of the message text or the entire packet.
