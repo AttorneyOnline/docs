@@ -50,6 +50,7 @@ Reference of fields:
 - `desk_modifier`: Whether or not to override desk appearance.
   - `0`: desk is hidden
   - `1`: desk is shown
+    - `chat`: deprecated alias for `1`. Clients should rewrite it to 1, or reject it. Servers should rewrite it to 1, or reject it.
   - `2`: desk is hidden during preanim, shown when it ends
   - `3`: desk is shown during preanim, hidden when it ends
   - `4`: desk is hidden during preanim, character is centered and pairing is ignored, when it ends desk is shown and pairing is restored
