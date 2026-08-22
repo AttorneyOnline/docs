@@ -41,7 +41,7 @@ Receivers: `Server, Client`
 | `blips`                   | `number`  |                         |
 | `slide`                   | `number`  |                         |
 
-An in-character (IC) message is a basic form of viewport event in which an animation is displayed on the screen with various parameters. Line breaks are included for cleanliness and are not present in the actual packet.
+An in-character (IC) message is a basic form of viewport event in which an animation is displayed on the screen with various parameters.
 
 > Note: the Server-as-receiver wire form (Client -> Server) omits four fields entirely: `paired_name`, `paired_emote`, `paired_offset`, and `paired_flip`. The server fills these in from the paired client's state when broadcasting.
 
