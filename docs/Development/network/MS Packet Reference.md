@@ -61,7 +61,7 @@ Reference of fields:
 
 - `emote`: The emote that should play. Does not include `(a)`/`(b)` prefixes or file extensions. If empty, denotes a "narrator message", affecting only the text box and no more.
 
-- `message`: The chat message as to be displayed in the chatbox and the IC log. Note that the message may contain markup that must be parsed.
+- `message`: The chat message as to be displayed in the chatbox and the IC log. Note that the message may contain markup that must be parsed. If empty, the chatbox is not displayed, this is known as "blankposting". Servers often disallow blankposts, usually on a per-area basis. Since `229a423` (2.10.0), AO2-Client allows themes to force the chatbox to always be displayed.
 
 - `side`: Which side the character is on. See the character authoring page for valid positions.
 
