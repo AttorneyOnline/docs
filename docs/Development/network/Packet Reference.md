@@ -64,7 +64,7 @@ Receiver: `Client`
 | `update_data` | `array[int\|string]` |       |
 
 Updates a status for all areas.
-Should only be sent to clients who have sent `arup` in `FL`.
+Sent by servers who have `arup` in `FL`.
 
 `update_type` indicates what data is being updated
 
