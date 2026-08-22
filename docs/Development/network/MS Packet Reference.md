@@ -59,7 +59,7 @@ Reference of fields:
 
 - `character`: The folder name of the character that is talking.
 
-- `emote`: The emote that should play. Does not include `(a)`/`(b)` prefixes or file extensions.
+- `emote`: The emote that should play. Does not include `(a)`/`(b)` prefixes or file extensions. If empty, denotes a "narrator message", affecting only the text box and no more.
 
 - `message`: The chat message as to be displayed in the chatbox and the IC log. Note that the message may contain markup that must be parsed.
 
